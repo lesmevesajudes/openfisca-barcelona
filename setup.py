@@ -6,17 +6,17 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='OpenFisca-Country-Template',
-    version='1.1.0',
+    name='OpenFisca-Spain',
+    version='1.2.0',
     author='OpenFisca Team',
     author_email='contact@openfisca.fr',
-    description=u'OpenFisca tax and benefit system for Country-Template',
+    description=u'OpenFisca tax and benefit system for Spain',
     keywords='benefit microsimulation social tax',
     license='http://www.fsf.org/licensing/licenses/agpl-3.0.html',
-    url='https://github.com/openfisca/openfisca-country-template',
+    url='https://github.com/openfisca/openfisca-spain',
     include_package_data = True,  # Will read MANIFEST.in
     install_requires=[
-        'OpenFisca-Core >= 12.0.0, < 13.0',
+        'OpenFisca-Core >= 14.0.0, < 15.0',
         ],
     extras_require = {
         'api': [

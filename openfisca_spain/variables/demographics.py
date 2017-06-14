@@ -7,7 +7,7 @@
 # Import from openfisca-core the common python objects used to code the legislation in OpenFisca
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
-from openfisca_country_template.entities import *
+from openfisca_spain.entities import *
 
 from numpy import datetime64
 
@@ -19,7 +19,7 @@ class age(Variable):
     label = u"Person's age (in years)"
 
     # A person's age is computed according to its birth date.
-    def function(person, period, legislation):
+    def formula(person, period, legislation):
         birth = person('birth', period)
         return (datetime64(period.date) - birth).astype('timedelta64[Y]')
 
