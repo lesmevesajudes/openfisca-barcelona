@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='OpenFisca-Spain',
-    version='1.2.0',
+    version='1.0.0',
     author='OpenFisca Team',
     author_email='contact@openfisca.fr',
     description=u'OpenFisca tax and benefit system for Spain',
@@ -16,11 +16,12 @@ setup(
     url='https://github.com/openfisca/openfisca-spain',
     include_package_data = True,  # Will read MANIFEST.in
     install_requires=[
-        'OpenFisca-Core >= 14.0.0, < 15.0',
+        'OpenFisca-Core >= 15.0.0, < 17.0',
+        'numpy >= 1.11, < 1.13',
         ],
-    extras_require = {
+    extras_require={
         'api': [
-            'OpenFisca-Web-API >= 4.0.0, < 6.0',
+            'OpenFisca-Web-API >= 4.0.0, < 7.0',
             ],
         'test': [
             'flake8',

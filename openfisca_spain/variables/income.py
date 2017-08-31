@@ -16,7 +16,6 @@ class salary(Variable):
     entity = Person
     definition_period = MONTH
     label = "Salary"
-    url = "https://law.gov.example/salary"  # Always use the most official source
 
 
 class disposable_income(Variable):
@@ -24,12 +23,4 @@ class disposable_income(Variable):
     entity = Person
     definition_period = MONTH
     label = "Actual amount available to the person at the end of the month"
-    url = "https://stats.gov.example/disposable_income"  # Some variables represent quantities used in economic models, and not defined by law. Always give the source of your definition.
-
-    def formula(person, period, legislation):
-        return (
-            + person('salary', period)
-            + person('basic_income', period)
-            - person('income_tax', period)
-            - person('social_security_contribution', period)
-            )
+    set_input = set_input_divide_by_period

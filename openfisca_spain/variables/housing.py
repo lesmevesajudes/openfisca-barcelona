@@ -10,17 +10,9 @@ from openfisca_core.model_api import *
 from openfisca_spain.entities import *
 
 
-# This variable is a pure input: it doesn't have a formula
-class accomodation_size(Variable):
-    column = FloatCol
-    entity = Household
+class ciutat_empadronament(Variable):
+    column = StrCol
+    entity = Person
     definition_period = MONTH
-    label = u"Size of the accomodation, in square metters"
-
-
-# This variable is a pure input: it doesn't have a formula
-class rent(Variable):
-    column = FloatCol
-    entity = Household
-    definition_period = MONTH
-    label = u"Rent paid by the household"
+    label = u"City Where the user is censed"
+    set_input = set_input_dispatch_by_period

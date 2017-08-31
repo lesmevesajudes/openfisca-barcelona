@@ -6,3 +6,6 @@ dist:
 
 test:
 	openfisca-run-test --country_package openfisca_spain openfisca_spain/tests
+
+run:
+	openfisca-serve --port 2000

@@ -10,34 +10,67 @@ from openfisca_core.model_api import *
 from openfisca_spain.entities import *
 
 
-class basic_income(Variable):
-    column = FloatCol
-    entity = Person
-    definition_period = MONTH
-    label = "Basic income provided to adults"
-    url = "https://law.gov.example/basic_income"  # Always use the most official source
-
-    # Since Dec 1st 2016, the basic income is provided to any adult, without considering their income.
-    def formula_2016_12(person, period, legislation):
-        age_condition = person('age', period) >= legislation(period).general.age_of_majority
-        return age_condition * legislation(period).benefits.basic_income  # This '*' is a vectorial 'if'. See https://doc.openfisca.fr/coding-the-legislation/30_case_disjunction.html#simple-multiplication
-
-    # From Dec 1st 2015 to Nov 30 2016, the basic income is provided to adults who have no income.
-    # Before Dec 1st 2015, the basic income does not exist in the law, and calculating it returns its default value, which is 0.
-    def formula_2015_12(person, period, legislation):
-        age_condition = person('age', period) >= legislation(period).general.age_of_majority
-        salary_condition = person('salary', period) == 0
-        return age_condition * salary_condition * legislation(period).benefits.basic_income  # The '*' is also used as a vectorial 'and'. See https://doc.openfisca.fr/coding-the-legislation/25_vectorial_computing.html#forbidden-operations-and-alternatives
-
-
-class housing_allowance(Variable):
-    column = FloatCol
+class household_disposable_income(Variable):
+    column = IntCol(val_type="monetary")
     entity = Household
     definition_period = MONTH
-    label = "Housing allowange"
-    url = "https://law.gov.example/housing_allowance"  # Always use the most official source
-    end = '2016-11-30'  # This allowance was removed on the 1st of Dec 2016. Calculating it before this date will always return the variable default value, 0.
+    label = "Total yearly income"
+    set_input = set_input_divide_by_period
 
-    # This allowance was introduced on the 1st of Jan 1980. Calculating it before this date will always return the variable default value, 0.
-    def formula_1980(household, period, legislation):
-        return household('rent', period) * legislation(period).benefits.housing_allowance
+    def formula(household, period):
+        salaries = household.members('disposable_income', period)
+        sum_salaries = household.sum(salaries)
+        return sum_salaries
+
+
+def varem_irsc_016(nr_members):
+        return select(
+            [nr_members == 2,
+             nr_members == 3,
+             nr_members == 4,
+             nr_members == 5,
+             nr_members == 6,
+             nr_members == 7,
+             nr_members == 8,
+             nr_members == 9,
+             nr_members == 10,
+             nr_members == 11,
+             nr_members > 11],
+            [11951.60,
+             14939.49,
+             17927.39,
+             20915.29,
+             23903.29,
+             26891.09,
+             29878.99,
+             32866.89,
+             35854.79,
+             38842.68,
+             41830.58])
+
+
+class usuari_serveis_socials(Variable):
+    column = BoolCol
+    entity = Person
+    definition_period = MONTH
+    label = "The user is a Social services user"
+    set_input = set_input_dispatch_by_period
+
+
+class ajuda_016_mensual(Variable):
+    column = IntCol(val_type="monetary")
+    entity = Person
+    definition_period = MONTH
+    label = "Ajuda 0-16"
+
+    def formula(person, period, legislation):
+        age_requirement = person('age', period) < 16
+        income_condition = person.household('household_disposable_income', period) < \
+                           varem_irsc_016(person.household.nb_persons())
+        usuari_serveis_socials_condition = person('usuari_serveis_socials', period)
+        empadronat_a_barcelona_condition = person('ciutat_empadronament', period) == "Barcelona"
+        return age_requirement \
+               * income_condition \
+               * empadronat_a_barcelona_condition \
+               * usuari_serveis_socials_condition \
+               * 100
