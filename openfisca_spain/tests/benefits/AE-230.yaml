@@ -17,7 +17,7 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Barcelona"
   output_variables:
-    ajuda_016_mensual: [ 0, 100]
+    AE_230_mensual: [ 0, 100]
 
 - name: "0-16 Unitat familiar 3 membres nivell renda disponible inferior a 1,5 IRSC"
   description: Montant AAH au niveau de la famille
@@ -43,7 +43,7 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Barcelona"
   output_variables:
-    ajuda_016_mensual: [ 0, 100, 100]
+    AE_230_mensual: [ 0, 100, 100]
 
 - name: "0-16 Unitat familiar 3 membres nivell renda disponible superior a 1,5 IRSC"
   description: Montant AAH au niveau de la famille
@@ -69,7 +69,7 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Barcelona"
   output_variables:
-    ajuda_016_mensual: [ 0, 0, 0]
+    AE_230_mensual: [ 0, 0, 0]
 
 - name: "0-16 Unitat familiar 4 membres nivell renda disponible superior a 1,5 IRSC"
   description: Montant AAH au niveau de la famille
@@ -100,7 +100,7 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Barcelona"
   output_variables:
-    ajuda_016_mensual: [ 0, 0, 0, 0]
+    AE_230_mensual: [ 0, 0, 0, 0]
 
 - name: "0-16 menor major de 16"
   description: Montant AAH au niveau de la famille
@@ -121,7 +121,7 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Barcelona"
   output_variables:
-    ajuda_016_mensual: [0, 0]
+    AE_230_mensual: [0, 0]
 
 - name: "0-16 membre no empadronat a Barcelona"
   description: Montant AAH au niveau de la famille
@@ -142,7 +142,7 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Mataró"
   output_variables:
-    ajuda_016_mensual: [ 0, 0]
+    AE_230_mensual: [ 0, 0]
 
 - name: "0-16 Unitat familiar 2 membres nivell renda disponible superior a 1,5 IRSC"
   description: Montant AAH au niveau de la famille
@@ -163,4 +163,4 @@
      usuari_serveis_socials: 1
      ciutat_empadronament: "Barcelona"
   output_variables:
-    ajuda_016_mensual: [ 0, 0]
+    AE_230_mensual: [ 0, 0]

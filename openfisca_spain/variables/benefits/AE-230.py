@@ -57,7 +57,7 @@ class usuari_serveis_socials(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class ajuda_016_mensual(Variable):
+class AE_230_mensual(Variable):
     column = IntCol(val_type="monetary")
     entity = Person
     definition_period = MONTH
