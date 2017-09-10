@@ -2,7 +2,6 @@
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_spain.entities import *
-import numpy as np
 
 class DISCSUP33(Variable):
     column = BoolCol
@@ -28,71 +27,7 @@ class DEMANDOC12M(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class INGINF530(Variable):
-    column = BoolCol
-    entity = Person
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-    def formula(person, period, legislation):
-        return person('disposable_income', period) < 530
-
-class CAPMEMBREINGSUP530(Variable):
-    column = BoolCol
-    entity = Household
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-    def formula(household, period, legislation):
-        qq = household.members('INGINF530', period)
-        return household.all(qq)
-
-
 class ACCRESFEIN(Variable):
-    column = BoolCol
-    entity = Person
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-
-
-class NORAI365(Variable):
-    column = BoolCol
-    entity = Person
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-
-class NOTRESRAIANT(Variable):
-    column = BoolCol
-    entity = Person
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-
-class TREBALLACOMPTEPROPI(Variable):
-    column = BoolCol
-    entity = Person
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-
-class INGCPENITENCIARI(Variable):
-    column = BoolCol
-    entity = Person
-    definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
-    set_input = set_input_dispatch_by_period
-
-
-
-class PRESTSSINCOMPFEINA(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -108,7 +43,7 @@ class BENAJVIOGENNOPROGOC(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class GE_051_1_mensual(Variable):
+class GE_051_01_mensual(Variable):
     column = IntCol(val_type="monetary")
     entity = Person
     definition_period = MONTH

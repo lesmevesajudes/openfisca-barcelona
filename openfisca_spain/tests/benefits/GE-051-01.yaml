@@ -21,7 +21,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [ 426 ]
+     GE_051_01_mensual: [ 426 ]
 
 - name: "Persones amb tots els condicionants reben l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -61,7 +61,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [ 426, 426 ]
+     GE_051_01_mensual: [ 426, 426 ]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -83,7 +83,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense ESGSUBSDESOC no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -105,7 +105,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -127,7 +127,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -149,7 +149,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -171,7 +171,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -193,7 +193,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -215,7 +215,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -237,7 +237,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -259,7 +259,7 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -281,7 +281,7 @@
      PRESTSSINCOMPFEINA: true
      BENAJVIOGENNOPROGOC: false
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -303,4 +303,4 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: true
   output_variables:
-     GE_051_1_mensual: [0]
+     GE_051_01_mensual: [0]
