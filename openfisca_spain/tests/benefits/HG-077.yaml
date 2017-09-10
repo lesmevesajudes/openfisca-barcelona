@@ -1,0 +1,402 @@
+- name: "Persona amb tots els condicionants reb l'ajuda màxima no BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: true
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 200 ]
+
+- name: "Persona amb tots els condicionants menys VICTERRORISME reb l'ajuda màxima no BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 200 ]
+
+- name: "Persona amb tots els condicionants menys INGSUFLLOG reb l'ajuda màxima no BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: false
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: true
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 200 ]
+
+
+- name: "Persona amb tots els condicionants menys INGSUFLLOG reb l'ajuda mínima no BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: false
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 150
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: true
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 20 ]
+
+
+- name: "Persona amb tots els condicionants menys INGSUFLLOG reb l'ajuda BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: false
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1931-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: true
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 240 ]
+
+- name: "Persona amb tots els condicionants menys INGSUFLLOG i VICTERRORISME NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: false
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys LLOGMAXBCN NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: false
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys CORRPAGLLOG NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: false
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys LLOGDOMI NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: false
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys RESCAT5ANYS NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: false
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys RISCEXCSOC NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: false
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys TITCONTLLOG NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: false
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys PROHBENSUB NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: false
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persona amb tots els condicionants menys COMPOBTRIBADMIN NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: false
+  output_variables:
+     HG_077_mensual: [ 0 ]
+
+- name: "Persones, una BLJ, amb tots els condicionants reben l'ajuda BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1", "fill1"]
+     INGSUFLLOG: true
+     LLOGMAXBCN: true
+     CORRPAGLLOG: true
+     LLOGDOMI: true
+     import_del_lloguer: 700
+  persons:
+   - id: "pare1"
+     birth: '1947-01-15'
+     disposable_income: 0
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: false
+   - id: "fill1"
+     birth: '1961-01-15'
+     disposable_income: 7000
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     RESCAT5ANYS: true
+     VICTERRORISME: false
+     RISCEXCSOC: true
+     TITCONTLLOG: true
+     PROHBENSUB: true
+     COMPOBTRIBADMIN: true
+  output_variables:
+     HG_077_mensual: [ 0, 240 ]

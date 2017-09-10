@@ -1,5 +1,5 @@
 - name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
   households:
@@ -9,18 +9,18 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 7000
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 100]
 
 - name: "0-16 Unitat familiar 3 membres nivell renda disponible inferior a 1,5 IRSC"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
   households:
@@ -30,23 +30,23 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 12000
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant2"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 100, 100]
 
 - name: "0-16 Unitat familiar 3 membres nivell renda disponible superior a 1,5 IRSC"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
   households:
@@ -56,23 +56,23 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 14940
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant2"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0, 0]
 
 - name: "0-16 Unitat familiar 4 membres nivell renda disponible superior a 1,5 IRSC"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
   households:
@@ -82,28 +82,28 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 7928
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "mare1"
      birth: '1961-01-15'
      disposable_income: 10000
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant2"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
 
 - name: "0-16 menor major de 16"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-02
   absolute_error_margin: 0
   households:
@@ -113,18 +113,18 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 7000
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2000-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [0, 0]
 
 - name: "0-16 membre no empadronat a Barcelona"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
   households:
@@ -134,18 +134,18 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 7000
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Mataró"
   output_variables:
     AE_230_mensual: [ 0, 0]
 
 - name: "0-16 Unitat familiar 2 membres nivell renda disponible superior a 1,5 IRSC"
-  description: Montant AAH au niveau de la famille
+  description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
   households:
@@ -155,12 +155,12 @@
    - id: "pare1"
      birth: '1961-01-15'
      disposable_income: 12000
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
      birth: '2002-01-15'
      disposable_income: 0
-     usuari_serveis_socials: 1
+     usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0]

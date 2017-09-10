@@ -1,0 +1,24 @@
+- name: "Persona amb 65 anys el 2012-12-31 és BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  input_variables:
+     birth: '1947-11-15'
+  output_variables:
+     ESBLJ: True
+- name: "Persona amb 65 anys el 2012-12-31 és BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  input_variables:
+     birth: '1947-12-31'
+  output_variables:
+     ESBLJ: True
+- name: "Persona amb 65 anys el 2012-12-31 és BLJ"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  input_variables:
+     birth: '1948-1-1'
+  output_variables:
+     ESBLJ: False
