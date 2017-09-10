@@ -1,0 +1,306 @@
+- name: "Persona amb tots els condicionants reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["pare1"]
+  persons:
+   - id: "pare1"
+     birth: '1961-01-15'
+     disposable_income: 500
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [ 426 ]
+
+- name: "Persones amb tots els condicionants reben l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+  persons:
+   - id: "adult1"
+     birth: '1961-01-15'
+     disposable_income: 500
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+   - id: "adult2"
+     birth: '1961-01-15'
+     disposable_income: 500
+     usuari_serveis_socials: true
+     ciutat_empadronament: "Barcelona"
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [ 426, 426 ]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: false
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense ESGSUBSDESOC no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: false
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: false
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: false
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: false
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: false
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: true
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: true
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: true
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_1_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     DISCSUP33: true
+     ESGSUBSDESOC: true
+     DEMANDOC12M: true
+     ACCRESFEIN: true
+     NORAI365: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: true
+  output_variables:
+     GE_051_1_mensual: [0]
