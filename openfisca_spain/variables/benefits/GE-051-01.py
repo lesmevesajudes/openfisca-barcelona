@@ -55,7 +55,7 @@ class GE_051_01_mensual(Variable):
         ESGSUBSDESOC = person('ESGSUBSDESOC', period)
         DEMANDOC12M = person('DEMANDOC12M', period)
         ACCRESFEIN = person('ACCRESFEIN', period)
-        NORAI365 = person('NORAI365', period)
+        NORAI12M = person('NORAI12M', period)
         NOTRESRAIANT = person('NOTRESRAIANT', period)
         NOTREBALLACOMPTEPROPI = person('TREBALLACOMPTEPROPI', period) == False
         NOINGCPENITENCIARI = person('INGCPENITENCIARI', period) == False
@@ -63,7 +63,7 @@ class GE_051_01_mensual(Variable):
         NOBENAJVIOGENNOPROGOC = person('BENAJVIOGENNOPROGOC', period) == False
         compleix_els_requeriments = cap_membre_amb_ingressos_superiors_a_530_mensuals * \
                                     discapacitat_superior_al_33_percent * \
-                                    ESGSUBSDESOC * DEMANDOC12M * ACCRESFEIN * NORAI365 * NOTRESRAIANT * \
+                                    ESGSUBSDESOC * DEMANDOC12M * ACCRESFEIN * NORAI12M * NOTRESRAIANT * \
                                     NOTREBALLACOMPTEPROPI * \
                                     NOINGCPENITENCIARI * \
                                     NOPRESTSSINCOMPFEINA * \

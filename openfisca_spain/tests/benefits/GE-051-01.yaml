@@ -14,7 +14,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -39,7 +39,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -54,7 +54,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -76,7 +76,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -98,7 +98,7 @@
      ESGSUBSDESOC: false
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -120,7 +120,7 @@
      ESGSUBSDESOC: false
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -142,7 +142,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: false
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -164,7 +164,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: false
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -186,7 +186,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: false
+     NORAI12M: false
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -208,7 +208,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: false
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -230,7 +230,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: true
      INGCPENITENCIARI: false
@@ -252,7 +252,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: true
@@ -274,7 +274,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
@@ -296,7 +296,7 @@
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
-     NORAI365: true
+     NORAI12M: true
      NOTRESRAIANT: true
      TREBALLACOMPTEPROPI: false
      INGCPENITENCIARI: false
