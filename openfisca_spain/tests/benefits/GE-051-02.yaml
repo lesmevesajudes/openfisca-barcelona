@@ -1,0 +1,208 @@
+- name: "Persona amb tots els condicionants reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 426 ]
+
+
+- name: "Persona menos de 45 NO reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: no
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+
+- name: "Persona ocupada no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: false
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+
+- name: "Persona TREBALLEXTR6M no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: false
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+- name: "Persona que ha rebut una rai en els ultims 12 mesos no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: false
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+
+- name: "Persona que ha rebut tres rai anteriors no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+
+- name: "Persona que treballa per compte propi no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: true
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+- name: "Persona que està ingressada en un penitenciari no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: true
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+
+- name: "Persona que reb prestacions incompatibles no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: true
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+- name: "Persona que està ingressada en un penitenciari no reb l'ajuda"
+  description: RAI 2 - Ajuda desocupats
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     MAJ45ANYS: true
+     DESOCUP: true
+     TREBALLEXTR6M: true
+     NORAI12M: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+  output_variables:
+     GE_051_02_mensual: [ 0 ]
+
+
+

@@ -22,7 +22,7 @@ class CAPMEMBREINGSUP530(Variable):
         members_INGINF530 = household.members('INGINF530', period)
         return household.all(members_INGINF530)
 
-class NORAI365(Variable):
+class NORAI12M(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
