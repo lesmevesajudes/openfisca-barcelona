@@ -1,0 +1,262 @@
+- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 482
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 240
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 119
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 6 ]
+
+- name: "Persona amb tots els condicionants i nivell de renda ordinari reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 3 ]
+
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 904
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 501
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 300
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 340
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+- name: "Persona amb tots els condicionants menys escolarització i nivell de renda ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: false
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+- name: "Persona amb tots els condicionants menys menjador i nivell de renda ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: false
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+
+- name: "Persona amb tots els condicionants però amb una beca menjador i nivell de renda ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: true
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: true
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+
+- name: "Persona amb tots els condicionants menys custodia i nivell de renda ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: false
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]

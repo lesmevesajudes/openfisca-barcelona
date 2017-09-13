@@ -16,6 +16,11 @@ Household = build_entity(
         'subroles': ['first_parent', 'second_parent']
         },
         {
+        'key': 'other_adult',
+        'plural': 'other_adults',
+        'label': u'Other adults'
+        },
+        {
         'key': 'child',
         'plural': 'children',
         'label': u'Child',
