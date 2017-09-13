@@ -30,7 +30,7 @@ class GE_051_02_mensual(Variable):
     column = IntCol(val_type="monetary")
     entity = Person
     definition_period = MONTH
-    label = "GE_051_02 - RAI 2 - Ajuda persones desocupades"
+    label = "GE_051_02 - RAI 2 - Per emigrants retornats major de 45 anys"
 
     def formula(person, period, legislation):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = person.household('CAPMEMBREINGSUP530', period)

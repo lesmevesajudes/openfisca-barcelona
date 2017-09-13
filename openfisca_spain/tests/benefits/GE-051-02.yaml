@@ -1,5 +1,5 @@
 - name: "Persona amb tots els condicionants reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -20,7 +20,7 @@
 
 
 - name: "Persona menos de 45 NO reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -41,7 +41,7 @@
 
 
 - name: "Persona ocupada no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -62,7 +62,7 @@
 
 
 - name: "Persona TREBALLEXTR6M no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -82,7 +82,7 @@
      GE_051_02_mensual: [ 0 ]
 
 - name: "Persona que ha rebut una rai en els ultims 12 mesos no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -103,7 +103,7 @@
 
 
 - name: "Persona que ha rebut tres rai anteriors no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -124,7 +124,7 @@
 
 
 - name: "Persona que treballa per compte propi no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -144,7 +144,7 @@
      GE_051_02_mensual: [ 0 ]
 
 - name: "Persona que està ingressada en un penitenciari no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -165,7 +165,7 @@
 
 
 - name: "Persona que reb prestacions incompatibles no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
@@ -185,7 +185,7 @@
      GE_051_02_mensual: [ 0 ]
 
 - name: "Persona que està ingressada en un penitenciari no reb l'ajuda"
-  description: RAI 2 - Ajuda desocupats
+  description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
   households:
