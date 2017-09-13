@@ -1,0 +1,201 @@
+- name: "Persona amb tots els condicionants reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 426 ]
+
+
+- name: "Persona amb ingressos superiors a 530 no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 600
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que no és victima de violència de gènere no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: false
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que no és desocupada no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: false
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que ha rebut una RAI en els ultims 12m no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: false
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que ha rebut tres RAIs no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: false
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que treballa per compte propi no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: true
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que és en ingrés penitenciari no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: true
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que reb prestacions incompatibles no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: true
+     BENAJVIOGENNOPROGOC: false
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
+- name: "Persona que és beneficiaria de programes d'ocupació per a violència de genere a no reb l'ajuda"
+  description: RAI 3 - Per víctimes de violència de gènere o domèstica
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     disposable_income: 500
+     VICVILGEN: true
+     DESOCUP: true
+     NORAI12M: true
+     NOTRESRAIANT: true
+     TREBALLACOMPTEPROPI: false
+     INGCPENITENCIARI: false
+     PRESTSSINCOMPFEINA: false
+     BENAJVIOGENNOPROGOC: true
+  output_variables:
+     GE_051_03_mensual: [ 0 ]
+
