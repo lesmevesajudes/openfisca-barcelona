@@ -3,14 +3,14 @@
   period: 2017-01
   absolute_error_margin: false
   households:
-     parents: ["pare1"]
+     parents: ["adult1"]
   persons:
-   - id: "pare1"
+   - id: "adult1"
      birth: '1961-01-15'
      disposable_income: 500
      usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -35,7 +35,7 @@
      disposable_income: 500
      usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -50,7 +50,7 @@
      disposable_income: 500
      usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -72,7 +72,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: false
+     GRAUDISCAPACITAT: 32
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -94,7 +94,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: false
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -116,7 +116,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: false
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -138,7 +138,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: false
      ACCRESFEIN: true
@@ -160,7 +160,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: false
@@ -182,7 +182,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -204,7 +204,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -226,7 +226,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -248,7 +248,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -270,7 +270,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -292,7 +292,7 @@
   persons:
    - id: "adult1"
      disposable_income: 500
-     DISCSUP33: true
+     GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
