@@ -7,14 +7,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 426 ]
 
@@ -28,14 +28,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 600
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -48,18 +48,18 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: false
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: false
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
-- name: "Persona que no és desocupada no reb l'ajuda"
+- name: "Persona que no és desocupatada no reb l'ajuda"
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
@@ -68,14 +68,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: false
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: false
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -88,14 +88,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: false
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -108,14 +108,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -128,14 +128,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: true
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: true
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -148,14 +148,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: true
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: true
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -168,14 +168,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: true
-     BENAJVIOGENNOPROGOC: false
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: true
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_03_mensual: [ 0 ]
 
@@ -188,14 +188,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     VICVILGEN: true
-     DESOCUP: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: true
+     victima_violencia_de_genere: true
+     desocupat: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: true
   output_variables:
      GE_051_03_mensual: [ 0 ]
 

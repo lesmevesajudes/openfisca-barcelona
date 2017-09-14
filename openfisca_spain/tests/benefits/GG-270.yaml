@@ -15,7 +15,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 100 ]
@@ -38,7 +38,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -61,7 +61,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -83,7 +83,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -106,7 +106,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: false
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -129,7 +129,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: true
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -152,7 +152,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: true
+     ingressat_en_centre_penitenciari: true
      BAIXAVOL12M: false
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -174,7 +174,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: true
   output_variables:
      GG_270_mensual: [ 0 ]
@@ -198,7 +198,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: false
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'
@@ -224,7 +224,7 @@
      PERMISREAGRUPFAMIDIVORCIADA: true
      RESEFECTCAT24M: true
      PRESTACIORESIDENCIAL: false
-     INGCPENITENCIARI: false
+     ingressat_en_centre_penitenciari: false
      BAIXAVOL12M: false
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'

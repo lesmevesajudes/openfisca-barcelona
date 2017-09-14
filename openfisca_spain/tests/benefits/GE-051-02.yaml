@@ -7,14 +7,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 426 ]
 
@@ -28,14 +28,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: no
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: no
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -49,19 +49,19 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: false
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: false
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
 
-- name: "Persona TREBALLEXTR6M no reb l'ajuda"
+- name: "Persona ha_treballat_a_l_estranger_6_mesos no reb l'ajuda"
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
@@ -70,14 +70,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: false
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: false
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -90,14 +90,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: false
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -111,14 +111,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -132,14 +132,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: true
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: true
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -152,14 +152,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: true
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: true
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -173,14 +173,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: true
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: true
   output_variables:
      GE_051_02_mensual: [ 0 ]
 
@@ -193,14 +193,14 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     MAJ45ANYS: true
-     DESOCUP: true
-     TREBALLEXTR6M: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
+     major_de_45_anys: true
+     desocupat: true
+     ha_treballat_a_l_estranger_6_mesos: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
   output_variables:
      GE_051_02_mensual: [ 0 ]
 

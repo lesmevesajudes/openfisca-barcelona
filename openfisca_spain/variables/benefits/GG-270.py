@@ -95,7 +95,7 @@ class GG_270_mensual(Variable):
         ha_residit_efectivament_a_cat_durant_24m = person("RESEFECTCAT24M", period)
         compleix_nivell_ingressos = person("NRINFIMPRGC", period)
         te_prestacio_servei_residencial = person("PRESTACIORESIDENCIAL", period)
-        es_intern_penitenciari = person("INGCPENITENCIARI", period)
+        es_intern_penitenciari = person("ingressat_en_centre_penitenciari", period)
         va_fer_baixa_voluntaria_ultima_feina = person("BAIXAVOL12M", period)
 
         return ((major_23

@@ -11,15 +11,15 @@
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [ 426 ]
 
@@ -36,30 +36,30 @@
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
    - id: "adult2"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [ 426, 426 ]
 
@@ -73,19 +73,19 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 32
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
-- name: "Persona sense ESGSUBSDESOC no reb l'ajuda"
+- name: "Persona sense ha_esgotat_prestacio_de_desocupatacio no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
@@ -95,37 +95,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: false
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
-  output_variables:
-     GE_051_01_mensual: [0]
-
-- name: "Persona sense discapacitat no reb l'ajuda"
-  description: RAI 1 - Ajuda discapacitats 33% o superior
-  period: 2017-01
-  absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
-   - id: "adult1"
-     ingressos_disponibles: 500
-     grau_discapacitat: 34
-     ESGSUBSDESOC: false
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: false
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -139,15 +117,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: false
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: false
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -161,15 +139,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: false
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: false
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -183,15 +161,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: false
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: false
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -205,15 +183,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: false
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -227,15 +205,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: true
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -249,15 +227,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: true
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: true
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -271,15 +249,15 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: true
-     BENAJVIOGENNOPROGOC: false
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: true
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
 
@@ -293,14 +271,36 @@
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
-     ESGSUBSDESOC: true
-     DEMANDOC12M: true
-     ACCRESFEIN: true
-     NORAI12M: true
-     NOTRESRAIANT: true
-     TREBALLACOMPTEPROPI: false
-     INGCPENITENCIARI: false
-     PRESTSSINCOMPFEINA: false
-     BENAJVIOGENNOPROGOC: true
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: true
+     beneficiari_ajuts_per_violencia_de_genere: false
+  output_variables:
+     GE_051_01_mensual: [0]
+
+- name: "Persona sense discapacitat no reb l'ajuda"
+  description: RAI 1 - Ajuda discapacitats 33% o superior
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+  persons:
+   - id: "adult1"
+     ingressos_disponibles: 500
+     grau_discapacitat: 34
+     ha_esgotat_prestacio_de_desocupatacio: true
+     demandant_d_ocupacio_durant_12_mesos: true
+     durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
+     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacins_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: true
   output_variables:
      GE_051_01_mensual: [0]
