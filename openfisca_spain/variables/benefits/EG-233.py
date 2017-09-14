@@ -2,39 +2,39 @@ from openfisca_core.model_api import *
 from openfisca_spain.entities import *
 
 
-class GUARICUS(Variable):
+class en_guardia_i_custodia(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
+    label = "The user is responsible for the child"
     set_input = set_input_dispatch_by_period
 
 
-class ESCOLARITZAT(Variable):
+class es_escolaritzat(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
+    label = "The child goes to school"
     set_input = set_input_dispatch_by_period
 
 
-class MENJADOR(Variable):
+class utilitza_el_servei_de_menjador(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
+    label = "The child uses school's lunch service"
     set_input = set_input_dispatch_by_period
 
 
-class BECAMENJADOR(Variable):
+class te_beca_menjador(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
+    label = "The child has free lunch benefit"
     set_input = set_input_dispatch_by_period
 
 
-class NR_INF_2416_80(Variable):
+class nivell_de_renda_inferior_a_2416_80(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -46,7 +46,7 @@ class NR_INF_2416_80(Variable):
                                                                     # yearly total income
 
 
-class NR_INF_2900_20(Variable):
+class nivell_de_renda_inferior_a_2900_20(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -57,7 +57,7 @@ class NR_INF_2900_20(Variable):
         return person('ingressos_disponibles', period) * 12 < 2900.20
 
 
-class NR_INF_1450_08(Variable):
+class nivell_de_renda_inferior_a_1450_08(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -68,7 +68,7 @@ class NR_INF_1450_08(Variable):
         return person('ingressos_disponibles', period) * 12 < 1450.08
 
 
-class NR_INF_1740_12(Variable):
+class nivell_de_renda_inferior_a_1740_12(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -78,65 +78,52 @@ class NR_INF_1740_12(Variable):
     def formula(person, period, legislation):
         return person('ingressos_disponibles', period) * 12 < 1740.12
 
-
-FAMNOMBROSA_CATEGORIA = Enum([
-    u'No',
-    u'General',
-    u'Especial'])
+tipus_familia_nombrosa_categories = Enum(['No', 'General', 'Especial'])
 
 
-class FAMNOMBROSA(Variable):
+class tipus_familia_nombrosa(Variable):
     column = EnumCol(
-        enum=FAMNOMBROSA_CATEGORIA,
+        enum=tipus_familia_nombrosa_categories,
         default=0  # No
     )
     entity = Household
     definition_period = MONTH
-    label = u"Tipus de familia nombrosa"
+    label = "Type of large family certification"
+
+tipus_familia_monoparental_categories = Enum([u'No', u'General', u'Especial'])
 
 
-FAMMONOPARENTAL_CATEGORIA = Enum([
-    u'No',
-    u'General',
-    u'Especial'
-])
-
-
-class FAMMONOPARENTAL(Variable):
+class tipus_familia_monoparental(Variable):
     column = EnumCol(
-        enum=FAMMONOPARENTAL_CATEGORIA,
+        enum=tipus_familia_monoparental_categories,
         default=0  # No
     )
     entity = Household
     definition_period = MONTH
-    label = u"Tipus de familia monoparental"
+    label = "Type of monoparental family certification"
+
+nivell_de_risc_d_exclusio_social_categories = Enum(['No', 'Existeix', 'Greu'])
 
 
-RISCEXCLUSIOSOCIAL_CATEGORIA = Enum([
-    u'No',
-    u'Existeix',
-    u'Greu'
-])
-
-class RISCEXCLUSIOSOCIAL(Variable):
+class nivell_de_risc_d_exclusio_social(Variable):
     column = EnumCol(
-        enum=RISCEXCLUSIOSOCIAL_CATEGORIA,
+        enum=nivell_de_risc_d_exclusio_social_categories,
         default=0  # No
     )
     entity = Household
     definition_period = MONTH
-    label = u"Nivell de risc d'exclusio social"
+    label = "Level of social exclusion risk"
 
 
-class ENACOLLIMENT(Variable):
+class en_acolliment(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "L'infant es troba en regim d'acolliment"
+    label = "The child is in protection regime"
     set_input = set_input_dispatch_by_period
 
 
-class PUNTSGRAUDISCAPACITAT(Variable):
+class punts_assignats_per_grau_de_discapacitat(Variable):
     column = FloatCol
     entity = Person
     definition_period = MONTH
@@ -144,10 +131,11 @@ class PUNTSGRAUDISCAPACITAT(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(person, period, legislation):
-        grau_discapacitat = person("GRAUDISCAPACITAT", period)
+        grau_discapacitat = person("grau_discapacitat", period)
         return select([grau_discapacitat <= 33, grau_discapacitat > 33], [1.5, 3])
 
-class PUNTUACIO_FAMILIAR_EG_233(Variable):
+
+class puntuacio_de_la_familia_segons_eg_233(Variable):
     column = FloatCol
     entity = Household
     definition_period = MONTH
@@ -155,55 +143,100 @@ class PUNTUACIO_FAMILIAR_EG_233(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(household, period, legislation):
-        tipus_familia_nombrosa = household("FAMNOMBROSA", period)
-        puntuacio_familia_nombrosa = select([tipus_familia_nombrosa == FAMNOMBROSA_CATEGORIA['General'],
-                                             tipus_familia_nombrosa == FAMNOMBROSA_CATEGORIA['Especial']],
-                                            [1.5, 3])
-        tipus_familia_monoparental = household("FAMMONOPARENTAL", period)
-        puntuacio_familia_monoparental = select([tipus_familia_monoparental == FAMMONOPARENTAL_CATEGORIA['General'],
-                                                  tipus_familia_monoparental == FAMMONOPARENTAL_CATEGORIA['Especial']],
-                                                 [1.5, 3])
-        tipus_risc_exclusio_social = household("RISCEXCLUSIOSOCIAL", period)
-        puntuacio_risc_exclusio_social = select([tipus_risc_exclusio_social == RISCEXCLUSIOSOCIAL_CATEGORIA["Existeix"],
-                                                 tipus_risc_exclusio_social == RISCEXCLUSIOSOCIAL_CATEGORIA["Greu"]],
-                                                [10, 15])
-        punts_per_grau_discapacitat_membres = household.members("PUNTSGRAUDISCAPACITAT", period)
+        tipus_familia_nombrosa = household("tipus_familia_nombrosa", period)
+        puntuacio_familia_nombrosa = select([
+            tipus_familia_nombrosa == tipus_familia_nombrosa_categories['General'],
+            tipus_familia_nombrosa == tipus_familia_nombrosa_categories['Especial']],
+            [1.5, 3])
+        tipus_familia_monoparental = household("tipus_familia_monoparental", period)
+        puntuacio_familia_monoparental = select([
+            tipus_familia_monoparental == tipus_familia_monoparental_categories['General'],
+            tipus_familia_monoparental == tipus_familia_monoparental_categories['Especial']],
+            [1.5, 3])
+        tipus_risc_exclusio_social = household("nivell_de_risc_d_exclusio_social", period)
+        puntuacio_risc_exclusio_social = select([
+            tipus_risc_exclusio_social == nivell_de_risc_d_exclusio_social_categories["Existeix"],
+            tipus_risc_exclusio_social == nivell_de_risc_d_exclusio_social_categories["Greu"]],
+            [10, 15])
+        punts_per_grau_discapacitat_membres = household.members("punts_assignats_per_grau_de_discapacitat", period)
         punts_grau_discapacitat = household.sum(punts_per_grau_discapacitat_membres)
 
-        en_acolliment_membres = household.members("PUNTSGRAUDISCAPACITAT", period)
+        en_acolliment_membres = household.members("punts_assignats_per_grau_de_discapacitat", period)
         punts_en_acolliment = household.sum(en_acolliment_membres) * 3
 
         return puntuacio_familia_nombrosa + puntuacio_familia_monoparental + puntuacio_risc_exclusio_social + \
                punts_grau_discapacitat + punts_en_acolliment
 
 
-class VOLUMNEGOCI(Variable):
+class volum_del_negoci_familiar(Variable):
     column = IntCol(val_type="monetary")
     entity = Household
     definition_period = YEAR
     label = "Household total income due family business"
     set_input = set_input_divide_by_period
 
-class RENDIMENTSPATRIMONIALS(Variable):
+
+class rendiments_del_patrimoni(Variable):
     column = IntCol(val_type="monetary")
     entity = Household
     definition_period = YEAR
     label = "Household total income due properties"
     set_input = set_input_dispatch_by_period
 
-class VALORCADASTRALRUSTICEXTRES(Variable):
+
+class valor_cadastral_finques_rustiques(Variable):
     column = IntCol(val_type="monetary")
     entity = Household
     definition_period = YEAR
     label = "Household total valuation of rustic properties"
     set_input = set_input_dispatch_by_period
 
-class VALORCADASTRALURBA(Variable):
+
+class valor_cadastral_finques_urbanes(Variable):
     column = IntCol(val_type="monetary")
     entity = Household
     definition_period = YEAR
     label = "Household total valuation of urban properties"
     set_input = set_input_dispatch_by_period
+
+
+def compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(person, period, legislation):
+    nivell_renda_primer_adult = person.household.first_parent('ingressos_disponibles', period) * 12
+    nivell_renda_segon_adult = person.household.second_parent('ingressos_disponibles', period) * 12
+
+    els_adults_satisfant_criteris_de_nivell_de_renda = \
+        (nivell_renda_primer_adult < 5800.38) * (nivell_renda_segon_adult < 2900.16)
+
+    els_altres_adults_compleixen_criteris_de_nivell_de_renda = \
+        person.household.all(person.household.members('nivell_de_renda_inferior_a_1450_08', period), role=Household.OTHER_ADULT)
+
+    els_menors_compleixen_els_criteris_de_nivell_de_renda = \
+        person.household.all(person.household.members('nivell_de_renda_inferior_a_1740_12', period), role=Household.CHILD)
+
+
+    return \
+        els_adults_satisfant_criteris_de_nivell_de_renda \
+        * els_altres_adults_compleixen_criteris_de_nivell_de_renda\
+        * els_menors_compleixen_els_criteris_de_nivell_de_renda
+
+
+def compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(person, period, legislation):
+    nivell_renda_primer_adult = person.household.first_parent('ingressos_disponibles', period) * 12
+    nivell_renda_segon_adult = person.household.second_parent('ingressos_disponibles', period) * 12
+
+    els_adults_satisfant_criteris_de_nivell_de_renda = (nivell_renda_primer_adult < 9667.30) \
+                                                       * (nivell_renda_segon_adult < 4833.60)
+
+    els_altres_adults_compleixen_criteris_de_nivell_de_renda = person.household.all(
+        person.household.members('nivell_de_renda_inferior_a_2416_80', period), role=Household.OTHER_ADULT)
+
+    els_menors_compleixen_els_criteris_de_nivell_de_renda = \
+        person.household.all(person.household.members('nivell_de_renda_inferior_a_2900_20', period), role=Household.CHILD)
+
+    return els_adults_satisfant_criteris_de_nivell_de_renda \
+           * els_altres_adults_compleixen_criteris_de_nivell_de_renda \
+           * els_menors_compleixen_els_criteris_de_nivell_de_renda
+
 
 class EG_233_mensual(Variable):
     column = IntCol(val_type="monetary")
@@ -213,62 +246,36 @@ class EG_233_mensual(Variable):
 
     def formula(person, period, legislation):
 
-        ESCOLARITZAT = person('ESCOLARITZAT', period)
-        MENJADOR = person('MENJADOR', period)
-        NOBECAMENJADOR = person('BECAMENJADOR', period) == False
-        ESCHILD = person.has_role(Household.CHILD)
-        CUSTODIA = person.household.first_parent('GUARICUS', period)
-        compleix_els_requeriments = CUSTODIA * \
-                                    ESCOLARITZAT * \
-                                    MENJADOR * \
-                                    NOBECAMENJADOR * \
-                                    ESCHILD
+        es_escolaritzat = person('es_escolaritzat', period)
+        utilitza_el_servei_de_menjador = person('utilitza_el_servei_de_menjador', period)
+        no_te_beca_menjador = person('te_beca_menjador', period) == False
+        es_un_menor = person.has_role(Household.CHILD)
+        en_guardia_i_custodia = person.household.first_parent('en_guardia_i_custodia', period)   # Fixme: Need to understand the
+                                                                                    # semantics of this concept.
+                                                                                    # Somebody is in "guardia i
+                                                                                    # custodia" somebody has "guardia y
+                                                                                    # custodia" over somebody else...
+        compleix_els_requeriments = en_guardia_i_custodia * \
+                                    es_escolaritzat * \
+                                    utilitza_el_servei_de_menjador * \
+                                    no_te_beca_menjador * \
+                                    es_un_menor
 
-        compleix_ajut_ordinari = determine_ajut_ordinari_nr_compliance(person, period, legislation)
+        compleix_ajut_ordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(person, period, legislation)
 
-        puntuacio_familiar = person.household("PUNTUACIO_FAMILIAR_EG_233", period)
-        volum_de_negoci = person.household("VOLUMNEGOCI", period.last_year)
-        rendiments_patrimonials = person.household("RENDIMENTSPATRIMONIALS", period.last_year)
-        valoracio_cadastral_propietats_rustiques = person.household("VALORCADASTRALRUSTICEXTRES", period.this_year)
-        valor_cadastral_propietats_urbanes = person.household("VALORCADASTRALURBA", period.this_year)
+        puntuacio_familiar = person.household("puntuacio_de_la_familia_segons_eg_233", period)
+        volum_de_negoci = person.household("volum_del_negoci_familiar", period.last_year)
+        rendiments_patrimonials = person.household("rendiments_del_patrimoni", period.last_year)
+        valor_cadastral_finques_rustiques = person.household("valor_cadastral_finques_rustiques", period.this_year)
+        valor_cadastral_finques_urbanes = person.household("valor_cadastral_finques_urbanes", period.this_year)
 
-        print volum_de_negoci, rendiments_patrimonials, valoracio_cadastral_propietats_rustiques, valor_cadastral_propietats_urbanes
-        print(puntuacio_familiar >= 15), (volum_de_negoci < 155000), (rendiments_patrimonials < 1700), (valoracio_cadastral_propietats_rustiques < 131390), (valor_cadastral_propietats_urbanes < 42900)
-
-        compleix_ajut_extraordinari = determine_ajut_extraordinari_nr_compliance(person, period, legislation) \
+        compleix_ajut_extraordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(person, period, legislation) \
                                       * (puntuacio_familiar >= 15) \
                                       * (volum_de_negoci < 155000) \
                                       * (rendiments_patrimonials < 1700) \
-                                      * (valoracio_cadastral_propietats_rustiques < 131390) \
-                                      * (valor_cadastral_propietats_urbanes < 42900)
+                                      * (valor_cadastral_finques_rustiques < 131390) \
+                                      * (valor_cadastral_finques_urbanes < 42900)
 
         import_EG_233 = select([compleix_ajut_extraordinari, compleix_ajut_ordinari], [6, 3])
 
         return compleix_els_requeriments * import_EG_233
-
-
-def determine_ajut_extraordinari_nr_compliance(person, period, legislation):
-    nr_adult_demandant = person.household.first_parent('ingressos_disponibles', period) * 12
-    nr_adult_secundari = person.household.second_parent('ingressos_disponibles', period) * 12
-    other_adult_satisfy_extraordinari_nr = person.household.all(person.household.members('NR_INF_1450_08', period),
-                                                                role=Household.OTHER_ADULT)
-
-    children_satisfy_extraordinari_nr = person.household.all(person.household.members('NR_INF_1740_12', period),
-                                                             role=Household.CHILD)
-
-    adults_satisfy_extraordinary_nr = (nr_adult_demandant < 5800.38) * (nr_adult_secundari < 2900.16)
-    return adults_satisfy_extraordinary_nr * other_adult_satisfy_extraordinari_nr * children_satisfy_extraordinari_nr
-
-
-def determine_ajut_ordinari_nr_compliance(person, period, legislation):
-    nr_adult_demandant = person.household.first_parent('ingressos_disponibles', period) * 12
-    nr_adult_secundari = person.household.second_parent('ingressos_disponibles', period) * 12
-
-    other_adult_satisfy_ordinari_nr = person.household.all(person.household.members('NR_INF_2416_80', period),
-                                                           role=Household.OTHER_ADULT)
-
-    children_satisfy_ordinari_nr = person.household.all(person.household.members('NR_INF_2900_20', period),
-                                                        role=Household.CHILD)
-
-    adults_satisfy_ordinari_nr = (nr_adult_demandant < 9667.30) * (nr_adult_secundari < 4833.60)
-    return adults_satisfy_ordinari_nr * other_adult_satisfy_ordinari_nr * children_satisfy_ordinari_nr

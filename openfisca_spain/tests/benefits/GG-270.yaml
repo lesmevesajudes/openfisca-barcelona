@@ -202,7 +202,7 @@
      BAIXAVOL12M: false
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'
-     GRAUDISCAPACITAT: 33
+     grau_discapacitat: 33
   output_variables:
      GG_270_mensual: [ 100, 0 ]
 
@@ -228,6 +228,6 @@
      BAIXAVOL12M: false
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'
-     GRAUDISCAPACITAT: 33
+     grau_discapacitat: 33
   output_variables:
      GG_270_mensual: [ 100, 0 ]

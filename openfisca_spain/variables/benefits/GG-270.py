@@ -65,7 +65,7 @@ class ESDISCAPACITAT(Variable):
     label = "True if person is disabled"
 
     def formula(person, period, legislation):
-        return person("GRAUDISCAPACITAT", period) > 0
+        return person("grau_discapacitat", period) > 0
 
 class NRINFIMPRGC(Variable):
     column = BoolCol

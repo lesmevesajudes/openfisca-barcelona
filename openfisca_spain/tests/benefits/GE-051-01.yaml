@@ -10,7 +10,7 @@
      ingressos_disponibles: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -35,7 +35,7 @@
      ingressos_disponibles: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -50,7 +50,7 @@
      ingressos_disponibles: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -72,7 +72,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 32
+     grau_discapacitat: 32
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -94,7 +94,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: false
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -116,7 +116,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: false
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -138,7 +138,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: false
      ACCRESFEIN: true
@@ -160,7 +160,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: false
@@ -182,7 +182,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -204,7 +204,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -226,7 +226,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -248,7 +248,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -270,7 +270,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true
@@ -292,7 +292,7 @@
   persons:
    - id: "adult1"
      ingressos_disponibles: 500
-     GRAUDISCAPACITAT: 34
+     grau_discapacitat: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
      ACCRESFEIN: true

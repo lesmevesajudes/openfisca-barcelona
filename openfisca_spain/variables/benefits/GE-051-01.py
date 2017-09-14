@@ -3,7 +3,7 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_spain.entities import *
 
-class GRAUDISCAPACITAT(Variable):
+class grau_discapacitat(Variable):
     column = IntCol
     entity = Person
     definition_period = MONTH
@@ -51,7 +51,7 @@ class GE_051_01_mensual(Variable):
 
     def formula(person, period, legislation):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = person.household('CAPMEMBREINGSUP530', period)
-        discapacitat_superior_al_33_percent = person('GRAUDISCAPACITAT', period) > 33
+        discapacitat_superior_al_33_percent = person('grau_discapacitat', period) > 33
         ESGSUBSDESOC = person('ESGSUBSDESOC', period)
         DEMANDOC12M = person('DEMANDOC12M', period)
         ACCRESFEIN = person('ACCRESFEIN', period)
