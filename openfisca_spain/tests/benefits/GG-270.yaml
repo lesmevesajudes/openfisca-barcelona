@@ -1,0 +1,233 @@
+- name: "Persona amb tots els condicionants reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 100 ]
+
+
+- name: "Persona amb ingressos superiors al limit no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 531
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+
+- name: "Persona no empadronada a Catalunya no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: false
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+- name: "Persona sense permis de residencia no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: false
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+
+- name: "Persona que no ha viscut els ultims 24 mesos a Catalunya no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: false
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+
+- name: "Persona que te una ajuda residencial no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: true
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+
+- name: "Persona que que és un pres no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: true
+     BAIXAVOL12M: false
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+- name: "Persona que va causar baixa voluntaria de la última feina no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+  persons:
+   - id: "adult"
+     birth: '1961-01-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: true
+  output_variables:
+     GG_270_mensual: [ 0 ]
+
+
+- name: "Persona menor de 23 orfe de projenitors amb discapacitats a carrec reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+     children: ["menor_discapacitat"]
+  persons:
+   - id: "adult"
+     birth: '1998-03-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: true
+     PERMISRESID: true
+     PERMISREAGRUPFAMIDIVORCIADA: false
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+   - id: "menor_discapacitat"
+     birth: '2008-03-15'
+     GRAUDISCAPACITAT: 33
+  output_variables:
+     GG_270_mensual: [ 100, 0 ]
+
+- name: "Persona no empadronada i sense permis pero divorciada de familia reagrupada reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult"]
+     children: ["menor_discapacitat"]
+  persons:
+   - id: "adult"
+     birth: '1998-03-15'
+     disposable_income: 529
+     ORFEDOSPROJENITORS: true
+     VICTIMAVIOLENCIAMASCLISTA: true
+     EMPCAT: false
+     PERMISRESID: false
+     PERMISREAGRUPFAMIDIVORCIADA: true
+     RESEFECTCAT24M: true
+     PRESTACIORESIDENCIAL: false
+     INGCPENITENCIARI: false
+     BAIXAVOL12M: false
+   - id: "menor_discapacitat"
+     birth: '2008-03-15'
+     GRAUDISCAPACITAT: 33
+  output_variables:
+     GG_270_mensual: [ 100, 0 ]
