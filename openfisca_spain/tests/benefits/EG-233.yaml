@@ -6,21 +6,33 @@
      parents: ["adult1", "adult2"]
      other_adults: ["adult3"]
      children: ["menor1"]
+     RISCEXCLUSIOSOCIAL: Greu
+     FAMMONOPARENTAL: No
+     FAMNOMBROSA: No
+     VOLUMNEGOCI: 0
+     RENDIMENTSPATRIMONIALS: 0
+     VALORCADASTRALRUSTICEXTRES: 0
+     VALORCADASTRALURBA: 0
   persons:
    - id: "adult1"
      disposable_income: 482
      GUARICUS: true
+     GRAUDISCAPACITAT: 0
    - id: "adult2"
      disposable_income: 240
      GUARICUS: false
+     GRAUDISCAPACITAT: 0
    - id: "adult3"
      disposable_income: 119
      GUARICUS: false
+     GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
      disposable_income: 144
+     GRAUDISCAPACITAT: 0
+     ENACOLLIMENT: false
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 6 ]
 
@@ -260,3 +272,225 @@
      disposable_income: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
+
+
+- name: "Persona amb tots els condicionants menys custodia i nivell de renda ordinari no reb l'ajuda ordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+     FAMNOMBROSA: 'General'
+  persons:
+   - id: "adult1"
+     disposable_income: 804
+     GUARICUS: false
+   - id: "adult2"
+     disposable_income: 401
+     GUARICUS: false
+   - id: "adult3"
+     disposable_income: 200
+     GUARICUS: false
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 240
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 0 ]
+
+
+- name: "Familia amb volum de negoci superior al limit NO reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+     RISCEXCLUSIOSOCIAL: Greu
+     FAMMONOPARENTAL: No
+     FAMNOMBROSA: No
+     VOLUMNEGOCI:
+      2016-01: 155001
+     RENDIMENTSPATRIMONIALS: 0
+     VALORCADASTRALRUSTICEXTRES: 0
+     VALORCADASTRALURBA: 0
+  persons:
+   - id: "adult1"
+     disposable_income: 482
+     GUARICUS: true
+     GRAUDISCAPACITAT: 0
+   - id: "adult2"
+     disposable_income: 240
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "adult3"
+     disposable_income: 119
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+     GRAUDISCAPACITAT: 0
+     ENACOLLIMENT: false
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 3 ]
+
+
+- name: "Familia amb rendiments patrimonials superiors al llindar NO reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+     RISCEXCLUSIOSOCIAL: Greu
+     FAMMONOPARENTAL: No
+     FAMNOMBROSA: No
+     VOLUMNEGOCI: 0
+     RENDIMENTSPATRIMONIALS:
+      2016-01: 1701
+     VALORCADASTRALRUSTICEXTRES: 0
+     VALORCADASTRALURBA: 0
+  persons:
+   - id: "adult1"
+     disposable_income: 482
+     GUARICUS: true
+     GRAUDISCAPACITAT: 0
+   - id: "adult2"
+     disposable_income: 240
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "adult3"
+     disposable_income: 119
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+     GRAUDISCAPACITAT: 0
+     ENACOLLIMENT: false
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 3 ]
+
+- name: "Familia amb valoracions cadastrals rustiques superiors al llindar NO reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+     RISCEXCLUSIOSOCIAL: Greu
+     FAMMONOPARENTAL: No
+     FAMNOMBROSA: No
+     VOLUMNEGOCI: 0
+     RENDIMENTSPATRIMONIALS: 0
+     VALORCADASTRALRUSTICEXTRES: 131391
+     VALORCADASTRALURBA: 0
+  persons:
+   - id: "adult1"
+     disposable_income: 482
+     GUARICUS: true
+     GRAUDISCAPACITAT: 0
+   - id: "adult2"
+     disposable_income: 240
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "adult3"
+     disposable_income: 119
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+     GRAUDISCAPACITAT: 0
+     ENACOLLIMENT: false
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 3 ]
+
+
+- name: "Familia amb valoracions cadastrals urbanes superiors al llindar NO reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1", "adult2"]
+     other_adults: ["adult3"]
+     children: ["menor1"]
+     RISCEXCLUSIOSOCIAL: Greu
+     FAMMONOPARENTAL: No
+     FAMNOMBROSA: No
+     VOLUMNEGOCI: 0
+     RENDIMENTSPATRIMONIALS: 0
+     VALORCADASTRALRUSTICEXTRES: 0
+     VALORCADASTRALURBA: 42901
+  persons:
+   - id: "adult1"
+     disposable_income: 482
+     GUARICUS: true
+     GRAUDISCAPACITAT: 0
+   - id: "adult2"
+     disposable_income: 240
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "adult3"
+     disposable_income: 119
+     GUARICUS: false
+     GRAUDISCAPACITAT: 0
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+     GRAUDISCAPACITAT: 0
+     ENACOLLIMENT: false
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 3 ]
+
+
+- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  households:
+     parents: ["adult1"]
+     children: ["menor1", "menor2"]
+     RISCEXCLUSIOSOCIAL: No
+     FAMMONOPARENTAL: Especial
+     FAMNOMBROSA: Especial
+     VOLUMNEGOCI: 0
+     RENDIMENTSPATRIMONIALS: 0
+     VALORCADASTRALRUSTICEXTRES: 0
+     VALORCADASTRALURBA: 0
+  persons:
+   - id: "adult1"
+     disposable_income: 482
+     GUARICUS: true
+     GRAUDISCAPACITAT: 0
+   - id: "menor1"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+     GRAUDISCAPACITAT: 34
+     ENACOLLIMENT: true
+   - id: "menor2"
+     ESCOLARITZAT: true
+     MENJADOR: true
+     BECAMENJADOR: false
+     disposable_income: 144
+     GRAUDISCAPACITAT: 34
+     ENACOLLIMENT: false
+  output_variables:
+    EG_233_mensual: [ 0, 6, 6 ]
