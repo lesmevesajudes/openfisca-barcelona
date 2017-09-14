@@ -459,7 +459,7 @@
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
 
-- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria"
+- name: "Familia obté ajut extraordinari per punts família"
   description: EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
