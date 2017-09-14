@@ -18,9 +18,9 @@ class household_disposable_income(Variable):
     set_input = set_input_divide_by_period
 
     def formula(household, period):
-        salaries = household.members('disposable_income', period)
-        sum_salaries = household.sum(salaries)
-        return sum_salaries
+        ingressos_membres_de_la_familia = household.members('ingressos_disponibles', period)
+        total_ingressos_familia = household.sum(ingressos_membres_de_la_familia)
+        return total_ingressos_familia
 
 
 def varem_irsc_016(nr_members):
@@ -49,7 +49,7 @@ def varem_irsc_016(nr_members):
              41830.58])
 
 
-class usuari_serveis_socials(Variable):
+class es_usuari_serveis_socials(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -64,13 +64,13 @@ class AE_230_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(person, period, legislation):
-        age_requirement = person('age', period) < 16
-        income_condition = person.household('household_disposable_income', period) < \
+        te_menys_de_16_anys = person('age', period) < 16
+        ingressos_inferiors_varem = person.household('household_disposable_income', period) < \
                            varem_irsc_016(person.household.nb_persons())
-        usuari_serveis_socials_condition = person('usuari_serveis_socials', period)
-        empadronat_a_barcelona_condition = person('ciutat_empadronament', period) == "Barcelona"
-        return age_requirement \
-               * income_condition \
-               * empadronat_a_barcelona_condition \
-               * usuari_serveis_socials_condition \
+        es_usuari_serveis_socials = person('es_usuari_serveis_socials', period)
+        es_empadronat_a_barcelona = person('ciutat_empadronament', period) == "Barcelona"
+        return te_menys_de_16_anys \
+               * ingressos_inferiors_varem \
+               * es_empadronat_a_barcelona \
+               * es_usuari_serveis_socials \
                * 100

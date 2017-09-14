@@ -74,7 +74,7 @@ class NRINFIMPRGC(Variable):
     label = "True if income is less than IRSC"
 
     def formula(person, period, legislation):
-        return person("disposable_income", period) < 530 #Fixme: Stub, as I can not understand documentation
+        return person("ingressos_disponibles", period) < 530 #Fixme: Stub, as I can not understand documentation
 
 
 class GG_270_mensual(Variable):

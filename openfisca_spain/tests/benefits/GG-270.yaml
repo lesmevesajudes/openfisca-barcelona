@@ -6,8 +6,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -29,8 +29,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 531
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 531
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -52,8 +52,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: false
@@ -74,8 +74,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -97,8 +97,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -120,8 +120,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -143,8 +143,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -165,8 +165,8 @@
      parents: ["adult"]
   persons:
    - id: "adult"
-     birth: '1961-01-15'
-     disposable_income: 529
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -189,8 +189,8 @@
      children: ["menor_discapacitat"]
   persons:
    - id: "adult"
-     birth: '1998-03-15'
-     disposable_income: 529
+     data_naixement: '1998-03-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: true
@@ -201,7 +201,7 @@
      INGCPENITENCIARI: false
      BAIXAVOL12M: false
    - id: "menor_discapacitat"
-     birth: '2008-03-15'
+     data_naixement: '2008-03-15'
      GRAUDISCAPACITAT: 33
   output_variables:
      GG_270_mensual: [ 100, 0 ]
@@ -215,8 +215,8 @@
      children: ["menor_discapacitat"]
   persons:
    - id: "adult"
-     birth: '1998-03-15'
-     disposable_income: 529
+     data_naixement: '1998-03-15'
+     ingressos_disponibles: 529
      ORFEDOSPROJENITORS: true
      VICTIMAVIOLENCIAMASCLISTA: true
      EMPCAT: false
@@ -227,7 +227,7 @@
      INGCPENITENCIARI: false
      BAIXAVOL12M: false
    - id: "menor_discapacitat"
-     birth: '2008-03-15'
+     data_naixement: '2008-03-15'
      GRAUDISCAPACITAT: 33
   output_variables:
      GG_270_mensual: [ 100, 0 ]

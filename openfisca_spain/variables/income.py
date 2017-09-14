@@ -18,7 +18,7 @@ class salary(Variable):
     label = "Salary"
 
 
-class disposable_income(Variable):
+class ingressos_disponibles(Variable):
     column = FloatCol
     entity = Person
     definition_period = MONTH

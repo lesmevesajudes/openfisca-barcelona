@@ -20,12 +20,12 @@ class age(Variable):
 
     # A person's age is computed according to its birth date.
     def formula(person, period, legislation):
-        birth = person('birth', period)
-        return (datetime64(period.date) - birth).astype('timedelta64[Y]')
+        data_naixement = person('data_naixement', period)
+        return (datetime64(period.date) - data_naixement).astype('timedelta64[Y]')
 
 
 # This variable is a pure input: it doesn't have a formula
-class birth(Variable):
+class data_naixement(Variable):
     column = DateCol(default = date(1970, 1, 1))  # By default, is no value is set for a simulation, we consider the people involed in a simulation to be born on the 1st of Jan 1970.
     entity = Person
     label = u"Birth date"

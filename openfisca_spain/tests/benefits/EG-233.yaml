@@ -15,22 +15,22 @@
      VALORCADASTRALURBA: 0
   persons:
    - id: "adult1"
-     disposable_income: 482
+     ingressos_disponibles: 482
      GUARICUS: true
      GRAUDISCAPACITAT: 0
    - id: "adult2"
-     disposable_income: 240
+     ingressos_disponibles: 240
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "adult3"
-     disposable_income: 119
+     ingressos_disponibles: 119
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 0
      ENACOLLIMENT: false
   output_variables:
@@ -46,19 +46,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -72,19 +72,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 904
+     ingressos_disponibles: 904
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -99,19 +99,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 501
+     ingressos_disponibles: 501
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -125,19 +125,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 300
+     ingressos_disponibles: 300
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -151,19 +151,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 340
+     ingressos_disponibles: 340
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -177,19 +177,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: false
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -203,19 +203,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: false
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -230,19 +230,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: true
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: true
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -257,19 +257,19 @@
      children: ["menor1"]
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: false
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -285,19 +285,19 @@
      FAMNOMBROSA: 'General'
   persons:
    - id: "adult1"
-     disposable_income: 804
+     ingressos_disponibles: 804
      GUARICUS: false
    - id: "adult2"
-     disposable_income: 401
+     ingressos_disponibles: 401
      GUARICUS: false
    - id: "adult3"
-     disposable_income: 200
+     ingressos_disponibles: 200
      GUARICUS: false
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 240
+     ingressos_disponibles: 240
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -320,22 +320,22 @@
      VALORCADASTRALURBA: 0
   persons:
    - id: "adult1"
-     disposable_income: 482
+     ingressos_disponibles: 482
      GUARICUS: true
      GRAUDISCAPACITAT: 0
    - id: "adult2"
-     disposable_income: 240
+     ingressos_disponibles: 240
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "adult3"
-     disposable_income: 119
+     ingressos_disponibles: 119
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 0
      ENACOLLIMENT: false
   output_variables:
@@ -360,22 +360,22 @@
      VALORCADASTRALURBA: 0
   persons:
    - id: "adult1"
-     disposable_income: 482
+     ingressos_disponibles: 482
      GUARICUS: true
      GRAUDISCAPACITAT: 0
    - id: "adult2"
-     disposable_income: 240
+     ingressos_disponibles: 240
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "adult3"
-     disposable_income: 119
+     ingressos_disponibles: 119
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 0
      ENACOLLIMENT: false
   output_variables:
@@ -398,22 +398,22 @@
      VALORCADASTRALURBA: 0
   persons:
    - id: "adult1"
-     disposable_income: 482
+     ingressos_disponibles: 482
      GUARICUS: true
      GRAUDISCAPACITAT: 0
    - id: "adult2"
-     disposable_income: 240
+     ingressos_disponibles: 240
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "adult3"
-     disposable_income: 119
+     ingressos_disponibles: 119
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 0
      ENACOLLIMENT: false
   output_variables:
@@ -437,22 +437,22 @@
      VALORCADASTRALURBA: 42901
   persons:
    - id: "adult1"
-     disposable_income: 482
+     ingressos_disponibles: 482
      GUARICUS: true
      GRAUDISCAPACITAT: 0
    - id: "adult2"
-     disposable_income: 240
+     ingressos_disponibles: 240
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "adult3"
-     disposable_income: 119
+     ingressos_disponibles: 119
      GUARICUS: false
      GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 0
      ENACOLLIMENT: false
   output_variables:
@@ -475,21 +475,21 @@
      VALORCADASTRALURBA: 0
   persons:
    - id: "adult1"
-     disposable_income: 482
+     ingressos_disponibles: 482
      GUARICUS: true
      GRAUDISCAPACITAT: 0
    - id: "menor1"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 34
      ENACOLLIMENT: true
    - id: "menor2"
      ESCOLARITZAT: true
      MENJADOR: true
      BECAMENJADOR: false
-     disposable_income: 144
+     ingressos_disponibles: 144
      GRAUDISCAPACITAT: 34
      ENACOLLIMENT: false
   output_variables:

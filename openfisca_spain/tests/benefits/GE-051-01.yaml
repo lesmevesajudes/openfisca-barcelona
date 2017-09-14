@@ -6,9 +6,9 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     birth: '1961-01-15'
-     disposable_income: 500
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 500
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
@@ -31,9 +31,9 @@
      parents: ["adult1", "adult2"]
   persons:
    - id: "adult1"
-     birth: '1961-01-15'
-     disposable_income: 500
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 500
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
@@ -46,9 +46,9 @@
      PRESTSSINCOMPFEINA: false
      BENAJVIOGENNOPROGOC: false
    - id: "adult2"
-     birth: '1961-01-15'
-     disposable_income: 500
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 500
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
@@ -71,7 +71,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 32
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -93,7 +93,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: false
      DEMANDOC12M: true
@@ -115,7 +115,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: false
      DEMANDOC12M: true
@@ -137,7 +137,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: false
@@ -159,7 +159,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -181,7 +181,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -203,7 +203,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -225,7 +225,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -247,7 +247,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -269,7 +269,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true
@@ -291,7 +291,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      GRAUDISCAPACITAT: 34
      ESGSUBSDESOC: true
      DEMANDOC12M: true

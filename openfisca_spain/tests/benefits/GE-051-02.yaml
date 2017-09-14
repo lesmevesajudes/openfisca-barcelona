@@ -6,7 +6,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -27,7 +27,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: no
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -48,7 +48,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: false
      TREBALLEXTR6M: true
@@ -69,7 +69,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: false
@@ -89,7 +89,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -110,7 +110,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -131,7 +131,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -151,7 +151,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -172,7 +172,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true
@@ -192,7 +192,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      MAJ45ANYS: true
      DESOCUP: true
      TREBALLEXTR6M: true

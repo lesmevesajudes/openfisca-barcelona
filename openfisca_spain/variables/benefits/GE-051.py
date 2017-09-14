@@ -9,7 +9,7 @@ class INGINF530(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(person, period, legislation):
-        return person('disposable_income', period) < 530
+        return person('ingressos_disponibles', period) < 530
 
 class CAPMEMBREINGSUP530(Variable):
     column = BoolCol

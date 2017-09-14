@@ -6,7 +6,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true
@@ -27,7 +27,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 600
+     ingressos_disponibles: 600
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true
@@ -47,7 +47,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: false
      DESOCUP: true
      NORAI12M: true
@@ -67,7 +67,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: false
      NORAI12M: true
@@ -87,7 +87,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: false
@@ -107,7 +107,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true
@@ -127,7 +127,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true
@@ -147,7 +147,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true
@@ -167,7 +167,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true
@@ -187,7 +187,7 @@
      parents: ["adult1"]
   persons:
    - id: "adult1"
-     disposable_income: 500
+     ingressos_disponibles: 500
      VICVILGEN: true
      DESOCUP: true
      NORAI12M: true

@@ -92,7 +92,7 @@ class ESBLJ(Variable):
     label = "The user has more than 65 years at 31/12/2012"
     set_input = set_input_dispatch_by_period
     def formula(person, period, legislation):
-        return major_de_65_el_2012_12_31(person('birth',period))
+        return major_de_65_el_2012_12_31(person('data_naixement',period))
 
 
 def major_de_65_el_2012_12_31(data_de_naixement):
@@ -125,9 +125,9 @@ class HG_077_mensual(Variable):
             person('PROHBENSUB', period) * \
             person('COMPOBTRIBADMIN', period)
         irsc_per_0_94 = 569.12 * 0.94
-        lloguer_just = where(person('disposable_income', period)/12 > irsc_per_0_94,
-                             person('disposable_income', period)/12 * 0.3,
-                             person('disposable_income', period)/12 * 0.2)
+        lloguer_just = where(person('ingressos_disponibles', period)/12 > irsc_per_0_94,
+                             person('ingressos_disponibles', period)/12 * 0.3,
+                             person('ingressos_disponibles', period)/12 * 0.2)
         import_ajuda_BLJ = max_(min_(person.household('import_del_lloguer', period) - lloguer_just, 2880/12), 0)
         import_ajuda_no_BLJ = max_(min_(person.household('import_del_lloguer', period) - lloguer_just, 200), 20)
         BLJStatus = person.household.members('ESBLJ', period)

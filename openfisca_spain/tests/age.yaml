@@ -5,7 +5,7 @@
 - name: Person born on the 15th of Jan 1980
   period: 2015-01
   input_variables:
-    birth: 1980-01-15
+    data_naixement: 1980-01-15
   output_variables:
     age:
       2015-01: 34

@@ -7,14 +7,14 @@
     children: ["infant1"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 7000
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 7000
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 100]
@@ -28,19 +28,19 @@
     children: ["infant1", "infant2"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 12000
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 12000
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant2"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 100, 100]
@@ -54,19 +54,19 @@
     children: ["infant1", "infant2"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 14940
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 14940
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant2"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0, 0]
@@ -80,24 +80,24 @@
     children: ["infant1", "infant2"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 7928
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 7928
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "mare1"
-     birth: '1961-01-15'
-     disposable_income: 10000
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 10000
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant2"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
@@ -111,14 +111,14 @@
     children: ["infant1"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 7000
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 7000
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2000-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2000-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [0, 0]
@@ -132,14 +132,14 @@
     children: ["infant1"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 7000
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 7000
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Mataró"
   output_variables:
     AE_230_mensual: [ 0, 0]
@@ -153,14 +153,14 @@
     children: ["infant1"]
   persons:
    - id: "pare1"
-     birth: '1961-01-15'
-     disposable_income: 12000
-     usuari_serveis_socials: true
+     data_naixement: '1961-01-15'
+     ingressos_disponibles: 12000
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
    - id: "infant1"
-     birth: '2002-01-15'
-     disposable_income: 0
-     usuari_serveis_socials: true
+     data_naixement: '2002-01-15'
+     ingressos_disponibles: 0
+     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0]

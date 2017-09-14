@@ -42,7 +42,7 @@ class NR_INF_2416_80(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(person, period, legislation):
-        return person('disposable_income', period) * 12 < 2416.80   #FIXME: I should not be * define a concept for
+        return person('ingressos_disponibles', period) * 12 < 2416.80   #FIXME: I should not be * define a concept for
                                                                     # yearly total income
 
 
@@ -54,7 +54,7 @@ class NR_INF_2900_20(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(person, period, legislation):
-        return person('disposable_income', period) * 12 < 2900.20
+        return person('ingressos_disponibles', period) * 12 < 2900.20
 
 
 class NR_INF_1450_08(Variable):
@@ -65,7 +65,7 @@ class NR_INF_1450_08(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(person, period, legislation):
-        return person('disposable_income', period) * 12 < 1450.08
+        return person('ingressos_disponibles', period) * 12 < 1450.08
 
 
 class NR_INF_1740_12(Variable):
@@ -76,7 +76,7 @@ class NR_INF_1740_12(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(person, period, legislation):
-        return person('disposable_income', period) * 12 < 1740.12
+        return person('ingressos_disponibles', period) * 12 < 1740.12
 
 
 FAMNOMBROSA_CATEGORIA = Enum([
@@ -248,8 +248,8 @@ class EG_233_mensual(Variable):
 
 
 def determine_ajut_extraordinari_nr_compliance(person, period, legislation):
-    nr_adult_demandant = person.household.first_parent('disposable_income', period) * 12
-    nr_adult_secundari = person.household.second_parent('disposable_income', period) * 12
+    nr_adult_demandant = person.household.first_parent('ingressos_disponibles', period) * 12
+    nr_adult_secundari = person.household.second_parent('ingressos_disponibles', period) * 12
     other_adult_satisfy_extraordinari_nr = person.household.all(person.household.members('NR_INF_1450_08', period),
                                                                 role=Household.OTHER_ADULT)
 
@@ -261,8 +261,8 @@ def determine_ajut_extraordinari_nr_compliance(person, period, legislation):
 
 
 def determine_ajut_ordinari_nr_compliance(person, period, legislation):
-    nr_adult_demandant = person.household.first_parent('disposable_income', period) * 12
-    nr_adult_secundari = person.household.second_parent('disposable_income', period) * 12
+    nr_adult_demandant = person.household.first_parent('ingressos_disponibles', period) * 12
+    nr_adult_secundari = person.household.second_parent('ingressos_disponibles', period) * 12
 
     other_adult_satisfy_ordinari_nr = person.household.all(person.household.members('NR_INF_2416_80', period),
                                                            role=Household.OTHER_ADULT)
