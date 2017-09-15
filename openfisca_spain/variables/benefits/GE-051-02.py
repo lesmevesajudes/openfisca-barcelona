@@ -41,7 +41,7 @@ class GE_051_02_mensual(Variable):
         no_se_li_ha_concedit_tres_ajudes_rai_anteiors = persona('no_se_li_ha_concedit_tres_ajudes_rai_anteiors', period)
         no_treballa_per_compte_propi = persona('treballa_per_compte_propi', period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
-        no_percep_prestacins_incompatibles_amb_la_feina = persona('percep_prestacins_incompatibles_amb_la_feina', period) == False
+        no_percep_prestacins_incompatibles_amb_la_feina = persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
 
         compleix_els_requeriments = \
             cap_membre_amb_ingressos_superiors_a_530_mensuals \

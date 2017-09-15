@@ -28,7 +28,7 @@ class GE_051_03_mensual(Variable):
         no_treballa_per_compte_propi = persona('treballa_per_compte_propi', period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
         no_percep_prestacins_incompatibles_amb_la_feina = \
-            persona('percep_prestacins_incompatibles_amb_la_feina', period) == False
+            persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
         beneficiari_ajuts_per_violencia_de_genere = \
             persona('beneficiari_ajuts_per_violencia_de_genere', period) == False
 

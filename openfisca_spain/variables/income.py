@@ -9,15 +9,6 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_spain.entities import *
 
-
-# This variable is a pure input: it doesn't have a formula
-class salary(Variable):
-    column = FloatCol
-    entity = Persona
-    definition_period = MONTH
-    label = "Salary"
-
-
 class ingressos_disponibles(Variable):
     column = FloatCol
     entity = Persona

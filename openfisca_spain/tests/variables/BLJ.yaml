@@ -5,7 +5,8 @@
   input_variables:
      data_naixement: '1947-11-15'
   output_variables:
-     ESBLJ: True
+     es_BLJ: True
+
 - name: "Persona amb 65 anys el 2012-12-31 és BLJ"
   description: Ajuda lloguer just
   period: 2017-01
@@ -13,7 +14,8 @@
   input_variables:
      data_naixement: '1947-12-31'
   output_variables:
-     ESBLJ: True
+     es_BLJ: True
+
 - name: "Persona amb 65 anys el 2012-12-31 és BLJ"
   description: Ajuda lloguer just
   period: 2017-01
@@ -21,4 +23,4 @@
   input_variables:
      data_naixement: '1948-1-1'
   output_variables:
-     ESBLJ: False
+     es_BLJ: False

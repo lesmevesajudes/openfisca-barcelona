@@ -18,7 +18,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [ 426 ]
@@ -43,7 +43,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
    - id: "adult2"
      data_naixement: '1961-01-15'
@@ -58,7 +58,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [ 426, 426 ]
@@ -80,7 +80,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -102,7 +102,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -124,7 +124,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -146,7 +146,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -168,7 +168,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -190,7 +190,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -212,7 +212,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -234,7 +234,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: true
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -256,7 +256,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: true
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -278,7 +278,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: true
+     percep_prestacions_incompatibles_amb_la_feina: true
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
      GE_051_01_mensual: [0]
@@ -300,7 +300,7 @@
      no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
-     percep_prestacins_incompatibles_amb_la_feina: false
+     percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: true
   output_variables:
      GE_051_01_mensual: [0]

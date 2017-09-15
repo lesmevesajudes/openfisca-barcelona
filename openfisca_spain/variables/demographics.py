@@ -12,13 +12,13 @@ from openfisca_spain.entities import *
 from numpy import datetime64
 
 
-class age(Variable):
+class edat(Variable):
     column = IntCol
     entity = Persona
     definition_period = MONTH
     label = u"Person's age (in years)"
 
-    # A persona's age is computed according to its birth date.
+    # A person's age is computed according to its birth date.
     def formula(persona, period, legislation):
         data_naixement = persona('data_naixement', period)
         return (datetime64(period.date) - data_naixement).astype('timedelta64[Y]')
@@ -26,7 +26,8 @@ class age(Variable):
 
 # This variable is a pure input: it doesn't have a formula
 class data_naixement(Variable):
-    column = DateCol(default = date(1970, 1, 1))  # By default, is no value is set for a simulation, we consider the people involed in a simulation to be born on the 1st of Jan 1970.
+    column = DateCol(default=date(1970, 1, 1))  # By default, is no value is set for a simulation, we consider the
+                                                # people involed in a simulation to be born on the 1st of Jan 1970.
     entity = Persona
     label = u"Birth date"
     definition_period = ETERNITY  # This variable cannot change over time.

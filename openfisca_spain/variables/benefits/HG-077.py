@@ -88,7 +88,7 @@ class al_corrent_de_les_obligacions_tributaries(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class ESBLJ(Variable):
+class es_BLJ(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
@@ -136,7 +136,7 @@ class HG_077_mensual(Variable):
                              persona('ingressos_disponibles', period)/12 * 0.2)
         import_ajuda_BLJ = max_(min_(persona.familia('import_del_lloguer', period) - lloguer_just, 2880/12), 0)
         import_ajuda_no_BLJ = max_(min_(persona.familia('import_del_lloguer', period) - lloguer_just, 200), 20)
-        BLJStatus = persona.familia.members('ESBLJ', period)
-        existeixAlgunBLJ = persona.familia.any(BLJStatus)
-        import_ajuda = where(existeixAlgunBLJ, import_ajuda_BLJ, import_ajuda_no_BLJ)
+        estat_BLJ = persona.familia.members('es_BLJ', period)
+        existeix_algun_BLJ = persona.familia.any(estat_BLJ)
+        import_ajuda = where(existeix_algun_BLJ, import_ajuda_BLJ, import_ajuda_no_BLJ)
         return where(compleix_els_requeriments, import_ajuda, 0)

@@ -64,7 +64,7 @@ class AE_230_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, legislation):
-        te_menys_de_16_anys = persona('age', period) < 16
+        te_menys_de_16_anys = persona('edat', period) < 16
         ingressos_inferiors_varem = persona.familia('familia_disposable_income', period) < \
                            varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona('es_usuari_serveis_socials', period)

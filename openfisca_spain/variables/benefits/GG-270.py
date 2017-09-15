@@ -13,7 +13,7 @@ class es_victima_de_violencia_masclista(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
-    label = "True if persona is a victim of male violence"
+    label = "True if person is a victim of male violence"
 
 
 class es_empadronat_a_catalunya(Variable):
@@ -55,7 +55,7 @@ class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
-    label = "True if person is left voluntarily her last job"
+    label = "True if person has left voluntarily her last job"
 
 
 class es_discapacitat(Variable):
@@ -84,8 +84,8 @@ class GG_270_mensual(Variable):
     label = "RENDA GARANTIDA CIUTADANA"
 
     def formula(persona, period, legislation):
-        major_23 = persona("age", period) >= 23
-        major_18 = persona("age", period) >= 18
+        major_23 = persona("edat", period) >= 23
+        major_18 = persona("edat", period) >= 18
         discapacitats_a_carrec = persona.familia.any(persona("es_discapacitat", period))
         es_orfe_de_progenitors = persona("es_orfe_dels_dos_progenitors", period)
         es_victima_violencia_masclista = persona("es_victima_de_violencia_masclista", period)

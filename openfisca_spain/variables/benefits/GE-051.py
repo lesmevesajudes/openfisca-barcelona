@@ -43,7 +43,7 @@ class treballa_per_compte_propi(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
-    label = "The user is iself employed"
+    label = "The user is self-employed"
     set_input = set_input_dispatch_by_period
 
 
@@ -51,14 +51,14 @@ class ingressat_en_centre_penitenciari(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
-    label = "The user isin prison"
+    label = "The user is in prison"
     set_input = set_input_dispatch_by_period
 
 
-class percep_prestacins_incompatibles_amb_la_feina(Variable):
+class percep_prestacions_incompatibles_amb_la_feina(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
+    label = "The user has some benefit incompatible with having a job"
     set_input = set_input_dispatch_by_period
 

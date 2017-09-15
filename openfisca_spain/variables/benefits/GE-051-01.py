@@ -7,7 +7,7 @@ class grau_discapacitat(Variable):
     column = IntCol
     entity = Persona
     definition_period = MONTH
-    label = "Persona grade of disability"
+    label = "User's grade of disability"
     set_input = set_input_dispatch_by_period
 
 
@@ -63,7 +63,7 @@ class GE_051_01_mensual(Variable):
         no_treballa_per_compte_propi = persona('treballa_per_compte_propi', period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
         no_percep_prestacins_incompatibles_amb_la_feina = \
-            persona('percep_prestacins_incompatibles_amb_la_feina', period) == False
+            persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
         no_beneficiari_ajuts_per_violencia_de_genere = \
             persona('beneficiari_ajuts_per_violencia_de_genere', period) == False
 
