@@ -11,7 +11,7 @@ run:
 	openfisca-serve --port 2000
 
 prod-run:
-	openfisca-serve --port 80
+	openfisca-serve --port ${PORT}
 
 deploy-heroku:
-    git push heroku master
+	git push heroku master
