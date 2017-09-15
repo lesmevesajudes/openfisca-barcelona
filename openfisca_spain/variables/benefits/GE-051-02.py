@@ -32,7 +32,7 @@ class GE_051_02_mensual(Variable):
     definition_period = MONTH
     label = "GE_051_02 - RAI 2 - Per emigrants retornats major de 45 anys"
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
         major_de_45_anys = persona('major_de_45_anys', period)
         desocupat = persona('desocupat', period)
@@ -54,4 +54,5 @@ class GE_051_02_mensual(Variable):
             * no_ingressat_en_centre_penitenciari \
             * no_percep_prestacins_incompatibles_amb_la_feina
 
-        return where(compleix_els_requeriments, 426, 0)
+        import_ajuda = parameters(period).benefits.GE051.import_ajuda
+        return where(compleix_els_requeriments, import_ajuda, 0)

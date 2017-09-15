@@ -9,7 +9,8 @@ class renda_disponible_inferior_a_530(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_disponibles', period) < 530
+        return persona('ingressos_disponibles', period) < 530   # Fixme: This 530 smells like a parameter
+                                                                # (or function of)
 
 class cap_familiar_te_renda_disponible_superior_a_530(Variable):
     column = BoolCol
@@ -21,6 +22,7 @@ class cap_familiar_te_renda_disponible_superior_a_530(Variable):
     def formula(familia, period, legislation):
         members_renda_disponible_inferior_a_530 = familia.members('renda_disponible_inferior_a_530', period)
         return familia.all(members_renda_disponible_inferior_a_530)
+
 
 class no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos(Variable):
     column = BoolCol

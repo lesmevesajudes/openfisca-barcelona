@@ -16,7 +16,7 @@ class GE_051_03_mensual(Variable):
     definition_period = MONTH
     label = "RAI 3 - Per victimes de violencia de genere o domestica"
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = \
             persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
         victima_violencia_de_genere = persona('victima_violencia_de_genere', period)
@@ -43,4 +43,5 @@ class GE_051_03_mensual(Variable):
             * no_percep_prestacins_incompatibles_amb_la_feina \
             * beneficiari_ajuts_per_violencia_de_genere
 
-        return where(compleix_els_requeriments, 426, 0)
+        import_ajuda = parameters(period).benefits.GE051.import_ajuda
+        return where(compleix_els_requeriments, import_ajuda, 0)

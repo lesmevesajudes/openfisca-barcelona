@@ -49,7 +49,7 @@ class GE_051_01_mensual(Variable):
     definition_period = MONTH
     label = "GE_051_1 - RAI 1 - Ajuda discapacitats 33% o superior"
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = \
             persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
         discapacitat_superior_al_33_percent = persona('grau_discapacitat', period) > 33
@@ -80,4 +80,5 @@ class GE_051_01_mensual(Variable):
             * no_percep_prestacins_incompatibles_amb_la_feina \
             * no_beneficiari_ajuts_per_violencia_de_genere
 
-        return where(compleix_els_requeriments, 426, 0)
+        import_ajuda = parameters(period).benefits.GE051.import_ajuda
+        return where(compleix_els_requeriments, import_ajuda, 0)
