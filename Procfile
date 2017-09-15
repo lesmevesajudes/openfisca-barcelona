@@ -1,1 +1,1 @@
-api: make prod-run
+web: make prod-run
