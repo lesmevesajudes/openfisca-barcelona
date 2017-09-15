@@ -3,9 +3,9 @@ from datetime import datetime
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_spain.entities import *
-import numpy as np
 
-class RESCAT5ANYS(Variable):
+
+class resident_a_catalunya_durant_5_anys(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -13,7 +13,7 @@ class RESCAT5ANYS(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class VICTERRORISME(Variable):
+class victima_de_terrorisme(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -21,23 +21,26 @@ class VICTERRORISME(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class INGSUFLLOG(Variable):
+class ingressos_suficients_per_pagar_el_lloguer(Variable):
     column = BoolCol
     entity = Household
     definition_period = MONTH
-    label = "The household income is not enough to pay rent"
+    label = "The household income is enough to pay rent"
     set_input = set_input_dispatch_by_period
 
 
-class RISCEXCSOC(Variable):
+class risc_d_exclusio_social(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "The user is in risk of social exclusion"
     set_input = set_input_dispatch_by_period
 
+    def formula(person, period, legislation):
+        return person("nivell_de_risc_d_exclusio_social", period) != nivell_de_risc_d_exclusio_social_categories["No"]
 
-class TITCONTLLOG(Variable):
+
+class existeix_un_contracte_de_lloguer(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -45,7 +48,7 @@ class TITCONTLLOG(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class LLOGMAXBCN(Variable):
+class LLOGMAXBCN(Variable):     # Fixme: This should be in parameters
     column = BoolCol
     entity = Household
     definition_period = MONTH
@@ -53,7 +56,7 @@ class LLOGMAXBCN(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class CORRPAGLLOG(Variable):
+class esta_al_corrent_del_pagament_de_lloguer(Variable):
     column = BoolCol
     entity = Household
     definition_period = MONTH
@@ -61,7 +64,7 @@ class CORRPAGLLOG(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class LLOGDOMI(Variable):
+class lloguer_domiciliat(Variable):
     column = BoolCol
     entity = Household
     definition_period = MONTH
@@ -69,7 +72,7 @@ class LLOGDOMI(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class PROHBENSUB(Variable):
+class pot_rebre_subvencions(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -77,7 +80,7 @@ class PROHBENSUB(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class COMPOBTRIBADMIN(Variable):
+class al_corrent_de_les_obligacions_tributaries(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -91,6 +94,7 @@ class ESBLJ(Variable):
     definition_period = MONTH
     label = "The user has more than 65 years at 31/12/2012"
     set_input = set_input_dispatch_by_period
+
     def formula(person, period, legislation):
         return major_de_65_el_2012_12_31(person('data_naixement',period))
 
@@ -106,6 +110,7 @@ class import_del_lloguer(Variable):
     label = "Rent amount payed every month"
     set_input = set_input_dispatch_by_period
 
+
 class HG_077_mensual(Variable):
     column = FloatCol
     entity = Person   ## TODO Cambiar a household
@@ -115,15 +120,16 @@ class HG_077_mensual(Variable):
 
     def formula(person, period, legislation):
         compleix_els_requeriments = \
-            ((person.household('INGSUFLLOG', period) + person('VICTERRORISME', period)) > 0) * \
-            person.household('LLOGMAXBCN', period) * \
-            person.household('CORRPAGLLOG', period) * \
-            person.household('LLOGDOMI',period) * \
-            person('RESCAT5ANYS', period) * \
-            person('RISCEXCSOC', period) * \
-            person('TITCONTLLOG', period) * \
-            person('PROHBENSUB', period) * \
-            person('COMPOBTRIBADMIN', period)
+            ((person.household('ingressos_suficients_per_pagar_el_lloguer', period)
+              + person('victima_de_terrorisme', period)) > 0) \
+            * person.household('LLOGMAXBCN', period) \
+            * person.household('esta_al_corrent_del_pagament_de_lloguer', period) \
+            * person.household('lloguer_domiciliat',period) \
+            * person('resident_a_catalunya_durant_5_anys', period) \
+            * person('risc_d_exclusio_social', period) \
+            * person('existeix_un_contracte_de_lloguer', period) \
+            * person('pot_rebre_subvencions', period) \
+            * person('al_corrent_de_les_obligacions_tributaries', period)
         irsc_per_0_94 = 569.12 * 0.94
         lloguer_just = where(person('ingressos_disponibles', period)/12 > irsc_per_0_94,
                              person('ingressos_disponibles', period)/12 * 0.3,
