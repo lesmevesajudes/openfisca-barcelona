@@ -6,7 +6,7 @@ class victima_violencia_de_genere(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "The user is up to date with her obligations against the state"
+    label = "The user is a victim of genre violence"
     set_input = set_input_dispatch_by_period
 
 
