@@ -113,30 +113,41 @@ class import_del_lloguer(Variable):
 
 class HG_077_mensual(Variable):
     column = FloatCol
-    entity = Persona   ## TODO Cambiar a familia
+    entity = Persona   # TODO Cambiar a familia
     definition_period = MONTH
     label = "AJUT PER AL PAGAMENT DEL LLOGUER"
     set_input = set_input_dispatch_by_period
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
         compleix_els_requeriments = \
             ((persona.familia('ingressos_suficients_per_pagar_el_lloguer', period)
               + persona('victima_de_terrorisme', period)) > 0) \
             * persona.familia('LLOGMAXBCN', period) \
             * persona.familia('esta_al_corrent_del_pagament_de_lloguer', period) \
-            * persona.familia('lloguer_domiciliat',period) \
+            * persona.familia('lloguer_domiciliat', period) \
             * persona('resident_a_catalunya_durant_5_anys', period) \
             * persona('risc_d_exclusio_social', period) \
             * persona('existeix_un_contracte_de_lloguer', period) \
             * persona('pot_rebre_subvencions', period) \
             * persona('al_corrent_de_les_obligacions_tributaries', period)
-        irsc_per_0_94 = 569.12 * 0.94
+        irsc = parameters(period).benefits.HG077.IRSC
+        irsc_per_0_94 = irsc * 0.94
         lloguer_just = where(persona('ingressos_disponibles', period)/12 > irsc_per_0_94,
                              persona('ingressos_disponibles', period)/12 * 0.3,
                              persona('ingressos_disponibles', period)/12 * 0.2)
-        import_ajuda_BLJ = max_(min_(persona.familia('import_del_lloguer', period) - lloguer_just, 2880/12), 0)
-        import_ajuda_no_BLJ = max_(min_(persona.familia('import_del_lloguer', period) - lloguer_just, 200), 20)
+        import_ajuda_maxim_pels_BLJ = parameters(period).benefits.HG077.BLJ_ajuda_maxima_anual/12
+        import_ajuda_maxim_pels_no_BLJ = parameters(period).benefits.HG077.no_BLJ_ajuda_maxima_anual / 12
+        import_ajuda_minim_pels_no_BLJ = parameters(period).benefits.HG077.no_BLJ_ajuda_minima_anual / 12
+        import_ajuda_BLJ = max_(
+            min_(persona.familia('import_del_lloguer', period) - lloguer_just, import_ajuda_maxim_pels_BLJ), 0)
+        import_ajuda_no_BLJ = \
+            max_(
+                min_(
+                    persona.familia('import_del_lloguer', period)
+                    - lloguer_just, import_ajuda_maxim_pels_no_BLJ),
+                import_ajuda_minim_pels_no_BLJ)
         estat_BLJ = persona.familia.members('es_BLJ', period)
         existeix_algun_BLJ = persona.familia.any(estat_BLJ)
         import_ajuda = where(existeix_algun_BLJ, import_ajuda_BLJ, import_ajuda_no_BLJ)
+
         return where(compleix_els_requeriments, import_ajuda, 0)
