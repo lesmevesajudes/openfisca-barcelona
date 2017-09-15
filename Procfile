@@ -1,1 +1,1 @@
-api: make run
+api: make prod-run

@@ -9,3 +9,6 @@ test:
 
 run:
 	openfisca-serve --port 2000
+
+prod-run:
+    openfisca-serve --port 80
