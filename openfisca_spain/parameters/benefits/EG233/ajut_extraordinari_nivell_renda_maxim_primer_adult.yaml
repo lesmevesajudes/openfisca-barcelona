@@ -1,0 +1,5 @@
+description: Maximum income level for the first adult
+reference: openfisca
+values:
+  2017-01-01:
+    value: 5800.38

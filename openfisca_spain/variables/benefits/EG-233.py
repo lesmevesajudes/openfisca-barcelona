@@ -200,15 +200,21 @@ class valor_cadastral_finques_urbanes(Variable):
     set_input = set_input_dispatch_by_period
 
 
-def compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, period, legislation):
+def compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, period, parameters):
     nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_disponibles', period) * 12
     nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_disponibles', period) * 12
 
+    nivell_renda_maxim_primer_adult = \
+        parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim_primer_adult
+    nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim_segon_adult
+
     els_adults_satisfant_criteris_de_nivell_de_renda = \
-        (nivell_renda_primer_adult < 5800.38) * (nivell_renda_segon_adult < 2900.16)
+        (nivell_renda_primer_adult < nivell_renda_maxim_primer_adult) \
+        * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
 
     els_altres_adults_compleixen_criteris_de_nivell_de_renda = \
-        persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_1450_08', period), role=Familia.ALTRE_ADULT)
+        persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_1450_08', period),
+                            role=Familia.ALTRE_ADULT)
 
     els_menors_compleixen_els_criteris_de_nivell_de_renda = \
         persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_1740_12', period), role=Familia.MENOR)
@@ -220,12 +226,15 @@ def compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, perio
         * els_menors_compleixen_els_criteris_de_nivell_de_renda
 
 
-def compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(persona, period, legislation):
+def compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(persona, period, parameters):
     nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_disponibles', period) * 12
     nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_disponibles', period) * 12
 
-    els_adults_satisfant_criteris_de_nivell_de_renda = (nivell_renda_primer_adult < 9667.30) \
-                                                       * (nivell_renda_segon_adult < 4833.60)
+    nivell_renda_maxim_primer_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_primer_adult
+    nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_segon_adult
+
+    els_adults_satisfant_criteris_de_nivell_de_renda = (nivell_renda_primer_adult < nivell_renda_maxim_primer_adult) \
+                                                       * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
 
     els_altres_adults_compleixen_criteris_de_nivell_de_renda = persona.familia.all(
         persona.familia.members('nivell_de_renda_inferior_a_2416_80', period), role=Familia.ALTRE_ADULT)
@@ -244,7 +253,7 @@ class EG_233_mensual(Variable):
     definition_period = MONTH
     label = "EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA"
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
 
         es_escolaritzat = persona('es_escolaritzat', period)
         utilitza_el_servei_de_menjador = persona('utilitza_el_servei_de_menjador', period)
@@ -261,7 +270,7 @@ class EG_233_mensual(Variable):
                                     no_te_beca_menjador * \
                                     es_un_menor
 
-        compleix_ajut_ordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(persona, period, legislation)
+        compleix_ajut_ordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(persona, period, parameters)
 
         puntuacio_familiar = persona.familia("puntuacio_de_la_familia_segons_eg_233", period)
         volum_de_negoci = persona.familia("volum_del_negoci_familiar", period.last_year)
@@ -269,13 +278,26 @@ class EG_233_mensual(Variable):
         valor_cadastral_finques_rustiques = persona.familia("valor_cadastral_finques_rustiques", period.this_year)
         valor_cadastral_finques_urbanes = persona.familia("valor_cadastral_finques_urbanes", period.this_year)
 
-        compleix_ajut_extraordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, period, legislation) \
-                                      * (puntuacio_familiar >= 15) \
-                                      * (volum_de_negoci < 155000) \
-                                      * (rendiments_patrimonials < 1700) \
-                                      * (valor_cadastral_finques_rustiques < 131390) \
-                                      * (valor_cadastral_finques_urbanes < 42900)
+        puntuacio_familiar_minima = parameters(period).benefits.EG233.ajut_extraordinari_puntuacio_minima
+        volum_de_negoci_maxim = parameters(period).benefits.EG233.ajut_extraordinari_volum_de_negoci_maxim
+        rendiments_patrimonials_maxim = \
+            parameters(period).benefits.EG233.ajut_extraordinari_rendiments_patrimonials_maxim
+        valor_cadastral_finques_rustiques_maxim = \
+            parameters(period).benefits.EG233.ajut_extraordinari_valor_cadastral_finques_rustiques_maxim
+        valor_cadastral_finques_urbanes_maxim = \
+            parameters(period).benefits.EG233.ajut_extraordinari_valor_cadastral_finques_urbanes_maxim
 
-        import_EG_233 = select([compleix_ajut_extraordinari, compleix_ajut_ordinari], [6, 3])
+        compleix_ajut_extraordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, period, parameters) \
+                                      * (puntuacio_familiar >= puntuacio_familiar_minima) \
+                                      * (volum_de_negoci < volum_de_negoci_maxim) \
+                                      * (rendiments_patrimonials < rendiments_patrimonials_maxim) \
+                                      * (valor_cadastral_finques_rustiques < valor_cadastral_finques_rustiques_maxim) \
+                                      * (valor_cadastral_finques_urbanes < valor_cadastral_finques_urbanes_maxim)
+
+        import_ajut_extraordinari = parameters(period).benefits.EG233.ajut_extraordinari_import
+        import_ajut_ordinari = parameters(period).benefits.EG233.ajut_ordinari_import
+
+        import_EG_233 = select([compleix_ajut_extraordinari, compleix_ajut_ordinari],
+                               [import_ajut_extraordinari, import_ajut_ordinari])
 
         return compleix_els_requeriments * import_EG_233

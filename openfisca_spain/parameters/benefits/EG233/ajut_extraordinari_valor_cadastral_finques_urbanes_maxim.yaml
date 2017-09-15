@@ -1,0 +1,5 @@
+description: Maximum cadastral value of urban properties
+reference: openfisca
+values:
+  2017-01-01:
+    value: 42900

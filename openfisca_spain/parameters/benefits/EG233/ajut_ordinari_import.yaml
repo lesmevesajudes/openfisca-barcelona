@@ -1,0 +1,5 @@
+description: Ordinary benefet amount
+reference: openfisca
+values:
+  2017-01-01:
+    value: 3

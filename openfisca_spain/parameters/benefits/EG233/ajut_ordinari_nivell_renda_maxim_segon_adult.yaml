@@ -1,0 +1,5 @@
+description: Maximum income level for the second adult
+reference: openfisca
+values:
+  2017-01-01:
+    value: 4833.60
