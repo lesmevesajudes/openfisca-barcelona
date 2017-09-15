@@ -1,1 +1,1 @@
-web: make prod-run
+web: openfisca-serve --port ${PORT} 
