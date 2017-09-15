@@ -24,7 +24,7 @@ class familia_disposable_income(Variable):
 
 
 def varem_irsc_016(nr_members):
-        return select(
+        return select(                  # Fixme: Find the formula!
             [nr_members == 2,
              nr_members == 3,
              nr_members == 4,
@@ -63,14 +63,15 @@ class AE_230_mensual(Variable):
     definition_period = MONTH
     label = "Ajuda 0-16"
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
         te_menys_de_16_anys = persona('edat', period) < 16
         ingressos_inferiors_varem = persona.familia('familia_disposable_income', period) < \
                            varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona('es_usuari_serveis_socials', period)
         es_empadronat_a_barcelona = persona('ciutat_empadronament', period) == "Barcelona"
+        import_ajuda = parameters(period).benefits.AE230.import_ajuda
         return te_menys_de_16_anys \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
                * es_usuari_serveis_socials \
-               * 100
+               * import_ajuda
