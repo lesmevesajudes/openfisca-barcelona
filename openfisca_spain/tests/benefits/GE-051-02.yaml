@@ -2,9 +2,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -23,9 +23,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: no
@@ -44,9 +44,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -65,9 +65,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -85,9 +85,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -106,9 +106,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -127,9 +127,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -147,9 +147,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -168,9 +168,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true
@@ -188,9 +188,9 @@
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      major_de_45_anys: true

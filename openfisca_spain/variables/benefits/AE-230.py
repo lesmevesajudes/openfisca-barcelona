@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # This file defines the variables of our legislation.
-# A variable is property of a person, or an entity (e.g. a household).
+# A variable is property of a person, or an entity (e.g. a familia).
 # See https://doc.openfisca.fr/variables.html
 
 # Import from openfisca-core the common python objects used to code the legislation in OpenFisca
@@ -10,16 +10,16 @@ from openfisca_core.model_api import *
 from openfisca_spain.entities import *
 
 
-class household_disposable_income(Variable):
+class familia_disposable_income(Variable):
     column = IntCol(val_type="monetary")
-    entity = Household
+    entity = Familia
     definition_period = MONTH
     label = "Total yearly income"
     set_input = set_input_divide_by_period
 
-    def formula(household, period):
-        ingressos_membres_de_la_familia = household.members('ingressos_disponibles', period)
-        total_ingressos_familia = household.sum(ingressos_membres_de_la_familia)
+    def formula(familia, period):
+        ingressos_membres_de_la_familia = familia.members('ingressos_disponibles', period)
+        total_ingressos_familia = familia.sum(ingressos_membres_de_la_familia)
         return total_ingressos_familia
 
 
@@ -51,7 +51,7 @@ def varem_irsc_016(nr_members):
 
 class es_usuari_serveis_socials(Variable):
     column = BoolCol
-    entity = Person
+    entity = Persona
     definition_period = MONTH
     label = "The user is a Social services user"
     set_input = set_input_dispatch_by_period
@@ -59,16 +59,16 @@ class es_usuari_serveis_socials(Variable):
 
 class AE_230_mensual(Variable):
     column = IntCol(val_type="monetary")
-    entity = Person
+    entity = Persona
     definition_period = MONTH
     label = "Ajuda 0-16"
 
-    def formula(person, period, legislation):
-        te_menys_de_16_anys = person('age', period) < 16
-        ingressos_inferiors_varem = person.household('household_disposable_income', period) < \
-                           varem_irsc_016(person.household.nb_persons())
-        es_usuari_serveis_socials = person('es_usuari_serveis_socials', period)
-        es_empadronat_a_barcelona = person('ciutat_empadronament', period) == "Barcelona"
+    def formula(persona, period, legislation):
+        te_menys_de_16_anys = persona('age', period) < 16
+        ingressos_inferiors_varem = persona.familia('familia_disposable_income', period) < \
+                           varem_irsc_016(persona.familia.nb_persons())
+        es_usuari_serveis_socials = persona('es_usuari_serveis_socials', period)
+        es_empadronat_a_barcelona = persona('ciutat_empadronament', period) == "Barcelona"
         return te_menys_de_16_anys \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \

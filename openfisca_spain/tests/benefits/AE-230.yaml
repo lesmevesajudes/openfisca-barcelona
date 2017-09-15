@@ -2,10 +2,10 @@
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  households:
-    parents: ["pare1"]
-    children: ["infant1"]
-  persons:
+  families:
+    adults: ["pare1"]
+    menors: ["infant1"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 7000
@@ -23,10 +23,10 @@
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  households:
-    parents: ["pare1"]
-    children: ["infant1", "infant2"]
-  persons:
+  families:
+    adults: ["pare1"]
+    menors: ["infant1", "infant2"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 12000
@@ -49,10 +49,10 @@
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  households:
-    parents: ["pare1"]
-    children: ["infant1", "infant2"]
-  persons:
+  families:
+    adults: ["pare1"]
+    menors: ["infant1", "infant2"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 14940
@@ -75,10 +75,10 @@
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  households:
-    parents: ["pare1", "mare1"]
-    children: ["infant1", "infant2"]
-  persons:
+  families:
+    adults: ["pare1", "mare1"]
+    menors: ["infant1", "infant2"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 7928
@@ -106,10 +106,10 @@
   description: Ajuda menors 0-16
   period: 2017-02
   absolute_error_margin: 0
-  households:
-    parents: ["pare1"]
-    children: ["infant1"]
-  persons:
+  families:
+    adults: ["pare1"]
+    menors: ["infant1"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 7000
@@ -127,10 +127,10 @@
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  households:
-    parents: ["pare1"]
-    children: ["infant1"]
-  persons:
+  families:
+    adults: ["pare1"]
+    menors: ["infant1"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 7000
@@ -148,10 +148,10 @@
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  households:
-    parents: ["pare1"]
-    children: ["infant1"]
-  persons:
+  families:
+    adults: ["pare1"]
+    menors: ["infant1"]
+  persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 12000

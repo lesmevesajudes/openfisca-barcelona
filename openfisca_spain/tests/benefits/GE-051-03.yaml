@@ -2,9 +2,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -23,9 +23,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 600
      victima_violencia_de_genere: true
@@ -43,9 +43,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: false
@@ -63,9 +63,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -83,9 +83,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -103,9 +103,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -123,9 +123,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -143,9 +143,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -163,9 +163,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true
@@ -183,9 +183,9 @@
   description: RAI 3 - Per víctimes de violència de gènere o domèstica
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      victima_violencia_de_genere: true

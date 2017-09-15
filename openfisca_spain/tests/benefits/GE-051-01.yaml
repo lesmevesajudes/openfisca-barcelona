@@ -2,9 +2,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 500
@@ -27,9 +27,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+  persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 500
@@ -67,9 +67,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 32
@@ -89,9 +89,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -111,9 +111,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -133,9 +133,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -155,9 +155,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -177,9 +177,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -199,9 +199,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -221,9 +221,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -243,9 +243,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -265,9 +265,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34
@@ -287,9 +287,9 @@
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-  persons:
+  families:
+     adults: ["adult1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 500
      grau_discapacitat: 34

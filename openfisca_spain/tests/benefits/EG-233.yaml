@@ -2,10 +2,10 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
@@ -13,7 +13,7 @@
      rendiments_del_patrimoni: 0
      valor_cadastral_finques_rustiques: 0
      valor_cadastral_finques_urbanes: 0
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 482
      en_guardia_i_custodia: true
@@ -40,11 +40,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -66,11 +66,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 904
      en_guardia_i_custodia: true
@@ -93,11 +93,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -119,11 +119,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -145,11 +145,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -171,11 +171,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -197,11 +197,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -224,11 +224,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: true
@@ -251,11 +251,11 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
-  persons:
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: false
@@ -278,12 +278,12 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
      tipus_familia_nombrosa: 'General'
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 804
      en_guardia_i_custodia: false
@@ -306,10 +306,10 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
@@ -318,7 +318,7 @@
      rendiments_del_patrimoni: 0
      valor_cadastral_finques_rustiques: 0
      valor_cadastral_finques_urbanes: 0
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 482
      en_guardia_i_custodia: true
@@ -346,10 +346,10 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
@@ -358,7 +358,7 @@
       2016-01: 1701
      valor_cadastral_finques_rustiques: 0
      valor_cadastral_finques_urbanes: 0
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 482
      en_guardia_i_custodia: true
@@ -385,10 +385,10 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
@@ -396,7 +396,7 @@
      rendiments_del_patrimoni: 0
      valor_cadastral_finques_rustiques: 131391
      valor_cadastral_finques_urbanes: 0
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 482
      en_guardia_i_custodia: true
@@ -424,10 +424,10 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1", "adult2"]
-     other_adults: ["adult3"]
-     children: ["menor1"]
+  families:
+     adults: ["adult1", "adult2"]
+     altres_adults: ["adult3"]
+     menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
@@ -435,7 +435,7 @@
      rendiments_del_patrimoni: 0
      valor_cadastral_finques_rustiques: 0
      valor_cadastral_finques_urbanes: 42901
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 482
      en_guardia_i_custodia: true
@@ -463,9 +463,9 @@
   description: EG_233 - AJUTS INDIVIDUALS DE utilitza_el_servei_de_menjador CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult1"]
-     children: ["menor1", "menor2"]
+  families:
+     adults: ["adult1"]
+     menors: ["menor1", "menor2"]
      nivell_de_risc_d_exclusio_social: No
      tipus_familia_monoparental: Especial
      tipus_familia_nombrosa: Especial
@@ -473,7 +473,7 @@
      rendiments_del_patrimoni: 0
      valor_cadastral_finques_rustiques: 0
      valor_cadastral_finques_urbanes: 0
-  persons:
+  persones:
    - id: "adult1"
      ingressos_disponibles: 482
      en_guardia_i_custodia: true

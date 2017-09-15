@@ -4,34 +4,34 @@
 
 from openfisca_core.entities import build_entity
 
-Household = build_entity(
-    key="household",
-    plural="households",
-    label=u'Household',
+Familia = build_entity(
+    key="familia",
+    plural="families",
+    label=u'Familia',
     roles=[{
         'key': 'parent',
-        'plural': 'parents',
-        'label': u'Parents',
+        'plural': 'adults',
+        'label': u'Adults',
         'max': 2,
-        'subroles': ['first_parent', 'second_parent']
+        'subroles': ['primer_adult', 'segon_adult']
         },
         {
-        'key': 'other_adult',
-        'plural': 'other_adults',
+        'key': 'altre_adult',
+        'plural': 'altres_adults',
         'label': u'Other adults'
         },
         {
-        'key': 'child',
-        'plural': 'children',
-        'label': u'Child',
+        'key': 'menor',
+        'plural': 'menors',
+        'label': u'Menor',
         }]
     )
 
-Person = build_entity(
-    key="person",
-    plural="persons",
-    label=u'Person',
+Persona = build_entity(
+    key="persona",
+    plural="persones",
+    label=u'Persona',
     is_person=True,
     )
 
-entities = [Household, Person]
+entities = [Familia, Persona]

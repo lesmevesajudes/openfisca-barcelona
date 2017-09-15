@@ -2,9 +2,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -25,9 +25,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 531
@@ -48,9 +48,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -70,9 +70,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -93,9 +93,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -116,9 +116,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -139,9 +139,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -161,9 +161,9 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-  persons:
+  families:
+     adults: ["adult"]
+  persones:
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
@@ -184,10 +184,10 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-     children: ["menor_discapacitat"]
-  persons:
+  families:
+     adults: ["adult"]
+     menors: ["menor_discapacitat"]
+  persones:
    - id: "adult"
      data_naixement: '1998-03-15'
      ingressos_disponibles: 529
@@ -210,10 +210,10 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  households:
-     parents: ["adult"]
-     children: ["menor_discapacitat"]
-  persons:
+  families:
+     adults: ["adult"]
+     menors: ["menor_discapacitat"]
+  persones:
    - id: "adult"
      data_naixement: '1998-03-15'
      ingressos_disponibles: 529
