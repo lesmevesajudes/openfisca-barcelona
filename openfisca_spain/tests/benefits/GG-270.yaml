@@ -8,15 +8,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 100 ]
 
@@ -31,15 +31,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 531
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -54,15 +54,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: false
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: false
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -76,15 +76,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: false
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: false
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -99,15 +99,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: false
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: false
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -122,15 +122,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: true
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: true
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -145,15 +145,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: true
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -167,15 +167,15 @@
    - id: "adult"
      data_naixement: '1961-01-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: true
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -191,15 +191,15 @@
    - id: "adult"
      data_naixement: '1998-03-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: true
-     PERMISRESID: true
-     PERMISREAGRUPFAMIDIVORCIADA: false
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: true
+     te_permis_de_residencia: true
+     es_divorciada_de_familia_reagrupada: false
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'
      grau_discapacitat: 33
@@ -217,15 +217,15 @@
    - id: "adult"
      data_naixement: '1998-03-15'
      ingressos_disponibles: 529
-     ORFEDOSPROJENITORS: true
-     VICTIMAVIOLENCIAMASCLISTA: true
-     EMPCAT: false
-     PERMISRESID: false
-     PERMISREAGRUPFAMIDIVORCIADA: true
-     RESEFECTCAT24M: true
-     PRESTACIORESIDENCIAL: false
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_empadronat_a_catalunya: false
+     te_permis_de_residencia: false
+     es_divorciada_de_familia_reagrupada: true
+     ha_residit_a_catalunya_durant_24_mesos: true
+     es_beneficiar_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
-     BAIXAVOL12M: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'
      grau_discapacitat: 33

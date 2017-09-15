@@ -2,63 +2,63 @@ from openfisca_core.model_api import *
 from openfisca_spain.entities import *
 
 
-class ORFEDOSPROJENITORS(Variable):
+class es_orfe_dels_dos_progenitors(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if both parents are dead"
 
 
-class VICTIMAVIOLENCIAMASCLISTA(Variable):
+class es_victima_de_violencia_masclista(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
-    label = "True if person is a victim of genre violence"
+    label = "True if person is a victim of male violence"
 
 
-class EMPCAT(Variable):
+class es_empadronat_a_catalunya(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if person is registered in Catalonia"
 
 
-class PERMISRESID(Variable):
+class te_permis_de_residencia(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if person has a residence permit"
 
 
-class PERMISREAGRUPFAMIDIVORCIADA(Variable):
+class es_divorciada_de_familia_reagrupada(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if person is divorced from a regrouped immigrant family"
 
 
-class RESEFECTCAT24M(Variable):
+class ha_residit_a_catalunya_durant_24_mesos(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if person has lived efectively in Catalonia for the last 24 months"
 
 
-class PRESTACIORESIDENCIAL(Variable):
+class es_beneficiar_d_una_prestacio_residencial(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if person is benefitiary of a residential benefit"
 
 
-class BAIXAVOL12M(Variable):
+class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
     label = "True if person is left voluntarily her last job"
 
 
-class ESDISCAPACITAT(Variable):
+class es_discapacitat(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -67,7 +67,7 @@ class ESDISCAPACITAT(Variable):
     def formula(person, period, legislation):
         return person("grau_discapacitat", period) > 0
 
-class NRINFIMPRGC(Variable):
+class nivell_de_renda_inferior_rgc(Variable):
     column = BoolCol
     entity = Person
     definition_period = MONTH
@@ -86,29 +86,37 @@ class GG_270_mensual(Variable):
     def formula(person, period, legislation):
         major_23 = person("age", period) >= 23
         major_18 = person("age", period) >= 18
-        discapacitats_a_carrec = person.household.any(person("ESDISCAPACITAT", period))
-        es_orfe_de_progenitors = person("ORFEDOSPROJENITORS", period)
-        es_victima_violencia_masclista = person("VICTIMAVIOLENCIAMASCLISTA", period)
-        es_empadronat_a_catalunya = person("EMPCAT", period)
-        te_permis_de_residencia = person("PERMISRESID", period)
-        es_divorciada_de_familia_reagrupada = person("PERMISREAGRUPFAMIDIVORCIADA", period)
-        ha_residit_efectivament_a_cat_durant_24m = person("RESEFECTCAT24M", period)
-        compleix_nivell_ingressos = person("NRINFIMPRGC", period)
-        te_prestacio_servei_residencial = person("PRESTACIORESIDENCIAL", period)
+        discapacitats_a_carrec = person.household.any(person("es_discapacitat", period))
+        es_orfe_de_progenitors = person("es_orfe_dels_dos_progenitors", period)
+        es_victima_violencia_masclista = person("es_victima_de_violencia_masclista", period)
+        es_empadronat_a_catalunya = person("es_empadronat_a_catalunya", period)
+        te_permis_de_residencia = person("te_permis_de_residencia", period)
+        es_divorciada_de_familia_reagrupada = person("es_divorciada_de_familia_reagrupada", period)
+        ha_residit_efectivament_a_cat_durant_24m = person("ha_residit_a_catalunya_durant_24_mesos", period)
+        compleix_nivell_ingressos = person("nivell_de_renda_inferior_rgc", period)
+        te_prestacio_servei_residencial = person("es_beneficiar_d_una_prestacio_residencial", period)
         es_intern_penitenciari = person("ingressat_en_centre_penitenciari", period)
-        va_fer_baixa_voluntaria_ultima_feina = person("BAIXAVOL12M", period)
+        va_fer_baixa_voluntaria_ultima_feina = \
+            person("en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina", period)
 
-        return ((major_23
+        return \
+            (
+                (major_23
                  + (major_18
                     * discapacitats_a_carrec
                     * es_orfe_de_progenitors
-                    * es_victima_violencia_masclista))
-                * ((es_empadronat_a_catalunya
-                    * te_permis_de_residencia)
-                + es_divorciada_de_familia_reagrupada)
+                    * es_victima_violencia_masclista
+                    )
+                 )
+                * (
+                    (es_empadronat_a_catalunya
+                    * te_permis_de_residencia
+                     )
+                    + es_divorciada_de_familia_reagrupada
+                )
                 * ha_residit_efectivament_a_cat_durant_24m
                 * compleix_nivell_ingressos
                 * (te_prestacio_servei_residencial == False)
                 * (es_intern_penitenciari == False)
-                * (va_fer_baixa_voluntaria_ultima_feina == False)) \
-                * 100  # Fixme: Stub
+                * (va_fer_baixa_voluntaria_ultima_feina == False)
+            ) * 100  # Fixme: Stub
