@@ -9,7 +9,7 @@ Familia = build_entity(
     plural="families",
     label=u'Familia',
     roles=[{
-        'key': 'parent',
+        'key': 'adult',
         'plural': 'adults',
         'label': u'Adults',
         'max': 2,
