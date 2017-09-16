@@ -46,4 +46,43 @@ You can make sure that the api is working by requesting:
 curl "http://localhost:2000/api/2/formula/edat?data_naixement=1978-01-15"
 ```
 
+A more complex example, create this file:
+```json
+{
+  "output_format": "variables",
+  "scenarios": [
+    {
+      "test_case": {
+        "families": [
+          {
+            "adults": ["pare1"],
+			"menors": ["infant1"]
+          }
+        ],
+        "persones": [
+          {
+            "id": "pare1",
+            "data_naixement": "1961-01-15",
+            "ingressos_disponibles": "7000",
+            "es_usuari_serveis_socials": true,
+            "ciutat_empadronament": "Barcelona"
+          },
+          {
+            "id": "infant1",
+            "data_naixement": "2002-01-15",
+            "es_usuari_serveis_socials": true,
+            "ciutat_empadronament": "Barcelona"
+          }
+        ]
+      },
+      "period": "2017-1"
+    }
+  ],
+  "variables": ["AE_230_mensual"]
+}
+```
+and run:
+```sh
+curl http://localhost:2000/api/1/calculate -X POST --data @./the_file_you_created.json --header 'Content-type: application/json'
+```
 > [Learn more about the API](https://doc.openfisca.fr/openfisca-web-api/index.html)
