@@ -8,6 +8,10 @@ class major_de_45_anys(Variable):
     definition_period = MONTH
     label = "The user is older than 45 years"
     set_input = set_input_dispatch_by_period
+    default = False
+
+    def formula(persona, period, parameters):
+        return persona('edat', period) >= 45
 
 
 class desocupat(Variable):

@@ -6,8 +6,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -19,7 +19,7 @@
      GE_051_02_mensual: [ 426 ]
 
 
-- name: "Persona menos de 45 NO reb l'ajuda"
+- name: "Persona menor de 45 anys NO reb l'ajuda"
   description: RAI 2 - Per emigrants retornats major de 45 anys
   period: 2017-01
   absolute_error_margin: false
@@ -27,8 +27,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1980-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: no
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -48,8 +48,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: false
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -69,8 +69,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: false
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -89,8 +89,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
@@ -110,8 +110,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -131,8 +131,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -151,8 +151,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -172,8 +172,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -192,8 +192,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
+     data_naixement: 1960-01-01
      ingressos_disponibles: 500
-     major_de_45_anys: true
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
