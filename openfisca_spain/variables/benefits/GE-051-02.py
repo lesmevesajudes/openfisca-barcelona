@@ -42,7 +42,7 @@ class GE_051_02_mensual(Variable):
         desocupat = persona('desocupat', period)
         ha_treballat_a_l_estranger_6_mesos = persona('ha_treballat_a_l_estranger_6_mesos', period)
         no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos = persona('no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos', period)
-        no_se_li_ha_concedit_tres_ajudes_rai_anteiors = persona('no_se_li_ha_concedit_tres_ajudes_rai_anteiors', period)
+        no_se_li_ha_concedit_tres_ajudes_rai_anteriors = persona('no_se_li_ha_concedit_tres_ajudes_rai_anteriors', period)
         no_treballa_per_compte_propi = persona('treballa_per_compte_propi', period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
         no_percep_prestacins_incompatibles_amb_la_feina = persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
@@ -53,7 +53,7 @@ class GE_051_02_mensual(Variable):
             * desocupat \
             * ha_treballat_a_l_estranger_6_mesos \
             * no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos \
-            * no_se_li_ha_concedit_tres_ajudes_rai_anteiors \
+            * no_se_li_ha_concedit_tres_ajudes_rai_anteriors \
             * no_treballa_per_compte_propi \
             * no_ingressat_en_centre_penitenciari \
             * no_percep_prestacins_incompatibles_amb_la_feina

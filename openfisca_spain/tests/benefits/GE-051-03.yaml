@@ -10,7 +10,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -31,7 +31,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -51,7 +51,7 @@
      victima_violencia_de_genere: false
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -71,7 +71,7 @@
      victima_violencia_de_genere: true
      desocupat: false
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -91,7 +91,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -111,7 +111,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: false
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -131,7 +131,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: true
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -151,7 +151,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: true
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -171,7 +171,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: true
@@ -191,7 +191,7 @@
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteiors: true
+     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false

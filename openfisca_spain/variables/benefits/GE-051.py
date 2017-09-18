@@ -32,7 +32,7 @@ class no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class no_se_li_ha_concedit_tres_ajudes_rai_anteiors(Variable):
+class no_se_li_ha_concedit_tres_ajudes_rai_anteriors(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
