@@ -10,7 +10,7 @@ from openfisca_core.model_api import *
 from openfisca_spain.entities import *
 
 
-class familia_disposable_income(Variable):
+class familia_ingressos_disponibles(Variable):
     column = IntCol(val_type="monetary")
     entity = Familia
     definition_period = MONTH
@@ -65,7 +65,7 @@ class AE_230_mensual(Variable):
 
     def formula(persona, period, parameters):
         te_menys_de_16_anys = persona('edat', period) < 16
-        ingressos_inferiors_varem = persona.familia('familia_disposable_income', period) < \
+        ingressos_inferiors_varem = persona.familia('familia_ingressos_disponibles', period) < \
                            varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona('es_usuari_serveis_socials', period)
         es_empadronat_a_barcelona = persona('ciutat_empadronament', period) == "Barcelona"
