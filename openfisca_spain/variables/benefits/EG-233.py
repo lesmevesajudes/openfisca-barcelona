@@ -90,7 +90,7 @@ class tipus_familia_nombrosa(Variable):
     definition_period = MONTH
     label = "Type of large family certification"
 
-tipus_familia_monoparental_categories = Enum([u'No', u'General', u'Especial'])
+tipus_familia_monoparental_categories = Enum(['No', 'General', 'Especial'])
 
 
 class tipus_familia_monoparental(Variable):
