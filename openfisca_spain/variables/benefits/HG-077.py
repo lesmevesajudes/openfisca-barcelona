@@ -1,9 +1,6 @@
 # Import from openfisca-core the common python objects used to code the legislation in OpenFisca
 from datetime import datetime
-from openfisca_core.model_api import *
-# Import the entities specifically defined for this tax and benefit system
-from openfisca_spain.entities import *
-
+from openfisca_spain.variables.demographics import *
 
 class resident_a_catalunya_durant_5_anys(Variable):
     column = BoolCol
@@ -37,7 +34,7 @@ class risc_d_exclusio_social(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona("nivell_de_risc_d_exclusio_social", period) != nivell_de_risc_d_exclusio_social_categories["No"]
+        return persona.familia("nivell_de_risc_d_exclusio_social", period) != NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL["No"]
 
 
 class existeix_un_contracte_de_lloguer(Variable):

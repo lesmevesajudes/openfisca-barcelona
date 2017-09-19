@@ -1,6 +1,4 @@
-from openfisca_core.model_api import *
-from openfisca_spain.entities import *
-
+from openfisca_spain.variables.demographics import *
 
 class en_guardia_i_custodia(Variable):
     column = BoolCol
@@ -78,42 +76,6 @@ class nivell_de_renda_inferior_a_1740_12(Variable):
     def formula(persona, period, legislation):
         return persona('ingressos_disponibles', period) * 12 < 1740.12
 
-tipus_familia_nombrosa_categories = Enum(['No', 'General', 'Especial'])
-
-
-class tipus_familia_nombrosa(Variable):
-    column = EnumCol(
-        enum=tipus_familia_nombrosa_categories,
-        default=0  # No
-    )
-    entity = Familia
-    definition_period = MONTH
-    label = "Type of large family certification"
-
-tipus_familia_monoparental_categories = Enum(['No', 'General', 'Especial'])
-
-
-class tipus_familia_monoparental(Variable):
-    column = EnumCol(
-        enum=tipus_familia_monoparental_categories,
-        default=0  # No
-    )
-    entity = Familia
-    definition_period = MONTH
-    label = "Type of monoparental family certification"
-
-nivell_de_risc_d_exclusio_social_categories = Enum(['No', 'Existeix', 'Greu'])
-
-
-class nivell_de_risc_d_exclusio_social(Variable):
-    column = EnumCol(
-        enum=nivell_de_risc_d_exclusio_social_categories,
-        default=0  # No
-    )
-    entity = Familia
-    definition_period = MONTH
-    label = "Level of social exclusion risk"
-
 
 class en_acolliment(Variable):
     column = BoolCol
@@ -145,18 +107,18 @@ class puntuacio_de_la_familia_segons_eg_233(Variable):
     def formula(familia, period, legislation):
         tipus_familia_nombrosa = familia("tipus_familia_nombrosa", period)
         puntuacio_familia_nombrosa = select([
-            tipus_familia_nombrosa == tipus_familia_nombrosa_categories['General'],
-            tipus_familia_nombrosa == tipus_familia_nombrosa_categories['Especial']],
+            tipus_familia_nombrosa == TIPUS_FAMILIA_NOMBROSA['General'],
+            tipus_familia_nombrosa == TIPUS_FAMILIA_NOMBROSA['Especial']],
             [1.5, 3])
         tipus_familia_monoparental = familia("tipus_familia_monoparental", period)
         puntuacio_familia_monoparental = select([
-            tipus_familia_monoparental == tipus_familia_monoparental_categories['General'],
-            tipus_familia_monoparental == tipus_familia_monoparental_categories['Especial']],
+            tipus_familia_monoparental == TIPUS_FAMILIA_MONOPARENTAL['General'],
+            tipus_familia_monoparental == TIPUS_FAMILIA_MONOPARENTAL['Especial']],
             [1.5, 3])
         tipus_risc_exclusio_social = familia("nivell_de_risc_d_exclusio_social", period)
         puntuacio_risc_exclusio_social = select([
-            tipus_risc_exclusio_social == nivell_de_risc_d_exclusio_social_categories["Existeix"],
-            tipus_risc_exclusio_social == nivell_de_risc_d_exclusio_social_categories["Greu"]],
+            tipus_risc_exclusio_social == NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL["Existeix"],
+            tipus_risc_exclusio_social == NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL["Greu"]],
             [10, 15])
         punts_per_grau_discapacitat_membres = familia.members("punts_assignats_per_grau_de_discapacitat", period)
         punts_grau_discapacitat = familia.sum(punts_per_grau_discapacitat_membres)

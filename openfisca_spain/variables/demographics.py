@@ -8,8 +8,7 @@
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_spain.entities import *
-
-from numpy import datetime64
+import numpy as np
 
 
 class edat(Variable):
@@ -21,7 +20,7 @@ class edat(Variable):
     # A person's age is computed according to its birth date.
     def formula(persona, period, legislation):
         data_naixement = persona('data_naixement', period)
-        return (datetime64(period.date) - data_naixement).astype('timedelta64[Y]')
+        return (np.datetime64(period.date) - data_naixement).astype('timedelta64[Y]')
 
 
 # This variable is a pure input: it doesn't have a formula
@@ -31,3 +30,39 @@ class data_naixement(Variable):
     entity = Persona
     label = u"Birth date"
     definition_period = ETERNITY  # This variable cannot change over time.
+
+NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL = Enum(['No', 'Existeix', 'Greu'])
+
+
+class nivell_de_risc_d_exclusio_social(Variable):
+    column = EnumCol(
+        enum=NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL,
+        default=0  # No
+    )
+    entity = Familia
+    definition_period = MONTH
+    label = "Level of social exclusion risk"
+
+TIPUS_FAMILIA_NOMBROSA = Enum(['No', 'General', 'Especial'])
+
+
+class tipus_familia_nombrosa(Variable):
+    column = EnumCol(
+        enum=TIPUS_FAMILIA_NOMBROSA,
+        default=0  # No
+    )
+    entity = Familia
+    definition_period = MONTH
+    label = "Type of large family certification"
+
+TIPUS_FAMILIA_MONOPARENTAL = Enum(['No', 'General', 'Especial'])
+
+
+class tipus_familia_monoparental(Variable):
+    column = EnumCol(
+        enum=TIPUS_FAMILIA_MONOPARENTAL,
+        default=0  # No
+    )
+    entity = Familia
+    definition_period = MONTH
+    label = "Type of monoparental family certification"
