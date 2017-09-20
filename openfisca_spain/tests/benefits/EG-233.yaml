@@ -16,18 +16,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 482
-     en_guardia_i_custodia: true
      grau_discapacitat: 0
    - id: "adult2"
      ingressos_disponibles: 240
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "adult3"
      ingressos_disponibles: 119
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat: true
+     en_guardia_i_custodia: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144
@@ -47,18 +45,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -73,18 +69,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 904
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -100,18 +94,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 501
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -126,18 +118,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 300
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -152,18 +142,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 340
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -178,18 +166,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: false
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -204,18 +190,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: false
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -231,18 +215,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: true
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: true
      ingressos_disponibles: 240
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -258,18 +240,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: false
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: false
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -286,18 +266,16 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 804
-     en_guardia_i_custodia: false
    - id: "adult2"
      ingressos_disponibles: 401
-     en_guardia_i_custodia: false
    - id: "adult3"
      ingressos_disponibles: 200
-     en_guardia_i_custodia: false
    - id: "menor1"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
+     en_guardia_i_custodia: false
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -321,15 +299,12 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 482
-     en_guardia_i_custodia: true
      grau_discapacitat: 0
    - id: "adult2"
      ingressos_disponibles: 240
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "adult3"
      ingressos_disponibles: 119
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat: true
@@ -338,6 +313,7 @@
      ingressos_disponibles: 144
      grau_discapacitat: 0
      en_acolliment: false
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -361,15 +337,12 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 482
-     en_guardia_i_custodia: true
      grau_discapacitat: 0
    - id: "adult2"
      ingressos_disponibles: 240
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "adult3"
      ingressos_disponibles: 119
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat: true
@@ -378,6 +351,7 @@
      ingressos_disponibles: 144
      grau_discapacitat: 0
      en_acolliment: false
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -399,15 +373,12 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 482
-     en_guardia_i_custodia: true
      grau_discapacitat: 0
    - id: "adult2"
      ingressos_disponibles: 240
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "adult3"
      ingressos_disponibles: 119
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat: true
@@ -416,6 +387,7 @@
      ingressos_disponibles: 144
      grau_discapacitat: 0
      en_acolliment: false
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -438,15 +410,12 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 482
-     en_guardia_i_custodia: true
      grau_discapacitat: 0
    - id: "adult2"
      ingressos_disponibles: 240
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "adult3"
      ingressos_disponibles: 119
-     en_guardia_i_custodia: false
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat: true
@@ -455,6 +424,7 @@
      ingressos_disponibles: 144
      grau_discapacitat: 0
      en_acolliment: false
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -476,7 +446,6 @@
   persones:
    - id: "adult1"
      ingressos_disponibles: 482
-     en_guardia_i_custodia: true
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat: true
@@ -485,6 +454,7 @@
      ingressos_disponibles: 144
      grau_discapacitat: 34
      en_acolliment: true
+     en_guardia_i_custodia: true
    - id: "menor2"
      es_escolaritzat: true
      utilitza_el_servei_de_menjador: true
@@ -492,5 +462,6 @@
      ingressos_disponibles: 144
      grau_discapacitat: 34
      en_acolliment: false
+     en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 6, 6 ]

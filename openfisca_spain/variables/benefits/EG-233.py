@@ -221,7 +221,7 @@ class EG_233_mensual(Variable):
         utilitza_el_servei_de_menjador = persona('utilitza_el_servei_de_menjador', period)
         no_te_beca_menjador = persona('te_beca_menjador', period) == False
         es_un_menor = persona.has_role(Familia.MENOR)
-        en_guardia_i_custodia = persona.familia.primer_adult('en_guardia_i_custodia', period)   # Fixme: Need to understand the
+        en_guardia_i_custodia = persona('en_guardia_i_custodia', period)   # Fixme: Need to understand the
                                                                                     # semantics of this concept.
                                                                                     # Somebody is in "guardia i
                                                                                     # custodia" somebody has "guardia y
