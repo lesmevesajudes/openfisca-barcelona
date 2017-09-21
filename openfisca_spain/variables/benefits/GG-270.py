@@ -44,7 +44,7 @@ class ha_residit_a_catalunya_durant_24_mesos(Variable):
     label = "True if person has lived efectively in Catalonia for the last 24 months"
 
 
-class es_beneficiar_d_una_prestacio_residencial(Variable):
+class es_beneficiari_d_una_prestacio_residencial(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
@@ -94,7 +94,7 @@ class GG_270_mensual(Variable):
         es_divorciada_de_familia_reagrupada = persona("es_divorciada_de_familia_reagrupada", period)
         ha_residit_efectivament_a_cat_durant_24m = persona("ha_residit_a_catalunya_durant_24_mesos", period)
         compleix_nivell_ingressos = persona("nivell_de_renda_inferior_rgc", period)
-        te_prestacio_servei_residencial = persona("es_beneficiar_d_una_prestacio_residencial", period)
+        te_prestacio_servei_residencial = persona("es_beneficiari_d_una_prestacio_residencial", period)
         es_intern_penitenciari = persona("ingressat_en_centre_penitenciari", period)
         va_fer_baixa_voluntaria_ultima_feina = \
             persona("en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina", period)

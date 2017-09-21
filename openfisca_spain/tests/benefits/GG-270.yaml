@@ -14,7 +14,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -37,7 +37,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -60,7 +60,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -82,7 +82,7 @@
      te_permis_de_residencia: false
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -105,7 +105,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: false
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -128,7 +128,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: true
+     es_beneficiari_d_una_prestacio_residencial: true
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -151,7 +151,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: true
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -173,7 +173,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
   output_variables:
@@ -197,7 +197,7 @@
      te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
    - id: "menor_discapacitat"
@@ -223,7 +223,7 @@
      te_permis_de_residencia: false
      es_divorciada_de_familia_reagrupada: true
      ha_residit_a_catalunya_durant_24_mesos: true
-     es_beneficiar_d_una_prestacio_residencial: false
+     es_beneficiari_d_una_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
    - id: "menor_discapacitat"
