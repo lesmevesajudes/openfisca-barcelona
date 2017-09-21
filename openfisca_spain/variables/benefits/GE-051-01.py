@@ -11,7 +11,7 @@ class grau_discapacitat(Variable):
     set_input = set_input_dispatch_by_period
 
 
-class ha_esgotat_prestacio_de_desocupatacio(Variable):
+class ha_esgotat_prestacio_de_desocupacio(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
@@ -53,7 +53,7 @@ class GE_051_01_mensual(Variable):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = \
             persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
         discapacitat_superior_al_33_percent = persona('grau_discapacitat', period) > 33
-        ha_esgotat_prestacio_de_desocupatacio = persona('ha_esgotat_prestacio_de_desocupatacio', period)
+        ha_esgotat_prestacio_de_desocupacio = persona('ha_esgotat_prestacio_de_desocupacio', period)
         demandant_d_ocupacio_durant_12_mesos = persona('demandant_d_ocupacio_durant_12_mesos', period)
         durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina = \
             persona('durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina', period)
@@ -70,7 +70,7 @@ class GE_051_01_mensual(Variable):
         compleix_els_requeriments = \
             cap_membre_amb_ingressos_superiors_a_530_mensuals \
             * discapacitat_superior_al_33_percent \
-            * ha_esgotat_prestacio_de_desocupatacio \
+            * ha_esgotat_prestacio_de_desocupacio \
             * demandant_d_ocupacio_durant_12_mesos \
             * durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina \
             * no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos \
