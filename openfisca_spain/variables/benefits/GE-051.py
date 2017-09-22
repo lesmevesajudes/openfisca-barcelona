@@ -30,6 +30,7 @@ class no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos(Variable):
     definition_period = MONTH
     label = "The user has not been benefited with a rai in the last 12 months"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class no_se_li_ha_concedit_tres_ajudes_rai_anteriors(Variable):
@@ -38,6 +39,7 @@ class no_se_li_ha_concedit_tres_ajudes_rai_anteriors(Variable):
     definition_period = MONTH
     label = "The user has been benefited with three consecutive rai benefits"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 
@@ -47,6 +49,7 @@ class treballa_per_compte_propi(Variable):
     definition_period = MONTH
     label = "The user is self-employed"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class ingressat_en_centre_penitenciari(Variable):
@@ -55,6 +58,7 @@ class ingressat_en_centre_penitenciari(Variable):
     definition_period = MONTH
     label = "The user is in prison"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class percep_prestacions_incompatibles_amb_la_feina(Variable):
@@ -63,4 +67,5 @@ class percep_prestacions_incompatibles_amb_la_feina(Variable):
     definition_period = MONTH
     label = "The user has some benefit incompatible with having a job"
     set_input = set_input_dispatch_by_period
+    default = False
 

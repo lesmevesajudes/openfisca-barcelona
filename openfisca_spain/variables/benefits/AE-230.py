@@ -55,6 +55,7 @@ class es_usuari_serveis_socials(Variable):
     definition_period = MONTH
     label = "The user is a Social services user"
     set_input = set_input_dispatch_by_period
+    default=False
 
 
 class AE_230_mensual(Variable):

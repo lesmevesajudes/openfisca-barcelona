@@ -6,6 +6,7 @@ class en_guardia_i_custodia(Variable):
     definition_period = MONTH
     label = "The user is responsible for the child"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class es_escolaritzat(Variable):
@@ -14,6 +15,7 @@ class es_escolaritzat(Variable):
     definition_period = MONTH
     label = "The child goes to school"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class utilitza_el_servei_de_menjador(Variable):
@@ -22,6 +24,7 @@ class utilitza_el_servei_de_menjador(Variable):
     definition_period = MONTH
     label = "The child uses school's lunch service"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class te_beca_menjador(Variable):
@@ -30,6 +33,7 @@ class te_beca_menjador(Variable):
     definition_period = MONTH
     label = "The child has free lunch benefit"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class nivell_de_renda_inferior_a_2416_80(Variable):
@@ -83,6 +87,7 @@ class en_acolliment(Variable):
     definition_period = MONTH
     label = "The child is in protection regime"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class punts_assignats_per_grau_de_discapacitat(Variable):

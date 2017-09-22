@@ -20,6 +20,7 @@ class desocupat(Variable):
     definition_period = MONTH
     label = "The user has no job"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class ha_treballat_a_l_estranger_6_mesos(Variable):
@@ -28,6 +29,7 @@ class ha_treballat_a_l_estranger_6_mesos(Variable):
     definition_period = MONTH
     label = "The user has been working abroad for at least 6 months"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class GE_051_02_mensual(Variable):

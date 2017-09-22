@@ -8,6 +8,7 @@ class resident_a_catalunya_durant_5_anys(Variable):
     definition_period = MONTH
     label = "The user has legal residence in catalonia for at least 5 years"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class victima_de_terrorisme(Variable):
@@ -16,6 +17,7 @@ class victima_de_terrorisme(Variable):
     definition_period = MONTH
     label = "The user is a victim of terrorism"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class ingressos_suficients_per_pagar_el_lloguer(Variable):
@@ -24,6 +26,7 @@ class ingressos_suficients_per_pagar_el_lloguer(Variable):
     definition_period = MONTH
     label = "The familia income is enough to pay rent"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class risc_d_exclusio_social(Variable):
@@ -43,6 +46,7 @@ class existeix_un_contracte_de_lloguer(Variable):
     definition_period = MONTH
     label = "The user has a rent contract"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class LLOGMAXBCN(Variable):     # Fixme: This should be in parameters
@@ -51,6 +55,7 @@ class LLOGMAXBCN(Variable):     # Fixme: This should be in parameters
     definition_period = MONTH
     label = "The house hold rent does not exceed maximum rent amount for Barcelona"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class esta_al_corrent_del_pagament_de_lloguer(Variable):
@@ -59,6 +64,7 @@ class esta_al_corrent_del_pagament_de_lloguer(Variable):
     definition_period = MONTH
     label = "The rent payments must be up to date"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class lloguer_domiciliat(Variable):
@@ -67,6 +73,7 @@ class lloguer_domiciliat(Variable):
     definition_period = MONTH
     label = "The rent payments are made through a bank"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class pot_rebre_subvencions(Variable):
@@ -75,6 +82,7 @@ class pot_rebre_subvencions(Variable):
     definition_period = MONTH
     label = "The user is not subject to any condition that is forbidden"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class al_corrent_de_les_obligacions_tributaries(Variable):
@@ -83,6 +91,7 @@ class al_corrent_de_les_obligacions_tributaries(Variable):
     definition_period = MONTH
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class es_BLJ(Variable):

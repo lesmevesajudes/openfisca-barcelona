@@ -8,6 +8,7 @@ class victima_violencia_de_genere(Variable):
     definition_period = MONTH
     label = "The user is a victim of genre violence"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 class GE_051_03_mensual(Variable):
