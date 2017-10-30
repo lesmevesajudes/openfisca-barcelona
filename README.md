@@ -8,12 +8,19 @@ all non domain specific documentation to enable collaboration with other openfis
 
 ## Installing
 
-> We recommend that you [use a virtualenv](https://doc.openfisca.fr/for_developers.html#create-a-virtualenv) 
+> We recommend that you use a virtualenv:
+```sh
+virtualenv ${HOME}/.virtualenvs/openfisca-barcelona/
+```
+and activate it (You will need to do this every time you work with openfisca):
+```sh
+. ~/.virtualenvs/openfisca-barcelona/bin/activate
+```
 to install OpenFisca. If you don't, you may need to add `--user` at the end of all commands starting by `pip`.
 
 To install your country package, run:
 
-```
+```sh
 pip install -e ".[test]"
 ```
 
