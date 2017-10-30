@@ -1,4 +1,4 @@
-# OpenFisca Spain
+# OpenFisca Barcelona
 
 [OpenFisca](https://www.openfisca.fr/) package that model Spain legislation from Barcelona point of view. This project 
 is intended to be used as a simulator to determine which benefits can be opted by a person or family.

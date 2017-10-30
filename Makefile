@@ -5,10 +5,14 @@ dist:
 	flake8
 
 test:
-	openfisca-run-test --country_package openfisca_spain openfisca_spain/tests
+	openfisca-run-test --country_package openfisca_barcelona openfisca_barcelona/tests
 
 run:
 	openfisca-serve --port 2000
+
+run_new:
+	COUNTRY_PACKAGE=openfisca_barcelona gunicorn "openfisca_web_api_preview.app:create_app()" \
+	--bind localhost:5000 --workers 3
 
 prod-run:
 	openfisca-serve --port ${PORT}

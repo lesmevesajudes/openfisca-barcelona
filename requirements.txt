@@ -23,7 +23,7 @@ mccabe==0.6.1
 nose==1.3.7
 numpy==1.12.1
 OpenFisca-Core==17.1.1
--e git+https://github.com/jvalduvieco/openfisca-spain.git@fef07c07d94592e5469f4d3e111e778a101bf63f#egg=OpenFisca_Spain
+-e git+https://github.com/jvalduvieco/openfisca-spain.git@fef07c07d94592e5469f4d3e111e778a101bf63f#egg=openfisca-barcelona
 OpenFisca-Web-API==6.2.2
 Paste==2.0.3
 PasteDeploy==1.5.2

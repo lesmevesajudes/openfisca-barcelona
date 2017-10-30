@@ -6,14 +6,14 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='OpenFisca-Spain',
+    name='OpenFisca-Barcelona',
     version='1.0.0',
     author='OpenFisca Team',
     author_email='contact@openfisca.fr',
-    description=u'OpenFisca tax and benefit system for Spain',
+    description=u'OpenFisca tax and benefit system for Barcelona',
     keywords='benefit microsimulation social tax',
     license='http://www.fsf.org/licensing/licenses/agpl-3.0.html',
-    url='https://github.com/openfisca/openfisca-spain',
+    url='https://github.com/openfisca/openfisca-barcelona',
     include_package_data=True,  # Will read MANIFEST.in
     install_requires=[
         'OpenFisca-Core >= 17.0.0, < 18.0',

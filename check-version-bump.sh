@@ -2,7 +2,7 @@
 
 current_version=`python setup.py --version`
 
-if git diff-index --quiet origin/master openfisca_spain
+if git diff-index --quiet origin/master openfisca_barcelona
 then exit 0  # there are no changes at all, the version is correct
 fi
 

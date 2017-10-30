@@ -1,6 +1,6 @@
 # Import from openfisca-core the common python objects used to code the legislation in OpenFisca
 from datetime import datetime
-from openfisca_spain.variables.demographics import *
+from openfisca_barcelona.variables.demographics import *
 
 class resident_a_catalunya_durant_5_anys(Variable):
     column = BoolCol

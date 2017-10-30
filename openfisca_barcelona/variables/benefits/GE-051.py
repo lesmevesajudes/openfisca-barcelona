@@ -1,5 +1,5 @@
 from openfisca_core.model_api import *
-from openfisca_spain.entities import *
+from openfisca_barcelona.entities import *
 
 class renda_disponible_inferior_a_530(Variable):
     column = BoolCol

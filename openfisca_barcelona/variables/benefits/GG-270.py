@@ -1,5 +1,5 @@
 from openfisca_core.model_api import *
-from openfisca_spain.entities import *
+from openfisca_barcelona.entities import *
 
 
 class es_orfe_dels_dos_progenitors(Variable):

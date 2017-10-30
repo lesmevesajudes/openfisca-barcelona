@@ -1,4 +1,4 @@
-from openfisca_spain.variables.demographics import *
+from openfisca_barcelona.variables.demographics import *
 
 class en_guardia_i_custodia(Variable):
     column = BoolCol

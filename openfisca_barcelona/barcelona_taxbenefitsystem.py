@@ -6,7 +6,7 @@ from .entities import entities
 COUNTRY_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-class SpainTaxBenefitSystem(TaxBenefitSystem):
+class BarcelonaTaxBenefitSystem(TaxBenefitSystem):
     def __init__(self):
         TaxBenefitSystem.__init__(self, entities)
 

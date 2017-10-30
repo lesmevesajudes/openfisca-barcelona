@@ -7,7 +7,7 @@
 # Import from openfisca-core the common python objects used to code the legislation in OpenFisca
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
-from openfisca_spain.entities import *
+from openfisca_barcelona.entities import *
 
 
 class familia_ingressos_disponibles(Variable):
@@ -55,7 +55,7 @@ class es_usuari_serveis_socials(Variable):
     definition_period = MONTH
     label = "The user is a Social services user"
     set_input = set_input_dispatch_by_period
-    default=False
+    default = False
 
 
 class AE_230_mensual(Variable):
