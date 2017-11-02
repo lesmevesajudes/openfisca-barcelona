@@ -8,14 +8,10 @@ test:
 	openfisca-run-test --country-package openfisca_barcelona openfisca_barcelona/tests
 
 run:
-	openfisca-serve --port 2000
-
-run_new:
-	COUNTRY_PACKAGE=openfisca_barcelona gunicorn "openfisca_web_api_preview.app:create_app()" \
-	--bind localhost:5000 --workers 3
+	openfisca serve --country-package openfisca_barcelona --port 2000
 
 prod-run:
-	openfisca-serve --port ${PORT}
+	openfisca serve  --country-package openfisca_barcelona --port ${PORT}
 
 deploy-heroku:
 	git push heroku master
