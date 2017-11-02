@@ -16,14 +16,14 @@ setup(
     url='https://github.com/openfisca/openfisca-barcelona',
     include_package_data=True,  # Will read MANIFEST.in
     install_requires=[
-        'OpenFisca-Core >= 17.0.0, < 18.0',
+        'OpenFisca-Core >= 19.0.0, < 20.0',
         'PyYAML >= 3.10',
         'numpy >= 1.11, < 1.13',
         'requests >= 2.8',
         ],
     extras_require={
         'api': [
-            'OpenFisca-Web-API >= 6.2.1, < 7.0',
+            'OpenFisca-Web-API >= 4.0.0, < 7.0',
             ],
         'test': [
             'flake8',

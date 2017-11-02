@@ -5,7 +5,7 @@ dist:
 	flake8
 
 test:
-	openfisca-run-test --country_package openfisca_barcelona openfisca_barcelona/tests
+	openfisca-run-test --country-package openfisca_barcelona openfisca_barcelona/tests
 
 run:
 	openfisca-serve --port 2000
