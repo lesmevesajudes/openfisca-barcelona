@@ -11,7 +11,7 @@ run:
 	openfisca serve --country-package openfisca_barcelona --port 2000
 
 prod-run:
-	openfisca serve  --country-package openfisca_barcelona --port ${PORT}
+	openfisca serve  --configuration-file production-config/config.py --port ${PORT}
 
 deploy-heroku:
 	git push heroku master
