@@ -10,19 +10,6 @@ from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 
 
-class familia_ingressos_disponibles(Variable):
-    column = IntCol(val_type="monetary")
-    entity = Familia
-    definition_period = MONTH
-    label = "Total yearly income"
-    set_input = set_input_divide_by_period
-
-    def formula(familia, period):
-        ingressos_membres_de_la_familia = familia.members('ingressos_disponibles', period)
-        total_ingressos_familia = familia.sum(ingressos_membres_de_la_familia)
-        return total_ingressos_familia
-
-
 def varem_irsc_016(nr_members):
         return select(                  # Fixme: Find the formula!
             [nr_members == 2,

@@ -29,7 +29,7 @@ class data_naixement(Variable):
                                                 # people involved in a simulation to be born on the 1st of Jan 1970.
     entity = Persona
     label = u"Birth date"
-    definition_period = ETERNITY  # This variable cannot change over time.
+    definition_period = ETERNITY  # This     variable cannot change over time.
 
 NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL = Enum(['No', 'Existeix', 'Greu'])
 
@@ -66,3 +66,10 @@ class tipus_familia_monoparental(Variable):
     entity = Familia
     definition_period = MONTH
     label = "Type of monoparental family certification"
+
+
+class nacionalitat(Variable):
+    column = StrCol
+    entity = Persona
+    definition_period = MONTH
+    label = u"Person nationality"

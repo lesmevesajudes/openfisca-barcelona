@@ -1,0 +1,5 @@
+description: Maximum rent subject to benefits in Barcelona
+reference: openfisca
+values:
+  2017-01-01:
+    value: 750

@@ -9,9 +9,23 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
 
+
 class ingressos_disponibles(Variable):
     column = FloatCol
     entity = Persona
     definition_period = MONTH
     label = "Actual amount available to the person at the end of the month"
     set_input = set_input_divide_by_period
+
+
+class familia_ingressos_disponibles(Variable):
+    column = IntCol(val_type="monetary")
+    entity = Familia
+    definition_period = MONTH
+    label = "Total yearly income"
+    set_input = set_input_divide_by_period
+
+    def formula(familia, period):
+        ingressos_membres_de_la_familia = familia.members('ingressos_disponibles', period)
+        total_ingressos_familia = familia.sum(ingressos_membres_de_la_familia)
+        return total_ingressos_familia

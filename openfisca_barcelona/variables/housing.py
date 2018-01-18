@@ -16,3 +16,14 @@ class ciutat_empadronament(Variable):
     definition_period = MONTH
     label = u"City Where the user is censed"
     set_input = set_input_dispatch_by_period
+
+
+class empadronat_a_la_ciutat_de_barcelona(Variable):
+    column = StrCol
+    entity = Persona
+    definition_period = MONTH
+    label = u"The user is censed in Barcelona city"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        return persona("ciutat_empadronament", period) == "Barcelona"
