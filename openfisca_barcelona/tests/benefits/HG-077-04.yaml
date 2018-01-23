@@ -11,19 +11,15 @@
      habitatge_de_ladministracio: false
      relacio_de_parentiu_amb_el_propietari: false
      data_signatura_contracte_de_lloguer: '2016-12-01'
-     contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre: false
   persones:
    - id: "persona1"
-     data_naixement: '1961-01-15'
+     data_naixement: '1941-01-15'
      ingressos_disponibles: 7000
      ciutat_empadronament: "Barcelona"
-     resident_a_catalunya_durant_5_anys: false
+     resident_a_catalunya_durant_5_anys: true
+     ha_residit_a_catalunya_els_ultims_24_mesos: true
      risc_d_exclusio_social: true
      titular_contracte_de_lloguer: true
-     codi_postal: 08003
-     ha_residit_a_lextranger_els_ultims_24_mesos: true
-     ha_residit_a_lextranger_36_mesos_continuats: true
-     ha_residit_a_lextranger_60_mesos_discontinuats: false
      nacionalitat: "Espanyola"
   output_variables:
-     HG_077_03_mensual: [ 200 ]
+     HG_077_04_mensual: [ 200 ]

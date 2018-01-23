@@ -1,0 +1,43 @@
+- name: "Demarcacio 077 - Barcelona ciutat"
+  period: 2017-01
+  input_variables:
+    codi_postal: 08003
+  output_variables:
+    lloguer_maxim_segons_demarcacio_077: 750
+
+
+- name: "Demarcacio 077 - Barcelona provincia"
+  period: 2017-01
+  input_variables:
+    codi_postal: 08370
+  output_variables:
+    lloguer_maxim_segons_demarcacio_077: 600
+
+- name: "Demarcacio 077 - Girona provincia"
+  period: 2017-01
+  input_variables:
+    codi_postal: 17310
+  output_variables:
+    lloguer_maxim_segons_demarcacio_077: 450
+
+- name: "Demarcacio 077 - Tarragona provincia"
+  period: 2017-01
+  input_variables:
+    codi_postal: 43008
+  output_variables:
+    lloguer_maxim_segons_demarcacio_077: 450
+
+- name: "Demarcacio 077 - Lleida provincia"
+  period: 2017-01
+  input_variables:
+    codi_postal: 25567
+  output_variables:
+    lloguer_maxim_segons_demarcacio_077: 400
+
+
+#- name: "Demarcacio 077 - Terres de l'Ebre"
+#  period: 2017-01
+#  input_variables:
+#    codi_postal: 43870
+#  output_variables:
+#    lloguer_maxim_segons_demarcacio_077: 350

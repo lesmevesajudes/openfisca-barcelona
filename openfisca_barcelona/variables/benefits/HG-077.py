@@ -158,4 +158,59 @@ class ha_residit_a_lextranger_60_mesos_discontinuats(Variable):
     default = False
 
 
+class demarcacio_077(Variable):
+    column = StrCol
+    entity = Persona
+    definition_period = MONTH
+    label = u"The province where this person lives"
+    set_input = set_input_dispatch_by_period
 
+    def formula(persona, period, params):
+        print persona("codi_postal", period)
+        codi_postal = int(persona("codi_postal", period)[0])
+        print codi_postal
+        # http://www.solosequenosenada.com/2010/09/16/listado-de-todos-los-codigos-postales-de-espana/
+        codis_postals_barcelona_ciutat = np.array([8001, 8002, 8003, 8004, 8005, 8006, 8007, 8008, 8009, 8010, 8011, 8012,
+                                            8013, 8014, 8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023, 8024,
+                                            8025, 8026, 8027, 8028, 8029, 8030, 8031, 8032, 8033, 8034, 8035, 8036,
+                                            8037, 8038, 8039, 8040, 8041, 8042, 8075, 8196, 8830, 8903, 8904, 8930,
+                                            8960])
+        es_barcelona_ciutat = np.argmax(codis_postals_barcelona_ciutat == codi_postal)
+
+        es_barcelona_provincia = (not es_barcelona_ciutat) & (8000 < codi_postal < 9000)
+        es_girona = 17000 < codi_postal < 18000
+        es_tarragona = 43000 < codi_postal < 44000
+        es_lleida = 25000 < codi_postal < 26000
+        es_terres_de_lebre = False         # TODO https://ca.wikipedia.org/wiki/Terres_de_l%27Ebre
+
+        return select(
+            [es_barcelona_ciutat, es_barcelona_provincia, es_girona, es_terres_de_lebre, es_tarragona, es_lleida ],
+            ["barcelona_ciutat", "barcelona", "girona",  "terres_de_lebre", "tarragona", "lleida"]
+        )
+
+
+class lloguer_maxim_segons_demarcacio_077(Variable):
+    column = IntCol
+    entity = Persona
+    definition_period = MONTH
+    label = u"Maximal rent amount by demarcation"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, params):
+        demarcacio = persona("demarcacio_077", period)
+        return select(
+            [demarcacio == "barcelona_ciutat",
+             demarcacio == "barcelona",
+             demarcacio == "girona",
+             demarcacio == "tarragona",
+             demarcacio == "lleida",
+             demarcacio == "terres_de_lebre"],
+            [
+                750,
+                600,
+                450,
+                450,
+                400,
+                350
+            ]
+        )

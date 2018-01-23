@@ -57,7 +57,8 @@ class HG_077_03_mensual(Variable):
                 * persona.familia("esta_al_corrent_del_pagament_de_lloguer", period) \
                 * persona.familia("lloguer_domiciliat", period) \
                 * persona.familia("contracte_posterior_a_1_11_2016", period) \
-                * (persona.familia("contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre", period) == False)
+                * (persona.familia("contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre", period) == False) \
+                * (persona.familia("import_del_lloguer", period) < persona("lloguer_maxim_segons_demarcacio_077", period))
 
         import_ajuda = 200
 
