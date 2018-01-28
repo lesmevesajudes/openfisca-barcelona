@@ -4,7 +4,7 @@ from openfisca_barcelona.entities import *
 import numpy as np
 
 
-class codi_postal(Variable):
+class codi_postal_empadronament(Variable):
     column = StrCol
     entity = Persona
     definition_period = MONTH
