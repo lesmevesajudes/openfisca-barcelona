@@ -8,7 +8,6 @@
      esta_al_corrent_del_pagament_de_lloguer: true
      lloguer_domiciliat: true
      import_del_lloguer: 700
-     habitatge_de_ladministracio: false
      relacio_de_parentiu_amb_el_propietari: false
      data_signatura_contracte_de_lloguer: '2016-12-01'
      contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre: false
@@ -38,7 +37,6 @@
      esta_al_corrent_del_pagament_de_lloguer: true
      lloguer_domiciliat: true
      import_del_lloguer: 700
-     habitatge_de_ladministracio: false
      relacio_de_parentiu_amb_el_propietari: false
      data_signatura_contracte_de_lloguer: '2016-12-01'
      contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre: false
@@ -70,7 +68,6 @@
      esta_al_corrent_del_pagament_de_lloguer: true
      lloguer_domiciliat: true
      import_del_lloguer: 700
-     habitatge_de_ladministracio: false
      relacio_de_parentiu_amb_el_propietari: false
      data_signatura_contracte_de_lloguer: '2016-12-01'
      contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre: false
