@@ -1,5 +1,5 @@
 import datetime
-from numpy import logical_or
+from numpy import logical_or, logical_not
 
 from datetime import datetime
 from openfisca_barcelona.variables.demographics import *
@@ -46,11 +46,15 @@ class HG_077_03_mensual(Variable):
                 * persona("resident_a_catalunya_durant_5_anys", period)
                 * persona("ha_residit_a_catalunya_els_ultims_24_mesos", period))
 
+        espanyol_resident_a_catalunya = (persona("nacionalitat", period) == "Espanyola") \
+                                        * (persona("ha_residit_a_lextranger_els_ultims_24_mesos", period) == False)
+
         requeriments_solicitant = \
-                logical_or(emigrant_amb_5_anys_de_residencia, retornat_espanyol_residint_a_lextranger_36_mesos) \
+            ((emigrant_amb_5_anys_de_residencia \
+                + retornat_espanyol_residint_a_lextranger_36_mesos \
+                + espanyol_resident_a_catalunya)) \
                 * persona("edat", period) > 18 \
-                * persona("titular_contracte_de_lloguer", period) \
-                * persona("risc_d_exclusio_social", period)
+                * persona("titular_contracte_de_lloguer", period)
 
         requeriments_familia = \
                 (ingressos_familia_mensual < irsc_per_1_5) \
@@ -58,7 +62,8 @@ class HG_077_03_mensual(Variable):
                 * persona.familia("lloguer_domiciliat", period) \
                 * persona.familia("contracte_posterior_a_1_11_2016", period) \
                 * (persona.familia("contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre", period) == False) \
-                * (persona.familia("import_del_lloguer", period) < persona("lloguer_maxim_segons_demarcacio_077", period))
+                * (persona.familia("import_del_lloguer", period) < persona("lloguer_maxim_segons_demarcacio_077", period)) \
+                * (ingressos_familia_mensual * 0.3 < persona.familia("import_del_lloguer", period))
 
         import_ajuda = 200
 
