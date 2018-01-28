@@ -5,13 +5,17 @@ from datetime import datetime
 from openfisca_barcelona.variables.demographics import *
 from openfisca_barcelona.variables.housing import *
 
+class data_signatura_contracte_de_lloguer(Variable):
+    column = DateCol
+    entity = Familia
+    definition_period = ETERNITY
+    label = u"When the rent contract was signed"
 
 class contracte_posterior_a_1_11_2016(Variable):
     column = BoolCol
     entity = Familia
-    definition_period = MONTH
+    definition_period = ETERNITY
     label = u"The rent contract is signed after 2016/11/01"
-    set_input = set_input_dispatch_by_period
 
     def formula(familia, period, parameters):
         return familia("data_signatura_contracte_de_lloguer", period) > datetime.strptime('1916-11-1', "%Y-%m-%d").date()
