@@ -54,21 +54,22 @@ class HG_077_03_mensual(Variable):
                                         * (persona("ha_residit_a_lextranger_els_ultims_24_mesos", period) == False)
 
         requeriments_solicitant = \
-            ((emigrant_amb_5_anys_de_residencia \
-                + retornat_espanyol_residint_a_lextranger_36_mesos \
+            ((emigrant_amb_5_anys_de_residencia
+                + retornat_espanyol_residint_a_lextranger_36_mesos
                 + espanyol_resident_a_catalunya)) \
                 * persona("edat", period) > 18 \
                 * persona("titular_contracte_de_lloguer", period)
 
         requeriments_familia = \
                 (ingressos_familia_mensual < irsc_per_1_5) \
-                * persona.familia("esta_al_corrent_del_pagament_de_lloguer", period) \
+                * (persona.familia("import_del_deute_amb_el_propietari", period) == 0) \
                 * persona.familia("lloguer_domiciliat", period) \
                 * persona.familia("contracte_posterior_a_1_11_2016", period) \
-                * (persona.familia("contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre", period) == False) \
+                * (persona.familia("relacio_de_parentiu_amb_el_propietari", period) == False) \
+                * (persona.familia("contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre", period) == True) \
                 * (persona.familia("import_del_lloguer", period) < persona("lloguer_maxim_segons_demarcacio_077", period)) \
                 * (ingressos_familia_mensual * 0.3 < persona.familia("import_del_lloguer", period))
 
-        import_ajuda = 200
+        import_ajuda = max(20, min(200, (persona.familia("import_del_lloguer", period) - persona.familia("lloguer_just", period))))
 
         return requeriments_solicitant * requeriments_familia * import_ajuda
