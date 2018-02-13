@@ -41,15 +41,6 @@ class existeix_un_contracte_de_lloguer(Variable):
     default = False
 
 
-class LLOGMAXBCN(Variable):  # Fixme: This should be in parameters
-    column = BoolCol
-    entity = Familia
-    definition_period = MONTH
-    label = "The house hold rent does not exceed maximum rent amount for Barcelona"
-    set_input = set_input_dispatch_by_period
-    default = False
-
-
 class import_del_deute_amb_el_propietari(Variable):
     column = FloatCol
     entity = Familia
