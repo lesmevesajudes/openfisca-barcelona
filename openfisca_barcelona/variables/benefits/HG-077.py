@@ -47,7 +47,7 @@ class import_del_deute_amb_el_propietari(Variable):
     definition_period = MONTH
     label = "The debt amount with the owner"
     set_input = set_input_dispatch_by_period
-    default = False
+    default = 0
 
 
 class lloguer_domiciliat(Variable):
@@ -102,6 +102,7 @@ class relacio_de_parentiu_amb_el_propietari(Variable):
     definition_period = MONTH
     label = "There is some kind of family relation with the owner"
     set_input = set_input_dispatch_by_period
+    default = False
 
 
 def major_de_65_el_2012_12_31(data_de_naixement):

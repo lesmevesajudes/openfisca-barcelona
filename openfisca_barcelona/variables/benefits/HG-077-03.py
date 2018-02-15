@@ -5,7 +5,7 @@ from datetime import datetime
 from openfisca_barcelona.variables.demographics import *
 from openfisca_barcelona.variables.housing import *
 
-class data_signatura_contracte_de_lloguer(Variable):
+class data_signatura_contracte_arrendament(Variable):
     column = DateCol
     entity = Familia
     definition_period = ETERNITY
@@ -18,14 +18,16 @@ class contracte_posterior_a_1_11_2016(Variable):
     label = u"The rent contract is signed after 2016/11/01"
 
     def formula(familia, period, parameters):
-        return familia("data_signatura_contracte_de_lloguer", period) > datetime.strptime('1916-11-1', "%Y-%m-%d").date()
+        return familia("data_signatura_contracte_arrendament", period) > datetime.strptime('1916-11-1', "%Y-%m-%d").date()
 
 class contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre(Variable):
     column = BoolCol
     entity = Familia
     definition_period = MONTH
-    label = u"The rent contract has been obtainet through mediaton or the owner of the flat is a benefit association"
+    label = u"The rent contract has been obtained through mediaton or the owner of the flat is a benefit association"
     set_input = set_input_dispatch_by_period
+    default = False
+
 
 
 class HG_077_03_mensual(Variable):
@@ -66,7 +68,6 @@ class HG_077_03_mensual(Variable):
                 * persona.familia("lloguer_domiciliat", period) \
                 * persona.familia("contracte_posterior_a_1_11_2016", period) \
                 * (persona.familia("relacio_de_parentiu_amb_el_propietari", period) == False) \
-                * (persona.familia("contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre", period) == True) \
                 * (persona.familia("import_del_lloguer", period) < persona("lloguer_maxim_segons_demarcacio_077", period)) \
                 * (ingressos_familia_mensual * 0.3 < persona.familia("import_del_lloguer", period))
 
