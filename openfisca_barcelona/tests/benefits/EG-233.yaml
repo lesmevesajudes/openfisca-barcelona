@@ -24,7 +24,7 @@
      ingressos_disponibles: 119
      grau_discapacitat: 0
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      en_guardia_i_custodia: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
@@ -50,7 +50,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -74,7 +74,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -99,7 +99,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -123,7 +123,7 @@
    - id: "adult3"
      ingressos_disponibles: 300
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -147,7 +147,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 340
@@ -171,7 +171,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: false
+     es_escolaritzat_entre_P3_i_4rt_ESO: false
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -195,7 +195,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: false
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -220,7 +220,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: true
      ingressos_disponibles: 240
@@ -245,7 +245,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -271,7 +271,7 @@
    - id: "adult3"
      ingressos_disponibles: 200
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 240
@@ -307,7 +307,7 @@
      ingressos_disponibles: 119
      grau_discapacitat: 0
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144
@@ -345,7 +345,7 @@
      ingressos_disponibles: 119
      grau_discapacitat: 0
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144
@@ -381,7 +381,7 @@
      ingressos_disponibles: 119
      grau_discapacitat: 0
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144
@@ -418,7 +418,7 @@
      ingressos_disponibles: 119
      grau_discapacitat: 0
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144
@@ -448,7 +448,7 @@
      ingressos_disponibles: 482
      grau_discapacitat: 0
    - id: "menor1"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144
@@ -456,7 +456,7 @@
      en_acolliment: true
      en_guardia_i_custodia: true
    - id: "menor2"
-     es_escolaritzat: true
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
      ingressos_disponibles: 144

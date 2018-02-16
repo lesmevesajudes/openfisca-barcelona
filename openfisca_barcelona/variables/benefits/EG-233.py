@@ -9,7 +9,7 @@ class en_guardia_i_custodia(Variable):
     default = False
 
 
-class es_escolaritzat(Variable):
+class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
@@ -222,7 +222,7 @@ class EG_233_mensual(Variable):
 
     def formula(persona, period, parameters):
 
-        es_escolaritzat = persona('es_escolaritzat', period)
+        es_escolaritzat_entre_P3_i_4rt_ESO = persona('es_escolaritzat_entre_P3_i_4rt_ESO', period)
         utilitza_el_servei_de_menjador = persona('utilitza_el_servei_de_menjador', period)
         no_te_beca_menjador = persona('te_beca_menjador', period) == False
         es_un_menor = persona.has_role(Familia.MENOR)
@@ -232,7 +232,7 @@ class EG_233_mensual(Variable):
                                                                                     # custodia" somebody has "guardia y
                                                                                     # custodia" over somebody else...
         compleix_els_requeriments = en_guardia_i_custodia * \
-                                    es_escolaritzat * \
+                                    es_escolaritzat_entre_P3_i_4rt_ESO * \
                                     utilitza_el_servei_de_menjador * \
                                     no_te_beca_menjador * \
                                     es_un_menor

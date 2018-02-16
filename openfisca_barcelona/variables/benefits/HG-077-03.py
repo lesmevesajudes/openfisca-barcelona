@@ -1,8 +1,5 @@
 import datetime
-from numpy import logical_or, logical_not
-
 from datetime import datetime
-from openfisca_barcelona.variables.demographics import *
 from openfisca_barcelona.variables.housing import *
 
 class data_signatura_contracte_arrendament(Variable):
