@@ -6,7 +6,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -27,7 +27,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 600
+     ingressos_bruts: 600
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -47,7 +47,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: false
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -67,7 +67,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: false
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -87,7 +87,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
@@ -107,7 +107,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -127,7 +127,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -147,7 +147,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -167,7 +167,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -187,7 +187,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      victima_violencia_de_genere: true
      desocupat: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true

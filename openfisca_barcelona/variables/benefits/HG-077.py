@@ -222,4 +222,4 @@ class lloguer_just(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(familia, period, params):
-        return (familia("familia_ingressos_disponibles", period) / 12) * 0.3
+        return (familia("familia_ingressos_bruts", period) / 12) * 0.3

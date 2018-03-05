@@ -74,7 +74,7 @@ class nivell_de_renda_inferior_rgc(Variable):
     label = "True if income is less than IRSC"
 
     def formula(persona, period, legislation):
-        return persona("ingressos_disponibles", period) < 530 #Fixme: Stub, as I can not understand documentation
+        return persona("ingressos_bruts", period) < 530 #Fixme: Stub, as I can not understand documentation
 
 
 class GG_270_mensual(Variable):

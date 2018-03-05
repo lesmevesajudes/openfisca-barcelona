@@ -5,6 +5,7 @@
 
   families:
      adults: ["persona1"]
+     menors: ["persona2"]
      import_del_deute_amb_el_propietari: 0
      lloguer_domiciliat: true
      import_del_lloguer: 700
@@ -14,10 +15,21 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: false
      risc_d_exclusio_social: true
      titular_contracte_de_lloguer: true
+     codi_postal_empadronament: 08003
+     ha_residit_a_lextranger_els_ultims_24_mesos: false
+     ha_residit_a_lextranger_36_mesos_continuats: false
+     ha_residit_a_lextranger_60_mesos_discontinuats: false
+     nacionalitat: "Espanyola"
+   - id: "persona2"
+     data_naixement: '2010-01-15'
+     ingressos_bruts: 0
+     resident_a_catalunya_durant_5_anys: false
+     risc_d_exclusio_social: true
+     titular_contracte_de_lloguer: false
      codi_postal_empadronament: 08003
      ha_residit_a_lextranger_els_ultims_24_mesos: false
      ha_residit_a_lextranger_36_mesos_continuats: false
@@ -42,7 +54,7 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: false
      risc_d_exclusio_social: true
      titular_contracte_de_lloguer: true
@@ -70,7 +82,7 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: false
      titular_contracte_de_lloguer: true
      codi_postal_empadronament: 08003
@@ -97,7 +109,7 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: false
      risc_d_exclusio_social: true
      titular_contracte_de_lloguer: true
@@ -125,7 +137,7 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: false
      risc_d_exclusio_social: true
      titular_contracte_de_lloguer: true
@@ -153,7 +165,7 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: false
      titular_contracte_de_lloguer: true
      codi_postal_empadronament: 08003
@@ -183,7 +195,7 @@
   persones:
    - id: "persona1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 7000
+     ingressos_bruts: 7000
      resident_a_catalunya_durant_5_anys: true
      titular_contracte_de_lloguer: true
      codi_postal_empadronament: 08003

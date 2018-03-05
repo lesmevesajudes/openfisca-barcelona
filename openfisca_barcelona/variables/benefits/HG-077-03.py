@@ -38,7 +38,7 @@ class HG_077_03_mensual(Variable):
         irsc = parameters(period).benefits.HG077.IRSC
         irsc_per_1_5 = irsc * 1.5
 
-        ingressos_familia_mensual = persona.familia("familia_ingressos_disponibles", period) / 12
+        ingressos_familia_mensual = persona.familia("familia_ingressos_bruts", period) / 12
 
         retornat_espanyol_residint_a_lextranger_36_mesos = ((persona("nacionalitat", period) == "Espanyola")
               * (persona("ha_residit_a_lextranger_36_mesos_continuats", period)

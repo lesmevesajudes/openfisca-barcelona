@@ -7,7 +7,7 @@
   persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
@@ -32,7 +32,7 @@
   persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
@@ -47,7 +47,7 @@
      beneficiari_ajuts_per_violencia_de_genere: false
    - id: "adult2"
      data_naixement: '1961-01-15'
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
@@ -71,7 +71,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 32
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -93,7 +93,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: false
      demandant_d_ocupacio_durant_12_mesos: true
@@ -115,7 +115,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: false
      demandant_d_ocupacio_durant_12_mesos: true
@@ -137,7 +137,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: false
@@ -159,7 +159,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -181,7 +181,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -203,7 +203,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -225,7 +225,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -247,7 +247,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -269,7 +269,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -291,7 +291,7 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true

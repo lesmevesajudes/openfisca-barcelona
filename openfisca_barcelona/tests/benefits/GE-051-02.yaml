@@ -7,7 +7,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -28,7 +28,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1980-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -49,7 +49,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: false
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -70,7 +70,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: false
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -90,7 +90,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
@@ -111,7 +111,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -132,7 +132,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -152,7 +152,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -173,7 +173,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
@@ -193,7 +193,7 @@
   persones:
    - id: "adult1"
      data_naixement: 1960-01-01
-     ingressos_disponibles: 500
+     ingressos_bruts: 500
      desocupat: true
      ha_treballat_a_l_estranger_6_mesos: true
      no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true

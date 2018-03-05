@@ -44,7 +44,7 @@ class nivell_de_renda_inferior_a_2416_80(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_disponibles', period) * 12 < 2416.80   #FIXME: I should not be * define a concept for
+        return persona('ingressos_bruts', period) * 12 < 2416.80   #FIXME: I should not be * define a concept for
                                                                     # yearly total income
 
 
@@ -56,7 +56,7 @@ class nivell_de_renda_inferior_a_2900_20(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_disponibles', period) * 12 < 2900.20
+        return persona('ingressos_bruts', period) * 12 < 2900.20
 
 
 class nivell_de_renda_inferior_a_1450_08(Variable):
@@ -67,7 +67,7 @@ class nivell_de_renda_inferior_a_1450_08(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_disponibles', period) * 12 < 1450.08
+        return persona('ingressos_bruts', period) * 12 < 1450.08
 
 
 class nivell_de_renda_inferior_a_1740_12(Variable):
@@ -78,7 +78,7 @@ class nivell_de_renda_inferior_a_1740_12(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_disponibles', period) * 12 < 1740.12
+        return persona('ingressos_bruts', period) * 12 < 1740.12
 
 
 class en_acolliment(Variable):
@@ -168,8 +168,8 @@ class valor_cadastral_finques_urbanes(Variable):
 
 
 def compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, period, parameters):
-    nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_disponibles', period) * 12
-    nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_disponibles', period) * 12
+    nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period) * 12
+    nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period) * 12
 
     nivell_renda_maxim_primer_adult = \
         parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim_primer_adult
@@ -194,8 +194,8 @@ def compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(persona, perio
 
 
 def compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(persona, period, parameters):
-    nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_disponibles', period) * 12
-    nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_disponibles', period) * 12
+    nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period) * 12
+    nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period) * 12
 
     nivell_renda_maxim_primer_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_primer_adult
     nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_segon_adult

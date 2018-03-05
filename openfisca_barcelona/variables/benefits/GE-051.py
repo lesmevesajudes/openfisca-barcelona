@@ -9,7 +9,7 @@ class renda_disponible_inferior_a_530(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_disponibles', period) < 530   # Fixme: This 530 smells like a parameter
+        return persona('ingressos_bruts', period) < 530   # Fixme: This 530 smells like a parameter
                                                                 # (or function of)
 
 class cap_familiar_te_renda_disponible_superior_a_530(Variable):

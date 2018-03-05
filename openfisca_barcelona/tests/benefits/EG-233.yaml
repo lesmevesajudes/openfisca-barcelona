@@ -15,20 +15,20 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_disponibles: 482
+     ingressos_bruts: 482
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_disponibles: 119
+     ingressos_bruts: 119
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      en_guardia_i_custodia: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -44,16 +44,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
@@ -68,16 +68,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 904
+     ingressos_bruts: 904
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -93,16 +93,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 501
+     ingressos_bruts: 501
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -117,16 +117,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 300
+     ingressos_bruts: 300
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -141,16 +141,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 340
+     ingressos_bruts: 340
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -165,16 +165,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: false
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -189,16 +189,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: false
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -214,16 +214,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: true
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: true
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -239,16 +239,16 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: false
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -265,16 +265,16 @@
      tipus_familia_nombrosa: 'General'
   persones:
    - id: "adult1"
-     ingressos_disponibles: 804
+     ingressos_bruts: 804
    - id: "adult2"
-     ingressos_disponibles: 401
+     ingressos_bruts: 401
    - id: "adult3"
-     ingressos_disponibles: 200
+     ingressos_bruts: 200
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      en_guardia_i_custodia: false
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -298,19 +298,19 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_disponibles: 482
+     ingressos_bruts: 482
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_disponibles: 119
+     ingressos_bruts: 119
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 0
      en_acolliment: false
      en_guardia_i_custodia: true
@@ -336,19 +336,19 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_disponibles: 482
+     ingressos_bruts: 482
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_disponibles: 119
+     ingressos_bruts: 119
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 0
      en_acolliment: false
      en_guardia_i_custodia: true
@@ -372,19 +372,19 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_disponibles: 482
+     ingressos_bruts: 482
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_disponibles: 119
+     ingressos_bruts: 119
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 0
      en_acolliment: false
      en_guardia_i_custodia: true
@@ -409,19 +409,19 @@
      valor_cadastral_finques_urbanes: 42901
   persones:
    - id: "adult1"
-     ingressos_disponibles: 482
+     ingressos_bruts: 482
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_disponibles: 240
+     ingressos_bruts: 240
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_disponibles: 119
+     ingressos_bruts: 119
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 0
      en_acolliment: false
      en_guardia_i_custodia: true
@@ -445,13 +445,13 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_disponibles: 482
+     ingressos_bruts: 482
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 34
      en_acolliment: true
      en_guardia_i_custodia: true
@@ -459,7 +459,7 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      utilitza_el_servei_de_menjador: true
      te_beca_menjador: false
-     ingressos_disponibles: 144
+     ingressos_bruts: 144
      grau_discapacitat: 34
      en_acolliment: false
      en_guardia_i_custodia: true

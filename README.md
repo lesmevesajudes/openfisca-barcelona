@@ -70,7 +70,7 @@ A more complex example, create this file:
           {
             "id": "pare1",
             "data_naixement": "1961-01-15",
-            "ingressos_disponibles": "7000",
+            "ingressos_bruts": "7000",
             "es_usuari_serveis_socials": true,
             "ciutat_empadronament": "Barcelona"
           },
