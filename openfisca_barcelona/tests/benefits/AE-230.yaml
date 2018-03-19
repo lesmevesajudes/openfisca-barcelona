@@ -6,18 +6,66 @@
     adults: ["pare1"]
     menors: ["infant1"]
     domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 7000
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [ 0, 100]
+
+- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC amb expedient a SS posterior a 31-12-16"
+  description: Ajuda menors 0-16
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    adults: ["pare1"]
+    menors: ["infant1"]
+    domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2017-01-01
+  persones:
+   - id: "pare1"
+     data_naixement: '1961-01-15'
+     ingressos_bruts: 7000
+     ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
+   - id: "infant1"
+     data_naixement: '2002-01-15'
+     ingressos_bruts: 0
+     data_alta_padro: '2015-12-31'
+  output_variables:
+    AE_230_mensual: [ 0, 0]
+
+- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC, data alta padró posterior a 01-01-16"
+  description: Ajuda menors 0-16
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    adults: ["pare1"]
+    menors: ["infant1"]
+    domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
+  persones:
+   - id: "pare1"
+     data_naixement: '1961-01-15'
+     ingressos_bruts: 7000
+     ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2016-1-2'
+   - id: "infant1"
+     data_naixement: '2002-01-15'
+     ingressos_bruts: 0
+     data_alta_padro: '2016-1-2'
+  output_variables:
+    AE_230_mensual: [ 0, 0]
 
 - name: "0-16 Unitat familiar 3 membres nivell renda disponible inferior a 1,5 IRSC"
   description: Ajuda menors 0-16
@@ -27,21 +75,23 @@
     adults: ["pare1"]
     menors: ["infant1", "infant2"]
     domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 12000
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant2"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [ 0, 100, 100]
 
@@ -53,21 +103,23 @@
     adults: ["pare1"]
     menors: ["infant1", "infant2"]
     domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 14940
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant2"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [ 0, 0, 0]
 
@@ -79,23 +131,25 @@
     adults: ["pare1", "mare1"]
     menors: ["infant1", "infant2"]
     domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 7928
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
    - id: "mare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 10000
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
    - id: "infant2"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
 
@@ -107,16 +161,18 @@
     adults: ["pare1"]
     menors: ["infant1"]
     domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 7000
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2000-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [0, 0]
 
@@ -128,16 +184,18 @@
     adults: ["pare1"]
     menors: ["infant1"]
     domicili_a_barcelona_ciutat: false
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 7000
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [ 0, 0]
 
@@ -149,15 +207,17 @@
     adults: ["pare1"]
     menors: ["infant1"]
     domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    data_obertura_expedient_serveis_socials: 2016-12-30
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 12000
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
+     data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
-     es_usuari_serveis_socials: true
+     data_alta_padro: '2015-12-31'
   output_variables:
     AE_230_mensual: [ 0, 0]

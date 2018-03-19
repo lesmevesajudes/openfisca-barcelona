@@ -15,7 +15,7 @@ class contracte_posterior_a_1_11_2016(Variable):
     label = u"The rent contract is signed after 2016/11/01"
 
     def formula(familia, period, parameters):
-        return familia("data_signatura_contracte_arrendament", period) > datetime.strptime('1916-11-1', "%Y-%m-%d").date()
+        return familia("data_signatura_contracte_arrendament", period) > datetime.strptime('2016-11-1', "%Y-%m-%d").date()
 
 class contracte_obtingut_a_traves_de_borsa_de_mediacio_o_gestionat_per_entitat_sense_anim_de_lucre(Variable):
     column = BoolCol

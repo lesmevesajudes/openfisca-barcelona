@@ -18,24 +18,6 @@ class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
     default = False
 
 
-class utilitza_el_servei_de_menjador(Variable):
-    column = BoolCol
-    entity = Persona
-    definition_period = MONTH
-    label = "The child uses school's lunch service"
-    set_input = set_input_dispatch_by_period
-    default = False
-
-
-class te_beca_menjador(Variable):
-    column = BoolCol
-    entity = Persona
-    definition_period = MONTH
-    label = "The child has free lunch benefit"
-    set_input = set_input_dispatch_by_period
-    default = False
-
-
 class nivell_de_renda_inferior_a_2416_80(Variable):
     column = BoolCol
     entity = Persona
@@ -46,7 +28,6 @@ class nivell_de_renda_inferior_a_2416_80(Variable):
     def formula(persona, period, legislation):
         return persona('ingressos_bruts', period) * 12 < 2416.80   #FIXME: I should not be * define a concept for
                                                                     # yearly total income
-
 
 class nivell_de_renda_inferior_a_2900_20(Variable):
     column = BoolCol
@@ -223,8 +204,6 @@ class EG_233_mensual(Variable):
     def formula(persona, period, parameters):
 
         es_escolaritzat_entre_P3_i_4rt_ESO = persona('es_escolaritzat_entre_P3_i_4rt_ESO', period)
-        utilitza_el_servei_de_menjador = persona('utilitza_el_servei_de_menjador', period)
-        no_te_beca_menjador = persona('te_beca_menjador', period) == False
         es_un_menor = persona.has_role(Familia.MENOR)
         en_guardia_i_custodia = persona('en_guardia_i_custodia', period)   # Fixme: Need to understand the
                                                                                     # semantics of this concept.
@@ -233,8 +212,6 @@ class EG_233_mensual(Variable):
                                                                                     # custodia" over somebody else...
         compleix_els_requeriments = en_guardia_i_custodia * \
                                     es_escolaritzat_entre_P3_i_4rt_ESO * \
-                                    utilitza_el_servei_de_menjador * \
-                                    no_te_beca_menjador * \
                                     es_un_menor
 
         compleix_ajut_ordinari = compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(persona, period, parameters)
