@@ -5,6 +5,7 @@
   families:
     adults: ["pare1"]
     menors: ["infant1"]
+    domicili_a_barcelona_ciutat: true
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
@@ -15,7 +16,6 @@
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 100]
 
@@ -26,6 +26,7 @@
   families:
     adults: ["pare1"]
     menors: ["infant1", "infant2"]
+    domicili_a_barcelona_ciutat: true
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
@@ -41,7 +42,6 @@
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 100, 100]
 
@@ -52,6 +52,7 @@
   families:
     adults: ["pare1"]
     menors: ["infant1", "infant2"]
+    domicili_a_barcelona_ciutat: true
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
@@ -67,7 +68,6 @@
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0, 0]
 
@@ -78,27 +78,24 @@
   families:
     adults: ["pare1", "mare1"]
     menors: ["infant1", "infant2"]
+    domicili_a_barcelona_ciutat: true
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 7928
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
    - id: "mare1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 10000
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
    - id: "infant2"
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
 
@@ -109,6 +106,7 @@
   families:
     adults: ["pare1"]
     menors: ["infant1"]
+    domicili_a_barcelona_ciutat: true
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
@@ -119,7 +117,6 @@
      data_naixement: '2000-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [0, 0]
 
@@ -130,6 +127,7 @@
   families:
     adults: ["pare1"]
     menors: ["infant1"]
+    domicili_a_barcelona_ciutat: false
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
@@ -140,7 +138,6 @@
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Mataró"
   output_variables:
     AE_230_mensual: [ 0, 0]
 
@@ -151,6 +148,7 @@
   families:
     adults: ["pare1"]
     menors: ["infant1"]
+    domicili_a_barcelona_ciutat: true
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
@@ -161,6 +159,5 @@
      data_naixement: '2002-01-15'
      ingressos_bruts: 0
      es_usuari_serveis_socials: true
-     ciutat_empadronament: "Barcelona"
   output_variables:
     AE_230_mensual: [ 0, 0]

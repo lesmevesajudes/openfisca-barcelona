@@ -31,7 +31,44 @@ class data_naixement(Variable):
     label = u"Birth date"
     definition_period = ETERNITY  # This     variable cannot change over time.
 
+
+class data_alta_padro(Variable):
+    column = DateCol(default=date(1970, 1, 1))
+    entity = Persona
+    label = u"Inscription to the cityzenship register"
+    definition_period = MONTH
+
+class situacio_laboral(Variable):
+    column = StrCol
+    entity = Persona
+    label = u"labor situation"
+    definition_period = MONTH
+
+
+class beneficiari_fons_infancia_2017(Variable):
+    column = BoolCol
+    entity = Persona
+    label = u"Has fons_infancia_2017 benefit"
+    definition_period = MONTH
+
+
+class tipus_document_identitat(Variable):
+    column = StrCol
+    entity = Persona
+    label = u"ID document type"
+    definition_period = MONTH
+
+
+class relacio_habitatge(Variable):
+    column = StrCol
+    entity = Familia
+    label = u"Family - property relation"
+    definition_period = MONTH
+
+
+
 NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL = Enum(['No', 'Existeix', 'Greu'])
+
 
 
 class nivell_de_risc_d_exclusio_social(Variable):

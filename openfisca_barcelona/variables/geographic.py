@@ -10,3 +10,19 @@ class codi_postal_empadronament(Variable):
     definition_period = MONTH
     label = u"Postal code where person lives"
     set_input = set_input_dispatch_by_period
+
+
+class codi_postal_habitatge(Variable):
+    column = StrCol
+    entity = Familia
+    definition_period = MONTH
+    label = u"Postal code where family lives"
+    set_input = set_input_dispatch_by_period
+
+
+class domicili_a_barcelona_ciutat(Variable):
+    column = BoolCol
+    entity = Familia
+    definition_period = MONTH
+    label = u"Postal code where family lives"
+    set_input = set_input_dispatch_by_period

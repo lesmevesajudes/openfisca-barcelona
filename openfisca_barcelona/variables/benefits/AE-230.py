@@ -56,10 +56,9 @@ class AE_230_mensual(Variable):
         ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period) < \
                            varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona('es_usuari_serveis_socials', period)
-        es_empadronat_a_barcelona = persona('ciutat_empadronament', period) == "Barcelona"
+        es_empadronat_a_barcelona = persona.familia('domicili_a_barcelona_ciutat', period).all()
+        print(persona.familia.nb_persons(Familia.ADULT))
         import_ajuda = parameters(period).benefits.AE230.import_ajuda
-        return te_menys_de_16_anys \
-               * ingressos_inferiors_varem \
-               * es_empadronat_a_barcelona \
-               * es_usuari_serveis_socials \
-               * import_ajuda
+
+        return where(te_menys_de_16_anys * ingressos_inferiors_varem * es_empadronat_a_barcelona * es_usuari_serveis_socials,
+               import_ajuda, 0)
