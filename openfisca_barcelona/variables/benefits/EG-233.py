@@ -1,10 +1,10 @@
 from openfisca_barcelona.variables.demographics import *
 
-class en_guardia_i_custodia(Variable):
-    column = BoolCol
+class tipus_custodia(Variable):
+    column = StrCol
     entity = Persona
     definition_period = MONTH
-    label = "The user is responsible for the child"
+    label = "The type of relation child between child and it's maintainers"
     set_input = set_input_dispatch_by_period
     default = False
 
@@ -205,11 +205,7 @@ class EG_233_mensual(Variable):
 
         es_escolaritzat_entre_P3_i_4rt_ESO = persona('es_escolaritzat_entre_P3_i_4rt_ESO', period)
         es_un_menor = persona.has_role(Familia.MENOR)
-        en_guardia_i_custodia = persona('en_guardia_i_custodia', period)   # Fixme: Need to understand the
-                                                                                    # semantics of this concept.
-                                                                                    # Somebody is in "guardia i
-                                                                                    # custodia" somebody has "guardia y
-                                                                                    # custodia" over somebody else...
+        en_guardia_i_custodia = persona('tipus_custodia', period) != "cap"
         compleix_els_requeriments = en_guardia_i_custodia * \
                                     es_escolaritzat_entre_P3_i_4rt_ESO * \
                                     es_un_menor
