@@ -76,8 +76,8 @@ class data_alta_padro_anterior_a_2016_1_1(Variable):
         return persona("data_alta_padro", period) < datetime.strptime('2016-01-01', "%Y-%m-%d").date()
 
 
-class AE_230_mensual(Variable):
-    column = IntCol(val_type="monetary")
+class compleix_criteris_AE230(Variable):
+    column = BoolCol
     entity = Persona
     definition_period = MONTH
     label = "Ajuda 0-16"
@@ -85,23 +85,27 @@ class AE_230_mensual(Variable):
     def formula(persona, period, parameters):
         te_menys_de_16_anys = persona('edat', period) < 16
         ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period)[0] < \
-                           varem_irsc_016(persona.familia.nb_persons())
+                                    varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)[0]
         es_empadronat_a_barcelona = persona.familia('domicili_a_barcelona_ciutat', period)[0]
         alta_padro_anterior_2016_01_01 = persona('data_alta_padro_anterior_a_2016_1_1', period)
 
+        return te_menys_de_16_anys \
+               * ingressos_inferiors_varem \
+               * es_empadronat_a_barcelona \
+               * alta_padro_anterior_2016_01_01 \
+               * es_usuari_serveis_socials
+
+
+class AE_230_mensual(Variable):
+    column = IntCol(val_type="monetary")
+    entity = Persona
+    definition_period = MONTH
+    label = "Ajuda 0-16"
+
+    def formula(persona, period, parameters):
         import_ajuda = select([persona('tipus_custodia', period) == 'total',
                                 persona('tipus_custodia', period) == 'compartida'],
-                                [parameters(period).benefits.AE230.import_ajuda,
-                                 50]) + \
-                       select([persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['General'],
-                                persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['Especial']],
-                               [100, 100]
-                               )
+                                [parameters(period).benefits.AE230.import_ajuda, 50])
 
-        return where(te_menys_de_16_anys
-                     * ingressos_inferiors_varem
-                     * es_empadronat_a_barcelona
-                     * alta_padro_anterior_2016_01_01
-                     * es_usuari_serveis_socials,
-               import_ajuda, 0)
+        return persona('compleix_criteris_AE230', period) * import_ajuda
