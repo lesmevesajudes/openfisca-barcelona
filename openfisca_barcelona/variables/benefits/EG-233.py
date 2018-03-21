@@ -1,12 +1,13 @@
 from openfisca_barcelona.variables.demographics import *
 
+TIPUS_CUSTODIA = Enum(['cap', 'total', 'compartida'])
+
 class tipus_custodia(Variable):
     column = StrCol
     entity = Persona
     definition_period = MONTH
     label = "The type of relation child between child and it's maintainers"
     set_input = set_input_dispatch_by_period
-    default = False
 
 
 class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):

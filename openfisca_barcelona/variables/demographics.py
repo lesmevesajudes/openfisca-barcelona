@@ -70,7 +70,6 @@ class relacio_habitatge(Variable):
 NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL = Enum(['No', 'Existeix', 'Greu'])
 
 
-
 class nivell_de_risc_d_exclusio_social(Variable):
     column = EnumCol(
         enum=NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL,
