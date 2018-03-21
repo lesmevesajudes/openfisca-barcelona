@@ -9,6 +9,7 @@ from datetime import datetime
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
+from openfisca_barcelona.variables.demographics import TIPUS_FAMILIA_MONOPARENTAL
 
 
 def varem_irsc_016(nr_members):
@@ -83,17 +84,21 @@ class AE_230_mensual(Variable):
 
     def formula(persona, period, parameters):
         te_menys_de_16_anys = persona('edat', period) < 16
-        ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period) < \
+        ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period)[0] < \
                            varem_irsc_016(persona.familia.nb_persons())
-        es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)
-        es_empadronat_a_barcelona = persona.familia('domicili_a_barcelona_ciutat', period).all()
+        es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)[0]
+        es_empadronat_a_barcelona = persona.familia('domicili_a_barcelona_ciutat', period)[0]
         alta_padro_anterior_2016_01_01 = persona('data_alta_padro_anterior_a_2016_1_1', period)
 
-        import_ajuda = select(
-            [persona('tipus_custodia', period) == 'total',
-            persona('tipus_custodia', period) == 'compartida'],
+        import_ajuda = select([persona('tipus_custodia', period) == 'total',
+                                persona('tipus_custodia', period) == 'compartida'],
                                 [parameters(period).benefits.AE230.import_ajuda,
-                                 50])
+                                 50]) + \
+                       select([persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['General'],
+                                persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['Especial']],
+                               [100, 100]
+                               )
+
         return where(te_menys_de_16_anys
                      * ingressos_inferiors_varem
                      * es_empadronat_a_barcelona
