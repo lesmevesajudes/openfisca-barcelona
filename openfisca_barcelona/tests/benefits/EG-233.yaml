@@ -15,18 +15,18 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5799
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2899
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1449
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      tipus_custodia: "total"
-     ingressos_bruts: 144
+     ingressos_bruts: 1739
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -49,18 +49,18 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5799
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1449
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      tipus_custodia: "Compartida"
-     ingressos_bruts: 144
+     ingressos_bruts: 1739
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -84,18 +84,18 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5799
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1449
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      tipus_custodia: "cap"
-     ingressos_bruts: 144
+     ingressos_bruts: 1739
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -111,19 +111,19 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria adult 1"
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
@@ -133,20 +133,20 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 904
+     ingressos_bruts: 10848
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
 
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, adult 2"
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
@@ -156,19 +156,19 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 501
+     ingressos_bruts: 6012
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, altres_adults"
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
@@ -178,19 +178,19 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 300
+     ingressos_bruts: 3600
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria"
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, menors"
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
@@ -200,14 +200,14 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 340
+     ingressos_bruts: 4080
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -222,14 +222,14 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: false
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -244,14 +244,14 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "cap"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -268,14 +268,14 @@
      tipus_familia_nombrosa: 'General'
   persones:
    - id: "adult1"
-     ingressos_bruts: 804
+     ingressos_bruts: 9648
    - id: "adult2"
-     ingressos_bruts: 401
+     ingressos_bruts: 4812
    - id: "adult3"
-     ingressos_bruts: 200
+     ingressos_bruts: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      tipus_custodia: "cap"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -299,17 +299,17 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 144
+     ingressos_bruts: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -335,17 +335,17 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 144
+     ingressos_bruts: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -369,17 +369,17 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 144
+     ingressos_bruts: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -404,17 +404,17 @@
      valor_cadastral_finques_urbanes: 42901
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 240
+     ingressos_bruts: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 119
+     ingressos_bruts: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 144
+     ingressos_bruts: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -438,17 +438,17 @@
      valor_cadastral_finques_urbanes: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 482
+     ingressos_bruts: 5784
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 144
+     ingressos_bruts: 1728
      grau_discapacitat: 34
      en_acolliment: true
      tipus_custodia: "total"
    - id: "menor2"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 144
+     ingressos_bruts: 1728
      grau_discapacitat: 34
      en_acolliment: false
      tipus_custodia: "total"
