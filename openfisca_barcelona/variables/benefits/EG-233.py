@@ -168,14 +168,12 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
             (nivell_renda_primer_adult < nivell_renda_maxim_primer_adult) \
             * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
 
-        print ("adults: " + els_adults_satisfant_criteris_de_nivell_de_renda.__str__())
         els_altres_adults_compleixen_criteris_de_nivell_de_renda = \
             familia.all(familia.members('nivell_de_renda_inferior_a_1450_08', period),
                                 role=Familia.ALTRE_ADULT)
-        print ("altres adults: " + els_altres_adults_compleixen_criteris_de_nivell_de_renda.__str__())
         els_menors_compleixen_els_criteris_de_nivell_de_renda = \
             familia.all(familia.members('nivell_de_renda_inferior_a_1740_12', period), role=Familia.MENOR)
-        print ("els_menors_compleixen_els_criteris_de_nivell_de_renda: " + els_menors_compleixen_els_criteris_de_nivell_de_renda.__str__())
+
         return \
             els_adults_satisfant_criteris_de_nivell_de_renda \
             * els_altres_adults_compleixen_criteris_de_nivell_de_renda\

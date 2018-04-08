@@ -18,9 +18,9 @@ class AE_230_01_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-
         import_ajuda = select([persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['General'],
-                                persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['Especial']],
-                               [900, 900])
+                                persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['Especial'],
+                                persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['No']],
+                               [900, 900, 0])
 
         return persona('compleix_criteris_AE230', period) * import_ajuda
