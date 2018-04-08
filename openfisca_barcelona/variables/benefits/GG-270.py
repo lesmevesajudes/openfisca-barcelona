@@ -58,6 +58,14 @@ class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
     default = False
 
 
+class ha_residit_a_catalunya_els_ultims_24_mesos(Variable):
+    column = BoolCol
+    entity = Persona
+    definition_period = MONTH
+    label = "True if person has lived in catalonia for the last 24 months"
+    default = False
+
+
 class es_discapacitat(Variable):
     column = BoolCol
     entity = Persona
