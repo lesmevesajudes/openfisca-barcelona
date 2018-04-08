@@ -8,7 +8,6 @@
    - id: "adult1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 500
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
@@ -33,7 +32,6 @@
    - id: "adult1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 500
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
@@ -48,7 +46,6 @@
    - id: "adult2"
      data_naixement: '1961-01-15'
      ingressos_bruts: 500
-     es_usuari_serveis_socials: true
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
