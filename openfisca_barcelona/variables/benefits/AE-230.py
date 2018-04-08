@@ -66,14 +66,16 @@ class data_obertura_expedient_anterior_a_2016_12_31(Variable):
         return familia("data_obertura_expedient_serveis_socials", period) < datetime.strptime('2016-12-31', "%Y-%m-%d").date()
 
 
-class data_alta_padro_anterior_a_2016_1_1(Variable):
+class data_alta_padro_valida_AE_230(Variable):
     column = BoolCol
     entity = Persona
     definition_period = ETERNITY
     label = u"The social services expedient if filed after 2016/12/31"
 
     def formula(persona, period, parameters):
-        return persona("data_alta_padro", period) < datetime.strptime('2016-01-01', "%Y-%m-%d").date()
+        return ((persona("data_naixement", period) > datetime.strptime('2016-01-01', "%Y-%m-%d").date())
+                + ((persona("data_naixement", period) < datetime.strptime('2016-01-01', "%Y-%m-%d").date())
+                   * (persona("data_alta_padro", period) < datetime.strptime('2016-01-01', "%Y-%m-%d").date())))
 
 
 class compleix_criteris_AE230(Variable):
@@ -88,12 +90,12 @@ class compleix_criteris_AE230(Variable):
                                     varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)[0]
         es_empadronat_a_barcelona = persona.familia('domicili_a_barcelona_ciutat', period)[0]
-        alta_padro_anterior_2016_01_01 = persona('data_alta_padro_anterior_a_2016_1_1', period)
+        data_alta_padro_valida = persona('data_alta_padro_valida_AE_230', period)
 
         return te_menys_de_16_anys \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
-               * alta_padro_anterior_2016_01_01 \
+               * data_alta_padro_valida \
                * es_usuari_serveis_socials
 
 
