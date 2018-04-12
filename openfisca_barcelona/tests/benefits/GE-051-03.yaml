@@ -8,9 +8,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -29,9 +30,10 @@
    - id: "adult1"
      ingressos_bruts: 600
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -49,9 +51,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: false
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -69,9 +72,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: false
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'treball_compte_daltri_jornada_complerta'
+     inscrit_com_a_demandant_docupacio: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -89,9 +93,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: true
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -109,9 +114,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: false
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -129,9 +135,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: true
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -149,9 +156,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: true
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -169,9 +177,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: true
@@ -189,9 +198,10 @@
    - id: "adult1"
      ingressos_bruts: 500
      victima_violencia_de_genere: true
-     desocupat: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     situacio_laboral: 'desocupat'
+     inscrit_com_a_demandant_docupacio: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false

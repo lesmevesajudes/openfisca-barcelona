@@ -8,13 +8,14 @@
    - id: "adult1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 500
+     situacio_laboral: 'desocupat'
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -32,13 +33,14 @@
    - id: "adult1"
      data_naixement: '1961-01-15'
      ingressos_bruts: 500
+     situacio_laboral: 'desocupat'
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -46,13 +48,14 @@
    - id: "adult2"
      data_naixement: '1961-01-15'
      ingressos_bruts: 500
+     situacio_laboral: 'desocupat'
      ciutat_empadronament: "Barcelona"
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -69,12 +72,13 @@
   persones:
    - id: "adult1"
      ingressos_bruts: 500
+     situacio_laboral: 'desocupat'
      grau_discapacitat: 32
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -91,12 +95,13 @@
   persones:
    - id: "adult1"
      ingressos_bruts: 500
+     situacio_laboral: 'desocupat'
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: false
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -114,11 +119,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: false
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -136,11 +142,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: false
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -158,11 +165,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: false
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -180,11 +188,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: false
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: true
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -202,11 +211,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: false
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: true
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -224,11 +234,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: true
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -246,11 +257,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: true
      percep_prestacions_incompatibles_amb_la_feina: false
@@ -268,11 +280,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: true
@@ -290,11 +303,12 @@
    - id: "adult1"
      ingressos_bruts: 500
      grau_discapacitat: 34
+     situacio_laboral: 'desocupat'
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
-     no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos: true
-     no_se_li_ha_concedit_tres_ajudes_rai_anteriors: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
      ingressat_en_centre_penitenciari: false
      percep_prestacions_incompatibles_amb_la_feina: false

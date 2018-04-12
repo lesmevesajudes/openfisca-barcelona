@@ -1,7 +1,9 @@
 # Import from openfisca-core the common python objects used to code the legislation in OpenFisca
+from numpy.ma import logical_not
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
+
 
 class grau_discapacitat(Variable):
     column = IntCol
@@ -26,6 +28,23 @@ class demandant_d_ocupacio_durant_12_mesos(Variable):
     entity = Persona
     definition_period = MONTH
     label = "The user has been searching for a job at least 12 months"
+    set_input = set_input_dispatch_by_period
+    default = False
+
+
+class inscrit_com_a_demandant_docupacio(Variable):
+    column = BoolCol
+    entity = Persona
+    definition_period = MONTH
+    label = "The user has been searching for a job at least 12 months"
+    set_input = set_input_dispatch_by_period
+    default = False
+
+class percep_prestacions_incompatibles_amb_la_feina(Variable):
+    column = BoolCol
+    entity = Persona
+    definition_period = MONTH
+    label = "The user has some benefit that does not let her work"
     set_input = set_input_dispatch_by_period
     default = False
 
@@ -55,35 +74,23 @@ class GE_051_01_mensual(Variable):
     label = "GE_051_1 - RAI 1 - Ajuda discapacitats 33% o superior"
 
     def formula(persona, period, parameters):
-        cap_membre_amb_ingressos_superiors_a_530_mensuals = \
-            persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
+        requeriments_generals = persona('GE_051_mensual', period)
         discapacitat_superior_al_33_percent = persona('grau_discapacitat', period) > 33
+        no_beneficiari_ajuts_per_violencia_de_genere = \
+            persona('beneficiari_ajuts_per_violencia_de_genere', period) == False
         ha_esgotat_prestacio_de_desocupacio = persona('ha_esgotat_prestacio_de_desocupacio', period)
         demandant_d_ocupacio_durant_12_mesos = persona('demandant_d_ocupacio_durant_12_mesos', period)
         durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina = \
             persona('durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina', period)
-        no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos = \
-            persona('no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos', period)
-        no_se_li_ha_concedit_tres_ajudes_rai_anteriors = persona('no_se_li_ha_concedit_tres_ajudes_rai_anteriors', period)
-        no_treballa_per_compte_propi = persona('treballa_per_compte_propi', period) == False
-        no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
-        no_percep_prestacins_incompatibles_amb_la_feina = \
-            persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
-        no_beneficiari_ajuts_per_violencia_de_genere = \
-            persona('beneficiari_ajuts_per_violencia_de_genere', period) == False
 
         compleix_els_requeriments = \
-            cap_membre_amb_ingressos_superiors_a_530_mensuals \
+            requeriments_generals \
             * discapacitat_superior_al_33_percent \
+            * no_beneficiari_ajuts_per_violencia_de_genere \
             * ha_esgotat_prestacio_de_desocupacio \
             * demandant_d_ocupacio_durant_12_mesos \
-            * durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina \
-            * no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos \
-            * no_se_li_ha_concedit_tres_ajudes_rai_anteriors \
-            * no_treballa_per_compte_propi \
-            * no_ingressat_en_centre_penitenciari \
-            * no_percep_prestacins_incompatibles_amb_la_feina \
-            * no_beneficiari_ajuts_per_violencia_de_genere
+            * durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina
 
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
+
         return where(compleix_els_requeriments, import_ajuda, 0)
