@@ -1,4 +1,4 @@
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC"
+- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC cust. compartida"
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
@@ -21,10 +21,10 @@
      tipus_custodia: 'compartida'
   output_variables:
     AE_230_mensual: [ 0, 50]
-    AE_230_01_mensual: [ 0, 900]
+    AE_230_01_mensual: [ 0, 450]
 
 
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC"
+- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC cust. total"
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
@@ -50,7 +50,7 @@
     AE_230_01_mensual: [ 0, 900]
 
 
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC"
+- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC no monoparental"
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
