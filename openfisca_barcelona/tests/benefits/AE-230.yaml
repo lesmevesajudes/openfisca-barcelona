@@ -10,17 +10,20 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 7000
+     ingressos_bruts:
+      2016: 7000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "mare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 0000
+     ingressos_bruts:
+      2016: 0
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:
@@ -38,17 +41,20 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 7000
+     ingressos_bruts:
+      2016: 7000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "mare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 0000
+     ingressos_bruts:
+      2016: 0
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2016-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2016-01-20'
      tipus_custodia: 'total'
   output_variables:
@@ -67,12 +73,14 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 7000
+     ingressos_bruts:
+      2016: 7000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2016-1-2'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2016-1-2'
      tipus_custodia: 'total'
   output_variables:
@@ -90,18 +98,21 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 12000
+     ingressos_bruts:
+      2016: 12000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
    - id: "infant2"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:
@@ -119,18 +130,21 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 14940
+     ingressos_bruts:
+      2016: 14940
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
    - id: "infant2"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:
@@ -148,20 +162,24 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 7928
+     ingressos_bruts:
+      2016: 7928
      data_alta_padro: '2015-12-31'
    - id: "mare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 10000
+     ingressos_bruts:
+      2016: 10000
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
    - id: "infant2"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:
@@ -179,12 +197,14 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 7000
+     ingressos_bruts:
+      2016: 7000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2000-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:
@@ -202,12 +222,14 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 7000
+     ingressos_bruts:
+      2016: 7000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:
@@ -225,12 +247,14 @@
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 12000
+     ingressos_bruts:
+      2016: 12000
      ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
-     ingressos_bruts: 0
+     ingressos_bruts:
+      2016: 0
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
   output_variables:

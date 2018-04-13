@@ -7,7 +7,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -30,7 +31,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 531
+     ingressos_bruts:
+      2016: 6372
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -53,7 +55,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: false
@@ -75,7 +78,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -98,7 +102,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -121,7 +126,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -144,7 +150,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -166,7 +173,8 @@
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -190,7 +198,8 @@
   persones:
    - id: "adult"
      data_naixement: '1998-03-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: true
@@ -216,7 +225,8 @@
   persones:
    - id: "adult"
      data_naixement: '1998-03-15'
-     ingressos_bruts: 529
+     ingressos_bruts:
+      2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
      es_empadronat_a_catalunya: false

@@ -22,7 +22,7 @@ class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
 class nivell_de_renda_inferior_a_2416_80(Variable):
     column = BoolCol
     entity = Persona
-    definition_period = MONTH
+    definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
 
@@ -33,7 +33,7 @@ class nivell_de_renda_inferior_a_2416_80(Variable):
 class nivell_de_renda_inferior_a_2900_20(Variable):
     column = BoolCol
     entity = Persona
-    definition_period = MONTH
+    definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
 
@@ -44,7 +44,7 @@ class nivell_de_renda_inferior_a_2900_20(Variable):
 class nivell_de_renda_inferior_a_1450_08(Variable):
     column = BoolCol
     entity = Persona
-    definition_period = MONTH
+    definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
 
@@ -55,7 +55,7 @@ class nivell_de_renda_inferior_a_1450_08(Variable):
 class nivell_de_renda_inferior_a_1740_12(Variable):
     column = BoolCol
     entity = Persona
-    definition_period = MONTH
+    definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
 
@@ -157,8 +157,8 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(familia, period, parameters):
-        nivell_renda_primer_adult = familia.primer_adult('ingressos_bruts', period)
-        nivell_renda_segon_adult = familia.segon_adult('ingressos_bruts', period)
+        nivell_renda_primer_adult = familia.primer_adult('ingressos_bruts', period.last_year)
+        nivell_renda_segon_adult = familia.segon_adult('ingressos_bruts', period.last_year)
 
         nivell_renda_maxim_primer_adult = \
             parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim_primer_adult
@@ -169,10 +169,10 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
             * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
 
         els_altres_adults_compleixen_criteris_de_nivell_de_renda = \
-            familia.all(familia.members('nivell_de_renda_inferior_a_1450_08', period),
+            familia.all(familia.members('nivell_de_renda_inferior_a_1450_08', period.last_year),
                                 role=Familia.ALTRE_ADULT)
         els_menors_compleixen_els_criteris_de_nivell_de_renda = \
-            familia.all(familia.members('nivell_de_renda_inferior_a_1740_12', period), role=Familia.MENOR)
+            familia.all(familia.members('nivell_de_renda_inferior_a_1740_12', period.last_year), role=Familia.MENOR)
 
         return \
             els_adults_satisfant_criteris_de_nivell_de_renda \
@@ -188,9 +188,9 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, parameters):
-        nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period)
-        nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period)
-
+        nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period.last_year)
+        nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period.last_year)
+        print (nivell_renda_segon_adult)
         nivell_renda_maxim_primer_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_primer_adult
         nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_segon_adult
 
@@ -198,10 +198,10 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
                                                            * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
 
         els_altres_adults_compleixen_criteris_de_nivell_de_renda = persona.familia.all(
-            persona.familia.members('nivell_de_renda_inferior_a_2416_80', period), role=Familia.ALTRE_ADULT)
+            persona.familia.members('nivell_de_renda_inferior_a_2416_80', period.last_year), role=Familia.ALTRE_ADULT)
 
         els_menors_compleixen_els_criteris_de_nivell_de_renda = \
-            persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_2900_20', period), role=Familia.MENOR)
+            persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_2900_20', period.last_year), role=Familia.MENOR)
 
         return els_adults_satisfant_criteris_de_nivell_de_renda \
                * els_altres_adults_compleixen_criteris_de_nivell_de_renda \
@@ -228,8 +228,8 @@ class EG_233_mensual(Variable):
         puntuacio_familiar = persona.familia("puntuacio_de_la_familia_segons_eg_233", period)
         volum_de_negoci = persona.familia("volum_del_negoci_familiar", period.last_year)
         rendiments_patrimonials = persona.familia("rendiments_del_patrimoni", period.last_year)
-        valor_cadastral_finques_rustiques = persona.familia("valor_cadastral_finques_rustiques", period.this_year)
-        valor_cadastral_finques_urbanes = persona.familia("valor_cadastral_finques_urbanes", period.this_year)
+        valor_cadastral_finques_rustiques = persona.familia("valor_cadastral_finques_rustiques", period.last_year)
+        valor_cadastral_finques_urbanes = persona.familia("valor_cadastral_finques_urbanes", period.last_year)
 
         puntuacio_familiar_minima = parameters(period).benefits.EG233.ajut_extraordinari_puntuacio_minima
         volum_de_negoci_maxim = parameters(period).benefits.EG233.ajut_extraordinari_volum_de_negoci_maxim
@@ -251,6 +251,7 @@ class EG_233_mensual(Variable):
         import_ajut_extraordinari = parameters(period).benefits.EG233.ajut_extraordinari_import
         import_ajut_ordinari = parameters(period).benefits.EG233.ajut_ordinari_import
 
+        print (compleix_ajut_ordinari)
         import_EG_233 = select([compleix_ajut_extraordinari, compleix_ajut_ordinari],
                                [import_ajut_extraordinari, import_ajut_ordinari])
 

@@ -3,7 +3,7 @@ from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 
 
-class renda_disponible_inferior_a_530(Variable):
+class renda_mensual_disponible_inferior_a_530(Variable):
     column = BoolCol
     entity = Persona
     definition_period = MONTH
@@ -11,7 +11,7 @@ class renda_disponible_inferior_a_530(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) < 551.93
+        return persona('ingressos_bruts', period.last_year)/12 < 551.93
 
 
 class cap_familiar_te_renda_disponible_superior_a_530(Variable):
@@ -22,7 +22,7 @@ class cap_familiar_te_renda_disponible_superior_a_530(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(familia, period, legislation):
-        members_renda_disponible_inferior_a_530 = familia.members('renda_disponible_inferior_a_530', period)
+        members_renda_disponible_inferior_a_530 = familia.members('renda_mensual_disponible_inferior_a_530', period)
         return familia.all(members_renda_disponible_inferior_a_530)
 
 

@@ -9,24 +9,32 @@
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
-     volum_del_negoci_familiar: 0
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 0
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5799
+     ingressos_bruts:
+      2016: 5799
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2899
+     ingressos_bruts:
+      2016: 2899
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1449
+     ingressos_bruts:
+      2016: 1449
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      tipus_custodia: "total"
-     ingressos_bruts: 1739
+     ingressos_bruts:
+      2016: 1739
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -43,24 +51,32 @@
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
-     volum_del_negoci_familiar: 0
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 0
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5799
+     ingressos_bruts:
+      2016: 5799
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1449
+     ingressos_bruts:
+      2016: 1449
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      tipus_custodia: "Compartida"
-     ingressos_bruts: 1739
+     ingressos_bruts:
+      2016: 1739
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -78,24 +94,32 @@
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
-     volum_del_negoci_familiar: 0
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 0
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5799
+     ingressos_bruts:
+      2016: 5799
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1449
+     ingressos_bruts:
+      2016: 1449
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      tipus_custodia: "cap"
-     ingressos_bruts: 1739
+     ingressos_bruts:
+      2016: 1739
      grau_discapacitat: 0
      en_acolliment: false
   output_variables:
@@ -111,14 +135,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
@@ -133,14 +161,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 10848
+     ingressos_bruts:
+      2016: 10848
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -156,14 +188,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 6012
+     ingressos_bruts:
+      2016: 6012
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -178,14 +214,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 3600
+     ingressos_bruts:
+      2016: 3600
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -200,14 +240,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 4080
+     ingressos_bruts:
+      2016: 4080
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -222,14 +266,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: false
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "total"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -244,14 +292,18 @@
      menors: ["menor1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "cap"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -268,14 +320,18 @@
      tipus_familia_nombrosa: 'General'
   persones:
    - id: "adult1"
-     ingressos_bruts: 9648
+     ingressos_bruts:
+      2016: 9648
    - id: "adult2"
-     ingressos_bruts: 4812
+     ingressos_bruts:
+      2016: 4812
    - id: "adult3"
-     ingressos_bruts: 2400
+     ingressos_bruts:
+      2016: 2400
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      tipus_custodia: "cap"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
@@ -293,23 +349,30 @@
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
      volum_del_negoci_familiar:
-      2016-01: 155001
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 0
+      2016: 155001
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5784
+     ingressos_bruts:
+      2016: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1428
+     ingressos_bruts:
+      2016: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 1728
+     ingressos_bruts:
+      2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -328,24 +391,31 @@
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
-     volum_del_negoci_familiar: 0
+     volum_del_negoci_familiar:
+      2016: 0
      rendiments_del_patrimoni:
-      2016-01: 1701
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 0
+      2016: 1701
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5784
+     ingressos_bruts:
+      2016: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1428
+     ingressos_bruts:
+      2016: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 1728
+     ingressos_bruts:
+      2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -363,23 +433,31 @@
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
-     volum_del_negoci_familiar: 0
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 131391
-     valor_cadastral_finques_urbanes: 0
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 131391
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5784
+     ingressos_bruts:
+      2016: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1428
+     ingressos_bruts:
+      2016: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 1728
+     ingressos_bruts:
+      2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -398,23 +476,31 @@
      nivell_de_risc_d_exclusio_social: Greu
      tipus_familia_monoparental: No
      tipus_familia_nombrosa: No
-     volum_del_negoci_familiar: 0
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 42901
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 42901
   persones:
    - id: "adult1"
-     ingressos_bruts: 5784
+     ingressos_bruts:
+      2016: 5784
      grau_discapacitat: 0
    - id: "adult2"
-     ingressos_bruts: 2880
+     ingressos_bruts:
+      2016: 2880
      grau_discapacitat: 0
    - id: "adult3"
-     ingressos_bruts: 1428
+     ingressos_bruts:
+      2016: 1428
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 1728
+     ingressos_bruts:
+      2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
      tipus_custodia: "total"
@@ -432,23 +518,30 @@
      nivell_de_risc_d_exclusio_social: No
      tipus_familia_monoparental: Especial
      tipus_familia_nombrosa: Especial
-     volum_del_negoci_familiar: 0
-     rendiments_del_patrimoni: 0
-     valor_cadastral_finques_rustiques: 0
-     valor_cadastral_finques_urbanes: 0
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
   persones:
    - id: "adult1"
-     ingressos_bruts: 5784
+     ingressos_bruts:
+      2016: 5784
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 1728
+     ingressos_bruts:
+      2016: 1728
      grau_discapacitat: 34
      en_acolliment: true
      tipus_custodia: "total"
    - id: "menor2"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts: 1728
+     ingressos_bruts:
+      2016: 1728
      grau_discapacitat: 34
      en_acolliment: false
      tipus_custodia: "total"

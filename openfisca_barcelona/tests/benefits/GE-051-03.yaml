@@ -6,7 +6,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: true
@@ -28,7 +29,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 600
+     ingressos_bruts:
+      2016: 9000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: true
@@ -49,7 +51,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: false
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: true
@@ -70,7 +73,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'treball_compte_daltri_jornada_complerta'
      inscrit_com_a_demandant_docupacio: false
@@ -91,7 +95,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: true
@@ -112,7 +117,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: false
@@ -133,7 +139,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: false
@@ -154,7 +161,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: false
@@ -175,7 +183,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: false
@@ -196,7 +205,8 @@
      adults: ["adult1"]
   persones:
    - id: "adult1"
-     ingressos_bruts: 500
+     ingressos_bruts:
+      2016: 6000
      victima_violencia_de_genere: true
      situacio_laboral: 'desocupat'
      inscrit_com_a_demandant_docupacio: false
