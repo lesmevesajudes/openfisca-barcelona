@@ -1,5 +1,7 @@
 # OpenFisca Barcelona
 
+[![CircleCI](https://circleci.com/gh/jvalduvieco/openfisca-barcelona.svg?style=svg)](https://circleci.com/gh/jvalduvieco/openfisca-barcelona)
+
 [OpenFisca](https://www.openfisca.fr/) package that model Spain legislation from Barcelona point of view. This project 
 is intended to be used as a simulator to determine which benefits can be opted by a person or family.
 
