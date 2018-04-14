@@ -12,13 +12,11 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 7000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "mare1"
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 0
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
@@ -43,13 +41,11 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 7000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "mare1"
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 0
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2016-01-15'
@@ -75,7 +71,6 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 7000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2016-1-2'
    - id: "infant1"
      data_naixement: '2002-01-15'
@@ -100,13 +95,11 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 12000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts:
       2016: 0
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
    - id: "infant2"
@@ -132,13 +125,11 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 14940
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts:
       2016: 0
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
      tipus_custodia: 'total'
    - id: "infant2"
@@ -199,7 +190,6 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 7000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2000-01-15'
@@ -224,7 +214,6 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 7000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
@@ -249,7 +238,6 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 12000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'

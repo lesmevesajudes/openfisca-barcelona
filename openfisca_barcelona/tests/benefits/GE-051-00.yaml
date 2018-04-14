@@ -9,8 +9,7 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
-     ciutat_empadronament: "Barcelona"
+     situacio_laboral: desocupat
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true

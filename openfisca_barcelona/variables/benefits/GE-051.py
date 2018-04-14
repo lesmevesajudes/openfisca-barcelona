@@ -101,11 +101,12 @@ class GE_051_mensual(Variable):
     def formula(persona, period, parameters):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = \
             persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
-        desocupat = persona('situacio_laboral', period) == "desocupat"
+        situacio_laboral = persona('situacio_laboral', period)
+        desocupat = situacio_laboral == situacio_laboral.possible_values.desocupat
         no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos = \
-            logical_not(persona('ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos', period))
+            (persona('ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos', period)) == False
         no_se_li_ha_concedit_tres_ajudes_rai_anteriors = \
-            logical_not(persona('ha_estat_beneficiari_de_les_tres_rai_anteriors', period))
+            (persona('ha_estat_beneficiari_de_les_tres_rai_anteriors', period)) == False
         no_treballa_per_compte_propi = persona('treballa_per_compte_propi', period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
         no_percep_prestacions_incompatibles_amb_la_feina = \

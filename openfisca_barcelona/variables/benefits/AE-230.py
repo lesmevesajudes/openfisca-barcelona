@@ -10,7 +10,6 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
 
-
 def varem_irsc_016(nr_members):
         return select(                  # Fixme: Find the formula!
             [nr_members == 2,
@@ -105,8 +104,9 @@ class AE_230_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-        import_ajuda = select([persona('tipus_custodia', period) == TipusCustodia.total,
-                                persona('tipus_custodia', period) == TipusCustodia.compartida],
-                                [parameters(period).benefits.AE230.import_ajuda, 50])
+        tipus_custodia = persona('tipus_custodia', period)
+        import_ajuda = where(tipus_custodia != tipus_custodia.possible_values.compartida,
+                                parameters(period).benefits.AE230.import_ajuda, 50)
 
+        print ("import ajuda: ", import_ajuda)
         return persona('compleix_criteris_AE230', period) * import_ajuda

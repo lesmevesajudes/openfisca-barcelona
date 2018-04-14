@@ -39,8 +39,18 @@ class data_alta_padro(Variable):
     definition_period = MONTH
 
 
+class SituacionsLaborals(Enum):
+    treball_compte_daltri_jornada_complerta = "treball_compte_daltri_jornada_complerta"
+    treball_compte_alie_jornada_parcial = "treball_compte_alie_jornada_parcial"
+    treball_compte_propi = "treball_compte_propi"
+    desocupat = "Desocupat"
+    estudiant = "estudiant"
+    jubilat = "jubilat"
+
 class situacio_laboral(Variable):
-    value_type = str
+    value_type = Enum
+    possible_values = SituacionsLaborals
+    default_value = SituacionsLaborals.desocupat
     entity = Persona
     label = u"labor situation"
     definition_period = MONTH
@@ -68,7 +78,7 @@ class relacio_habitatge(Variable):
 
 
 class NivellDeRiscExclusioSocial(Enum):
-    no = "no existeix"
+    nop = "no existeix"
     existeix = "existeix"
     greu = "greu"
 
@@ -76,14 +86,15 @@ class NivellDeRiscExclusioSocial(Enum):
 class nivell_de_risc_d_exclusio_social(Variable):
     value_type = Enum
     possible_values = NivellDeRiscExclusioSocial
-    default_value = NivellDeRiscExclusioSocial.no
+    default_value = NivellDeRiscExclusioSocial.nop
     entity = Familia
     definition_period = MONTH
+    set_input = set_input_dispatch_by_period
     label = "Level of social exclusion risk"
 
 
 class TipusFamiliaNombrosa(Enum):
-    no = "no"
+    nop = "no"
     general = "general"
     especial = "especial"
 
@@ -91,15 +102,16 @@ class TipusFamiliaNombrosa(Enum):
 class tipus_familia_nombrosa(Variable):
     value_type = Enum
     possible_values = TipusFamiliaNombrosa
-    default_value = TipusFamiliaNombrosa.no
+    default_value = TipusFamiliaNombrosa.nop
     entity = Familia
     definition_period = MONTH
+    set_input = set_input_dispatch_by_period
     label = "Type of large family certification"
 
 
 class TipusFamiliaMonoparental(Enum):
-    __order__ = "no general especial"
-    no = "no"
+    __order__ = "nop general especial"
+    nop = "no"
     general = "general"
     especial = "especial"
 
@@ -107,7 +119,7 @@ class TipusFamiliaMonoparental(Enum):
 class tipus_familia_monoparental(Variable):
     value_type = Enum
     possible_values = TipusFamiliaMonoparental
-    default_value = TipusFamiliaMonoparental.no
+    default_value = TipusFamiliaMonoparental.nop
     entity = Familia
     definition_period = MONTH
     set_input = set_input_dispatch_by_period
@@ -119,3 +131,19 @@ class nacionalitat(Variable):
     entity = Persona
     definition_period = MONTH
     label = u"Person nationality"
+
+
+class TipusCustodia(Enum):
+    cap = "cap"
+    total = "total"
+    compartida = "compartida"
+
+
+class tipus_custodia(Variable):
+    value_type = Enum
+    possible_values = TipusCustodia
+    default_value = TipusCustodia.cap
+    entity = Persona
+    definition_period = MONTH
+    label = "The type of relation child between child and it's maintainers"
+    set_input = set_input_dispatch_by_period

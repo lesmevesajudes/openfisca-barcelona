@@ -5,84 +5,22 @@
   families:
     adults: ["pare1"]
     menors: ["infant1"]
+    tipus_familia_monoparental: general
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
-    tipus_familia_monoparental: general
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 7000
-     ciutat_empadronament: "Barcelona"
      data_alta_padro: '2015-12-31'
    - id: "infant1"
      data_naixement: '2002-01-15'
      ingressos_bruts:
       2016: 0
      data_alta_padro: '2015-12-31'
-     tipus_custodia: 'compartida'
+     tipus_custodia: compartida
+
   output_variables:
     AE_230_mensual: [ 0, 50]
     AE_230_01_mensual: [ 0, 450]
-
-
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC cust. total"
-  description: Ajuda menors 0-16
-  period: 2017-01
-  absolute_error_margin: 0
-  families:
-    adults: ["pare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_familia_monoparental: general
-  persones:
-   - id: "pare1"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 7000
-     ciutat_empadronament: "Barcelona"
-     data_alta_padro: '2016-1-2'
-   - id: "infant1"
-     data_naixement: '2002-01-15'
-     ingressos_bruts:
-      2016: 0
-     data_alta_padro: '2015-12-31'
-     tipus_custodia: 'total'
-  output_variables:
-    AE_230_mensual: [ 0, 100]
-    AE_230_01_mensual: [ 0, 900]
-
-
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC no monoparental"
-  description: Ajuda menors 0-16
-  period: 2017-01
-  absolute_error_margin: 0
-  families:
-    adults: ["pare1", "pare2"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_familia_monoparental: no
-  persones:
-    - id: "pare1"
-      data_naixement: '1961-01-15'
-      ingressos_bruts:
-        2016: 7000
-      ciutat_empadronament: "Barcelona"
-      data_alta_padro: '2016-1-2'
-    - id: "pare2"
-      data_naixement: '1961-01-15'
-      ingressos_bruts:
-        2016: 7000
-      ciutat_empadronament: "Barcelona"
-      data_alta_padro: '2016-1-2'
-    - id: "infant1"
-      data_naixement: '2002-01-15'
-      ingressos_bruts:
-        2016: 0
-      data_alta_padro: '2015-12-31'
-      tipus_custodia: 'total'
-  output_variables:
-    AE_230_mensual: [ 0, 0, 100]
-    AE_230_01_mensual: [ 0, 0, 0]

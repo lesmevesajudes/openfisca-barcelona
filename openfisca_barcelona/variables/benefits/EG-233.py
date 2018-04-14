@@ -1,21 +1,5 @@
-from openfisca_barcelona.variables.demographics import *
-
-
-class TipusCustodia(Enum):
-    cap = "cap"
-    total = "total"
-    compartida = "compartida"
-
-
-class tipus_custodia(Variable):
-    value_type = Enum
-    possible_values = TipusCustodia
-    default_value = TipusCustodia.cap
-    entity = Persona
-    definition_period = MONTH
-    label = "The type of relation child between child and it's maintainers"
-    set_input = set_input_dispatch_by_period
-
+from openfisca_core.model_api import *
+from openfisca_barcelona.entities import *
 
 class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
     value_type = bool
@@ -101,18 +85,18 @@ class puntuacio_de_la_familia_segons_eg_233(Variable):
     def formula(familia, period, legislation):
         tipus_familia_nombrosa = familia("tipus_familia_nombrosa", period)
         puntuacio_familia_nombrosa = select([
-            tipus_familia_nombrosa == TipusFamiliaNombrosa.general,
-            tipus_familia_nombrosa == TipusFamiliaNombrosa.especial],
+            tipus_familia_nombrosa == tipus_familia_nombrosa.possible_values.general,
+            tipus_familia_nombrosa == tipus_familia_nombrosa.possible_values.especial],
             [1.5, 3])
         tipus_familia_monoparental = familia("tipus_familia_monoparental", period)
         puntuacio_familia_monoparental = select([
-            tipus_familia_monoparental == TipusFamiliaMonoparental.general,
-            tipus_familia_monoparental == TipusFamiliaMonoparental.especial],
+            tipus_familia_monoparental == tipus_familia_monoparental.possible_values.general,
+            tipus_familia_monoparental == tipus_familia_monoparental.possible_values.especial],
             [1.5, 3])
-        tipus_risc_exclusio_social = familia("nivell_de_risc_d_exclusio_social", period)
+        risc_exclusio_social = familia("nivell_de_risc_d_exclusio_social", period)
         puntuacio_risc_exclusio_social = select([
-            tipus_risc_exclusio_social == NivellDeRiscExclusioSocial.existeix,
-            tipus_risc_exclusio_social == NivellDeRiscExclusioSocial.greu],
+            risc_exclusio_social == risc_exclusio_social.possible_values.existeix,
+            risc_exclusio_social == risc_exclusio_social.possible_values.greu],
             [10, 15])
         punts_per_grau_discapacitat_membres = familia.members("punts_assignats_per_grau_de_discapacitat", period)
         punts_grau_discapacitat = familia.sum(punts_per_grau_discapacitat_membres)
@@ -230,7 +214,8 @@ class EG_233_mensual(Variable):
 
         es_escolaritzat_entre_P3_i_4rt_ESO = persona('es_escolaritzat_entre_P3_i_4rt_ESO', period)
         es_un_menor = persona.has_role(Familia.MENOR)
-        en_guardia_i_custodia = persona('tipus_custodia', period) != "cap"
+        tipus_custodia = persona('tipus_custodia', period)
+        en_guardia_i_custodia = tipus_custodia != tipus_custodia.possible_values.cap
         compleix_els_requeriments = en_guardia_i_custodia * \
                                     es_escolaritzat_entre_P3_i_4rt_ESO * \
                                     es_un_menor
