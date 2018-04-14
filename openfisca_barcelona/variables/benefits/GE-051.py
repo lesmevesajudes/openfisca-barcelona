@@ -4,7 +4,7 @@ from openfisca_barcelona.entities import *
 
 
 class renda_mensual_disponible_inferior_a_530(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "Available income is under 530 euros/month"
@@ -15,7 +15,7 @@ class renda_mensual_disponible_inferior_a_530(Variable):
 
 
 class cap_familiar_te_renda_disponible_superior_a_530(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Familia
     definition_period = MONTH
     label = "No one is making more than 530 euros/month"
@@ -27,7 +27,7 @@ class cap_familiar_te_renda_disponible_superior_a_530(Variable):
 
 
 class menor_de_65_anys(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is younger than 65 years"
@@ -39,7 +39,7 @@ class menor_de_65_anys(Variable):
 
 
 class ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has been benefited with a rai in the last 12 months"
@@ -48,7 +48,7 @@ class ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos(Variable):
 
 
 class ha_estat_beneficiari_de_les_tres_rai_anteriors(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has a violence of genre  benefit"
@@ -57,7 +57,7 @@ class ha_estat_beneficiari_de_les_tres_rai_anteriors(Variable):
 
 
 class treballa_per_compte_propi(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is self-employed"
@@ -66,7 +66,7 @@ class treballa_per_compte_propi(Variable):
 
 
 class ingressat_en_centre_penitenciari(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is in prison"
@@ -75,7 +75,7 @@ class ingressat_en_centre_penitenciari(Variable):
 
 
 class ingressat_en_centre_penitenciari_pot_treballar(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is in prison but can work"
@@ -84,7 +84,7 @@ class ingressat_en_centre_penitenciari_pot_treballar(Variable):
 
 
 class victima_violencia_domestica(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has some benefit incompatible with having a job"
@@ -93,7 +93,7 @@ class victima_violencia_domestica(Variable):
 
 
 class GE_051_mensual(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "GE_051_1 - RAI 1 - Ajuda discapacitats 33% o superior"

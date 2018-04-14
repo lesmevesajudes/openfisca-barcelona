@@ -4,7 +4,7 @@ from openfisca_barcelona.entities import *
 
 
 class major_de_45_anys(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is older than 45 years"
@@ -16,7 +16,7 @@ class major_de_45_anys(Variable):
 
 
 class desocupat(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has no job"
@@ -25,7 +25,7 @@ class desocupat(Variable):
 
 
 class ha_treballat_a_l_estranger_6_mesos(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has been working abroad for at least 6 months"
@@ -33,7 +33,7 @@ class ha_treballat_a_l_estranger_6_mesos(Variable):
     default = False
 
 class ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has been working abroad for at least 6 months and has come back to country in the last 12"
@@ -42,7 +42,8 @@ class ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos(Va
 
 
 class GE_051_02_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "GE_051_02 - RAI 2 - Per emigrants retornats major de 45 anys"

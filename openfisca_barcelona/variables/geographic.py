@@ -5,7 +5,7 @@ import numpy as np
 
 
 class codi_postal_empadronament(Variable):
-    column = StrCol
+    value_type = str
     entity = Persona
     definition_period = MONTH
     label = u"Postal code where person lives"
@@ -13,7 +13,7 @@ class codi_postal_empadronament(Variable):
 
 
 class codi_postal_habitatge(Variable):
-    column = StrCol
+    value_type = str
     entity = Familia
     definition_period = MONTH
     label = u"Postal code where family lives"
@@ -21,7 +21,7 @@ class codi_postal_habitatge(Variable):
 
 
 class domicili_a_barcelona_ciutat(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Familia
     definition_period = MONTH
     label = u"Postal code where family lives"

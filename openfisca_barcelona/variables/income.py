@@ -6,7 +6,7 @@ from openfisca_barcelona.entities import *
 
 
 class ingressos_bruts(Variable):
-    column = FloatCol
+    value_type = float
     entity = Persona
     definition_period = YEAR
     label = "Total amount earned in a year"
@@ -14,7 +14,8 @@ class ingressos_bruts(Variable):
 
 
 class familia_ingressos_bruts(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Familia
     definition_period = YEAR
     label = "Total yearly income"

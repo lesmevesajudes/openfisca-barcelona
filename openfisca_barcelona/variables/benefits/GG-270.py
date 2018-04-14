@@ -3,7 +3,7 @@ from openfisca_barcelona.entities import *
 
 
 class es_orfe_dels_dos_progenitors(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if both adults are dead"
@@ -11,7 +11,7 @@ class es_orfe_dels_dos_progenitors(Variable):
 
 
 class es_victima_de_violencia_masclista(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person is a victim of male violence"
@@ -19,7 +19,7 @@ class es_victima_de_violencia_masclista(Variable):
 
 
 class es_empadronat_a_catalunya(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person is registered in Catalonia"
@@ -27,7 +27,7 @@ class es_empadronat_a_catalunya(Variable):
 
 
 class te_permis_de_residencia(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person has a residence permit"
@@ -35,7 +35,7 @@ class te_permis_de_residencia(Variable):
 
 
 class es_divorciada_de_familia_reagrupada(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person is divorced from a regrouped immigrant family"
@@ -43,7 +43,7 @@ class es_divorciada_de_familia_reagrupada(Variable):
 
 
 class es_beneficiari_d_una_prestacio_residencial(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person is benefitiary of a residential benefit"
@@ -51,7 +51,7 @@ class es_beneficiari_d_una_prestacio_residencial(Variable):
 
 
 class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person has left voluntarily her last job"
@@ -59,7 +59,7 @@ class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
 
 
 class ha_residit_a_catalunya_els_ultims_24_mesos(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person has lived in catalonia for the last 24 months"
@@ -67,7 +67,7 @@ class ha_residit_a_catalunya_els_ultims_24_mesos(Variable):
 
 
 class es_discapacitat(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person is disabled"
@@ -76,7 +76,7 @@ class es_discapacitat(Variable):
         return persona("grau_discapacitat", period) > 0
 
 class nivell_de_renda_inferior_rgc(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if income is less than IRSC"
@@ -86,7 +86,8 @@ class nivell_de_renda_inferior_rgc(Variable):
 
 
 class GG_270_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "RENDA GARANTIDA CIUTADANA"

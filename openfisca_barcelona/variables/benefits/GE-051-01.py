@@ -6,7 +6,7 @@ from openfisca_barcelona.entities import *
 
 
 class grau_discapacitat(Variable):
-    column = IntCol
+    value_type = int
     entity = Persona
     definition_period = MONTH
     label = "User's grade of disability"
@@ -15,7 +15,7 @@ class grau_discapacitat(Variable):
 
 
 class ha_esgotat_prestacio_de_desocupacio(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is not receiving any benefit for not having a job"
@@ -24,7 +24,7 @@ class ha_esgotat_prestacio_de_desocupacio(Variable):
 
 
 class demandant_d_ocupacio_durant_12_mesos(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has been searching for a job at least 12 months"
@@ -33,7 +33,7 @@ class demandant_d_ocupacio_durant_12_mesos(Variable):
 
 
 class inscrit_com_a_demandant_docupacio(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has been searching for a job at least 12 months"
@@ -41,7 +41,7 @@ class inscrit_com_a_demandant_docupacio(Variable):
     default = False
 
 class percep_prestacions_incompatibles_amb_la_feina(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has some benefit that does not let her work"
@@ -50,7 +50,7 @@ class percep_prestacions_incompatibles_amb_la_feina(Variable):
 
 
 class durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "During the previous month the user has applied for a job"
@@ -59,7 +59,7 @@ class durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina(Variable):
 
 
 class beneficiari_ajuts_per_violencia_de_genere(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user has a violence of genre  benefit"
@@ -68,7 +68,8 @@ class beneficiari_ajuts_per_violencia_de_genere(Variable):
 
 
 class GE_051_01_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "GE_051_1 - RAI 1 - Ajuda discapacitats 33% o superior"
