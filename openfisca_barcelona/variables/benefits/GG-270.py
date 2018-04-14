@@ -7,7 +7,7 @@ class es_orfe_dels_dos_progenitors(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if both adults are dead"
-    default = False
+    default_value = False
 
 
 class es_victima_de_violencia_masclista(Variable):
@@ -15,7 +15,7 @@ class es_victima_de_violencia_masclista(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person is a victim of male violence"
-    default = False
+    default_value = False
 
 
 class es_empadronat_a_catalunya(Variable):
@@ -23,7 +23,7 @@ class es_empadronat_a_catalunya(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person is registered in Catalonia"
-    default = False
+    default_value = False
 
 
 class te_permis_de_residencia(Variable):
@@ -31,7 +31,7 @@ class te_permis_de_residencia(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person has a residence permit"
-    default = False
+    default_value = False
 
 
 class es_divorciada_de_familia_reagrupada(Variable):
@@ -39,7 +39,7 @@ class es_divorciada_de_familia_reagrupada(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person is divorced from a regrouped immigrant family"
-    default = False
+    default_value = False
 
 
 class es_beneficiari_d_una_prestacio_residencial(Variable):
@@ -47,7 +47,7 @@ class es_beneficiari_d_una_prestacio_residencial(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person is benefitiary of a residential benefit"
-    default = False
+    default_value = False
 
 
 class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
@@ -55,7 +55,7 @@ class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person has left voluntarily her last job"
-    default = False
+    default_value = False
 
 
 class ha_residit_a_catalunya_els_ultims_24_mesos(Variable):
@@ -63,7 +63,7 @@ class ha_residit_a_catalunya_els_ultims_24_mesos(Variable):
     entity = Persona
     definition_period = MONTH
     label = "True if person has lived in catalonia for the last 24 months"
-    default = False
+    default_value = False
 
 
 class es_discapacitat(Variable):

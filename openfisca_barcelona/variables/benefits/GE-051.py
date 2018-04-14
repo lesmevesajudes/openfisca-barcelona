@@ -32,7 +32,7 @@ class menor_de_65_anys(Variable):
     definition_period = MONTH
     label = "The user is younger than 65 years"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
     def formula(persona, period, parameters):
         return persona('edat', period) < 65
@@ -44,7 +44,7 @@ class ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos(Variable):
     definition_period = MONTH
     label = "The user has been benefited with a rai in the last 12 months"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class ha_estat_beneficiari_de_les_tres_rai_anteriors(Variable):
@@ -53,7 +53,7 @@ class ha_estat_beneficiari_de_les_tres_rai_anteriors(Variable):
     definition_period = MONTH
     label = "The user has a violence of genre  benefit"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class treballa_per_compte_propi(Variable):
@@ -62,7 +62,7 @@ class treballa_per_compte_propi(Variable):
     definition_period = MONTH
     label = "The user is self-employed"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class ingressat_en_centre_penitenciari(Variable):
@@ -71,7 +71,7 @@ class ingressat_en_centre_penitenciari(Variable):
     definition_period = MONTH
     label = "The user is in prison"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class ingressat_en_centre_penitenciari_pot_treballar(Variable):
@@ -80,7 +80,7 @@ class ingressat_en_centre_penitenciari_pot_treballar(Variable):
     definition_period = MONTH
     label = "The user is in prison but can work"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class victima_violencia_domestica(Variable):
@@ -89,7 +89,7 @@ class victima_violencia_domestica(Variable):
     definition_period = MONTH
     label = "The user has some benefit incompatible with having a job"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class GE_051_mensual(Variable):

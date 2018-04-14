@@ -11,7 +11,7 @@ class grau_discapacitat(Variable):
     definition_period = MONTH
     label = "User's grade of disability"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = 0
 
 
 class ha_esgotat_prestacio_de_desocupacio(Variable):
@@ -20,7 +20,7 @@ class ha_esgotat_prestacio_de_desocupacio(Variable):
     definition_period = MONTH
     label = "The user is not receiving any benefit for not having a job"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class demandant_d_ocupacio_durant_12_mesos(Variable):
@@ -29,7 +29,7 @@ class demandant_d_ocupacio_durant_12_mesos(Variable):
     definition_period = MONTH
     label = "The user has been searching for a job at least 12 months"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class inscrit_com_a_demandant_docupacio(Variable):
@@ -38,7 +38,7 @@ class inscrit_com_a_demandant_docupacio(Variable):
     definition_period = MONTH
     label = "The user has been searching for a job at least 12 months"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 class percep_prestacions_incompatibles_amb_la_feina(Variable):
     value_type = bool
@@ -46,7 +46,7 @@ class percep_prestacions_incompatibles_amb_la_feina(Variable):
     definition_period = MONTH
     label = "The user has some benefit that does not let her work"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina(Variable):
@@ -55,7 +55,7 @@ class durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina(Variable):
     definition_period = MONTH
     label = "During the previous month the user has applied for a job"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class beneficiari_ajuts_per_violencia_de_genere(Variable):
@@ -64,7 +64,7 @@ class beneficiari_ajuts_per_violencia_de_genere(Variable):
     definition_period = MONTH
     label = "The user has a violence of genre  benefit"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class GE_051_01_mensual(Variable):

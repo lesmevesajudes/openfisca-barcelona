@@ -9,7 +9,7 @@ class major_de_45_anys(Variable):
     definition_period = MONTH
     label = "The user is older than 45 years"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
     def formula(persona, period, parameters):
         return persona('edat', period) >= 45
@@ -21,7 +21,7 @@ class desocupat(Variable):
     definition_period = MONTH
     label = "The user has no job"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class ha_treballat_a_l_estranger_6_mesos(Variable):
@@ -30,7 +30,7 @@ class ha_treballat_a_l_estranger_6_mesos(Variable):
     definition_period = MONTH
     label = "The user has been working abroad for at least 6 months"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 class ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos(Variable):
     value_type = bool
@@ -38,7 +38,7 @@ class ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos(Va
     definition_period = MONTH
     label = "The user has been working abroad for at least 6 months and has come back to country in the last 12"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class GE_051_02_mensual(Variable):

@@ -43,7 +43,7 @@ class es_usuari_serveis_socials(Variable):
     definition_period = MONTH
     label = "The user is a Social services user"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class data_obertura_expedient_serveis_socials(Variable):
@@ -52,7 +52,6 @@ class data_obertura_expedient_serveis_socials(Variable):
     definition_period = MONTH
     label = "Date in which the user file opened"
     set_input = set_input_dispatch_by_period
-    default = False
 
 
 class data_obertura_expedient_anterior_a_2016_12_31(Variable):

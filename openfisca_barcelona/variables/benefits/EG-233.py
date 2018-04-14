@@ -23,7 +23,7 @@ class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
     definition_period = MONTH
     label = "The child goes to school"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class nivell_de_renda_inferior_a_2416_80(Variable):
@@ -76,7 +76,7 @@ class en_acolliment(Variable):
     definition_period = MONTH
     label = "The child is in protection regime"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class punts_assignats_per_grau_de_discapacitat(Variable):
