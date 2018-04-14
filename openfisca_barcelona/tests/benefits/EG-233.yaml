@@ -6,9 +6,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:
@@ -48,9 +48,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:
@@ -91,9 +91,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:
@@ -317,7 +317,7 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     tipus_familia_nombrosa: 'General'
+     tipus_familia_nombrosa: general
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -345,9 +345,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 155001
      rendiments_del_patrimoni:
@@ -388,9 +388,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:
@@ -430,9 +430,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:
@@ -473,9 +473,9 @@
      adults: ["adult1", "adult2"]
      altres_adults: ["adult3"]
      menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: Greu
-     tipus_familia_monoparental: No
-     tipus_familia_nombrosa: No
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_monoparental: no
+     tipus_familia_nombrosa: no
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:
@@ -515,9 +515,9 @@
   families:
      adults: ["adult1"]
      menors: ["menor1", "menor2"]
-     nivell_de_risc_d_exclusio_social: No
-     tipus_familia_monoparental: Especial
-     tipus_familia_nombrosa: Especial
+     nivell_de_risc_d_exclusio_social: no
+     tipus_familia_monoparental: especial
+     tipus_familia_nombrosa: especial
      volum_del_negoci_familiar:
       2016: 0
      rendiments_del_patrimoni:

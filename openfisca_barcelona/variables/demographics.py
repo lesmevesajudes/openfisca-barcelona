@@ -98,6 +98,7 @@ class tipus_familia_nombrosa(Variable):
 
 
 class TipusFamiliaMonoparental(Enum):
+    __order__ = "no general especial"
     no = "no"
     general = "general"
     especial = "especial"
@@ -109,6 +110,7 @@ class tipus_familia_monoparental(Variable):
     default_value = TipusFamiliaMonoparental.no
     entity = Familia
     definition_period = MONTH
+    set_input = set_input_dispatch_by_period
     label = "Type of monoparental family certification"
 
 

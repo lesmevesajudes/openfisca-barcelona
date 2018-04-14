@@ -69,7 +69,7 @@
     menors: ["infant1"]
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
-    tipus_familia_monoparental: 'General'
+    tipus_familia_monoparental: general
   persones:
    - id: "pare1"
      data_naixement: '1961-01-15'

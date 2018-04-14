@@ -2,6 +2,7 @@
 
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
+from openfisca_barcelona.variables.demographics import TipusFamiliaMonoparental
 
 
 class AE_230_01_mensual(Variable):
@@ -18,7 +19,7 @@ class AE_230_01_mensual(Variable):
         es_monoparental_custodia_compartida = es_monoparental * (persona('tipus_custodia', period) == 'compartida')
         import_ajuda = select([es_monoparental_custodia_total,
                                es_monoparental_custodia_compartida,
-                                persona.familia('tipus_familia_monoparental', period)[0] == TIPUS_FAMILIA_MONOPARENTAL['No']],
+                                persona.familia('tipus_familia_monoparental', period)[0] == TipusFamiliaMonoparental.no],
                                [900, 450, 0])
 
         return persona('compleix_criteris_AE230', period) * import_ajuda
