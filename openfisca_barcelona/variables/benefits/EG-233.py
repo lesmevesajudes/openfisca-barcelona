@@ -1,26 +1,17 @@
-from openfisca_barcelona.variables.demographics import *
-
-TIPUS_CUSTODIA = Enum(['cap', 'total', 'compartida'])
-
-class tipus_custodia(Variable):
-    column = StrCol
-    entity = Persona
-    definition_period = MONTH
-    label = "The type of relation child between child and it's maintainers"
-    set_input = set_input_dispatch_by_period
-
+from openfisca_core.model_api import *
+from openfisca_barcelona.entities import *
 
 class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The child goes to school"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class nivell_de_renda_inferior_a_2416_80(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
@@ -31,7 +22,7 @@ class nivell_de_renda_inferior_a_2416_80(Variable):
 
 
 class nivell_de_renda_inferior_a_2900_20(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
@@ -42,7 +33,7 @@ class nivell_de_renda_inferior_a_2900_20(Variable):
 
 
 class nivell_de_renda_inferior_a_1450_08(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
@@ -53,7 +44,7 @@ class nivell_de_renda_inferior_a_1450_08(Variable):
 
 
 class nivell_de_renda_inferior_a_1740_12(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
@@ -64,16 +55,16 @@ class nivell_de_renda_inferior_a_1740_12(Variable):
 
 
 class en_acolliment(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The child is in protection regime"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class punts_assignats_per_grau_de_discapacitat(Variable):
-    column = FloatCol
+    value_type = float
     entity = Persona
     definition_period = MONTH
     label = "Punts assignats a cada membre segons el grau de discapacitat"
@@ -85,7 +76,7 @@ class punts_assignats_per_grau_de_discapacitat(Variable):
 
 
 class puntuacio_de_la_familia_segons_eg_233(Variable):
-    column = FloatCol
+    value_type = float
     entity = Familia
     definition_period = MONTH
     label = "Puntuacio que te la familia per a clacular si es susceptible de rebre ajut extraordinari"
@@ -94,18 +85,18 @@ class puntuacio_de_la_familia_segons_eg_233(Variable):
     def formula(familia, period, legislation):
         tipus_familia_nombrosa = familia("tipus_familia_nombrosa", period)
         puntuacio_familia_nombrosa = select([
-            tipus_familia_nombrosa == TIPUS_FAMILIA_NOMBROSA['General'],
-            tipus_familia_nombrosa == TIPUS_FAMILIA_NOMBROSA['Especial']],
+            tipus_familia_nombrosa == tipus_familia_nombrosa.possible_values.general,
+            tipus_familia_nombrosa == tipus_familia_nombrosa.possible_values.especial],
             [1.5, 3])
         tipus_familia_monoparental = familia("tipus_familia_monoparental", period)
         puntuacio_familia_monoparental = select([
-            tipus_familia_monoparental == TIPUS_FAMILIA_MONOPARENTAL['General'],
-            tipus_familia_monoparental == TIPUS_FAMILIA_MONOPARENTAL['Especial']],
+            tipus_familia_monoparental == tipus_familia_monoparental.possible_values.general,
+            tipus_familia_monoparental == tipus_familia_monoparental.possible_values.especial],
             [1.5, 3])
-        tipus_risc_exclusio_social = familia("nivell_de_risc_d_exclusio_social", period)
+        risc_exclusio_social = familia("nivell_de_risc_d_exclusio_social", period)
         puntuacio_risc_exclusio_social = select([
-            tipus_risc_exclusio_social == NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL["Existeix"],
-            tipus_risc_exclusio_social == NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL["Greu"]],
+            risc_exclusio_social == risc_exclusio_social.possible_values.existeix,
+            risc_exclusio_social == risc_exclusio_social.possible_values.greu],
             [10, 15])
         punts_per_grau_discapacitat_membres = familia.members("punts_assignats_per_grau_de_discapacitat", period)
         punts_grau_discapacitat = familia.sum(punts_per_grau_discapacitat_membres)
@@ -118,7 +109,8 @@ class puntuacio_de_la_familia_segons_eg_233(Variable):
 
 
 class volum_del_negoci_familiar(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Familia
     definition_period = YEAR
     label = "Household total income due family business"
@@ -126,7 +118,8 @@ class volum_del_negoci_familiar(Variable):
 
 
 class rendiments_del_patrimoni(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Familia
     definition_period = YEAR
     label = "Household total income due properties"
@@ -134,7 +127,8 @@ class rendiments_del_patrimoni(Variable):
 
 
 class valor_cadastral_finques_rustiques(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Familia
     definition_period = YEAR
     label = "Household total valuation of rustic properties"
@@ -142,7 +136,8 @@ class valor_cadastral_finques_rustiques(Variable):
 
 
 class valor_cadastral_finques_urbanes(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Familia
     definition_period = YEAR
     label = "Household total valuation of urban properties"
@@ -150,7 +145,7 @@ class valor_cadastral_finques_urbanes(Variable):
 
 
 class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Familia
     definition_period = MONTH
     label = "Household total valuation of urban properties"
@@ -181,7 +176,7 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
 
 
 class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "Household total valuation of urban properties"
@@ -209,7 +204,8 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
 
 
 class EG_233_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "EG_233 - AJUTS INDIVIDUALS DE MENJADOR CIUTAT BARCELONA"
@@ -218,7 +214,8 @@ class EG_233_mensual(Variable):
 
         es_escolaritzat_entre_P3_i_4rt_ESO = persona('es_escolaritzat_entre_P3_i_4rt_ESO', period)
         es_un_menor = persona.has_role(Familia.MENOR)
-        en_guardia_i_custodia = persona('tipus_custodia', period) != "cap"
+        tipus_custodia = persona('tipus_custodia', period)
+        en_guardia_i_custodia = tipus_custodia != tipus_custodia.possible_values.cap
         compleix_els_requeriments = en_guardia_i_custodia * \
                                     es_escolaritzat_entre_P3_i_4rt_ESO * \
                                     es_un_menor

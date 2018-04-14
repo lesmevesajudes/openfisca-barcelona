@@ -4,16 +4,17 @@ from openfisca_barcelona.entities import *
 
 
 class victima_violencia_de_genere(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "The user is a victim of genre violence"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class GE_051_03_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "RAI 3 - Per victimes de violencia de genere o domestica"

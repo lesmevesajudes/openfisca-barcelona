@@ -5,7 +5,8 @@ from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 
 class GE_051_00_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "GE_051_0 - RAI 0 - Persones aturades de llarga durada"

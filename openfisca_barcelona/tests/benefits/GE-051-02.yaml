@@ -9,7 +9,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: true
@@ -33,7 +33,7 @@
      data_naixement: 1980-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -57,7 +57,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'treball_compte_daltri_jornada_complerta'
+     situacio_laboral: treball_compte_daltri_jornada_complerta
      inscrit_com_a_demandant_docupacio: false
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -81,7 +81,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: false
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -104,7 +104,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -128,7 +128,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -153,7 +153,7 @@
      ingressos_bruts:
       2016: 6000
      inscrit_com_a_demandant_docupacio: true
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
@@ -176,7 +176,7 @@
      ingressos_bruts:
       2016: 6000
      inscrit_com_a_demandant_docupacio: true
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
@@ -199,7 +199,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -222,7 +222,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
@@ -245,7 +245,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: false
      ha_treballat_a_l_estranger_6_mesos: true
@@ -269,7 +269,7 @@
      data_naixement: 1960-01-01
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      inscrit_com_a_demandant_docupacio: false
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_treballat_a_l_estranger_6_mesos: true

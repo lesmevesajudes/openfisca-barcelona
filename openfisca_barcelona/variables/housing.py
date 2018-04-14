@@ -11,7 +11,7 @@ from openfisca_barcelona.entities import *
 
 
 class ciutat_empadronament(Variable):
-    column = StrCol
+    value_type = str
     entity = Persona
     definition_period = MONTH
     label = u"City Where the user is censed"
@@ -19,7 +19,7 @@ class ciutat_empadronament(Variable):
 
 
 class empadronat_a_la_ciutat_de_barcelona(Variable):
-    column = StrCol
+    value_type = str
     entity = Persona
     definition_period = MONTH
     label = u"The user is censed in Barcelona city"

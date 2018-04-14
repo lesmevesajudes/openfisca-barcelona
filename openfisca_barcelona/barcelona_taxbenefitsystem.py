@@ -8,8 +8,7 @@ COUNTRY_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class BarcelonaTaxBenefitSystem(TaxBenefitSystem):
     def __init__(self):
-        TaxBenefitSystem.__init__(self, entities)
-
+        super(BarcelonaTaxBenefitSystem, self).__init__(entities)
         # We add to our tax and benefit system all the variables
         self.add_variables_from_directory(os.path.join(COUNTRY_DIR, 'variables'))
 

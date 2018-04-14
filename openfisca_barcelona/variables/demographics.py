@@ -12,7 +12,7 @@ import numpy as np
 
 
 class edat(Variable):
-    column = IntCol
+    value_type = int
     entity = Persona
     definition_period = MONTH
     label = u"Person's age (in years)"
@@ -25,7 +25,7 @@ class edat(Variable):
 
 # This variable is a pure input: it doesn't have a formula
 class data_naixement(Variable):
-    column = DateCol(default=date(1970, 1, 1))  # By default, is no value is set for a simulation, we consider the
+    value_type = date  # By default, is no value is set for a simulation, we consider the
                                                 # people involved in a simulation to be born on the 1st of Jan 1970.
     entity = Persona
     label = u"Birth date"
@@ -33,79 +33,117 @@ class data_naixement(Variable):
 
 
 class data_alta_padro(Variable):
-    column = DateCol(default=date(1970, 1, 1))
+    value_type = date
     entity = Persona
     label = u"Inscription to the cityzenship register"
     definition_period = MONTH
 
+
+class SituacionsLaborals(Enum):
+    treball_compte_daltri_jornada_complerta = "treball_compte_daltri_jornada_complerta"
+    treball_compte_alie_jornada_parcial = "treball_compte_alie_jornada_parcial"
+    treball_compte_propi = "treball_compte_propi"
+    desocupat = "Desocupat"
+    estudiant = "estudiant"
+    jubilat = "jubilat"
+
 class situacio_laboral(Variable):
-    column = StrCol
+    value_type = Enum
+    possible_values = SituacionsLaborals
+    default_value = SituacionsLaborals.desocupat
     entity = Persona
     label = u"labor situation"
     definition_period = MONTH
 
 
 class beneficiari_fons_infancia_2017(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     label = u"Has fons_infancia_2017 benefit"
     definition_period = MONTH
 
 
 class tipus_document_identitat(Variable):
-    column = StrCol
+    value_type = str
     entity = Persona
     label = u"ID document type"
     definition_period = MONTH
 
 
 class relacio_habitatge(Variable):
-    column = StrCol
+    value_type = str
     entity = Familia
     label = u"Family - property relation"
     definition_period = MONTH
 
 
-
-NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL = Enum(['No', 'Existeix', 'Greu'])
+class NivellDeRiscExclusioSocial(Enum):
+    nop = "no existeix"
+    existeix = "existeix"
+    greu = "greu"
 
 
 class nivell_de_risc_d_exclusio_social(Variable):
-    column = EnumCol(
-        enum=NIVELL_DE_RISC_D_EXCLUSIO_SOCIAL,
-        default=0  # No
-    )
+    value_type = Enum
+    possible_values = NivellDeRiscExclusioSocial
+    default_value = NivellDeRiscExclusioSocial.nop
     entity = Familia
     definition_period = MONTH
+    set_input = set_input_dispatch_by_period
     label = "Level of social exclusion risk"
 
-TIPUS_FAMILIA_NOMBROSA = Enum(['No', 'General', 'Especial'])
+
+class TipusFamiliaNombrosa(Enum):
+    nop = "no"
+    general = "general"
+    especial = "especial"
 
 
 class tipus_familia_nombrosa(Variable):
-    column = EnumCol(
-        enum=TIPUS_FAMILIA_NOMBROSA,
-        default=0  # No
-    )
+    value_type = Enum
+    possible_values = TipusFamiliaNombrosa
+    default_value = TipusFamiliaNombrosa.nop
     entity = Familia
     definition_period = MONTH
+    set_input = set_input_dispatch_by_period
     label = "Type of large family certification"
 
-TIPUS_FAMILIA_MONOPARENTAL = Enum(['No', 'General', 'Especial'])
+
+class TipusFamiliaMonoparental(Enum):
+    __order__ = "nop general especial"
+    nop = "no"
+    general = "general"
+    especial = "especial"
 
 
 class tipus_familia_monoparental(Variable):
-    column = EnumCol(
-        enum=TIPUS_FAMILIA_MONOPARENTAL,
-        default=0  # No
-    )
+    value_type = Enum
+    possible_values = TipusFamiliaMonoparental
+    default_value = TipusFamiliaMonoparental.nop
     entity = Familia
     definition_period = MONTH
+    set_input = set_input_dispatch_by_period
     label = "Type of monoparental family certification"
 
 
 class nacionalitat(Variable):
-    column = StrCol
+    value_type = str
     entity = Persona
     definition_period = MONTH
     label = u"Person nationality"
+
+
+class TipusCustodia(Enum):
+    cap = "cap"
+    total = "total"
+    compartida = "compartida"
+
+
+class tipus_custodia(Variable):
+    value_type = Enum
+    possible_values = TipusCustodia
+    default_value = TipusCustodia.cap
+    entity = Persona
+    definition_period = MONTH
+    label = "The type of relation child between child and it's maintainers"
+    set_input = set_input_dispatch_by_period

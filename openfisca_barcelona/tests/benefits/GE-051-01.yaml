@@ -9,8 +9,7 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
-     ciutat_empadronament: "Barcelona"
+     situacio_laboral: desocupat
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -35,8 +34,7 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
-     ciutat_empadronament: "Barcelona"
+     situacio_laboral: desocupat
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -51,8 +49,7 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
-     ciutat_empadronament: "Barcelona"
+     situacio_laboral: desocupat
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -76,7 +73,7 @@
    - id: "adult1"
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      grau_discapacitat: 32
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
@@ -100,7 +97,7 @@
    - id: "adult1"
      ingressos_bruts:
       2016: 6000
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: false
      demandant_d_ocupacio_durant_12_mesos: true
@@ -125,7 +122,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: false
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -149,7 +146,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: false
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -173,7 +170,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: false
@@ -197,7 +194,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -221,7 +218,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -245,7 +242,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -269,7 +266,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -293,7 +290,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
@@ -317,7 +314,7 @@
      ingressos_bruts:
       2016: 6000
      grau_discapacitat: 34
-     situacio_laboral: 'desocupat'
+     situacio_laboral: desocupat
      ha_esgotat_prestacio_de_desocupacio: true
      demandant_d_ocupacio_durant_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true

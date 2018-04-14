@@ -9,8 +9,6 @@ from datetime import datetime
 from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
-from openfisca_barcelona.variables.demographics import TIPUS_FAMILIA_MONOPARENTAL
-
 
 def varem_irsc_016(nr_members):
         return select(                  # Fixme: Find the formula!
@@ -39,25 +37,24 @@ def varem_irsc_016(nr_members):
 
 
 class es_usuari_serveis_socials(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Familia
     definition_period = MONTH
     label = "The user is a Social services user"
     set_input = set_input_dispatch_by_period
-    default = False
+    default_value = False
 
 
 class data_obertura_expedient_serveis_socials(Variable):
-    column = DateCol
+    value_type = date
     entity = Familia
     definition_period = MONTH
     label = "Date in which the user file opened"
     set_input = set_input_dispatch_by_period
-    default = False
 
 
 class data_obertura_expedient_anterior_a_2016_12_31(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Familia
     definition_period = ETERNITY
     label = u"The social services expedient if filed after 2016/12/31"
@@ -67,7 +64,7 @@ class data_obertura_expedient_anterior_a_2016_12_31(Variable):
 
 
 class data_alta_padro_valida_AE_230(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = ETERNITY
     label = u"The social services expedient if filed after 2016/12/31"
@@ -79,7 +76,7 @@ class data_alta_padro_valida_AE_230(Variable):
 
 
 class compleix_criteris_AE230(Variable):
-    column = BoolCol
+    value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "Ajuda 0-16"
@@ -100,14 +97,16 @@ class compleix_criteris_AE230(Variable):
 
 
 class AE_230_mensual(Variable):
-    column = IntCol(val_type="monetary")
+    value_type = float
+    unit = 'currency'
     entity = Persona
     definition_period = MONTH
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-        import_ajuda = select([persona('tipus_custodia', period) == 'total',
-                                persona('tipus_custodia', period) == 'compartida'],
-                                [parameters(period).benefits.AE230.import_ajuda, 50])
+        tipus_custodia = persona('tipus_custodia', period)
+        import_ajuda = where(tipus_custodia != tipus_custodia.possible_values.compartida,
+                                parameters(period).benefits.AE230.import_ajuda, 50)
 
+        print ("import ajuda: ", import_ajuda)
         return persona('compleix_criteris_AE230', period) * import_ajuda
