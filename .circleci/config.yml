@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: python:2.7.14
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - deps-{{ .Branch }}-{{ checksum "setup.py" }}
+
+      - run:
+          name: Create virtualenv
+          command: |
+            mkdir -p /tmp/venv/openfisca-barcelona
+            virtualenv /tmp/venv/openfisca-barcelona
+
+      # pip >= 8.0 needed to be compatible with "manylinux" wheels, used by numpy >= 1.11
+      - run:
+          name: Install dependencies
+          command: |
+            . /tmp/venv/openfisca-barcelona/bin/activate
+            pip install --upgrade pip twine wheel
+            pip install .[test] --upgrade
+
+      - save_cache:
+          key: deps-{{ .Branch }}-{{ checksum "setup.py" }}
+          paths:
+            - /tmp/venv/openfisca-barcelona
+      - run:
+          name: Run tests
+          command: |
+            . /tmp/venv/openfisca-barcelona/bin/activate
+            make test
