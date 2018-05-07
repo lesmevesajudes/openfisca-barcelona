@@ -143,6 +143,13 @@ class valor_cadastral_finques_urbanes(Variable):
     label = "Household total valuation of urban properties"
     set_input = set_input_dispatch_by_period
 
+class beneficiari_fons_infancia(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "This person was beneficiary of last year's 0-16 benefit"
+    set_input = set_input_dispatch_by_period
+    default_value = False
 
 class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
     value_type = bool
@@ -243,8 +250,8 @@ class EG_233_mensual(Variable):
             * (volum_de_negoci < volum_de_negoci_maxim) \
             * (rendiments_patrimonials < rendiments_patrimonials_maxim) \
             * (valor_cadastral_finques_rustiques < valor_cadastral_finques_rustiques_maxim) \
-            * (valor_cadastral_finques_urbanes < valor_cadastral_finques_urbanes_maxim)
-
+            * (valor_cadastral_finques_urbanes < valor_cadastral_finques_urbanes_maxim) \
+            + persona("beneficiari_fons_infancia", period.this_year)
         import_ajut_extraordinari = parameters(period).benefits.EG233.ajut_extraordinari_import
         import_ajut_ordinari = parameters(period).benefits.EG233.ajut_ordinari_import
 

@@ -547,3 +547,38 @@
      tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 6, 6 ]
+
+
+- name: "Familia obté ajut extraordinari si es beneficiaria del fons 0-16"
+  description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     adults: ["adult1"]
+     menors: ["menor1"]
+     nivell_de_risc_d_exclusio_social: nop
+     tipus_familia_monoparental: especial
+     tipus_familia_nombrosa: especial
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
+  persones:
+   - id: "adult1"
+     ingressos_bruts:
+      2016: 5784
+     grau_discapacitat: 0
+   - id: "menor1"
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
+     ingressos_bruts:
+      2016: 3728
+     grau_discapacitat: 0
+     en_acolliment: false
+     tipus_custodia: total
+     beneficiari_fons_infancia: true
+  output_variables:
+    EG_233_mensual: [ 0, 6 ]
