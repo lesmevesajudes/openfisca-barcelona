@@ -41,7 +41,7 @@ class data_alta_padro(Variable):
 
 class SituacionsLaborals(Enum):
     treball_compte_daltri_jornada_complerta = "treball_compte_daltri_jornada_complerta"
-    treball_compte_alie_jornada_parcial = "treball_compte_alie_jornada_parcial"
+    treball_compte_daltri_jornada_parcial = "treball_compte_daltri_jornada_parcial"
     treball_compte_propi = "treball_compte_propi"
     desocupat = "Desocupat"
     estudiant = "estudiant"
@@ -146,4 +146,17 @@ class tipus_custodia(Variable):
     entity = Persona
     definition_period = MONTH
     label = "The type of relation child between child and it's maintainers"
+    set_input = set_input_dispatch_by_period
+
+class Sexe(Enum):
+    home = "home"
+    dona = "dona"
+
+class sexe(Variable):
+    value_type = Enum
+    possible_values = Sexe
+    default_value = Sexe.dona
+    entity = Persona
+    definition_period = MONTH
+    label = "Gender"
     set_input = set_input_dispatch_by_period

@@ -22,6 +22,14 @@ class ha_esgotat_prestacio_de_desocupacio(Variable):
     set_input = set_input_dispatch_by_period
     default_value = False
 
+class gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+    label = "The user is receiving a benefit for not having a job"
+    set_input = set_input_dispatch_by_period
+    default_value = False
+
 
 class demandant_d_ocupacio_durant_12_mesos(Variable):
     value_type = bool

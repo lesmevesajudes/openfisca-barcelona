@@ -27,3 +27,16 @@ class empadronat_a_la_ciutat_de_barcelona(Variable):
 
     def formula(persona, period, parameters):
         return persona("ciutat_empadronament", period) == "Barcelona"
+
+
+class anys_empadronat_a_barcelona(Variable):
+    value_type = int
+    entity = Persona
+    definition_period = MONTH
+    label = u"how many years have this person been living in barcelona"
+
+class titular_contracte_de_lloguer(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+    label = u"is the user who rents the house"

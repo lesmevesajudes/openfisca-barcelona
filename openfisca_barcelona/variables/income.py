@@ -12,6 +12,13 @@ class ingressos_bruts(Variable):
     label = "Total amount earned in a year"
     set_input = set_input_divide_by_period
 
+class ingressos_per_pnc(Variable):
+    value_type = float
+    entity = Persona
+    definition_period = YEAR
+    label = "Total amount earned in a year by pnc"
+    set_input = set_input_divide_by_period
+
 
 class familia_ingressos_bruts(Variable):
     value_type = float
