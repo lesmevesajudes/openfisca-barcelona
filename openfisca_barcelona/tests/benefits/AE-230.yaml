@@ -9,20 +9,23 @@
     es_usuari_serveis_socials: true
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 7000
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "mare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "infant1"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
   output_variables:
     AE_230_mensual: [ 0, 0, 100]
@@ -38,20 +41,23 @@
     es_usuari_serveis_socials: true
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 7000
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "mare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "infant1"
-     data_naixement: '2016-01-15'
+     edat: 1
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2016-01-20'
+     anys_empadronat_a_barcelona: 1
      tipus_custodia: 'total'
   output_variables:
     AE_230_mensual: [ 0, 0, 100]
@@ -68,15 +74,17 @@
     tipus_familia_monoparental: general
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 7000
-     data_alta_padro: '2016-1-2'
+     anys_empadronat_a_barcelona: 1
    - id: "infant1"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2016-1-2'
+     anys_empadronat_a_barcelona: 1
      tipus_custodia: 'total'
   output_variables:
     AE_230_mensual: [ 0, 0]
@@ -92,21 +100,24 @@
     es_usuari_serveis_socials: true
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 12000
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "infant1"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
    - id: "infant2"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
   output_variables:
     AE_230_mensual: [ 0, 100, 100]
@@ -122,21 +133,24 @@
     es_usuari_serveis_socials: true
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 14940
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "infant1"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
    - id: "infant2"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
   output_variables:
     AE_230_mensual: [ 0, 0, 0]
@@ -152,98 +166,30 @@
     es_usuari_serveis_socials: true
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 7928
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "mare1"
-     data_naixement: '1961-01-15'
+     edat: 57
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 10000
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
    - id: "infant1"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
    - id: "infant2"
-     data_naixement: '2002-01-15'
+     edat: 15
+     municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: 'total'
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
-
-- name: "0-16 menor major de 16"
-  description: Ajuda menors 0-16
-  period: 2017-02
-  absolute_error_margin: 0
-  families:
-    adults: ["pare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-  persones:
-   - id: "pare1"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 7000
-     data_alta_padro: '2015-12-31'
-   - id: "infant1"
-     data_naixement: '2000-01-15'
-     ingressos_bruts:
-      2016: 0
-     data_alta_padro: '2015-12-31'
-     tipus_custodia: 'total'
-  output_variables:
-    AE_230_mensual: [0, 0]
-
-- name: "0-16 membre no empadronat a Barcelona"
-  description: Ajuda menors 0-16
-  period: 2017-01
-  absolute_error_margin: 0
-  families:
-    adults: ["pare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: false
-    es_usuari_serveis_socials: true
-  persones:
-   - id: "pare1"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 7000
-     data_alta_padro: '2015-12-31'
-   - id: "infant1"
-     data_naixement: '2002-01-15'
-     ingressos_bruts:
-      2016: 0
-     data_alta_padro: '2015-12-31'
-     tipus_custodia: 'total'
-  output_variables:
-    AE_230_mensual: [ 0, 0]
-
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible superior a 1,5 IRSC"
-  description: Ajuda menors 0-16
-  period: 2017-01
-  absolute_error_margin: 0
-  families:
-    adults: ["pare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-  persones:
-   - id: "pare1"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 12000
-     data_alta_padro: '2015-12-31'
-   - id: "infant1"
-     data_naixement: '2002-01-15'
-     ingressos_bruts:
-      2016: 0
-     data_alta_padro: '2015-12-31'
-     tipus_custodia: 'total'
-  output_variables:
-    AE_230_mensual: [ 0, 0]

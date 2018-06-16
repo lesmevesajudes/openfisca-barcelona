@@ -43,14 +43,14 @@ class SituacionsLaborals(Enum):
     treball_compte_daltri_jornada_complerta = "treball_compte_daltri_jornada_complerta"
     treball_compte_daltri_jornada_parcial = "treball_compte_daltri_jornada_parcial"
     treball_compte_propi = "treball_compte_propi"
-    desocupat = "Desocupat"
+    aturat = "Aturat"
     estudiant = "estudiant"
     jubilat = "jubilat"
 
 class situacio_laboral(Variable):
     value_type = Enum
     possible_values = SituacionsLaborals
-    default_value = SituacionsLaborals.desocupat
+    default_value = SituacionsLaborals.aturat
     entity = Persona
     label = u"labor situation"
     definition_period = MONTH
@@ -143,7 +143,7 @@ class tipus_custodia(Variable):
     value_type = Enum
     possible_values = TipusCustodia
     default_value = TipusCustodia.cap
-    entity = Persona
+    entity = Familia
     definition_period = MONTH
     label = "The type of relation child between child and it's maintainers"
     set_input = set_input_dispatch_by_period

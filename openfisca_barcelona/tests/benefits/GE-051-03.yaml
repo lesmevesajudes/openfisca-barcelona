@@ -9,7 +9,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -32,7 +32,7 @@
      ingressos_bruts:
       2016: 9000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -54,7 +54,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: false
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -98,7 +98,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -120,7 +120,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: false
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: true
@@ -142,7 +142,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: false
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -164,7 +164,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: false
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -186,7 +186,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: false
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -208,7 +208,7 @@
      ingressos_bruts:
       2016: 6000
      victima_violencia_de_genere: true
-     situacio_laboral: desocupat
+     situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: false
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false

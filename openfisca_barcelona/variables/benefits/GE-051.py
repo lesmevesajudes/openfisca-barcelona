@@ -102,7 +102,7 @@ class GE_051_mensual(Variable):
         cap_membre_amb_ingressos_superiors_a_530_mensuals = \
             persona.familia('cap_familiar_te_renda_disponible_superior_a_530', period)
         situacio_laboral = persona('situacio_laboral', period)
-        desocupat = situacio_laboral == situacio_laboral.possible_values.desocupat
+        aturat = situacio_laboral == situacio_laboral.possible_values.aturat
         no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos = \
             (persona('ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos', period)) == False
         no_se_li_ha_concedit_tres_ajudes_rai_anteriors = \
@@ -115,7 +115,7 @@ class GE_051_mensual(Variable):
 
         return \
             cap_membre_amb_ingressos_superiors_a_530_mensuals \
-            * desocupat \
+            * aturat \
             * menor_de_65_anys \
             * no_treballa_per_compte_propi \
             * no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos \

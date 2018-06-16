@@ -221,7 +221,7 @@ class EG_233_mensual(Variable):
 
         es_escolaritzat_entre_P3_i_4rt_ESO = persona('es_escolaritzat_entre_P3_i_4rt_ESO', period)
         es_un_menor = persona.has_role(Familia.MENOR)
-        tipus_custodia = persona('tipus_custodia', period)
+        tipus_custodia = persona.familia('tipus_custodia', period)
         en_guardia_i_custodia = tipus_custodia != tipus_custodia.possible_values.cap
         compleix_els_requeriments = en_guardia_i_custodia * \
                                     es_escolaritzat_entre_P3_i_4rt_ESO * \

@@ -14,7 +14,7 @@ class AE_230_01_mensual(Variable):
     def formula(persona, period, parameters):
         tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
         es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
-        tipus_custodia = persona('tipus_custodia', period)
+        tipus_custodia = persona.familia('tipus_custodia', period)
         es_monoparental_custodia_total = es_monoparental * (tipus_custodia == tipus_custodia.possible_values.total)
         es_monoparental_custodia_compartida = es_monoparental * (tipus_custodia == tipus_custodia.possible_values.compartida)
 

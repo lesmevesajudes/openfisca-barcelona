@@ -15,7 +15,7 @@ class major_de_45_anys(Variable):
         return persona('edat', period) >= 45
 
 
-class desocupat(Variable):
+class aturat(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH

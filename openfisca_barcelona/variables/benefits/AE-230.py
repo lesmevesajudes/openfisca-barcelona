@@ -70,9 +70,20 @@ class data_alta_padro_valida_AE_230(Variable):
     label = u"The social services expedient if filed after 2016/12/31"
 
     def formula(persona, period, parameters):
-        return ((persona("data_naixement", period) > datetime.strptime('2016-01-01', "%Y-%m-%d").date())
-                + ((persona("data_naixement", period) < datetime.strptime('2016-01-01', "%Y-%m-%d").date())
-                   * (persona("data_alta_padro", period) < datetime.strptime('2016-01-01', "%Y-%m-%d").date())))
+        return (
+                (persona("edat", period) <= 2)
+                + (
+                        (persona("edat", period) > 2)
+                        * (persona("anys_empadronat_a_barcelona", period) >= 2)))
+
+
+class solicitant_AE_230_valid(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+
+    def formula(persona, period, parameters):
+        return persona('data_alta_padro_valida_AE_230', period) * persona.has_role(Familia.ADULT)
 
 
 class compleix_criteris_AE230(Variable):
@@ -83,17 +94,19 @@ class compleix_criteris_AE230(Variable):
 
     def formula(persona, period, parameters):
         te_menys_de_16_anys = persona('edat', period) < 16
-        ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year)[0] < \
+        ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year) < \
                                     varem_irsc_016(persona.familia.nb_persons())
-        es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)[0]
-        es_empadronat_a_barcelona = persona.familia('domicili_a_barcelona_ciutat', period)[0]
-        data_alta_padro_valida = persona('data_alta_padro_valida_AE_230', period)
+        es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)
+        es_empadronat_a_barcelona = persona('municipi_empadronament', period) == 'barcelona'
+        anys_empadronament_valid = persona('data_alta_padro_valida_AE_230', period)
+        existeix_algun_solicitant_AE_230 = persona.familia.any(persona.familia.members('solicitant_AE_230_valid', period))
 
         return te_menys_de_16_anys \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
-               * data_alta_padro_valida \
-               * es_usuari_serveis_socials
+               * anys_empadronament_valid \
+               * es_usuari_serveis_socials \
+               * existeix_algun_solicitant_AE_230
 
 
 class AE_230_mensual(Variable):
@@ -104,7 +117,7 @@ class AE_230_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-        tipus_custodia = persona('tipus_custodia', period)
+        tipus_custodia = persona.familia('tipus_custodia', period)
         import_ajuda = where(tipus_custodia != tipus_custodia.possible_values.compartida,
                                 parameters(period).benefits.AE230.import_ajuda, 50)
 

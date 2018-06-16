@@ -10,16 +10,18 @@
     es_usuari_serveis_socials: true
   persones:
    - id: "pare1"
-     data_naixement: '1961-01-15'
+     edat: 57
      ingressos_bruts:
       2016: 7000
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
+     municipi_empadronament: barcelona
    - id: "infant1"
-     data_naixement: '2002-01-15'
+     edat: 15
      ingressos_bruts:
       2016: 0
-     data_alta_padro: '2015-12-31'
+     anys_empadronat_a_barcelona: 2
      tipus_custodia: compartida
+     municipi_empadronament: barcelona
 
   output_variables:
     AE_230_mensual: [ 0, 50]
