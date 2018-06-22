@@ -8,6 +8,8 @@
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "mare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57
@@ -40,6 +42,8 @@
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "mare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57
@@ -73,6 +77,8 @@
     es_usuari_serveis_socials: true
     tipus_familia_monoparental: general
     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57
@@ -99,6 +105,8 @@
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "infant1", "infant2"]
   persones:
    - id: "pare1"
      edat: 57
@@ -131,6 +139,8 @@
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "infant1", "infant2"]
   persones:
    - id: "pare1"
      edat: 57
@@ -163,6 +173,8 @@
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "mare1", "infant1", "infant2"]
   persones:
    - id: "pare1"
      edat: 57

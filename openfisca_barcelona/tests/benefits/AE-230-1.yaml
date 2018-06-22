@@ -9,6 +9,8 @@
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
     tipus_custodia: compartida
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57

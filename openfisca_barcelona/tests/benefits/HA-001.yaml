@@ -1,0 +1,21 @@
+- name: "Persona que te una ajuda residencial no reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
+     ha_participat_en_un_proces_de_mediacio: true
+  persones:
+   - id: "adult"
+     data_naixement: '1961-01-15'
+     ingressos_bruts:
+      2016: 6348
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: true
+     es_divorciada_de_familia_reagrupada: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: true
+     ingressat_en_centre_penitenciari: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+  output_variables:
+     HA_001: [ true ]
