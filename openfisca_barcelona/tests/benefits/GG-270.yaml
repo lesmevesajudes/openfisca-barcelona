@@ -4,6 +4,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
@@ -26,6 +28,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
@@ -48,6 +52,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
@@ -70,6 +76,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
@@ -92,6 +100,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
@@ -113,6 +123,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
   persones:
    - id: "adult"
      data_naixement: '1961-01-15'
@@ -136,6 +148,8 @@
   families:
      adults: ["adult"]
      menors: ["menor_discapacitat"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult", "menor_discapacitat"]
   persones:
    - id: "adult"
      data_naixement: '1998-03-15'
@@ -161,6 +175,8 @@
   families:
      adults: ["adult"]
      menors: ["menor_discapacitat"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult", "menor_discapacitat"]
   persones:
    - id: "adult"
      data_naixement: '1998-03-15'

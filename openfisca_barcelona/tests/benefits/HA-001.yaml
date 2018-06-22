@@ -2,12 +2,14 @@
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
+  families:
+    adults: [ adult ]
   unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
+     persones_que_conviuen: [ adult ]
      ha_participat_en_un_proces_de_mediacio: true
   persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
+   - id: adult
+     data_naixement: 1961-01-15
      ingressos_bruts:
       2016: 6348
      es_orfe_dels_dos_progenitors: true

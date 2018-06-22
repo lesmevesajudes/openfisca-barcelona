@@ -4,6 +4,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
@@ -28,6 +30,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1", "adult2"]
   persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
@@ -66,6 +70,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -89,6 +95,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -112,6 +120,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -135,6 +145,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -158,6 +170,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -181,6 +195,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -204,6 +220,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -227,6 +245,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -250,6 +270,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -273,6 +295,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:

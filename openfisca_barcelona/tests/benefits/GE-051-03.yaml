@@ -4,6 +4,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -27,6 +29,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -49,6 +53,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -71,6 +77,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -93,6 +101,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -115,6 +125,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -137,6 +149,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -159,6 +173,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -181,6 +197,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -203,6 +221,8 @@
   absolute_error_margin: false
   families:
      adults: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
