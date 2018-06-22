@@ -15,16 +15,13 @@ class GE_051_00_mensual(Variable):
         requeriments_generals = persona('GE_051_mensual', period)
         major_de_45_anys = persona('major_de_45_anys', period)
         ha_esgotat_prestacio_de_desocupacio = persona('ha_esgotat_prestacio_de_desocupacio', period)
-        demandant_d_ocupacio_durant_12_mesos = persona('demandant_d_ocupacio_durant_12_mesos', period)
-        durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina = \
-            persona('durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina', period)
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos = persona('inscrit_com_a_demandant_docupacio_mes_de_12_mesos', period)
 
         compleix_els_requeriments = \
             requeriments_generals \
             * major_de_45_anys \
             * ha_esgotat_prestacio_de_desocupacio \
-            * demandant_d_ocupacio_durant_12_mesos \
-            * durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina
+            * inscrit_com_a_demandant_docupacio_mes_de_12_mesos
 
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
 

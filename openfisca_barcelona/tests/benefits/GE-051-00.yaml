@@ -12,7 +12,7 @@
      situacio_laboral: aturat
      grau_discapacitat: 34
      ha_esgotat_prestacio_de_desocupacio: true
-     demandant_d_ocupacio_durant_12_mesos: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
      durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false

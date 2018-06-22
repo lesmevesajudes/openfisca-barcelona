@@ -172,7 +172,7 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
 
         els_altres_adults_compleixen_criteris_de_nivell_de_renda = \
             familia.all(familia.members('nivell_de_renda_inferior_a_1450_08', period.last_year),
-                                role=Familia.ALTRE_ADULT)
+                                role=Familia.ALTRES_FAMILIARS)
         els_menors_compleixen_els_criteris_de_nivell_de_renda = \
             familia.all(familia.members('nivell_de_renda_inferior_a_1740_12', period.last_year), role=Familia.MENOR)
 
@@ -200,7 +200,7 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
                                                            * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
 
         els_altres_adults_compleixen_criteris_de_nivell_de_renda = persona.familia.all(
-            persona.familia.members('nivell_de_renda_inferior_a_2416_80', period.last_year), role=Familia.ALTRE_ADULT)
+            persona.familia.members('nivell_de_renda_inferior_a_2416_80', period.last_year), role=Familia.ALTRES_FAMILIARS)
 
         els_menors_compleixen_els_criteris_de_nivell_de_renda = \
             persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_2900_20', period.last_year), role=Familia.MENOR)

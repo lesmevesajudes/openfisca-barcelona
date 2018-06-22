@@ -51,17 +51,16 @@ class GE_051_02_mensual(Variable):
     def formula(persona, period, parameters):
         requeriments_generals = persona('GE_051_mensual', period)
         major_de_45_anys = persona('major_de_45_anys', period)
-        ha_treballat_a_l_estranger_6_mesos = persona('ha_treballat_a_l_estranger_6_mesos', period)
         ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos = persona('ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos', period)
         inscrit_com_a_demandant_docupacio = persona('inscrit_com_a_demandant_docupacio', period)
 
         compleix_els_requeriments = \
             requeriments_generals \
             * major_de_45_anys \
-            * ha_treballat_a_l_estranger_6_mesos \
             * ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos \
             * inscrit_com_a_demandant_docupacio
-
+        print("popo")
+        print([requeriments_generals, major_de_45_anys, ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos, inscrit_com_a_demandant_docupacio])
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
 
         return where(compleix_els_requeriments, import_ajuda, 0)

@@ -25,19 +25,6 @@ class cap_familiar_te_renda_disponible_superior_a_530(Variable):
         members_renda_disponible_inferior_a_530 = familia.members('renda_mensual_disponible_inferior_a_530', period)
         return familia.all(members_renda_disponible_inferior_a_530)
 
-
-class menor_de_65_anys(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "The user is younger than 65 years"
-    set_input = set_input_dispatch_by_period
-    default_value = False
-
-    def formula(persona, period, parameters):
-        return persona('edat', period) < 65
-
-
 class ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos(Variable):
     value_type = bool
     entity = Persona
@@ -91,7 +78,6 @@ class victima_violencia_domestica(Variable):
     set_input = set_input_dispatch_by_period
     default_value = False
 
-
 class GE_051_mensual(Variable):
     value_type = bool
     entity = Persona
@@ -111,7 +97,7 @@ class GE_051_mensual(Variable):
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
         no_percep_prestacions_incompatibles_amb_la_feina = \
             persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
-        menor_de_65_anys = persona('menor_de_65_anys', period)
+        menor_de_65_anys = persona('edat', period) < 65
 
         return \
             cap_membre_amb_ingressos_superiors_a_530_mensuals \

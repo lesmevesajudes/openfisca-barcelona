@@ -16,15 +16,22 @@ Familia = build_entity(
         'subroles': ['primer_adult', 'segon_adult']
         },
         {
-        'key': 'altre_adult',
-        'plural': 'altres_adults',
-        'label': u'Other adults'
+        'key': 'altres_familiars',
+        'plural': 'altres_familiars',
+        'label': u'Other familiar'
         },
         {
         'key': 'menor',
         'plural': 'menors',
         'label': u'Menor',
-        }]
+        },
+        {
+        'key': 'altres_persones',
+        'plural': 'altres_persones',
+        'label': u'altres persones',
+        }
+
+    ]
     )
 
 Persona = build_entity(

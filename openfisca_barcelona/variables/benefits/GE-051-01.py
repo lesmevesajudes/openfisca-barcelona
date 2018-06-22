@@ -31,7 +31,7 @@ class gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio(Variable):
     default_value = False
 
 
-class demandant_d_ocupacio_durant_12_mesos(Variable):
+class inscrit_com_a_demandant_docupacio_mes_de_12_mesos(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
@@ -88,17 +88,14 @@ class GE_051_01_mensual(Variable):
         no_beneficiari_ajuts_per_violencia_de_genere = \
             persona('beneficiari_ajuts_per_violencia_de_genere', period) == False
         ha_esgotat_prestacio_de_desocupacio = persona('ha_esgotat_prestacio_de_desocupacio', period)
-        demandant_d_ocupacio_durant_12_mesos = persona('demandant_d_ocupacio_durant_12_mesos', period)
-        durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina = \
-            persona('durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina', period)
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos = persona('inscrit_com_a_demandant_docupacio_mes_de_12_mesos', period)
 
         compleix_els_requeriments = \
             requeriments_generals \
             * discapacitat_superior_al_33_percent \
             * no_beneficiari_ajuts_per_violencia_de_genere \
             * ha_esgotat_prestacio_de_desocupacio \
-            * demandant_d_ocupacio_durant_12_mesos \
-            * durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina
+            * inscrit_com_a_demandant_docupacio_mes_de_12_mesos
 
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
 
