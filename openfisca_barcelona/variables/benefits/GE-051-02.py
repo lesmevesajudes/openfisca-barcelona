@@ -24,14 +24,6 @@ class aturat(Variable):
     default_value = False
 
 
-class ha_treballat_a_l_estranger_6_mesos(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "The user has been working abroad for at least 6 months"
-    set_input = set_input_dispatch_by_period
-    default_value = False
-
 class ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos(Variable):
     value_type = bool
     entity = Persona
@@ -59,8 +51,7 @@ class GE_051_02_mensual(Variable):
             * major_de_45_anys \
             * ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos \
             * inscrit_com_a_demandant_docupacio
-        print("popo")
-        print([requeriments_generals, major_de_45_anys, ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos, inscrit_com_a_demandant_docupacio])
+
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
 
         return where(compleix_els_requeriments, import_ajuda, 0)

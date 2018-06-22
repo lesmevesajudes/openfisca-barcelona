@@ -4,7 +4,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_nombrosa: nop
@@ -17,6 +17,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -32,7 +33,6 @@
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     tipus_custodia: total
      ingressos_bruts:
       2016: 1739
      grau_discapacitat: 0
@@ -46,7 +46,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_monoparental: nop
@@ -59,6 +59,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: compartida
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -74,7 +75,6 @@
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     tipus_custodia: compartida
      ingressos_bruts:
       2016: 1739
      grau_discapacitat: 0
@@ -89,7 +89,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_monoparental: nop
@@ -102,6 +102,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: cap
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -117,7 +118,6 @@
      grau_discapacitat: 0
    - id: "menor1"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
-     tipus_custodia: cap
      ingressos_bruts:
       2016: 1739
      grau_discapacitat: 0
@@ -131,8 +131,9 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -147,7 +148,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -157,8 +157,9 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -173,7 +174,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -184,8 +184,9 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -200,18 +201,18 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, altres_adults"
+- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, altres_persones"
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_familiars: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -226,7 +227,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -236,8 +236,9 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -252,7 +253,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 4080
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -262,8 +262,9 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -278,7 +279,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: false
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -288,8 +288,9 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
+     tipus_custodia: cap
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -304,7 +305,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: "cap"
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -315,9 +315,10 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_familia_nombrosa: general
+     tipus_custodia: cap
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -332,7 +333,6 @@
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 2880
-     tipus_custodia: cap
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 0 ]
 
@@ -343,7 +343,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_monoparental: nop
@@ -356,6 +356,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -375,7 +376,6 @@
       2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -386,7 +386,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_monoparental: nop
@@ -399,6 +399,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -418,7 +419,6 @@
       2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -428,7 +428,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_monoparental: nop
@@ -441,6 +441,7 @@
       2016: 131391
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -460,7 +461,6 @@
       2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -471,7 +471,7 @@
   absolute_error_margin: false
   families:
      adults: ["adult1", "adult2"]
-     altres_adults: ["adult3"]
+     altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
      tipus_familia_monoparental: nop
@@ -484,6 +484,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 42901
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -503,7 +504,6 @@
       2016: 1728
      grau_discapacitat: 0
      en_acolliment: false
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 0, 0, 3 ]
 
@@ -526,6 +526,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -537,14 +538,12 @@
       2016: 1728
      grau_discapacitat: 34
      en_acolliment: true
-     tipus_custodia: "total"
    - id: "menor2"
      es_escolaritzat_entre_P3_i_4rt_ESO: true
      ingressos_bruts:
       2016: 1728
      grau_discapacitat: 34
      en_acolliment: false
-     tipus_custodia: total
   output_variables:
     EG_233_mensual: [ 0, 6, 6 ]
 
@@ -567,6 +566,7 @@
       2016: 0
      valor_cadastral_finques_urbanes:
       2016: 0
+     tipus_custodia: total
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -578,7 +578,6 @@
       2016: 3728
      grau_discapacitat: 0
      en_acolliment: false
-     tipus_custodia: total
      beneficiari_fons_infancia: true
   output_variables:
     EG_233_mensual: [ 0, 6 ]

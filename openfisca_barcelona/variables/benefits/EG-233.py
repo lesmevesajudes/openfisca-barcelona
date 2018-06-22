@@ -192,7 +192,6 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
     def formula(persona, period, parameters):
         nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period.last_year)
         nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period.last_year)
-        print (nivell_renda_segon_adult)
         nivell_renda_maxim_primer_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_primer_adult
         nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_segon_adult
 
@@ -255,7 +254,6 @@ class EG_233_mensual(Variable):
         import_ajut_extraordinari = parameters(period).benefits.EG233.ajut_extraordinari_import
         import_ajut_ordinari = parameters(period).benefits.EG233.ajut_ordinari_import
 
-        print (compleix_ajut_ordinari)
         import_EG_233 = select([compleix_ajut_extraordinari, compleix_ajut_ordinari],
                                [import_ajut_extraordinari, import_ajut_ordinari])
 

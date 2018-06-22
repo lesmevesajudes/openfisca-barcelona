@@ -11,11 +11,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -35,58 +33,9 @@
       2016: 6372
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-
-- name: "Persona no empadronada a Catalunya no reb l'ajuda"
-  description: Ajuda lloguer just
-  period: 2017-01
-  absolute_error_margin: false
-  families:
-     adults: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: false
-     te_permis_de_residencia: true
-     es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-- name: "Persona sense permis de residencia no reb l'ajuda"
-  description: Ajuda lloguer just
-  period: 2017-01
-  absolute_error_margin: false
-  families:
-     adults: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: false
-     es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -106,11 +55,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: false
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: false
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -130,11 +77,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: true
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: true
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -154,11 +99,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: true
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
   output_variables:
@@ -177,11 +120,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
   output_variables:
@@ -202,11 +143,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: true
-     te_permis_de_residencia: true
      es_divorciada_de_familia_reagrupada: false
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
    - id: "menor_discapacitat"
@@ -229,11 +168,9 @@
       2016: 6348
      es_orfe_dels_dos_progenitors: true
      es_victima_de_violencia_masclista: true
-     es_empadronat_a_catalunya: false
-     te_permis_de_residencia: false
      es_divorciada_de_familia_reagrupada: true
-     ha_residit_a_catalunya_els_ultims_24_mesos: true
-     es_beneficiari_d_una_prestacio_residencial: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
    - id: "menor_discapacitat"

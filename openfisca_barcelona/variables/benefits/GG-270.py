@@ -18,35 +18,11 @@ class es_victima_de_violencia_masclista(Variable):
     default_value = False
 
 
-class es_empadronat_a_catalunya(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "True if person is registered in Catalonia"
-    default_value = False
-
-
-class te_permis_de_residencia(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "True if person has a residence permit"
-    default_value = False
-
-
 class es_divorciada_de_familia_reagrupada(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
     label = "True if person is divorced from a regrouped immigrant family"
-    default_value = False
-
-
-class es_beneficiari_d_una_prestacio_residencial(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "True if person is benefitiary of a residential benefit"
     default_value = False
 
 
@@ -57,12 +33,11 @@ class en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina(Variable):
     label = "True if person has left voluntarily her last job"
     default_value = False
 
-
-class ha_residit_a_catalunya_els_ultims_24_mesos(Variable):
+class beneficiari_de_prestacio_residencial(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
-    label = "True if person has lived in catalonia for the last 24 months"
+    label = "Person has a residential benefit"
     default_value = False
 
 
@@ -82,7 +57,7 @@ class nivell_de_renda_inferior_rgc(Variable):
     label = "True if income is less than IRSC"
 
     def formula(persona, period, legislation):
-        return persona("ingressos_bruts", period.last_year) / 12 < 530 #Fixme: Stub, as I can not understand documentation
+        return persona("ingressos_bruts", period.last_year) / 12 < 530 #TODO Stub, as I can not understand documentation
 
 
 class GG_270_mensual(Variable):
@@ -93,39 +68,34 @@ class GG_270_mensual(Variable):
     label = "RENDA GARANTIDA CIUTADANA"
 
     def formula(persona, period, legislation):
-        major_23 = persona("edat", period) >= 23
-        major_18 = persona("edat", period) >= 18
-        discapacitats_a_carrec = persona.familia.any(persona("es_discapacitat", period))
-        es_orfe_de_progenitors = persona("es_orfe_dels_dos_progenitors", period)
-        es_victima_violencia_masclista = persona("es_victima_de_violencia_masclista", period)
-        es_empadronat_a_catalunya = persona("es_empadronat_a_catalunya", period)
-        te_permis_de_residencia = persona("te_permis_de_residencia", period)
-        es_divorciada_de_familia_reagrupada = persona("es_divorciada_de_familia_reagrupada", period)
-        ha_residit_efectivament_a_cat_durant_24m = persona("ha_residit_a_catalunya_els_ultims_24_mesos", period)
         compleix_nivell_ingressos = persona("nivell_de_renda_inferior_rgc", period)
-        te_prestacio_servei_residencial = persona("es_beneficiari_d_una_prestacio_residencial", period)
-        es_intern_penitenciari = persona("ingressat_en_centre_penitenciari", period)
-        va_fer_baixa_voluntaria_ultima_feina = \
-            persona("en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina", period)
+        no_beneficiari_de_prestacio_residencial = persona("beneficiari_de_prestacio_residencial", period) == False
+        discapacitats_a_carrec = persona.familia.any(persona("es_discapacitat", period))
+        en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina = \
+            persona("en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina", period) == False
+        es_divorciada_de_familia_reagrupada = persona("es_divorciada_de_familia_reagrupada", period)
+        es_empadronat_a_catalunya = persona("municipi_empadronament", period) != "no_empadronat_a_cat"
+        es_orfe_de_progenitors = persona("es_orfe_dels_dos_progenitors", period)
+        es_victima_violencia_de_genere = persona("es_victima_de_violencia_masclista", period)
+        ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos = \
+            persona("ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos", period)
+        major_18 = persona("edat", period) >= 18
+        major_23 = persona("edat", period) >= 23
+        porta_dos_anys_o_mes_empadronat_a_catalunya = persona("porta_dos_anys_o_mes_empadronat_a_catalunya", period)
+        no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
 
-        return \
-            (
-                (major_23
-                 + (major_18
-                    * discapacitats_a_carrec
-                    * es_orfe_de_progenitors
-                    * es_victima_violencia_masclista
-                    )
-                 )
-                * (
-                    (es_empadronat_a_catalunya
-                    * te_permis_de_residencia
-                     )
-                    + es_divorciada_de_familia_reagrupada
-                )
-                * ha_residit_efectivament_a_cat_durant_24m
-                * compleix_nivell_ingressos
-                * (te_prestacio_servei_residencial == False)
-                * (es_intern_penitenciari == False)
-                * (va_fer_baixa_voluntaria_ultima_feina == False)
-            ) * 100  # Fixme: Stub
+        # TODO Revisar el cas de menors discapacitats a carrec
+        compleix_criteris = (es_empadronat_a_catalunya
+                             + es_divorciada_de_familia_reagrupada
+                             + ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos) \
+                            * porta_dos_anys_o_mes_empadronat_a_catalunya \
+                            * (major_23
+                               + (major_18
+                                  * (es_orfe_de_progenitors + es_victima_violencia_de_genere + discapacitats_a_carrec))) \
+                            * en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina \
+                            * no_beneficiari_de_prestacio_residencial \
+                            * compleix_nivell_ingressos \
+                            * no_ingressat_en_centre_penitenciari
+
+        print (compleix_criteris)
+        return compleix_criteris * 100  # Fixme: Stub

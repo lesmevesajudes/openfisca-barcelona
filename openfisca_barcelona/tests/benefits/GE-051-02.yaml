@@ -12,7 +12,6 @@
      situacio_laboral: aturat
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
@@ -35,7 +34,6 @@
       2016: 6000
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -59,31 +57,6 @@
       2016: 6000
      situacio_laboral: treball_compte_daltri_jornada_complerta
      inscrit_com_a_demandant_docupacio: false
-     ha_treballat_a_l_estranger_6_mesos: true
-     ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
-     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
-     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
-     treballa_per_compte_propi: false
-     ingressat_en_centre_penitenciari: false
-     percep_prestacions_incompatibles_amb_la_feina: false
-  output_variables:
-     GE_051_02_mensual: [ 0 ]
-
-
-- name: "Persona ha_treballat_a_l_estranger_6_mesos no reb l'ajuda"
-  description: RAI 2 - Per emigrants retornats major de 45 anys
-  period: 2017-01
-  absolute_error_margin: false
-  families:
-     adults: ["adult1"]
-  persones:
-   - id: "adult1"
-     data_naixement: 1960-01-01
-     ingressos_bruts:
-      2016: 6000
-     situacio_laboral: aturat
-     inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: false
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -106,7 +79,6 @@
       2016: 6000
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
@@ -130,7 +102,6 @@
       2016: 6000
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: true
@@ -154,7 +125,6 @@
       2016: 6000
      inscrit_com_a_demandant_docupacio: true
      situacio_laboral: aturat
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: true
@@ -177,7 +147,6 @@
       2016: 6000
      inscrit_com_a_demandant_docupacio: true
      situacio_laboral: aturat
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: true
@@ -201,7 +170,6 @@
       2016: 6000
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: true
@@ -224,7 +192,6 @@
       2016: 6000
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: true
@@ -248,7 +215,6 @@
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: true
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: false
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false
@@ -272,7 +238,6 @@
      situacio_laboral: aturat
      inscrit_com_a_demandant_docupacio: false
      ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
-     ha_treballat_a_l_estranger_6_mesos: true
      ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
      ha_estat_beneficiari_de_les_tres_rai_anteriors: false
      treballa_per_compte_propi: false

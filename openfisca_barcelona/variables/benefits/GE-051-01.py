@@ -57,15 +57,6 @@ class percep_prestacions_incompatibles_amb_la_feina(Variable):
     default_value = False
 
 
-class durant_el_mes_anterior_ha_presentat_solicituds_recerca_de_feina(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "During the previous month the user has applied for a job"
-    set_input = set_input_dispatch_by_period
-    default_value = False
-
-
 class beneficiari_ajuts_per_violencia_de_genere(Variable):
     value_type = bool
     entity = Persona
@@ -97,6 +88,7 @@ class GE_051_01_mensual(Variable):
             * ha_esgotat_prestacio_de_desocupacio \
             * inscrit_com_a_demandant_docupacio_mes_de_12_mesos
 
+        print ([discapacitat_superior_al_33_percent, no_beneficiari_ajuts_per_violencia_de_genere, ha_esgotat_prestacio_de_desocupacio, inscrit_com_a_demandant_docupacio_mes_de_12_mesos ])
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
 
         return where(compleix_els_requeriments, import_ajuda, 0)

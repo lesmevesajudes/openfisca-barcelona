@@ -8,6 +8,7 @@
     tipus_familia_monoparental: general
     domicili_a_barcelona_ciutat: true
     es_usuari_serveis_socials: true
+    tipus_custodia: compartida
   persones:
    - id: "pare1"
      edat: 57
@@ -20,7 +21,6 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
-     tipus_custodia: compartida
      municipi_empadronament: barcelona
 
   output_variables:

@@ -121,5 +121,4 @@ class AE_230_mensual(Variable):
         import_ajuda = where(tipus_custodia != tipus_custodia.possible_values.compartida,
                                 parameters(period).benefits.AE230.import_ajuda, 50)
 
-        print ("import ajuda: ", import_ajuda)
         return persona('compleix_criteris_AE230', period) * import_ajuda

@@ -99,6 +99,7 @@ class GE_051_mensual(Variable):
             persona('percep_prestacions_incompatibles_amb_la_feina', period) == False
         menor_de_65_anys = persona('edat', period) < 65
 
+        print ([cap_membre_amb_ingressos_superiors_a_530_mensuals, aturat, menor_de_65_anys, no_treballa_per_compte_propi, no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos, no_se_li_ha_concedit_tres_ajudes_rai_anteriors, no_ingressat_en_centre_penitenciari, no_percep_prestacions_incompatibles_amb_la_feina ])
         return \
             cap_membre_amb_ingressos_superiors_a_530_mensuals \
             * aturat \

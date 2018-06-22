@@ -44,3 +44,4 @@ class porta_dos_anys_o_mes_empadronat_a_catalunya(Variable):
     definition_period = MONTH
     label = u"Has this person been living in Catalunya for more than 2 years"
     set_input = set_input_dispatch_by_period
+    default_value = False
