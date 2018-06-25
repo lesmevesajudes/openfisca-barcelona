@@ -15,7 +15,7 @@ class codi_postal_empadronament(Variable):
 class codi_postal_habitatge(Variable):
     value_type = str
     max_length = 5
-    entity = Persona
+    entity = UnitatDeConvivencia
     definition_period = MONTH
     label = u"Postal code where family lives"
     set_input = set_input_dispatch_by_period

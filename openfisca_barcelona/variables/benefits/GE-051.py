@@ -61,6 +61,15 @@ class ingressat_en_centre_penitenciari(Variable):
     default_value = False
 
 
+class ha_treballat_a_l_estranger_6_mesos(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+    label = "The user has worked abroad for 6 months"
+    set_input = set_input_dispatch_by_period
+    default_value = False
+
+
 class ingressat_en_centre_penitenciari_pot_treballar(Variable):
     value_type = bool
     entity = Persona
