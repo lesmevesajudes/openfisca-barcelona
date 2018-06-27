@@ -1,0 +1,68 @@
+zona_a:
+  un:
+    values:
+      2017-01-01:
+        value: 758.825
+  dos:
+    values:
+      2017-01-01:
+        value: 782.295
+  tres:
+    values:
+      2017-01-01:
+        value: 815.945
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 843.14
+zona_b:
+  un:
+    values:
+      2017-01-01:
+        value: 711.4
+  dos:
+    values:
+      2017-01-01:
+        value: 733.4
+  tres:
+    values:
+      2017-01-01:
+        value: 764.945
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 795.445
+zona_c:
+  un:
+    values:
+      2017-01-01:
+        value: 669.555
+  dos:
+    values:
+      2017-01-01:
+        value: 690.26
+  tres:
+    values:
+      2017-01-01:
+        value: 719.95
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 743.95
+zona_d:
+  un:
+    values:
+      2017-01-01:
+        value: 569.12
+  dos:
+    values:
+      2017-01-01:
+        value: 586.72
+  tres:
+    values:
+      2017-01-01:
+        value: 611.955
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 632.355

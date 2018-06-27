@@ -7,17 +7,18 @@
   unitats_de_convivencia:
      persones_que_conviuen: [ adult ]
      ha_participat_en_un_proces_de_mediacio: true
+     import_del_lloguer: 800
+     es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+     tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+     relacio_de_parentiu_amb_el_propietari: false
+     zona_de_lhabitatge: zona_a
   persones:
    - id: adult
-     data_naixement: 1961-01-15
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: true
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
   output_variables:
      HA_001: [ true ]

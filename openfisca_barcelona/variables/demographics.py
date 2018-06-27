@@ -62,12 +62,21 @@ class beneficiari_fons_infancia_2017(Variable):
     label = u"Has fons_infancia_2017 benefit"
     definition_period = MONTH
 
+class TipusDocumentIdentitat(Enum):
+    DNI = "DNI"
+    NIE = "NIE"
+    passaport = "passaport"
+    altres = "altres"
+    especial = "especial"
+
 
 class tipus_document_identitat(Variable):
-    value_type = str
+    value_type = Enum
+    possible_values = TipusDocumentIdentitat
     entity = Persona
     label = u"ID document type"
     definition_period = MONTH
+    default_value = TipusDocumentIdentitat.altres
 
 
 class relacio_habitatge(Variable):
