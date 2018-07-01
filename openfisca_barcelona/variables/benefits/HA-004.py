@@ -47,7 +47,7 @@ class HA_004(Variable):
     unit = 'currency'
     entity = UnitatDeConvivencia
     definition_period = MONTH
-    label = "AJUTS LLOGUER ESPECIAL URGÈNCIA"
+    label = "AJUTS LLOGUER ESPECIAL URGENCIA"
 
     def formula(unitatDeConvivencia, period, legislation):
         nr_membres = unitatDeConvivencia.nb_persons()
