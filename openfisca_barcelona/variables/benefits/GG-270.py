@@ -97,5 +97,4 @@ class GG_270_mensual(Variable):
                             * compleix_nivell_ingressos \
                             * no_ingressat_en_centre_penitenciari
 
-        print (compleix_criteris)
         return compleix_criteris * 100  # Fixme: Stub

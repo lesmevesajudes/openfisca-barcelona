@@ -88,7 +88,6 @@ class GE_051_01_mensual(Variable):
             * ha_esgotat_prestacio_de_desocupacio \
             * inscrit_com_a_demandant_docupacio_mes_de_12_mesos
 
-        print ([discapacitat_superior_al_33_percent, no_beneficiari_ajuts_per_violencia_de_genere, ha_esgotat_prestacio_de_desocupacio, inscrit_com_a_demandant_docupacio_mes_de_12_mesos ])
         import_ajuda = parameters(period).benefits.GE051.import_ajuda
 
         return where(compleix_els_requeriments, import_ajuda, 0)
