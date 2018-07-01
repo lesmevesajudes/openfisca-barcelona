@@ -2,6 +2,21 @@ from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
 
+
+class lloguer_inferior_al_maxim_per_demarcacio_HA002(Variable):
+    value_type = bool
+    entity = UnitatDeConvivencia
+    definition_period = MONTH
+    label = "Some person has a familiar relation to the owner"
+    default_value = False
+
+    def formula(unitatDeConvivencia, period, legislation):
+        import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
+        demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
+        lloguer_maxim_per_demarcacio = legislation(period).benefits.HA001.import_lloguer_maxim["HA002"][demarcacio_de_lhabitatge]
+        return import_del_lloguer < lloguer_maxim_per_demarcacio
+
+
 class pot_ser_solicitant_HA002(Variable):
     value_type = bool
     entity = Persona
@@ -45,6 +60,7 @@ class HA_002(Variable):
             legislation(period).benefits.HA001.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA001.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
+        lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA002", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False
         no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit = \
@@ -55,6 +71,7 @@ class HA_002(Variable):
         return ha_perdut_lhabitatge_en_els_ultims_2_anys \
                * existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
+               * lloguer_inferior_al_maxim_per_demarcacio\
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
                * no_relacio_de_parentiu_amb_el_propietari

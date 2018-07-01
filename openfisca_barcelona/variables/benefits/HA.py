@@ -2,6 +2,25 @@ from openfisca_barcelona.entities import *
 from openfisca_core.model_api import *
 
 
+class demarcacioDeLHabitatge(Enum):
+    barcelona_ciutat = "barcelona_ciutat"
+    barcelona_provincia = "barcelona_provincia"
+    desconeguda = "desconeguda"
+    girona = "girona"
+    lleida = "lleida"
+    terres_de_lebre = "terres_de_lebre"
+    tarragona = "tarragona"
+
+
+class demarcacio_de_lhabitatge(Variable):
+    value_type = Enum
+    possible_values = demarcacioDeLHabitatge
+    default_value = demarcacioDeLHabitatge.desconeguda
+    entity = UnitatDeConvivencia
+    label = u"demarcacio de lhabitatge"
+    definition_period = MONTH
+
+
 class es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge(Variable):
     value_type = bool
     entity = UnitatDeConvivencia

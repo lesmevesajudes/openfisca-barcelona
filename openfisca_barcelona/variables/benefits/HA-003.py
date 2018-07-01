@@ -2,6 +2,21 @@ from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
 
+
+class quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003(Variable):
+    value_type = bool
+    entity = UnitatDeConvivencia
+    definition_period = MONTH
+    label = "Some person has a familiar relation to the owner"
+    default_value = False
+
+    def formula(unitatDeConvivencia, period, legislation):
+        import_de_la_hipoteca = unitatDeConvivencia("import_de_la_hipoteca", period)
+        demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
+        import_de_la_hipoteca_maxim_per_demarcacio = legislation(period).benefits.HA001.import_quota_hipoteca_maxim["HA003"][demarcacio_de_lhabitatge]
+        return import_de_la_hipoteca < import_de_la_hipoteca_maxim_per_demarcacio
+
+
 class pot_ser_solicitant_HA003(Variable):
     value_type = bool
     entity = Persona
@@ -52,11 +67,12 @@ class HA_003(Variable):
             unitatDeConvivencia("tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit", period) == False
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
-
+        quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003 = unitatDeConvivencia("quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003", period)
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
                * no_fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca \
                * ha_pagat_12_mesos_daquesta_hipoteca \
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
-               * no_relacio_de_parentiu_amb_el_propietari
+               * no_relacio_de_parentiu_amb_el_propietari \
+               * quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003

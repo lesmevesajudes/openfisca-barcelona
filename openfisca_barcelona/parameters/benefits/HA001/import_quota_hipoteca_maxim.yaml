@@ -1,0 +1,29 @@
+HA003:
+  barcelona_ciutat:
+    values:
+      2017-01-01:
+        value: 900
+  barcelona_provincia:
+    values:
+      2017-01-01:
+        value: 800
+  desconeguda:
+    values:
+      2017-01-01:
+        value: 0
+  girona:
+    values:
+      2017-01-01:
+        value: 600
+  lleida:
+    values:
+      2017-01-01:
+        value: 550
+  terres_de_lebre:
+    values:
+      2017-01-01:
+        value: 500
+  tarragona:
+    values:
+      2017-01-01:
+        value: 600

@@ -6,13 +6,14 @@
     adults: [ adult ]
   unitats_de_convivencia:
      persones_que_conviuen: [ adult ]
-     import_del_lloguer: 800
+     import_del_lloguer: 350
      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
      relacio_de_parentiu_amb_el_propietari: false
      zona_de_lhabitatge: zona_a
      ha_pagat_almenys_3_quotes_del_lloguer: true
      des_de_quan_teniu_deutes_de_lloguer: menys_dun_any
+     demarcacio_de_lhabitatge: lleida
   persones:
    - id: adult
      ingressos_bruts:

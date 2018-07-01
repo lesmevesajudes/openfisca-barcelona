@@ -6,12 +6,13 @@
     adults: [ adult ]
   unitats_de_convivencia:
      persones_que_conviuen: [ adult ]
-     import_del_lloguer: 800
+     import_del_lloguer: 600
      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
      relacio_de_parentiu_amb_el_propietari: false
      ha_perdut_lhabitatge_en_els_ultims_2_anys: true
      zona_de_lhabitatge: zona_a
+     demarcacio_de_lhabitatge: barcelona_ciutat
   persones:
    - id: adult
      ingressos_bruts:
