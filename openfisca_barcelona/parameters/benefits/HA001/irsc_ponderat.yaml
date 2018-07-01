@@ -66,3 +66,20 @@ zona_d:
     values:
       2017-01-01:
         value: 632.355
+desconegut:
+  un:
+    values:
+      2017-01-01:
+        value: 0
+  dos:
+    values:
+      2017-01-01:
+        value: 0
+  tres:
+    values:
+      2017-01-01:
+        value: 0
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 0
