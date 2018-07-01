@@ -40,3 +40,10 @@ class titular_contracte_de_lloguer(Variable):
     entity = Persona
     definition_period = MONTH
     label = u"is the user who rents the house"
+
+
+class titular_hipoteca(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+    label = u"is the user who owns the house and has a mortage"
