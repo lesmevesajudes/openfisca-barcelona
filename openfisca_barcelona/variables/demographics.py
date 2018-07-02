@@ -46,11 +46,12 @@ class SituacionsLaborals(Enum):
     aturat = "Aturat"
     estudiant = "estudiant"
     jubilat = "jubilat"
+    altres = "altres"
 
 class situacio_laboral(Variable):
     value_type = Enum
     possible_values = SituacionsLaborals
-    default_value = SituacionsLaborals.aturat
+    default_value = SituacionsLaborals.altres
     entity = Persona
     label = u"labor situation"
     definition_period = MONTH
