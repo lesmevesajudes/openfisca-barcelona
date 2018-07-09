@@ -46,6 +46,7 @@ class SituacionsLaborals(Enum):
     aturat = "Aturat"
     estudiant = "estudiant"
     jubilat = "jubilat"
+    tasques_de_la_llar = "tasques_de_la_llar"
     altres = "altres"
 
 class situacio_laboral(Variable):
