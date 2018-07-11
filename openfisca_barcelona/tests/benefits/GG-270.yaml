@@ -11,13 +11,14 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
   output_variables:
      GG_270_mensual: [ 100 ]
 
@@ -35,13 +36,14 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6372
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -59,13 +61,14 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: false
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -83,13 +86,14 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: true
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -107,13 +111,14 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: true
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -130,13 +135,14 @@
      data_naixement: '1961-01-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
+     inscrit_com_a_demandant_docupacio: false
   output_variables:
      GG_270_mensual: [ 0 ]
 
@@ -155,18 +161,70 @@
      data_naixement: '1998-03-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
+     es_divorciada_de_familia_reagrupada: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
+     ingressat_en_centre_penitenciari: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
+   - id: "menor_discapacitat"
+     data_naixement: '2008-03-15'
+     grau_discapacitat: 33
+  output_variables:
+     GG_270_mensual: [ 100, 0 ]
+
+
+- name: "Persona menor de 23 victima de violencia de genere reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
+  persones:
+   - id: "adult"
+     data_naixement: '1998-03-15'
+     ingressos_bruts:
+      2016: 6348
+     es_orfe_dels_dos_progenitors: false
      es_victima_de_violencia_masclista: true
      es_divorciada_de_familia_reagrupada: false
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-   - id: "menor_discapacitat"
-     data_naixement: '2008-03-15'
-     grau_discapacitat: 33
+     inscrit_com_a_demandant_docupacio: true
   output_variables:
-     GG_270_mensual: [ 100, 0 ]
+     GG_270_mensual: [ 100 ]
+
+
+- name: "Persona menor de 23 orfena dels dos progenitors reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     adults: ["adult"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult"]
+  persones:
+   - id: "adult"
+     data_naixement: '1998-03-15'
+     ingressos_bruts:
+      2016: 6348
+     es_orfe_dels_dos_progenitors: true
+     es_victima_de_violencia_masclista: false
+     es_divorciada_de_familia_reagrupada: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
+     ingressat_en_centre_penitenciari: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
+  output_variables:
+     GG_270_mensual: [ 100 ]
+
 
 - name: "Persona no empadronada i sense permis pero divorciada de familia reagrupada reb l'ajuda"
   description: Ajuda lloguer just
@@ -179,18 +237,49 @@
      persones_que_conviuen: ["adult", "menor_discapacitat"]
   persones:
    - id: "adult"
-     data_naixement: '1998-03-15'
+     data_naixement: '1990-03-15'
      ingressos_bruts:
       2016: 6348
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: true
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
      es_divorciada_de_familia_reagrupada: true
      porta_dos_anys_o_mes_empadronat_a_catalunya: true
      beneficiari_de_prestacio_residencial: false
      ingressat_en_centre_penitenciari: false
      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: true
    - id: "menor_discapacitat"
      data_naixement: '2008-03-15'
      grau_discapacitat: 33
+     inscrit_com_a_demandant_docupacio: true
+  output_variables:
+     GG_270_mensual: [ 100, 0 ]
+
+- name: "Familia monoparental amb contracte a temps parcial no inscrita al SOC reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     adults: ["adult"]
+     menors: ["menor"]
+     tipus_familia_monoparental: general
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult", "menor"]
+  persones:
+   - id: "adult"
+     data_naixement: '1980-03-15'
+     ingressos_bruts:
+      2016: 6348
+     es_orfe_dels_dos_progenitors: false
+     es_victima_de_violencia_masclista: false
+     es_divorciada_de_familia_reagrupada: false
+     porta_dos_anys_o_mes_empadronat_a_catalunya: true
+     beneficiari_de_prestacio_residencial: false
+     ingressat_en_centre_penitenciari: false
+     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+     inscrit_com_a_demandant_docupacio: false
+     situacio_laboral: treball_compte_daltri_jornada_parcial
+   - id: "menor"
+     data_naixement: '2008-03-15'
   output_variables:
      GG_270_mensual: [ 100, 0 ]

@@ -83,7 +83,11 @@ class GG_270_mensual(Variable):
         major_23 = persona("edat", period) >= 23
         porta_dos_anys_o_mes_empadronat_a_catalunya = persona("porta_dos_anys_o_mes_empadronat_a_catalunya", period)
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
-
+        inscrit_com_a_demandant_docupacio = persona('inscrit_com_a_demandant_docupacio', period)
+        tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
+        es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
+        situacio_laboral = persona('situacio_laboral', period)
+        es_contracte_jornada_parcial = situacio_laboral == situacio_laboral.possible_values.treball_compte_daltri_jornada_parcial
         # TODO Revisar el cas de menors discapacitats a carrec
         compleix_criteris = (es_empadronat_a_catalunya
                              + es_divorciada_de_familia_reagrupada
@@ -95,6 +99,8 @@ class GG_270_mensual(Variable):
                             * en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina \
                             * no_beneficiari_de_prestacio_residencial \
                             * compleix_nivell_ingressos \
+                            * (inscrit_com_a_demandant_docupacio + (es_monoparental * es_contracte_jornada_parcial)) \
                             * no_ingressat_en_centre_penitenciari
 
+        print (porta_dos_anys_o_mes_empadronat_a_catalunya, en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina, no_beneficiari_de_prestacio_residencial, compleix_nivell_ingressos, inscrit_com_a_demandant_docupacio, es_monoparental, es_contracte_jornada_parcial)
         return compleix_criteris * 100  # Fixme: Stub
