@@ -29,13 +29,10 @@ class pot_ser_solicitant_HA002(Variable):
         has_DNI = tipus_document_identitat == tipus_document_identitat.possible_values.DNI
         has_NIE = tipus_document_identitat == tipus_document_identitat.possible_values.NIE
         empadronat_a_catalunya = (persona("municipi_empadronament", period) == "barcelona") + (persona("municipi_empadronament", period) == "altres")
-        temps_empadronat_a_lhabitatge = persona("temps_empadronat_habitatge_actual", period)
-        empadronat_a_lhabitatge = temps_empadronat_a_lhabitatge != temps_empadronat_a_lhabitatge.possible_values.no_empadronat
         titular_contracte_de_lloguer = persona("titular_contracte_de_lloguer", period)
 
         return (has_DNI + has_NIE) \
                * empadronat_a_catalunya \
-               * empadronat_a_lhabitatge \
                * titular_contracte_de_lloguer
 
 
@@ -68,10 +65,13 @@ class HA_002(Variable):
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
 
+        import_ajuda = min(2400, unitatDeConvivencia("import_del_lloguer", period) * 0.6)
+
         return ha_perdut_lhabitatge_en_els_ultims_2_anys \
                * existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
                * lloguer_inferior_al_maxim_per_demarcacio\
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
-               * no_relacio_de_parentiu_amb_el_propietari
+               * no_relacio_de_parentiu_amb_el_propietari \
+               * import_ajuda

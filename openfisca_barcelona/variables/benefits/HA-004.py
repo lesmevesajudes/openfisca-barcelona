@@ -84,6 +84,7 @@ class HA_004(Variable):
             unitatDeConvivencia("tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit", period) == False
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
+        import_ajuda = min(3000, unitatDeConvivencia("import_deute_en_el_pagament_del_lloguer", period))
 
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
@@ -92,4 +93,5 @@ class HA_004(Variable):
                * lloguer_inferior_al_maxim_per_demarcacio\
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
-               * no_relacio_de_parentiu_amb_el_propietari
+               * no_relacio_de_parentiu_amb_el_propietari \
+               * import_ajuda

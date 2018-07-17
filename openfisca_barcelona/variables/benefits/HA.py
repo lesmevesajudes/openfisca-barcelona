@@ -109,6 +109,22 @@ class import_de_la_hipoteca(Variable):
     default_value = 0
 
 
+class import_deute_en_el_pagament_del_lloguer(Variable):
+    value_type = float
+    entity = UnitatDeConvivencia
+    definition_period = MONTH
+    label = "Rent debt amount"
+    default_value = 0
+
+
+class import_deute_en_el_pagament_hipoteca(Variable):
+    value_type = float
+    entity = UnitatDeConvivencia
+    definition_period = MONTH
+    label = "Mortage debt amount"
+    default_value = 0
+
+
 class relacio_de_parentiu_amb_el_propietari(Variable):
     value_type = bool
     entity = UnitatDeConvivencia

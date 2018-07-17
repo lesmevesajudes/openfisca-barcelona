@@ -44,7 +44,7 @@ class HA_003(Variable):
     unit = 'currency'
     entity = UnitatDeConvivencia
     definition_period = MONTH
-    label = "AJUTS PER PERDUA D HABITATGE PER DESNONAMENT O EXECUCIO HIPOTECARIA"
+    label = "AJUTS ESPECIAL URGENCIA AMORTITZACIO HIPOTECARIA"
 
     def formula(unitatDeConvivencia, period, legislation):
         nr_membres = unitatDeConvivencia.nb_persons()
@@ -68,6 +68,8 @@ class HA_003(Variable):
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
         quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003 = unitatDeConvivencia("quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003", period)
+        import_ajuda = min(3000, unitatDeConvivencia("import_deute_en_el_pagament_hipoteca", period))
+
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
                * no_fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca \
@@ -75,4 +77,5 @@ class HA_003(Variable):
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
                * no_relacio_de_parentiu_amb_el_propietari \
-               * quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003
+               * quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003 \
+               * import_ajuda
