@@ -65,7 +65,7 @@ class HA_002(Variable):
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
 
-        import_ajuda = min(2400, unitatDeConvivencia("import_del_lloguer", period) * 0.6)
+        import_ajuda = min(200, unitatDeConvivencia("import_del_lloguer", period) * 0.6)
 
         return ha_perdut_lhabitatge_en_els_ultims_2_anys \
                * existeix_solicitant_viable \
