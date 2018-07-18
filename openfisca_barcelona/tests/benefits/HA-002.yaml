@@ -3,7 +3,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-    adults: [ adult ]
+    altres_persones: [ adult ]
   unitats_de_convivencia:
      persones_que_conviuen: [ adult ]
      import_del_lloguer: 600

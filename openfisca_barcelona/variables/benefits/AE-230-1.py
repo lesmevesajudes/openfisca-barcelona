@@ -12,7 +12,7 @@ class AE_230_01_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-        is_adult = persona.has_role(Familia.ADULT)
+        es_sustentador_i_te_la_custodia = persona.has_role(Familia.SUSTENTADOR_I_CUSTODIA)
         tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
         es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
         tipus_custodia = persona.familia('tipus_custodia', period)
@@ -25,4 +25,4 @@ class AE_230_01_mensual(Variable):
                                tipus_monoparental == tipus_monoparental.possible_values.nop],
                                [900, 450, 0])
 
-        return algun_membre_compleix_criteris_AE230 * is_adult * import_ajuda
+        return algun_membre_compleix_criteris_AE230 * es_sustentador_i_te_la_custodia * import_ajuda

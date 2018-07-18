@@ -3,7 +3,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -31,7 +31,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -59,7 +59,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -87,7 +87,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -115,7 +115,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -142,7 +142,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -170,7 +170,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      menors: ["menor_discapacitat"]
      tipus_familia_monoparental: general
   unitats_de_convivencia:
@@ -202,7 +202,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -230,7 +230,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
      persones_que_conviuen: ["adult"]
@@ -258,7 +258,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      menors: ["menor_discapacitat"]
      tipus_familia_monoparental: nop
   unitats_de_convivencia:
@@ -290,7 +290,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult"]
+     sustentadors_i_custodia: ["adult"]
      menors: ["menor"]
      tipus_familia_monoparental: general
   unitats_de_convivencia:

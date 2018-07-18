@@ -3,7 +3,7 @@
   period: 2017-01
   absolute_error_margin: 0
   families:
-    adults: ["pare1"]
+    sustentadors_i_custodia: ["pare1"]
     menors: ["infant1"]
     tipus_familia_monoparental: general
     domicili_a_barcelona_ciutat: true

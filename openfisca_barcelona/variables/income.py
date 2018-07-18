@@ -36,7 +36,9 @@ class ingressos_bruts_familiars(Variable):
 
     def formula(persona, period):
         ingressos = persona('ingressos_bruts', period, options=[DIVIDE])
-        return ingressos * (persona.has_role(persona.familia.ADULT) + persona.has_role(persona.familia.MENOR))
+        return ingressos * (persona.has_role(persona.familia.SUSTENTADOR_I_CUSTODIA)
+                            + persona.has_role(persona.familia.SUSTENTADOR)
+                            + persona.has_role(persona.familia.MENOR))
 
 
 class familia_ingressos_bruts(Variable):

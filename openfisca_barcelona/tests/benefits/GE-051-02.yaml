@@ -3,7 +3,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -30,7 +30,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -57,7 +57,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -83,7 +83,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -110,7 +110,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -137,7 +137,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -163,7 +163,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -190,7 +190,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -216,7 +216,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -242,7 +242,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:
@@ -269,7 +269,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
   families_fins_a_segon_grau:

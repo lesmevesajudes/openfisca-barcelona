@@ -83,7 +83,7 @@ class solicitant_AE_230_valid(Variable):
     definition_period = MONTH
 
     def formula(persona, period, parameters):
-        return persona('data_alta_padro_valida_AE_230', period) * persona.has_role(Familia.ADULT)
+        return persona('data_alta_padro_valida_AE_230', period) * persona.has_role(Familia.SUSTENTADOR_I_CUSTODIA)
 
 
 class compleix_criteris_AE230(Variable):

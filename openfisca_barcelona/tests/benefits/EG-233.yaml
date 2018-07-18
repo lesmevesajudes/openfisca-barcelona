@@ -3,7 +3,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -49,7 +49,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -96,7 +96,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -142,7 +142,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: total
@@ -172,7 +172,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: total
@@ -203,7 +203,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: total
@@ -233,7 +233,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_familiars: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: total
@@ -263,7 +263,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: total
@@ -293,7 +293,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: total
@@ -323,7 +323,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_custodia: cap
@@ -354,7 +354,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      tipus_familia_nombrosa: general
@@ -386,7 +386,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -433,7 +433,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -479,7 +479,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -526,7 +526,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1", "adult2"]
+     sustentadors_i_custodia: ["adult1", "adult2"]
      altres_persones: ["adult3"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: greu
@@ -573,7 +573,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
      menors: ["menor1", "menor2"]
      nivell_de_risc_d_exclusio_social: nop
      tipus_familia_monoparental: especial
@@ -617,7 +617,7 @@
   period: 2017-01
   absolute_error_margin: false
   families:
-     adults: ["adult1"]
+     sustentadors_i_custodia: ["adult1"]
      menors: ["menor1"]
      nivell_de_risc_d_exclusio_social: nop
      tipus_familia_monoparental: especial
