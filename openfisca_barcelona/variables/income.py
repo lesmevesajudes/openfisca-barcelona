@@ -27,6 +27,17 @@ class ingressos_per_pnc(Variable):
     label = "Total amount earned in a year by pnc"
     set_input = set_input_divide_by_period
 
+class ingressos_bruts_familiars(Variable):
+    value_type = float
+    entity = Persona
+    definition_period = YEAR
+    label = "Total amount earned in a year by pnc"
+    set_input = set_input_divide_by_period
+
+    def formula(persona, period):
+        ingressos = persona('ingressos_bruts', period, options=[DIVIDE])
+        return ingressos * (persona.has_role(persona.familia.ADULT) + persona.has_role(persona.familia.MENOR))
+
 
 class familia_ingressos_bruts(Variable):
     value_type = float
@@ -37,6 +48,6 @@ class familia_ingressos_bruts(Variable):
     set_input = set_input_divide_by_period
 
     def formula(familia, period):
-        ingressos_membres_de_la_familia = familia.members('ingressos_bruts', period, options=[DIVIDE])
+        ingressos_membres_de_la_familia = familia.members('ingressos_bruts_familiars', period, options=[DIVIDE])
         total_ingressos_familia = familia.sum(ingressos_membres_de_la_familia)
         return total_ingressos_familia

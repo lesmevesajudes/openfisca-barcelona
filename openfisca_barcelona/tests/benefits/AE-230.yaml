@@ -34,6 +34,48 @@
   output_variables:
     AE_230_mensual: [ 0, 0, 100]
 
+
+- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC - do not take into account non family members"
+  description: Ajuda menors 0-16
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    adults: ["pare1", "mare1"]
+    menors: ["infant1"]
+    altres_persones: ["no_familiar"]
+    domicili_a_barcelona_ciutat: true
+    es_usuari_serveis_socials: true
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["pare1", "mare1", "infant1", "no_familiar"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "mare1", "infant1"]
+    no_familiars: ["no_familiar"]
+  persones:
+   - id: "pare1"
+     edat: 57
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 7000
+     anys_empadronat_a_barcelona: 2
+   - id: "mare1"
+     edat: 57
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 2
+   - id: "infant1"
+     edat: 15
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 2
+   - id: "no_familiar"
+     ingressos_bruts:
+      2016: 45000
+  output_variables:
+    AE_230_mensual: [ 0, 0, 100, 0]
+
 - name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC fill nascut després de 2016-01-01"
   description: Ajuda menors 0-16
   period: 2017-01
@@ -214,3 +256,5 @@
      anys_empadronat_a_barcelona: 2
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
+
+
