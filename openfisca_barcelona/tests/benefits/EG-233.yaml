@@ -20,6 +20,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -64,6 +66,8 @@
      tipus_custodia: compartida
   unitats_de_convivencia:
     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -109,6 +113,8 @@
      tipus_custodia: cap
   unitats_de_convivencia:
     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -142,6 +148,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -170,6 +178,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -199,6 +209,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -227,6 +239,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -255,6 +269,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -283,6 +299,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -311,6 +329,8 @@
      tipus_custodia: cap
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -341,6 +361,8 @@
      tipus_custodia: cap
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -381,6 +403,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -426,6 +450,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -470,6 +496,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -515,6 +543,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -559,6 +589,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "menor1", "menor2"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "menor1", "menor2"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -601,6 +633,8 @@
      tipus_custodia: total
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "menor1"]
   persones:
    - id: "adult1"
      ingressos_bruts:

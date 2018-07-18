@@ -6,6 +6,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
@@ -22,7 +24,7 @@
      percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
-     GE_051_01_mensual: [ 426 ]
+     GE_051_01_mensual: [ 430 ]
 
 - name: "Persones amb tots els condicionants reben l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -32,6 +34,8 @@
      adults: ["adult1", "adult2"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1", "adult2"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2"]
   persones:
    - id: "adult1"
      data_naixement: '1961-01-15'
@@ -62,7 +66,7 @@
      percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
-     GE_051_01_mensual: [ 426, 426 ]
+     GE_051_01_mensual: [ 430, 430 ]
 
 - name: "Persona sense discapacitat no reb l'ajuda"
   description: RAI 1 - Ajuda discapacitats 33% o superior
@@ -72,6 +76,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -97,6 +103,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -122,6 +130,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -147,6 +157,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -172,6 +184,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -197,6 +211,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -222,6 +238,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -247,6 +265,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -272,6 +292,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -297,6 +319,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:

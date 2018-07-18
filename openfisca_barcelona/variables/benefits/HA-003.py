@@ -13,7 +13,7 @@ class quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_de_la_hipoteca = unitatDeConvivencia("import_de_la_hipoteca", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        import_de_la_hipoteca_maxim_per_demarcacio = legislation(period).benefits.HA001.import_quota_hipoteca_maxim["HA003"][demarcacio_de_lhabitatge]
+        import_de_la_hipoteca_maxim_per_demarcacio = legislation(period).benefits.HA.import_quota_hipoteca_maxim["HA003"][demarcacio_de_lhabitatge]
         return import_de_la_hipoteca < import_de_la_hipoteca_maxim_per_demarcacio
 
 
@@ -56,8 +56,8 @@ class HA_003(Variable):
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
         nivell_ingressos_maxim = \
-            legislation(period).benefits.HA001.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.HA001.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
+            legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
+            * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
         no_fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca = unitatDeConvivencia("fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca", period) == False
         ha_pagat_12_mesos_daquesta_hipoteca = unitatDeConvivencia("ha_pagat_12_mesos_daquesta_hipoteca", period)

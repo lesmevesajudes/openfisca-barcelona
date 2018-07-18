@@ -34,6 +34,18 @@ Familia = build_entity(
     ]
     )
 
+
+FamiliaFins2onGrau = build_entity(
+    key="familia_fins_a_segon_grau",
+    plural="families_fins_a_segon_grau",
+    label=u'Familia fins a segon grau',
+    roles=[{
+        'key': 'familiars',
+        'plural': 'familiars',
+        'label': u'persones familiars'
+    }]
+)
+
 UnitatDeConvivencia = build_entity(
     key="unitat_de_convivencia",
     plural="unitats_de_convivencia",
@@ -58,4 +70,4 @@ Persona = build_entity(
     is_person=True,
     )
 
-entities = [Familia, Persona, UnitatDeConvivencia]
+entities = [Familia, Persona, UnitatDeConvivencia, FamiliaFins2onGrau]

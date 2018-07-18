@@ -6,6 +6,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -20,7 +22,7 @@
      percep_prestacions_incompatibles_amb_la_feina: false
      beneficiari_ajuts_per_violencia_de_genere: false
   output_variables:
-     GE_051_03_mensual: [ 426 ]
+     GE_051_03_mensual: [ 430 ]
 
 
 - name: "Persona amb ingressos superiors a 530 no reb l'ajuda"
@@ -31,6 +33,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -55,6 +59,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -79,6 +85,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -103,6 +111,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -127,6 +137,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -151,6 +163,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -175,6 +189,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -199,6 +215,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:
@@ -223,6 +241,8 @@
      adults: ["adult1"]
   unitats_de_convivencia:
      persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
   persones:
    - id: "adult1"
      ingressos_bruts:

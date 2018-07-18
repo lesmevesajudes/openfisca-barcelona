@@ -13,6 +13,8 @@
      relacio_de_parentiu_amb_el_propietari: false
      zona_de_lhabitatge: zona_a
      demarcacio_de_lhabitatge: barcelona_ciutat
+  families_fins_a_segon_grau:
+    familiars: ["adult"]
   persones:
    - id: adult
      ingressos_bruts:
@@ -22,4 +24,4 @@
      titular_contracte_de_lloguer: true
      municipi_empadronament: barcelona
   output_variables:
-     HA_005: [ true ]
+     HA_005: [ 200 ]

@@ -14,6 +14,9 @@
      ha_pagat_almenys_3_quotes_del_lloguer: true
      des_de_quan_teniu_deutes_de_lloguer: menys_dun_any
      demarcacio_de_lhabitatge: lleida
+     import_deute_en_el_pagament_del_lloguer: 2000
+  families_fins_a_segon_grau:
+    familiars: ["adult"]
   persones:
    - id: adult
      ingressos_bruts:
@@ -23,4 +26,4 @@
      titular_contracte_de_lloguer: true
      municipi_empadronament: altres
   output_variables:
-     HA_004: [ true ]
+     HA_004: [ 2000 ]

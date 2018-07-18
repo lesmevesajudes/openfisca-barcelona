@@ -1,3 +1,5 @@
+import numpy
+
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 
@@ -50,14 +52,10 @@ class es_discapacitat(Variable):
     def formula(persona, period, legislation):
         return persona("grau_discapacitat", period) > 0
 
-class nivell_de_renda_inferior_rgc(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "True if income is less than IRSC"
 
-    def formula(persona, period, legislation):
-        return persona("ingressos_bruts", period.last_year) / 12 < 530 #TODO Stub, as I can not understand documentation
+def clauNombreDeMebres(membres):
+    return select([membres == 1, membres == 2, membres == 3, membres == 4, membres > 4],
+                  ['1', '2', '3', '4', '5_o_mes'])
 
 
 class GG_270_mensual(Variable):
@@ -68,26 +66,29 @@ class GG_270_mensual(Variable):
     label = "RENDA GARANTIDA CIUTADANA"
 
     def formula(persona, period, legislation):
-        compleix_nivell_ingressos = persona("nivell_de_renda_inferior_rgc", period)
-        no_beneficiari_de_prestacio_residencial = persona("beneficiari_de_prestacio_residencial", period) == False
-        discapacitats_a_carrec = persona.familia.any(persona("es_discapacitat", period))
+        discapacitats_a_carrec = persona.familia_fins_a_segon_grau.any(persona("es_discapacitat", period))
         en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina = \
             persona("en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina", period) == False
+        situacio_laboral = persona('situacio_laboral', period)
+        es_contracte_jornada_parcial = situacio_laboral == situacio_laboral.possible_values.treball_compte_daltri_jornada_parcial
         es_divorciada_de_familia_reagrupada = persona("es_divorciada_de_familia_reagrupada", period)
         es_empadronat_a_catalunya = persona("municipi_empadronament", period) != "no_empadronat_a_cat"
         es_orfe_de_progenitors = persona("es_orfe_dels_dos_progenitors", period)
+        tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
+        es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
         es_victima_violencia_de_genere = persona("es_victima_de_violencia_masclista", period)
         ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos = \
             persona("ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos", period)
+        inscrit_com_a_demandant_docupacio = persona('inscrit_com_a_demandant_docupacio', period)
+        ingressos_mensuals = persona("ingressos_bruts_ultims_sis_mesos", period) /6
+        nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
+        llindar_ingressos = legislation(period).benefits.GG270.llindars_ingressos[clauNombreDeMebres(nr_membres)]
+        compleix_nivell_ingressos = ingressos_mensuals < llindar_ingressos
         major_18 = persona("edat", period) >= 18
         major_23 = persona("edat", period) >= 23
-        porta_dos_anys_o_mes_empadronat_a_catalunya = persona("porta_dos_anys_o_mes_empadronat_a_catalunya", period)
+        no_beneficiari_de_prestacio_residencial = persona("beneficiari_de_prestacio_residencial", period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
-        inscrit_com_a_demandant_docupacio = persona('inscrit_com_a_demandant_docupacio', period)
-        tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
-        es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
-        situacio_laboral = persona('situacio_laboral', period)
-        es_contracte_jornada_parcial = situacio_laboral == situacio_laboral.possible_values.treball_compte_daltri_jornada_parcial
+        porta_dos_anys_o_mes_empadronat_a_catalunya = persona("porta_dos_anys_o_mes_empadronat_a_catalunya", period)
         # TODO Revisar el cas de menors discapacitats a carrec
         compleix_criteris = (es_empadronat_a_catalunya
                              + es_divorciada_de_familia_reagrupada
@@ -101,6 +102,5 @@ class GG_270_mensual(Variable):
                             * compleix_nivell_ingressos \
                             * (inscrit_com_a_demandant_docupacio + (es_monoparental * es_contracte_jornada_parcial)) \
                             * no_ingressat_en_centre_penitenciari
-
-        print (porta_dos_anys_o_mes_empadronat_a_catalunya, en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina, no_beneficiari_de_prestacio_residencial, compleix_nivell_ingressos, inscrit_com_a_demandant_docupacio, es_monoparental, es_contracte_jornada_parcial)
-        return compleix_criteris * 100  # Fixme: Stub
+        import_ajuda = round_(llindar_ingressos - ingressos_mensuals, decimals=0) + (es_monoparental * 75)
+        return compleix_criteris * import_ajuda

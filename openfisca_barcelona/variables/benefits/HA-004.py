@@ -28,7 +28,7 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA004(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        lloguer_maxim_per_demarcacio = legislation(period).benefits.HA001.import_lloguer_maxim["HA004"][demarcacio_de_lhabitatge]
+        lloguer_maxim_per_demarcacio = legislation(period).benefits.HA.import_lloguer_maxim["HA004"][demarcacio_de_lhabitatge]
         return import_del_lloguer < lloguer_maxim_per_demarcacio
 
 
@@ -72,8 +72,8 @@ class HA_004(Variable):
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
         nivell_ingressos_maxim = \
-            legislation(period).benefits.HA001.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.HA001.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
+            legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
+            * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
         fa_menys_dun_any_que_existeix_el_deute_de_lloguer = unitatDeConvivencia("des_de_quan_teniu_deutes_de_lloguer", period) == desDeQuanTeniuDeutesDeLloguer.menys_dun_any
         ha_pagat_almenys_3_quotes_del_lloguer = unitatDeConvivencia("ha_pagat_almenys_3_quotes_del_lloguer", period)

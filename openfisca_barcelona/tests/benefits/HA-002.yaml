@@ -13,6 +13,8 @@
      ha_perdut_lhabitatge_en_els_ultims_2_anys: true
      zona_de_lhabitatge: zona_a
      demarcacio_de_lhabitatge: barcelona_ciutat
+  families_fins_a_segon_grau:
+    familiars: ["adult"]
   persones:
    - id: adult
      ingressos_bruts:
@@ -22,4 +24,4 @@
      titular_contracte_de_lloguer: true
      municipi_empadronament: barcelona
   output_variables:
-     HA_002: [ true ]
+     HA_002: [ 200 ]

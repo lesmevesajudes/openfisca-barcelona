@@ -10,6 +10,8 @@
     tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["pare1", "mare1", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "mare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57
@@ -44,6 +46,8 @@
     tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["pare1", "mare1", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "mare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57
@@ -79,6 +83,8 @@
     tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["pare1", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "infant1"]
   persones:
    - id: "pare1"
      edat: 57
@@ -107,6 +113,8 @@
     tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["pare1", "infant1", "infant2"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "infant1", "infant2"]
   persones:
    - id: "pare1"
      edat: 57
@@ -141,6 +149,8 @@
     tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["pare1", "infant1", "infant2"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "infant1", "infant2"]
   persones:
    - id: "pare1"
      edat: 57
@@ -175,6 +185,8 @@
     tipus_custodia: total
   unitats_de_convivencia:
     persones_que_conviuen: ["pare1", "mare1", "infant1", "infant2"]
+  families_fins_a_segon_grau:
+    familiars: ["pare1", "mare1", "infant1", "infant2"]
   persones:
    - id: "pare1"
      edat: 57

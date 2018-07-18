@@ -62,8 +62,8 @@ class HA_001(Variable):
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
         ingressos_familia_mes_ajuda_superen_import_lloguer = (ingressos_familia_mensuals + 300) > import_del_lloguer
         nivell_ingressos_maxim = \
-            legislation(period).benefits.HA001.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.HA001.multiplicadors[
+            legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
+            * legislation(period).benefits.HA.multiplicadors[
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
         import_de_lloguer_supera_el_30_perc_dingressos = import_del_lloguer > (ingressos_familia_mensuals * 0.3)

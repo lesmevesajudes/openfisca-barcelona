@@ -14,6 +14,9 @@
      ha_pagat_12_mesos_daquesta_hipoteca: true
      fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca: false
      demarcacio_de_lhabitatge: tarragona
+     import_deute_en_el_pagament_hipoteca: 2000
+  families_fins_a_segon_grau:
+    familiars: ["adult"]
   persones:
    - id: adult
      ingressos_bruts:
@@ -23,4 +26,4 @@
      titular_hipoteca: true
      municipi_empadronament: altres
   output_variables:
-     HA_003: [ true ]
+     HA_003: [ 2000 ]

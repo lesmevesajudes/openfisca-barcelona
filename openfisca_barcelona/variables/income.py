@@ -12,6 +12,14 @@ class ingressos_bruts(Variable):
     label = "Total amount earned in a year"
     set_input = set_input_divide_by_period
 
+
+class ingressos_bruts_ultims_sis_mesos(Variable):
+    value_type = float
+    entity = Persona
+    definition_period = MONTH
+    label = "income in the last six months"
+    default_value = False
+
 class ingressos_per_pnc(Variable):
     value_type = float
     entity = Persona

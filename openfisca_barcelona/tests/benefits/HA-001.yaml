@@ -12,6 +12,8 @@
      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
      relacio_de_parentiu_amb_el_propietari: false
      zona_de_lhabitatge: zona_a
+  families_fins_a_segon_grau:
+    familiars: ["adult"]
   persones:
    - id: adult
      ingressos_bruts:
@@ -21,4 +23,4 @@
      titular_contracte_de_lloguer: true
      municipi_empadronament: barcelona
   output_variables:
-     HA_001: [ true ]
+     HA_001: [ 1 ]

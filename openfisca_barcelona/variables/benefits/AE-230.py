@@ -101,7 +101,6 @@ class compleix_criteris_AE230(Variable):
         anys_empadronament_valid = persona('data_alta_padro_valida_AE_230', period)
         existeix_algun_solicitant_AE_230 = persona.familia.any(persona.familia.members('solicitant_AE_230_valid', period))
 
-        print ("016", te_menys_de_16_anys, ingressos_inferiors_varem, es_empadronat_a_barcelona, anys_empadronament_valid, es_usuari_serveis_socials, existeix_algun_solicitant_AE_230)
         return te_menys_de_16_anys \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
