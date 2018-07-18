@@ -29,4 +29,4 @@
 
   output_variables:
     AE_230_mensual: [ 0, 50]
-    AE_230_01_mensual: [ 0, 450]
+    AE_230_01_mensual: [ 450, 0]
