@@ -43,7 +43,13 @@ FamiliaFins2onGrau = build_entity(
         'key': 'familiars',
         'plural': 'familiars',
         'label': u'persones familiars'
-    }]
+    },
+    {
+        'key': 'no_familiars',
+        'plural': 'no_familiars',
+        'label': u'persones no familiars'
+    }
+    ]
 )
 
 UnitatDeConvivencia = build_entity(
