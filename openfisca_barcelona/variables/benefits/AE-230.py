@@ -136,6 +136,5 @@ class AE_230_mensual(Variable):
 
     def formula(persona, period, parameters):
         tipus_custodia = persona.familia('tipus_custodia', period)
-        print  (clau_custodia(tipus_custodia), clau_ordre_del_menor(persona("ordre_del_menor", period)))
         import_ajuda = parameters(period).benefits.AE230.import_ajuda[clau_custodia(tipus_custodia)][clau_ordre_del_menor(persona("ordre_del_menor", period))]
         return persona('compleix_criteris_AE230', period) * import_ajuda
