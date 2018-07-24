@@ -53,6 +53,13 @@ class data_obertura_expedient_serveis_socials(Variable):
     set_input = set_input_dispatch_by_period
 
 
+class ordre_del_menor(Variable):
+    value_type = int
+    entity = Persona
+    definition_period = ETERNITY
+    label = "Ordinal number of this person within a family"
+
+
 class data_obertura_expedient_anterior_a_2016_12_31(Variable):
     value_type = bool
     entity = Familia
@@ -84,6 +91,17 @@ class solicitant_AE_230_valid(Variable):
 
     def formula(persona, period, parameters):
         return persona('data_alta_padro_valida_AE_230', period) * persona.has_role(Familia.SUSTENTADOR_I_CUSTODIA)
+
+def clau_ordre_del_menor(membres):
+    return select([membres == 0, membres == 1, membres >= 2],
+                  ['primer', 'segon', 'tercer_o_mes']
+                  )
+
+
+def clau_custodia(tipus_custodia):
+    return select([tipus_custodia == tipus_custodia.possible_values.compartida, tipus_custodia != tipus_custodia.possible_values.compartida],
+                  ['compartida', 'total']
+                  )
 
 
 class compleix_criteris_AE230(Variable):
@@ -118,7 +136,6 @@ class AE_230_mensual(Variable):
 
     def formula(persona, period, parameters):
         tipus_custodia = persona.familia('tipus_custodia', period)
-        import_ajuda = where(tipus_custodia != tipus_custodia.possible_values.compartida,
-                                parameters(period).benefits.AE230.import_ajuda, 50)
-
+        print  (clau_custodia(tipus_custodia), clau_ordre_del_menor(persona("ordre_del_menor", period)))
+        import_ajuda = parameters(period).benefits.AE230.import_ajuda[clau_custodia(tipus_custodia)][clau_ordre_del_menor(persona("ordre_del_menor", period))]
         return persona('compleix_criteris_AE230', period) * import_ajuda

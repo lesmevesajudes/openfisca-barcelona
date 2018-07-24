@@ -31,6 +31,7 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 0
   output_variables:
     AE_230_mensual: [ 0, 0, 100]
 
@@ -70,6 +71,7 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 0
    - id: "no_familiar"
      ingressos_bruts:
       2016: 45000
@@ -109,6 +111,7 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 1
+     ordre_del_menor: 0
   output_variables:
     AE_230_mensual: [ 0, 0, 100]
 
@@ -140,6 +143,7 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 1
+     ordre_del_menor: 0
   output_variables:
     AE_230_mensual: [ 0, 0]
 
@@ -167,17 +171,21 @@
    - id: "infant1"
      edat: 15
      municipi_empadronament: barcelona
+     ordre_del_menor: 0
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 0
    - id: "infant2"
      edat: 15
      municipi_empadronament: barcelona
+     ordre_del_menor: 1
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 1
   output_variables:
-    AE_230_mensual: [ 0, 100, 100]
+    AE_230_mensual: [ 0, 100, 75]
 
 - name: "0-16 Unitat familiar 3 membres nivell renda disponible superior a 1,5 IRSC"
   description: Ajuda menors 0-16
@@ -206,12 +214,14 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 0
    - id: "infant2"
      edat: 15
      municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 1
   output_variables:
     AE_230_mensual: [ 0, 0, 0]
 
@@ -248,12 +258,14 @@
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 0
    - id: "infant2"
      edat: 15
      municipi_empadronament: barcelona
      ingressos_bruts:
       2016: 0
      anys_empadronat_a_barcelona: 2
+     ordre_del_menor: 1
   output_variables:
     AE_230_mensual: [ 0, 0, 0, 0]
 
