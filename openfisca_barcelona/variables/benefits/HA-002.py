@@ -51,11 +51,12 @@ class HA_002(Variable):
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
         poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HA002", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
-        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
-        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
+        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
+        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
         nivell_ingressos_maxim = \
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
+        print (nr_membres,clauIRSCPonderat(nr_membres), nivell_ingressos_maxim, ingressos_familia_mensuals)
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA002", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \

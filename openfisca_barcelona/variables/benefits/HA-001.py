@@ -58,8 +58,8 @@ class HA_001(Variable):
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         import_del_lloguer_inferior_a_900_eur = import_del_lloguer < 900
-        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
-        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
+        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
+        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
         ingressos_familia_mes_ajuda_superen_import_lloguer = (ingressos_familia_mensuals + 300) > import_del_lloguer
         nivell_ingressos_maxim = \
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \

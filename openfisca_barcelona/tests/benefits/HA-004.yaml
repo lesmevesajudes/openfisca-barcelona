@@ -19,8 +19,7 @@
     familiars: ["adult"]
   persones:
    - id: adult
-     ingressos_bruts:
-      2016: 6348
+     ingressos_bruts_ultims_sis_mesos: 3174
      temps_empadronat_habitatge_actual: menys_nou_mesos
      tipus_document_identitat: DNI
      titular_contracte_de_lloguer: true

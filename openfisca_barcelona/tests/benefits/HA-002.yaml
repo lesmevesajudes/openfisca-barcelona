@@ -17,11 +17,43 @@
     familiars: ["adult"]
   persones:
    - id: adult
-     ingressos_bruts:
-      2016: 6348
+     ingressos_bruts_ultims_sis_mesos: 3174
      temps_empadronat_habitatge_actual: menys_nou_mesos
      tipus_document_identitat: DNI
      titular_contracte_de_lloguer: true
      municipi_empadronament: barcelona
   output_variables:
      HA_002: [ 200 ]
+
+- name: "Persona amb massa ingressos no reb l'ajuda HA-002"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+    altres_persones: [ adult, adult2 ]
+  unitats_de_convivencia:
+     persones_que_conviuen: [ adult, adult2  ]
+     import_del_lloguer: 600
+     es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+     tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+     relacio_de_parentiu_amb_el_propietari: false
+     ha_perdut_lhabitatge_en_els_ultims_2_anys: true
+     zona_de_lhabitatge: zona_a
+     demarcacio_de_lhabitatge: barcelona_ciutat
+  families_fins_a_segon_grau:
+    familiars: ["adult", "adult2"]
+  persones:
+   - id: adult
+     ingressos_bruts_ultims_sis_mesos: 11735
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+   - id: adult2
+     ingressos_bruts_ultims_sis_mesos: 11735
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+  output_variables:
+     HA_002: [ 0 ]
