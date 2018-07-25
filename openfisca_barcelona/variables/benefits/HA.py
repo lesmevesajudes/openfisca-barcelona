@@ -77,14 +77,6 @@ class ha_pagat_12_mesos_daquesta_hipoteca(Variable):
     default_value = False
 
 
-class ha_participat_en_un_proces_de_mediacio(Variable):
-    value_type = bool
-    entity = UnitatDeConvivencia
-    definition_period = MONTH
-    label = "The user has participated in a mediation process between owner and administration"
-    default_value = False
-
-
 class ha_rebut_oferta_per_accedir_a_habitatge_i_lha_rebutjada(Variable):
     value_type = bool
     entity = UnitatDeConvivencia

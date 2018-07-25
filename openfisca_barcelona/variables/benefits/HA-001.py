@@ -53,7 +53,6 @@ class HA_001(Variable):
         nr_membres = unitatDeConvivencia.nb_persons()
         discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
         existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
-        ha_participat_en_un_proces_de_mediacio = unitatDeConvivencia("ha_participat_en_un_proces_de_mediacio", period)
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
         poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HA001", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
@@ -75,8 +74,7 @@ class HA_001(Variable):
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
 
-        return ha_participat_en_un_proces_de_mediacio \
-               * existeix_solicitant_viable \
+        return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
                * import_del_lloguer_inferior_a_900_eur \
                * ingressos_familia_mes_ajuda_superen_import_lloguer \

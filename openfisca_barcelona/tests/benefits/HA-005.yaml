@@ -6,7 +6,6 @@
     altres_persones: [ adult ]
   unitats_de_convivencia:
      persones_que_conviuen: [ adult ]
-     ha_participat_en_un_proces_de_mediacio: true
      import_del_lloguer: 500
      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
