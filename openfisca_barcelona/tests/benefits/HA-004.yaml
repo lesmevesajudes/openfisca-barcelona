@@ -12,7 +12,6 @@
      relacio_de_parentiu_amb_el_propietari: false
      zona_de_lhabitatge: zona_a
      ha_pagat_almenys_3_quotes_del_lloguer: true
-     des_de_quan_teniu_deutes_de_lloguer: menys_dun_any
      demarcacio_de_lhabitatge: lleida
      import_deute_en_el_pagament_del_lloguer: 2000
   families_fins_a_segon_grau:

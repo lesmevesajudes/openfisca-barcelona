@@ -3,21 +3,6 @@ from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
 
 
-class desDeQuanTeniuDeutesDeLloguer(Enum):
-    no_en_tinc = "no_en_tinc"
-    mes_dun_any = "mes_dun_any"
-    menys_dun_any = "menys_dun_any"
-
-
-class des_de_quan_teniu_deutes_de_lloguer(Variable):
-    value_type = Enum
-    possible_values = desDeQuanTeniuDeutesDeLloguer
-    default_value = desDeQuanTeniuDeutesDeLloguer.no_en_tinc
-    entity = UnitatDeConvivencia
-    label = u"labor situation"
-    definition_period = MONTH
-
-
 class lloguer_inferior_al_maxim_per_demarcacio_HA004(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
@@ -53,8 +38,6 @@ class pot_ser_solicitant_HA004(Variable):
                * titular_contracte_de_lloguer
 
 
-
-
 class HA_004(Variable):
     value_type = float
     unit = 'currency'
@@ -75,7 +58,6 @@ class HA_004(Variable):
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
-        fa_menys_dun_any_que_existeix_el_deute_de_lloguer = unitatDeConvivencia("des_de_quan_teniu_deutes_de_lloguer", period) == desDeQuanTeniuDeutesDeLloguer.menys_dun_any
         ha_pagat_almenys_3_quotes_del_lloguer = unitatDeConvivencia("ha_pagat_almenys_3_quotes_del_lloguer", period)
         lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA004", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
@@ -88,7 +70,6 @@ class HA_004(Variable):
 
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
-               * fa_menys_dun_any_que_existeix_el_deute_de_lloguer \
                * ha_pagat_almenys_3_quotes_del_lloguer \
                * lloguer_inferior_al_maxim_per_demarcacio\
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
