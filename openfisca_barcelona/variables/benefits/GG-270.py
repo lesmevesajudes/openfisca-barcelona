@@ -132,9 +132,7 @@ class GG_270_mensual(Variable):
         es_solicitant_viable_GG_270 = persona('solicitant_GG_270_valid', period)
         import_ajuda_maxim_familia = persona.familia_fins_a_segon_grau.max(persona.familia_fins_a_segon_grau.members('import_GG_270', period))
         import_ajuda_aquesta_persona = persona('import_GG_270', period)
-        print (es_solicitant_viable_GG_270
-               * (import_ajuda_maxim_familia == import_ajuda_aquesta_persona)
-               * import_ajuda_aquesta_persona)
-        return 1.0 * (es_solicitant_viable_GG_270
-               * (import_ajuda_maxim_familia == import_ajuda_aquesta_persona)
-               * import_ajuda_aquesta_persona).astype(float)
+
+        return es_solicitant_viable_GG_270 \
+               * (import_ajuda_maxim_familia == import_ajuda_aquesta_persona)\
+               * import_ajuda_aquesta_persona
