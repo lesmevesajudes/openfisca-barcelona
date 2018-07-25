@@ -120,15 +120,21 @@ class import_GG_270(Variable):
         import_ajuda = round_(llindar_ingressos - ingressos_mensuals, decimals=0) + (es_monoparental * 75)
         return import_ajuda * persona('solicitant_GG_270_valid', period)
 
+
 class GG_270_mensual(Variable):
     value_type = float
     unit = 'currency'
-    entity = FamiliaFins2onGrau
+    entity = Persona
     definition_period = MONTH
     label = "RENDA GARANTIDA CIUTADANA"
 
-    def formula(familia, period, parameters):
-        existeix_algun_solicitant_GG_270 = familia.any(
-            familia.members('solicitant_GG_270_valid', period))
-        import_ajuda = familia.max(familia.members('import_GG_270', period))
-        return existeix_algun_solicitant_GG_270 * import_ajuda
+    def formula(persona, period, parameters):
+        es_solicitant_viable_GG_270 = persona('solicitant_GG_270_valid', period)
+        import_ajuda_maxim_familia = persona.familia_fins_a_segon_grau.max(persona.familia_fins_a_segon_grau.members('import_GG_270', period))
+        import_ajuda_aquesta_persona = persona('import_GG_270', period)
+        print (es_solicitant_viable_GG_270
+               * (import_ajuda_maxim_familia == import_ajuda_aquesta_persona)
+               * import_ajuda_aquesta_persona)
+        return 1.0 * (es_solicitant_viable_GG_270
+               * (import_ajuda_maxim_familia == import_ajuda_aquesta_persona)
+               * import_ajuda_aquesta_persona).astype(float)
