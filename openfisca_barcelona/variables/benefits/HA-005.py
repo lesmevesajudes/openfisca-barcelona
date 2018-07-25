@@ -3,6 +3,11 @@ from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
 
 
+def clauImportLloguerMaximFmiliaNombrosa(es_familia_nombrosa):
+    return select([es_familia_nombrosa, es_familia_nombrosa == False],
+                  ["familia_nombrosa", "familia_convencional"])
+
+
 class lloguer_inferior_al_maxim_per_demarcacio_HA005(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
@@ -13,7 +18,12 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA005(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        lloguer_maxim_per_demarcacio = legislation(period).benefits.HA.import_lloguer_maxim["HA005"][demarcacio_de_lhabitatge]
+
+        lloguer_maxim_per_demarcacio = \
+            legislation(period).benefits.HA005.import_lloguer_maxim[clauImportLloguerMaximFmiliaNombrosa(
+                unitatDeConvivencia.any(
+                    unitatDeConvivencia.members("el_solicitant_HA005_es_membre_de_familia_nombrosa", period)))][
+                demarcacio_de_lhabitatge]
         return import_del_lloguer < lloguer_maxim_per_demarcacio
 
 
@@ -32,10 +42,22 @@ class pot_ser_solicitant_HA005(Variable):
         temps_empadronat_a_lhabitatge = persona("temps_empadronat_habitatge_actual", period)
         empadronat_a_lhabitatge = temps_empadronat_a_lhabitatge != temps_empadronat_a_lhabitatge.possible_values.no_empadronat
         titular_contracte_de_lloguer = persona("titular_contracte_de_lloguer", period)
+
         return (has_DNI + has_NIE) \
                * empadronat_a_barcelona \
                * empadronat_a_lhabitatge \
                * titular_contracte_de_lloguer
+
+
+class el_solicitant_HA005_es_membre_de_familia_nombrosa(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+    label = "Is this person suitable to apply for this benefit"
+    default_value = False
+
+    def formula(persona, period, legislation):
+        return persona("pot_ser_solicitant_HA005", period) * persona.familia("es_familia_nombrosa", period)
 
 
 class HA_005(Variable):
@@ -59,7 +81,8 @@ class HA_005(Variable):
             * legislation(period).benefits.HA.multiplicadors[
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
-        lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA005", period)
+        lloguer_inferior_al_maxim_per_demarcacio = \
+            unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA005", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False
         no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit = \

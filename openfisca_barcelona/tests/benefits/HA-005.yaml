@@ -24,3 +24,97 @@
      municipi_empadronament: barcelona
   output_variables:
      HA_005: [ 200 ]
+
+
+- name: "Familia nombrosa amb tots els requeriments de HA-005 reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+    sustentadors_i_custodia: [ adult, adult2 ]
+    menors: [ menor, menor2, menor3 ]
+  unitats_de_convivencia:
+     persones_que_conviuen: [ adult, adult2, menor, menor2, menor3 ]
+     import_del_lloguer: 850
+     es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+     tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+     relacio_de_parentiu_amb_el_propietari: false
+     zona_de_lhabitatge: zona_a
+     demarcacio_de_lhabitatge: barcelona_ciutat
+  families_fins_a_segon_grau:
+    familiars: [ adult, adult2, menor, menor2, menor3 ]
+  persones:
+   - id: adult
+     ingressos_bruts:
+      2016: 6348
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+   - id: adult2
+     ingressos_bruts:
+      2016: 6348
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     municipi_empadronament: barcelona
+   - id: menor
+     edat: 12
+     ingressos_bruts:
+      2016: 0
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+   - id: menor2
+     edat: 12
+     ingressos_bruts:
+      2016: 0
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+   - id: menor3
+     edat: 12
+     ingressos_bruts:
+      2016: 0
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+  output_variables:
+  output_variables:
+     HA_005: [ 200 ]
+
+- name: "Persona amb tots els requeriments de HA-005 i lloguer sobre llindar NO reb l'ajuda"
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+    sustentadors_i_custodia: [ adult, adult2 ]
+  unitats_de_convivencia:
+     persones_que_conviuen: [ adult, adult2 ]
+     import_del_lloguer: 850
+     es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+     tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+     relacio_de_parentiu_amb_el_propietari: false
+     zona_de_lhabitatge: zona_a
+     demarcacio_de_lhabitatge: barcelona_ciutat
+  families_fins_a_segon_grau:
+    familiars: [ adult, adult2 ]
+  persones:
+   - id: adult
+     ingressos_bruts:
+      2016: 6348
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     titular_contracte_de_lloguer: true
+     municipi_empadronament: barcelona
+   - id: adult2
+     ingressos_bruts:
+      2016: 6348
+     temps_empadronat_habitatge_actual: menys_nou_mesos
+     tipus_document_identitat: DNI
+     municipi_empadronament: barcelona
+  output_variables:
+  output_variables:
+     HA_005: [ 0 ]
