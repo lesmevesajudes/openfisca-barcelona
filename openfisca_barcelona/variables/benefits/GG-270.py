@@ -76,10 +76,12 @@ class solicitant_GG_270_valid(Variable):
         ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos = \
             persona("ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos", period)
         inscrit_com_a_demandant_docupacio = persona('inscrit_com_a_demandant_docupacio', period)
-        ingressos_mensuals = persona("ingressos_bruts_ultims_sis_mesos", period) / 6
+        ingressos_mensuals_familia = persona.familia_fins_a_segon_grau.sum(
+            persona.familia_fins_a_segon_grau.members("ingressos_bruts_ultims_sis_mesos", period)
+        ) / 6
         nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
         llindar_ingressos = parameters(period).benefits.GG270.llindars_ingressos[clauNombreDeMebres(nr_membres)]
-        compleix_nivell_ingressos = ingressos_mensuals < llindar_ingressos
+        compleix_nivell_ingressos = ingressos_mensuals_familia < llindar_ingressos
         major_18 = persona("edat", period) >= 18
         major_23 = persona("edat", period) >= 23
         no_beneficiari_de_prestacio_residencial = persona("beneficiari_de_prestacio_residencial", period) == False
