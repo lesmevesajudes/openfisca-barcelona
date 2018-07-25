@@ -57,15 +57,13 @@ def clauNombreDeMebres(membres):
     return select([membres == 1, membres == 2, membres == 3, membres == 4, membres > 4],
                   ['1', '2', '3', '4', '5_o_mes'])
 
-
-class GG_270_mensual(Variable):
-    value_type = float
-    unit = 'currency'
+class solicitant_GG_270_valid(Variable):
+    value_type = bool
     entity = Persona
     definition_period = MONTH
-    label = "RENDA GARANTIDA CIUTADANA"
+    label = "Is this person a valid GG-270 benefitiary"
 
-    def formula(persona, period, legislation):
+    def formula(persona, period, parameters):
         discapacitats_a_carrec = persona.familia_fins_a_segon_grau.any(persona("es_discapacitat", period))
         en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina = \
             persona("en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina", period) == False
@@ -82,13 +80,14 @@ class GG_270_mensual(Variable):
         inscrit_com_a_demandant_docupacio = persona('inscrit_com_a_demandant_docupacio', period)
         ingressos_mensuals = persona("ingressos_bruts_ultims_sis_mesos", period) / 6
         nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
-        llindar_ingressos = legislation(period).benefits.GG270.llindars_ingressos[clauNombreDeMebres(nr_membres)]
+        llindar_ingressos = parameters(period).benefits.GG270.llindars_ingressos[clauNombreDeMebres(nr_membres)]
         compleix_nivell_ingressos = ingressos_mensuals < llindar_ingressos
         major_18 = persona("edat", period) >= 18
         major_23 = persona("edat", period) >= 23
         no_beneficiari_de_prestacio_residencial = persona("beneficiari_de_prestacio_residencial", period) == False
         no_ingressat_en_centre_penitenciari = persona('ingressat_en_centre_penitenciari', period) == False
         porta_dos_anys_o_mes_empadronat_a_catalunya = persona("porta_dos_anys_o_mes_empadronat_a_catalunya", period)
+
         # TODO Revisar el cas de menors discapacitats a carrec
         compleix_criteris = (es_empadronat_a_catalunya
                              + es_divorciada_de_familia_reagrupada
@@ -102,5 +101,34 @@ class GG_270_mensual(Variable):
                             * compleix_nivell_ingressos \
                             * (inscrit_com_a_demandant_docupacio + (es_monoparental * es_contracte_jornada_parcial)) \
                             * no_ingressat_en_centre_penitenciari
+
+        return compleix_criteris
+
+
+class import_GG_270(Variable):
+    value_type = float
+    entity = Persona
+    definition_period = MONTH
+    label = "GG-270 amount for a given person"
+
+    def formula(persona, period, parameters):
+        nr_membres = persona.familia.nb_persons()
+        llindar_ingressos = parameters(period).benefits.GG270.llindars_ingressos[clauNombreDeMebres(nr_membres)]
+        tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
+        es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
+        ingressos_mensuals = persona("ingressos_bruts_ultims_sis_mesos", period) / 6
         import_ajuda = round_(llindar_ingressos - ingressos_mensuals, decimals=0) + (es_monoparental * 75)
-        return compleix_criteris * import_ajuda
+        return import_ajuda * persona('solicitant_GG_270_valid', period)
+
+class GG_270_mensual(Variable):
+    value_type = float
+    unit = 'currency'
+    entity = FamiliaFins2onGrau
+    definition_period = MONTH
+    label = "RENDA GARANTIDA CIUTADANA"
+
+    def formula(familia, period, parameters):
+        existeix_algun_solicitant_GG_270 = familia.any(
+            familia.members('solicitant_GG_270_valid', period))
+        import_ajuda = familia.max(familia.members('import_GG_270', period))
+        return existeix_algun_solicitant_GG_270 * import_ajuda
