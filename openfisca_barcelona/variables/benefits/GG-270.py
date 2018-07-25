@@ -1,5 +1,3 @@
-import numpy
-
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 
