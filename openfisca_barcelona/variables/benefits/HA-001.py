@@ -58,8 +58,8 @@ class HA_001(Variable):
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         import_del_lloguer_inferior_a_900_eur = import_del_lloguer < 900
-        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
-        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
+        ingressos_bruts_ultims_sis_mesos = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
+        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts_ultims_sis_mesos) / 6
         ingressos_familia_mes_ajuda_superen_import_lloguer = (ingressos_familia_mensuals + 300) > import_del_lloguer
         nivell_ingressos_maxim = \
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
@@ -74,6 +74,7 @@ class HA_001(Variable):
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
 
+        print (existeix_solicitant_viable,ingressos_bruts_dins_barems, import_del_lloguer_inferior_a_900_eur,  ingressos_familia_mes_ajuda_superen_import_lloguer, import_de_lloguer_supera_el_30_perc_dingressos, no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge,no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit, no_relacio_de_parentiu_amb_el_propietari )
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
                * import_del_lloguer_inferior_a_900_eur \
