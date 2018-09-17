@@ -68,6 +68,7 @@ class TipusDocumentIdentitat(Enum):
     DNI = "DNI"
     NIE = "NIE"
     passaport = "passaport"
+    sense_documents = "sense_documents"
     altres = "altres"
     especial = "especial"
 
@@ -79,13 +80,6 @@ class tipus_document_identitat(Variable):
     label = u"ID document type"
     definition_period = MONTH
     default_value = TipusDocumentIdentitat.altres
-
-
-class relacio_habitatge(Variable):
-    value_type = str
-    entity = Familia
-    label = u"Family - property relation"
-    definition_period = MONTH
 
 
 class NivellDeRiscExclusioSocial(Enum):
