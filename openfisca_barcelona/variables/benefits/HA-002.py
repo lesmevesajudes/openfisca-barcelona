@@ -56,7 +56,7 @@ class HA_002(Variable):
         nivell_ingressos_maxim = \
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
-        ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
+        ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA002", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False

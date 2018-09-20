@@ -24,7 +24,7 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA005(Variable):
                 unitatDeConvivencia.any(
                     unitatDeConvivencia.members("el_solicitant_HA005_es_membre_de_familia_nombrosa", period)))][
                 demarcacio_de_lhabitatge]
-        return import_del_lloguer < lloguer_maxim_per_demarcacio
+        return import_del_lloguer <= lloguer_maxim_per_demarcacio
 
 
 class pot_ser_solicitant_HA005(Variable):
@@ -80,7 +80,7 @@ class HA_005(Variable):
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA.multiplicadors[
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
-        ingressos_bruts_dins_barems = ingressos_familia_mensuals < nivell_ingressos_maxim
+        ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = \
             unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA005", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \

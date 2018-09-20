@@ -112,7 +112,7 @@ class compleix_criteris_AE230(Variable):
 
     def formula(persona, period, parameters):
         te_menys_de_16_anys = persona('edat', period) < 16
-        ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year) < \
+        ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year) <= \
                                     varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)
         es_empadronat_a_barcelona = persona('municipi_empadronament', period) == 'barcelona'

@@ -11,7 +11,7 @@ class renda_mensual_disponible_inferior_a_530(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period.last_year)/12 < 551.93
+        return persona('ingressos_bruts', period.last_year)/12 <= 551.93
 
 
 class cap_familiar_te_renda_disponible_superior_a_530(Variable):
