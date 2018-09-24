@@ -46,8 +46,8 @@ class HA_002(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         nr_membres = unitatDeConvivencia.nb_persons()
         discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
-        ha_perdut_lhabitatge_en_els_ultims_2_anys = unitatDeConvivencia("ha_perdut_lhabitatge_en_els_ultims_2_anys", period)
         existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
+        ha_perdut_lhabitatge_en_els_ultims_2_anys = unitatDeConvivencia("ha_perdut_lhabitatge_en_els_ultims_2_anys", period)
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
         poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HA002", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
