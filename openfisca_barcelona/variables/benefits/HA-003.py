@@ -59,7 +59,6 @@ class HA_003(Variable):
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
-        no_fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca = unitatDeConvivencia("fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca", period) == False
         ha_pagat_12_mesos_daquesta_hipoteca = unitatDeConvivencia("ha_pagat_12_mesos_daquesta_hipoteca", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False
@@ -72,7 +71,6 @@ class HA_003(Variable):
 
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
-               * no_fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca \
                * ha_pagat_12_mesos_daquesta_hipoteca \
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \

@@ -12,7 +12,6 @@
      relacio_de_parentiu_amb_el_propietari: false
      zona_de_lhabitatge: zona_a
      ha_pagat_12_mesos_daquesta_hipoteca: true
-     fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca: false
      demarcacio_de_lhabitatge: tarragona
      import_deute_en_el_pagament_hipoteca: 2000
   families_fins_a_segon_grau:

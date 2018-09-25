@@ -45,14 +45,6 @@ class existeix_deute_en_el_pagament_del_lloguer(Variable):
     default_value = False
 
 
-class fa_mes_de_12_mesos_que_existeix_el_deute_de_hipoteca(Variable):
-    value_type = bool
-    entity = UnitatDeConvivencia
-    definition_period = MONTH
-    label = "The debt has existed for more than 12 months"
-    default_value = False
-
-
 class ha_pagat_almenys_3_quotes_del_lloguer(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
