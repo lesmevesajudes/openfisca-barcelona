@@ -111,7 +111,7 @@ class compleix_criteris_AE230(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-        te_menys_de_16_anys = persona('edat', period) < 16
+        te_16_anys_o_menys = persona('edat', period) <= 16
         ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year) <= \
                                     varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)
@@ -119,7 +119,7 @@ class compleix_criteris_AE230(Variable):
         anys_empadronament_valid = persona('data_alta_padro_valida_AE_230', period)
         existeix_algun_solicitant_AE_230 = persona.familia.any(persona.familia.members('solicitant_AE_230_valid', period))
 
-        return te_menys_de_16_anys \
+        return te_16_anys_o_menys \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
                * anys_empadronament_valid \
