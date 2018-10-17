@@ -81,7 +81,7 @@ class solicitant_GG_270_valid(Variable):
         ) / 6
         nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
         llindar_ingressos = parameters(period).benefits.GG270.llindars_ingressos[clauNombreDeMebres(nr_membres)]
-        compleix_nivell_ingressos = ingressos_mensuals_familia < llindar_ingressos
+        compleix_nivell_ingressos = ingressos_mensuals_familia <= llindar_ingressos
         major_18 = persona("edat", period) >= 18
         major_23 = persona("edat", period) >= 23
         no_beneficiari_de_prestacio_residencial = persona("beneficiari_de_prestacio_residencial", period) == False

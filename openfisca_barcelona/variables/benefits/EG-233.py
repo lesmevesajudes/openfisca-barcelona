@@ -9,7 +9,7 @@ class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
     set_input = set_input_dispatch_by_period
     default_value = False
 
-
+# TODO Move to a parameter
 class nivell_de_renda_inferior_a_2416_80(Variable):
     value_type = bool
     entity = Persona
@@ -18,7 +18,7 @@ class nivell_de_renda_inferior_a_2416_80(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) < 2416.80
+        return persona('ingressos_bruts', period) <= 2416.80
 
 
 class nivell_de_renda_inferior_a_2900_20(Variable):
@@ -29,7 +29,7 @@ class nivell_de_renda_inferior_a_2900_20(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) < 2900.20
+        return persona('ingressos_bruts', period) <= 2900.20
 
 
 class nivell_de_renda_inferior_a_1450_08(Variable):
@@ -40,7 +40,7 @@ class nivell_de_renda_inferior_a_1450_08(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) < 1450.08
+        return persona('ingressos_bruts', period) <= 1450.08
 
 
 class nivell_de_renda_inferior_a_1740_12(Variable):
@@ -51,7 +51,7 @@ class nivell_de_renda_inferior_a_1740_12(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) < 1740.12
+        return persona('ingressos_bruts', period) <= 1740.12
 
 
 class en_acolliment(Variable):
