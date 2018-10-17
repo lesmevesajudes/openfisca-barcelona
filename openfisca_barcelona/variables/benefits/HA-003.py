@@ -14,7 +14,7 @@ class quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003(Variable):
         import_de_la_hipoteca = unitatDeConvivencia("import_de_la_hipoteca", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
         import_de_la_hipoteca_maxim_per_demarcacio = legislation(period).benefits.HA.import_quota_hipoteca_maxim["HA003"][demarcacio_de_lhabitatge]
-        return import_de_la_hipoteca < import_de_la_hipoteca_maxim_per_demarcacio
+        return import_de_la_hipoteca <= import_de_la_hipoteca_maxim_per_demarcacio
 
 
 class pot_ser_solicitant_HA003(Variable):

@@ -61,13 +61,13 @@ class HA_001(Variable):
         import_del_lloguer_inferior_a_900_eur = import_del_lloguer <= 900
         ingressos_bruts_ultims_sis_mesos = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts_ultims_sis_mesos) / 6
-        ingressos_familia_mes_ajuda_superen_import_lloguer = (ingressos_familia_mensuals + 300) > import_del_lloguer
+        ingressos_familia_mes_ajuda_superen_import_lloguer = (ingressos_familia_mensuals + 300) >= import_del_lloguer
         nivell_ingressos_maxim = \
             legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
             * legislation(period).benefits.HA.multiplicadors[
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
-        import_de_lloguer_supera_el_30_perc_dingressos = import_del_lloguer > (ingressos_familia_mensuals * 0.3)
+        import_de_lloguer_supera_el_30_perc_dingressos = import_del_lloguer >= (ingressos_familia_mensuals * 0.3)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False
         no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit = \

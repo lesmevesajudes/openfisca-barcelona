@@ -14,7 +14,8 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA002(Variable):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
         lloguer_maxim_per_demarcacio = legislation(period).benefits.HA.import_lloguer_maxim["HA002"][demarcacio_de_lhabitatge]
-        return import_del_lloguer < lloguer_maxim_per_demarcacio
+
+        return import_del_lloguer <= lloguer_maxim_per_demarcacio
 
 
 class pot_ser_solicitant_HA002(Variable):
