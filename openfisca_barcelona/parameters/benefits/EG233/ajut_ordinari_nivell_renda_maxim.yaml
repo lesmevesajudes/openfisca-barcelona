@@ -1,0 +1,39 @@
+description: Maximum income level for ordinary benefit
+reference: openfisca
+
+primer_adult:
+  membre_discapacitat_superior_60:
+    values:
+      2016-01-01:
+        value: 24168.25
+  altres:
+    values:
+      2016-01-01:
+        value: 9667.30
+segon_adult:
+  membre_discapacitat_superior_60:
+    values:
+      2016-01-01:
+        value: 12084.0
+  altres:
+    values:
+      2016-01-01:
+        value: 4833.6
+altres_familiars:
+  membre_discapacitat_superior_60:
+    values:
+      2016-01-01:
+        value: 6042
+  altres:
+    values:
+      2016-01-01:
+        value: 2416.8
+menors:
+  membre_discapacitat_superior_60:
+    values:
+      2016-01-01:
+        value: 7250.5
+  altres:
+    values:
+      2016-01-01:
+        value: 2900.2

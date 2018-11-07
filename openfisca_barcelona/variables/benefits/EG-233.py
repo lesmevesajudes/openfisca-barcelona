@@ -9,27 +9,100 @@ class es_escolaritzat_entre_P3_i_4rt_ESO(Variable):
     set_input = set_input_dispatch_by_period
     default_value = False
 
-# TODO Move to a parameter
-class nivell_de_renda_inferior_a_2416_80(Variable):
+
+class ordinari_nivell_renda_altres_familiars_membre_discapacitat_60(Variable):
     value_type = bool
     entity = Persona
     definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
 
-    def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) <= 2416.80
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim['altres_familiars']['membre_discapacitat_superior_60']
+        return persona('ingressos_bruts', period) <= renda_maxima
 
 
-class nivell_de_renda_inferior_a_2900_20(Variable):
+class ordinari_nivell_renda_altres_familiars_no_discapacitat(Variable):
     value_type = bool
     entity = Persona
     definition_period = YEAR
     label = "The user is up to date with her obligations against the state"
     set_input = set_input_dispatch_by_period
 
-    def formula(persona, period, legislation):
-        return persona('ingressos_bruts', period) <= 2900.20
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim['altres_familiars']['altres']
+        return persona('ingressos_bruts', period) <= renda_maxima
+
+
+class ordinari_nivell_renda_menors_membre_discapacitat_60(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "The user is up to date with her obligations against the state"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim['menors']['membre_discapacitat_superior_60']
+        return persona('ingressos_bruts', period) <= renda_maxima
+
+
+class ordinari_nivell_renda_menors_no_discapacitat(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "The user is up to date with her obligations against the state"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim['menors']['altres']
+        return persona('ingressos_bruts', period) <= renda_maxima
+
+class extraordinari_nivell_renda_altres_familiars_membre_discapacitat_60(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "The user is up to date with her obligations against the state"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim['altres_familiars']['membre_discapacitat_superior_60']
+        return persona('ingressos_bruts', period) <= renda_maxima
+
+
+class extraordinari_nivell_renda_altres_familiars_no_discapacitat(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "The user is up to date with her obligations against the state"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim['altres_familiars']['altres']
+        return persona('ingressos_bruts', period) <= renda_maxima
+
+
+class extraordinari_nivell_renda_menors_membre_discapacitat_60(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "The user is up to date with her obligations against the state"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim['menors']['membre_discapacitat_superior_60']
+        return persona('ingressos_bruts', period) <= renda_maxima
+
+
+class extraordinari_nivell_renda_menors_no_discapacitat(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = YEAR
+    label = "The user is up to date with her obligations against the state"
+    set_input = set_input_dispatch_by_period
+
+    def formula(persona, period, parameters):
+        renda_maxima = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim['menors']['altres']
+        return persona('ingressos_bruts', period) <= renda_maxima
 
 
 class nivell_de_renda_inferior_a_1450_08(Variable):
@@ -151,35 +224,55 @@ class beneficiari_fons_infancia(Variable):
     set_input = set_input_dispatch_by_period
     default_value = False
 
+
+def clau_nivell_de_renda(grau_discapacitat):
+    return select([grau_discapacitat >= 60, grau_discapacitat < 60],
+                  ['membre_discapacitat_superior_60', 'altres'])
+
+
 class compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari(Variable):
     value_type = bool
-    entity = Familia
+    entity = Persona
     definition_period = MONTH
     label = "Household total valuation of urban properties"
     set_input = set_input_dispatch_by_period
 
-    def formula(familia, period, parameters):
-        nivell_renda_primer_adult = familia.primer_adult('ingressos_bruts', period.last_year)
-        nivell_renda_segon_adult = familia.segon_adult('ingressos_bruts', period.last_year)
+    def formula(persona, period, parameters):
+        grau_discapacitat = persona('grau_discapacitat', period)
+        renda_maxima = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim
+        nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period.last_year)
+        nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period.last_year)
+        nivell_renda_maxim_primer_adult = renda_maxima['primer_adult'][clau_nivell_de_renda(grau_discapacitat)]
+        nivell_renda_maxim_segon_adult = renda_maxima['segon_adult'][clau_nivell_de_renda(grau_discapacitat)]
 
-        nivell_renda_maxim_primer_adult = \
-            parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim_primer_adult
-        nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_extraordinari_nivell_renda_maxim_segon_adult
+        adults_satisfant_criteris_de_nivell_de_renda = (nivell_renda_primer_adult <= nivell_renda_maxim_primer_adult) \
+                                                       * (nivell_renda_segon_adult <= nivell_renda_maxim_segon_adult)
 
-        els_adults_satisfant_criteris_de_nivell_de_renda = \
-            (nivell_renda_primer_adult < nivell_renda_maxim_primer_adult) \
-            * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
+        altres_adults_compleixen_criteris_de_nivell_de_renda = \
+            (persona.familia.all(
+                persona.familia.members('extraordinari_nivell_renda_altres_familiars_no_discapacitat', period.last_year),
+                role=Familia.ALTRES_FAMILIARS)
+             * (grau_discapacitat < 60)) \
+            + (persona.familia.all(
+                persona.familia.members('extraordinari_nivell_renda_altres_familiars_membre_discapacitat_60',
+                                        period.last_year),
+                role=Familia.ALTRES_FAMILIARS)
+               * (grau_discapacitat >= 60))
 
-        els_altres_adults_compleixen_criteris_de_nivell_de_renda = \
-            familia.all(familia.members('nivell_de_renda_inferior_a_1450_08', period.last_year),
-                                role=Familia.ALTRES_FAMILIARS)
-        els_menors_compleixen_els_criteris_de_nivell_de_renda = \
-            familia.all(familia.members('nivell_de_renda_inferior_a_1740_12', period.last_year), role=Familia.MENOR)
+        menors_compleixen_els_criteris_de_nivell_de_renda = \
+            (persona.familia.all(
+                persona.familia.members('extraordinari_nivell_renda_menors_no_discapacitat', period.last_year),
+                role=Familia.MENOR)
+             * (grau_discapacitat < 60)) \
+            + (persona.familia.all(
+                persona.familia.members('extraordinari_nivell_renda_menors_membre_discapacitat_60', period.last_year),
+                role=Familia.MENOR)
+               * (grau_discapacitat >= 60))
 
         return \
-            els_adults_satisfant_criteris_de_nivell_de_renda \
-            * els_altres_adults_compleixen_criteris_de_nivell_de_renda\
-            * els_menors_compleixen_els_criteris_de_nivell_de_renda
+            adults_satisfant_criteris_de_nivell_de_renda \
+            * altres_adults_compleixen_criteris_de_nivell_de_renda\
+            * menors_compleixen_els_criteris_de_nivell_de_renda
 
 
 class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
@@ -190,23 +283,38 @@ class compleix_criteris_de_nivell_de_renda_per_l_ajut_ordinari(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, parameters):
+        grau_discapacitat = persona('grau_discapacitat', period)
+
+        renda_maxima = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim
         nivell_renda_primer_adult = persona.familia.primer_adult('ingressos_bruts', period.last_year)
         nivell_renda_segon_adult = persona.familia.segon_adult('ingressos_bruts', period.last_year)
-        nivell_renda_maxim_primer_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_primer_adult
-        nivell_renda_maxim_segon_adult = parameters(period).benefits.EG233.ajut_ordinari_nivell_renda_maxim_segon_adult
+        nivell_renda_maxim_primer_adult = renda_maxima['primer_adult'][clau_nivell_de_renda(grau_discapacitat)]
+        nivell_renda_maxim_segon_adult = renda_maxima['segon_adult'][clau_nivell_de_renda(grau_discapacitat)]
 
-        els_adults_satisfant_criteris_de_nivell_de_renda = (nivell_renda_primer_adult < nivell_renda_maxim_primer_adult) \
-                                                           * (nivell_renda_segon_adult < nivell_renda_maxim_segon_adult)
+        adults_satisfant_criteris_de_nivell_de_renda = (nivell_renda_primer_adult <= nivell_renda_maxim_primer_adult) \
+                                                           * (nivell_renda_segon_adult <= nivell_renda_maxim_segon_adult)
 
-        els_altres_adults_compleixen_criteris_de_nivell_de_renda = persona.familia.all(
-            persona.familia.members('nivell_de_renda_inferior_a_2416_80', period.last_year), role=Familia.ALTRES_FAMILIARS)
+        altres_adults_compleixen_criteris_de_nivell_de_renda = \
+            (persona.familia.all(
+                persona.familia.members('ordinari_nivell_renda_altres_familiars_no_discapacitat', period.last_year),
+                role=Familia.ALTRES_FAMILIARS)
+             * (grau_discapacitat < 60))\
+        + (persona.familia.all(
+                persona.familia.members('ordinari_nivell_renda_altres_familiars_membre_discapacitat_60', period.last_year),
+                role=Familia.ALTRES_FAMILIARS)
+             * (grau_discapacitat >= 60))
 
-        els_menors_compleixen_els_criteris_de_nivell_de_renda = \
-            persona.familia.all(persona.familia.members('nivell_de_renda_inferior_a_2900_20', period.last_year), role=Familia.MENOR)
+        menors_compleixen_els_criteris_de_nivell_de_renda = \
+            (persona.familia.all(
+                persona.familia.members('ordinari_nivell_renda_menors_no_discapacitat', period.last_year), role=Familia.MENOR)
+             * (grau_discapacitat < 60)) \
+            + (persona.familia.all(
+                persona.familia.members('ordinari_nivell_renda_menors_membre_discapacitat_60', period.last_year), role=Familia.MENOR)
+               * (grau_discapacitat >= 60))
 
-        return els_adults_satisfant_criteris_de_nivell_de_renda \
-               * els_altres_adults_compleixen_criteris_de_nivell_de_renda \
-               * els_menors_compleixen_els_criteris_de_nivell_de_renda
+        return adults_satisfant_criteris_de_nivell_de_renda \
+               * altres_adults_compleixen_criteris_de_nivell_de_renda \
+               * menors_compleixen_els_criteris_de_nivell_de_renda
 
 
 class EG_233_mensual(Variable):
@@ -244,7 +352,7 @@ class EG_233_mensual(Variable):
             parameters(period).benefits.EG233.ajut_extraordinari_valor_cadastral_finques_urbanes_maxim
 
         compleix_ajut_extraordinari = \
-            persona.familia("compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari", period) \
+            persona("compleix_criteris_de_nivell_de_renda_per_l_ajut_extraordinari", period) \
             * (puntuacio_familiar >= puntuacio_familiar_minima) \
             * (volum_de_negoci < volum_de_negoci_maxim) \
             * (rendiments_patrimonials <= rendiments_patrimonials_maxim) \

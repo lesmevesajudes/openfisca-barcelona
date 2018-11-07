@@ -649,3 +649,93 @@
      beneficiari_fons_infancia: true
   output_variables:
     EG_233_mensual: [ 0, 6 ]
+
+- name: "Familia amb un discapacitat superior al 60% obté ajut per aquest membre"
+  description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+     menors: ["menor1", "menor2"]
+     nivell_de_risc_d_exclusio_social: nop
+     tipus_familia_monoparental: especial
+     tipus_familia_nombrosa: especial
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
+     tipus_custodia: total
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1", "menor1", "menor2"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "menor1", "menor2"]
+  persones:
+   - id: "adult1"
+     ingressos_bruts:
+      2016: 24167
+     grau_discapacitat: 0
+   - id: "menor1"
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
+     ingressos_bruts:
+      2016: 7249
+     grau_discapacitat: 61
+     en_acolliment: true
+   - id: "menor2"
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
+     ingressos_bruts:
+      2016: 7249
+     grau_discapacitat: 34
+     en_acolliment: false
+  output_variables:
+    EG_233_mensual: [ 0, 3, 0 ]
+
+
+- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria"
+  description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1", "adult2"]
+     altres_persones: ["adult3"]
+     menors: ["menor1"]
+     nivell_de_risc_d_exclusio_social: greu
+     tipus_familia_nombrosa: nop
+     tipus_familia_monoparental: nop
+     volum_del_negoci_familiar:
+      2016: 0
+     rendiments_del_patrimoni:
+      2016: 0
+     valor_cadastral_finques_rustiques:
+      2016: 0
+     valor_cadastral_finques_urbanes:
+      2016: 0
+     tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "adult3", "menor1"]
+  persones:
+   - id: "adult1"
+     ingressos_bruts:
+      2016: 14499
+     grau_discapacitat: 0
+   - id: "adult2"
+     ingressos_bruts:
+      2016: 7249
+     grau_discapacitat: 0
+   - id: "adult3"
+     ingressos_bruts:
+      2016: 3624
+     grau_discapacitat: 0
+   - id: "menor1"
+     es_escolaritzat_entre_P3_i_4rt_ESO: true
+     ingressos_bruts:
+       2016: 4349
+     grau_discapacitat: 61
+     en_acolliment: false
+  output_variables:
+    EG_233_mensual: [ 0, 0, 0, 6 ]
