@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from barcelona_taxbenefitsystem import BarcelonaTaxBenefitSystem
+from openfisca_barcelona.barcelona_taxbenefitsystem import BarcelonaTaxBenefitSystem
 
 CountryTaxBenefitSystem = BarcelonaTaxBenefitSystem
