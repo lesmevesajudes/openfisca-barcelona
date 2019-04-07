@@ -7,6 +7,9 @@ dist:
 test:
 	openfisca-run-test --country-package openfisca_barcelona openfisca_barcelona/tests
 
+test_remote_debug:
+	openfisca-debug-test --debugserver ${DEBUG_SERVER} --country-package openfisca_barcelona openfisca_barcelona/tests
+
 test_verbose:
 	openfisca-run-test -v --country-package openfisca_barcelona openfisca_barcelona/tests
 
