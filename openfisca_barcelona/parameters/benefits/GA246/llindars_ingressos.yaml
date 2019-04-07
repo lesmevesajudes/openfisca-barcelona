@@ -1,0 +1,37 @@
+description: Gross family income
+reference: openfisca
+
+gratuita:
+  1:
+    values:
+      2017-01-01:
+        value: 8271.55
+  2:
+    values:
+      2017-01-01:
+        value: 16543.10
+  3:
+    values:
+      2017-01-01:
+        value: 24814.65
+  4:
+    values:
+      2017-01-01:
+        value: 33086.20
+reduida:
+  1:
+    values:
+      2017-01-01:
+        value: 16543.10
+  2:
+    values:
+      2017-01-01:
+        value: 33086.20
+  3:
+    values:
+      2017-01-01:
+        value: 49629.30
+  4:
+    values:
+      2017-01-01:
+        value: 66172.40
