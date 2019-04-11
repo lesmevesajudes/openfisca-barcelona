@@ -1,0 +1,352 @@
+- name: "Persona < 65 anys, discapacitat >= 33, empadronat a Barcelona, límit gratuïta < ingressos <= limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1961-01-15'
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     grau_discapacitat: 34
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: barcelona
+  output_variables:
+     GA_246_01: [ 0 ]
+     GA_246_02: [ 1 ]
+
+- name: "Persona < 65 anys, discapacitat >= 33, empadronat a Barcelona, ingressos > limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1961-01-15'
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     grau_discapacitat: 34
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: barcelona
+  output_variables:
+     GA_246_02: [ 0 ]
+
+- name: "Persona < 65 anys, discapacitat >= 33, empadronat a altres, límit gratuïta < ingressos <= limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1961-01-15'
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     grau_discapacitat: 34
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: altres
+  output_variables:
+     GA_246_02: [ 0 ]
+
+- name: "Persona < 65 anys, discapacitat < 33, empadronat a Barcelona, límit gratuïta < ingressos <= limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1961-01-15'
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: barcelona
+  output_variables:
+     GA_246_02: [ 0 ]
+
+- name: "Persona >= 65 anys, discapacitat < 33, empadronat a Barcelona, límit gratuïta < ingressos <= limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1931-01-15'
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: barcelona
+  output_variables:
+     GA_246_01: [ 0 ]
+     GA_246_02: [ 1 ]
+
+- name: "Persona >= 65 anys, discapacitat < 33, empadronat a Barcelona, ingressos > limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1931-01-15'
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: barcelona
+  output_variables:
+     GA_246_02: [ 0 ]
+
+- name: "Persona >= 65 anys, discapacitat < 33, empadronat a altres, límit gratuïta < ingressos <= limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1931-01-15'
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: altres
+  output_variables:
+     GA_246_02: [ 0 ]
+
+- name: "Persona >= 65 anys, discapacitat >= 33, empadronat a Barcelona, límit gratuïta < ingressos <= limit reduïda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     data_naixement: '1931-01-15'
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     grau_discapacitat: 34
+     ha_esgotat_prestacio_de_desocupacio: true
+     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+     treballa_per_compte_propi: false
+     ingressat_en_centre_penitenciari: false
+     percep_prestacions_incompatibles_amb_la_feina: false
+     beneficiari_ajuts_per_violencia_de_genere: false
+     municipi_empadronament: barcelona
+  output_variables:
+     GA_246_01: [ 0 ]
+     GA_246_02: [ 1 ]
+
+- name: "Persona < 65 anys, discapacitat >= 33, empadronat a Barcelona, ingressos < límit, 2 membres, fill no rep ajuda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    sustentadors_i_custodia: ["adult1"]
+    menors: ["infant1"]
+    tipus_familia_monoparental: nop
+    es_usuari_serveis_socials: false
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "infant1"]
+  persones:
+   - id: "adult1"
+     edat: 49
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     grau_discapacitat: 50
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "infant1"
+     edat: 5
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 3
+     ordre_del_menor: 0
+  output_variables:
+     GA_246_01: [ 0, 0 ]
+     GA_246_02: [ 1, 0 ]
+
+- name: "Persona < 65 anys, discapacitat >= 33, empadronat a Barcelona, ingressos < límit, 3 membres, fill i parella no reben ajuda"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    sustentadors_i_custodia: ["adult1", "adult2"]
+    menors: ["infant1"]
+    tipus_familia_monoparental: nop
+    es_usuari_serveis_socials: false
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "adult2", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "infant1"]
+  persones:
+   - id: "adult1"
+     edat: 49
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     grau_discapacitat: 50
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "adult2"
+     edat: 47
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "infant1"
+     edat: 5
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 3
+     ordre_del_menor: 0
+  output_variables:
+     GA_246_01: [ 0, 0, 0 ]
+     GA_246_02: [ 1, 0, 0 ]
+
+- name: "Persona < 65 anys, discapacitat >= 33, empadronat a Barcelona, ingressos < límit, 3 membres, parella rep, fill no rep"
+  description: GA_246_02 - Targeta Rosa (Reduïda)
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    sustentadors_i_custodia: ["adult1", "adult2"]
+    menors: ["infant1"]
+    tipus_familia_monoparental: nop
+    es_usuari_serveis_socials: false
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "adult2", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "infant1"]
+  persones:
+   - id: "adult1"
+     edat: 49
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     grau_discapacitat: 50
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "adult2"
+     edat: 66
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 18000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "infant1"
+     edat: 5
+     municipi_empadronament: barcelona
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 3
+     ordre_del_menor: 0
+  output_variables:
+     GA_246_01: [ 0, 0, 0 ]
+     GA_246_02: [ 1, 1, 0 ]
+ 

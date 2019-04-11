@@ -1,20 +1,47 @@
-# Python builds
+## Python builds
 
 *.egg-info
 *.pyc
 build
 dist
 
-# Editors
-
+## Eclipse
+.classpath
 .project
 .pydevproject
-.settings
+.metadata
+**/bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.externalToolBuilders/
+
+## NetBeans
+**/nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+## JetBrains
+.idea
+
+## Spyder
 .spyderproject
+
+## Visual Studio
 .vscode
 
-# OS stuff
-
+## OS Specific
 .DS_Store
-*~
-.idea
+/bin/
+
+## Project specific
+*.log
