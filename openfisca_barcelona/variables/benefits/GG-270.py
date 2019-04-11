@@ -68,7 +68,7 @@ class solicitant_GG_270_valid(Variable):
         situacio_laboral = persona('situacio_laboral', period)
         es_contracte_jornada_parcial = situacio_laboral == situacio_laboral.possible_values.treball_compte_daltri_jornada_parcial
         es_divorciada_de_familia_reagrupada = persona("es_divorciada_de_familia_reagrupada", period)
-        es_empadronat_a_catalunya = persona("municipi_empadronament", period) != "no_empadronat_a_cat"
+        es_empadronat_a_catalunya = persona("municipi_empadronament", period) != b'no_empadronat_a_cat'
         es_orfe_de_progenitors = persona("es_orfe_dels_dos_progenitors", period)
         tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
         es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop

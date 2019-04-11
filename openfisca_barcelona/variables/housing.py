@@ -26,7 +26,7 @@ class empadronat_a_la_ciutat_de_barcelona(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, parameters):
-        return persona("ciutat_empadronament", period) == "Barcelona"
+        return persona("ciutat_empadronament", period) == b'Barcelona'
 
 
 class anys_empadronat_a_barcelona(Variable):

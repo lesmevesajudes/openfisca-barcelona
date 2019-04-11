@@ -32,7 +32,7 @@ class pot_ser_solicitant_HA001(Variable):
         has_DNI = tipus_document_identitat == tipus_document_identitat.possible_values.DNI
         has_NIE = tipus_document_identitat == tipus_document_identitat.possible_values.NIE
         has_passaport = tipus_document_identitat == tipus_document_identitat.possible_values.passaport
-        empadronat_a_barcelona = persona("municipi_empadronament", period) == "barcelona"
+        empadronat_a_barcelona = persona("municipi_empadronament", period) == b'barcelona'
         temps_empadronat_a_lhabitatge = persona("temps_empadronat_habitatge_actual", period)
         empadronat_a_lhabitatge = temps_empadronat_a_lhabitatge != temps_empadronat_a_lhabitatge.possible_values.no_empadronat
         titular_contracte_de_lloguer = persona("titular_contracte_de_lloguer", period)

@@ -19,14 +19,11 @@ setup(
     },
     include_package_data=True,  # Will read MANIFEST.in
     install_requires=[
-        'OpenFisca-Core >= 23.1, < 24.0',
+        'OpenFisca-Core[web-api] >=31.0, <32.0',
     ],
     extras_require={
-        'api': [
-            'OpenFisca-Web-API >= 4.0.0, < 7.0',
-        ],
         'test': [
-            'flake8 >= 3.4.0, < 3.5.0',
+            'flake8',
             'flake8-print',
             'nose',
             'pydevd',

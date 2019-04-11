@@ -1,741 +1,733 @@
-- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria"
+- name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_nombrosa: nop
-     tipus_familia_monoparental: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5799
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2899
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1449
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1739
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 6 ]
-
-- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, custodia compartida rep l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_nombrosa: nop
+      tipus_familia_monoparental: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5799
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2899
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1449
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1739
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 6]
+- name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, custodia compartida rep l'ajuda
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_monoparental: nop
-     tipus_familia_nombrosa: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: compartida
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5799
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2880
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1449
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1739
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 6 ]
-
-
-- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, sense custodia no té ajut"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_monoparental: nop
+      tipus_familia_nombrosa: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: compartida
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5799
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2880
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1449
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1739
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 6]
+- name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, sense custodia no té ajut
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_monoparental: nop
-     tipus_familia_nombrosa: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: cap
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5799
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2880
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1449
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1739
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-- name: "Persona amb tots els condicionants i nivell de renda ordinari reb l'ajuda ordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_monoparental: nop
+      tipus_familia_nombrosa: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: cap
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5799
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2880
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1449
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1739
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants i nivell de renda ordinari reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 3 ]
-
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria adult 1"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 3]
+- name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria adult 1
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 10848
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, adult 2"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 10848
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, adult 2
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 6012
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, altres_persones"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 6012
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, altres_persones
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_familiars: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 3600
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-- name: "Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, menors"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_familiars: [adult3]
+      menors: [menor1]
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 3600
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, menors
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 4080
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-- name: "Persona amb tots els condicionants menys escolarització i nivell de renda ordinari nop reb l'ajuda ordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 4080
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants menys escolarització i nivell de renda ordinari nop reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: false
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-- name: "Persona amb tots els condicionants menys custodia i nivell de renda ordinari nop reb l'ajuda ordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: false
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants menys custodia i nivell de renda ordinari nop reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_custodia: cap
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-
-- name: "Persona amb tots els condicionants menys custodia i nivell de renda ordinari nop reb l'ajuda ordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_custodia: cap
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Persona amb tots els condicionants menys custodia i nivell de renda ordinari nop reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     tipus_familia_nombrosa: general
-     tipus_custodia: cap
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 9648
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 4812
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 2400
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 2880
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 0 ]
-
-
-- name: "Familia amb volum de negoci superior al limit nop reb l'ajuda extraordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      tipus_familia_nombrosa: general
+      tipus_custodia: cap
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 9648
+      adult2:
+        ingressos_bruts:
+          2016: 4812
+      adult3:
+        ingressos_bruts:
+          2016: 2400
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 2880
+  output:
+    EG_233_mensual: [0, 0, 0, 0]
+- name: Familia amb volum de negoci superior al limit nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_monoparental: nop
-     tipus_familia_nombrosa: nop
-     volum_del_negoci_familiar:
-      2016: 155001
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5784
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2880
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1428
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1728
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 3 ]
-
-
-- name: "Familia amb rendiments patrimonials superiors al llindar nop reb l'ajuda extraordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_monoparental: nop
+      tipus_familia_nombrosa: nop
+      volum_del_negoci_familiar:
+        2016: 155001
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5784
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2880
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1428
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1728
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 3]
+- name: Familia amb rendiments patrimonials superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_monoparental: nop
-     tipus_familia_nombrosa: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 1701
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5784
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2880
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1428
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1728
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 3 ]
-
-- name: "Familia amb valoracions cadastrals rustiques superiors al llindar nop reb l'ajuda extraordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_monoparental: nop
+      tipus_familia_nombrosa: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 1701
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5784
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2880
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1428
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1728
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 3]
+- name: Familia amb valoracions cadastrals rustiques superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_monoparental: nop
-     tipus_familia_nombrosa: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 131391
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5784
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2880
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1428
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1728
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 3 ]
-
-
-- name: "Familia amb valoracions cadastrals urbanes superiors al llindar nop reb l'ajuda extraordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_monoparental: nop
+      tipus_familia_nombrosa: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 131391
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5784
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2880
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1428
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1728
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 3]
+- name: Familia amb valoracions cadastrals urbanes superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_monoparental: nop
-     tipus_familia_nombrosa: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 42901
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5784
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 2880
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 1428
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1728
-     grau_discapacitat: 0
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 3 ]
-
-
-- name: "Familia obté ajut extraordinari per punts família"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_monoparental: nop
+      tipus_familia_nombrosa: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 42901
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5784
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 2880
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 1428
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1728
+        grau_discapacitat: 0
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 3]
+- name: Familia obté ajut extraordinari per punts família
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1"]
-     menors: ["menor1", "menor2"]
-     nivell_de_risc_d_exclusio_social: nop
-     tipus_familia_monoparental: especial
-     tipus_familia_nombrosa: especial
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "menor1", "menor2"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "menor1", "menor2"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5784
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1728
-     grau_discapacitat: 34
-     en_acolliment: true
-   - id: "menor2"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 1728
-     grau_discapacitat: 34
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 6, 6 ]
-
-
-- name: "Familia obté ajut extraordinari si es beneficiaria del fons 0-16"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [menor1, menor2]
+      nivell_de_risc_d_exclusio_social: nop
+      tipus_familia_monoparental: especial
+      tipus_familia_nombrosa: especial
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, menor1, menor2]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, menor1, menor2]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5784
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1728
+        grau_discapacitat: 34
+        en_acolliment: true
+      menor2:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 1728
+        grau_discapacitat: 34
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 6, 6]
+- name: Familia obté ajut extraordinari si es beneficiaria del fons 0-16
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: nop
-     tipus_familia_monoparental: especial
-     tipus_familia_nombrosa: especial
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 5784
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 3728
-     grau_discapacitat: 0
-     en_acolliment: false
-     beneficiari_fons_infancia: true
-  output_variables:
-    EG_233_mensual: [ 0, 6 ]
-
-- name: "Familia amb un discapacitat superior al 60% obté ajut per aquest membre"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: nop
+      tipus_familia_monoparental: especial
+      tipus_familia_nombrosa: especial
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 5784
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 3728
+        grau_discapacitat: 0
+        en_acolliment: false
+        beneficiari_fons_infancia: true
+  output:
+    EG_233_mensual: [0, 6]
+- name: Familia amb un discapacitat superior al 60% obté ajut per aquest membre
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1"]
-     menors: ["menor1", "menor2"]
-     nivell_de_risc_d_exclusio_social: nop
-     tipus_familia_monoparental: especial
-     tipus_familia_nombrosa: especial
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1", "menor1", "menor2"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "menor1", "menor2"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 24167
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 7249
-     grau_discapacitat: 61
-     en_acolliment: true
-   - id: "menor2"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-      2016: 7249
-     grau_discapacitat: 34
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 3, 0 ]
-
-
-- name: "Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [menor1, menor2]
+      nivell_de_risc_d_exclusio_social: nop
+      tipus_familia_monoparental: especial
+      tipus_familia_nombrosa: especial
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, menor1, menor2]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, menor1, menor2]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 24167
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 7249
+        grau_discapacitat: 61
+        en_acolliment: true
+      menor2:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 7249
+        grau_discapacitat: 34
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 3, 0]
+- name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1", "adult2"]
-     altres_persones: ["adult3"]
-     menors: ["menor1"]
-     nivell_de_risc_d_exclusio_social: greu
-     tipus_familia_nombrosa: nop
-     tipus_familia_monoparental: nop
-     volum_del_negoci_familiar:
-      2016: 0
-     rendiments_del_patrimoni:
-      2016: 0
-     valor_cadastral_finques_rustiques:
-      2016: 0
-     valor_cadastral_finques_urbanes:
-      2016: 0
-     tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["adult1", "adult2", "adult3", "menor1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1", "adult2", "adult3", "menor1"]
-  persones:
-   - id: "adult1"
-     ingressos_bruts:
-      2016: 14499
-     grau_discapacitat: 0
-   - id: "adult2"
-     ingressos_bruts:
-      2016: 7249
-     grau_discapacitat: 0
-   - id: "adult3"
-     ingressos_bruts:
-      2016: 3624
-     grau_discapacitat: 0
-   - id: "menor1"
-     es_escolaritzat_entre_P3_i_4rt_ESO: true
-     ingressos_bruts:
-       2016: 4349
-     grau_discapacitat: 61
-     en_acolliment: false
-  output_variables:
-    EG_233_mensual: [ 0, 0, 0, 6 ]
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      altres_persones: [adult3]
+      menors: [menor1]
+      nivell_de_risc_d_exclusio_social: greu
+      tipus_familia_nombrosa: nop
+      tipus_familia_monoparental: nop
+      volum_del_negoci_familiar:
+        2016: 0
+      rendiments_del_patrimoni:
+        2016: 0
+      valor_cadastral_finques_rustiques:
+        2016: 0
+      valor_cadastral_finques_urbanes:
+        2016: 0
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, adult3, menor1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, adult3, menor1]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2016: 14499
+        grau_discapacitat: 0
+      adult2:
+        ingressos_bruts:
+          2016: 7249
+        grau_discapacitat: 0
+      adult3:
+        ingressos_bruts:
+          2016: 3624
+        grau_discapacitat: 0
+      menor1:
+        es_escolaritzat_entre_P3_i_4rt_ESO: true
+        ingressos_bruts:
+          2016: 4349
+        grau_discapacitat: 61
+        en_acolliment: false
+  output:
+    EG_233_mensual: [0, 0, 0, 6]
