@@ -30,7 +30,7 @@ jobs:
           command: |
             . /tmp/venv/openfisca-barcelona/bin/activate
             pip install --upgrade pip twine wheel
-            pip install .[test] --upgrade
+            pip install ".[test]" --upgrade
 
       - save_cache:
           key: deps-{{ .Branch }}-{{ checksum "setup.py" }}
