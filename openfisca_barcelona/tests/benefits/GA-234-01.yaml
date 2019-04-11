@@ -1,0 +1,248 @@
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     edat: 66
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+  output_variables:
+     GA_234_01: [ 1 ]
+
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, no se sent sol"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     edat: 66
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     municipi_empadronament: barcelona
+     sentirse_sol: false
+  output_variables:
+     GA_234_01: [ 0 ]
+
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos > límit, se sent sol"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     edat: 66
+     ingressos_bruts:
+      2016: 9000
+     situacio_laboral: aturat
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+  output_variables:
+     GA_234_01: [ 0 ]
+
+- name: "Persona >= 65 anys, empadronat a altres, ingressos < límit, se sent sol"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     edat: 66
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     municipi_empadronament: altres
+     sentirse_sol: true
+  output_variables:
+     GA_234_01: [ 0 ]
+
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     edat: 66
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+  output_variables:
+     GA_234_01: [ 1 ]
+
+- name: "Persona < 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: false
+  families:
+     sustentadors_i_custodia: ["adult1"]
+  unitats_de_convivencia:
+     persones_que_conviuen: ["adult1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1"]
+  persones:
+   - id: "adult1"
+     edat: 60
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+  output_variables:
+     GA_234_01: [ 0 ]
+
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol, 2 membres, fill no rep ajuda"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    sustentadors_i_custodia: ["adult1"]
+    menors: ["infant1"]
+    tipus_familia_monoparental: nop
+    es_usuari_serveis_socials: false
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "infant1"]
+  persones:
+   - id: "adult1"
+     edat: 66
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 8000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "infant1"
+     edat: 5
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 3
+     ordre_del_menor: 0
+  output_variables:
+     GA_234_01: [ 1, 0 ]
+
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol, 3 membres, fill i parella no reben ajuda"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    sustentadors_i_custodia: ["adult1", "adult2"]
+    menors: ["infant1"]
+    tipus_familia_monoparental: nop
+    es_usuari_serveis_socials: false
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "adult2", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "infant1"]
+  persones:
+   - id: "adult1"
+     edat: 65
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 8000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "adult2"
+     edat: 63
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "infant1"
+     edat: 5
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 3
+     ordre_del_menor: 0
+  output_variables:
+     GA_234_01: [ 1, 0, 0 ]
+
+- name: "Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se senten sols, 3 membres, parella rep, fill no rep"
+  description: GA_234_01 - Ajuda Vincles (Gratuïta)
+  period: 2017-01
+  absolute_error_margin: 0
+  families:
+    sustentadors_i_custodia: ["adult1", "adult2"]
+    menors: ["infant1"]
+    tipus_familia_monoparental: nop
+    es_usuari_serveis_socials: false
+    tipus_custodia: total
+  unitats_de_convivencia:
+    persones_que_conviuen: ["adult1", "adult2", "infant1"]
+  families_fins_a_segon_grau:
+    familiars: ["adult1", "adult2", "infant1"]
+  persones:
+   - id: "adult1"
+     edat: 65
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 8000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "adult2"
+     edat: 66
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 6000
+     situacio_laboral: aturat
+     ha_esgotat_prestacio_de_desocupacio: true
+     anys_empadronat_a_barcelona: 10
+   - id: "infant1"
+     edat: 5
+     municipi_empadronament: barcelona
+     sentirse_sol: true
+     ingressos_bruts:
+      2016: 0
+     anys_empadronat_a_barcelona: 3
+     ordre_del_menor: 0
+  output_variables:
+     GA_234_01: [ 1, 1, 0 ]
