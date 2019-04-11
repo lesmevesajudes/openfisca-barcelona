@@ -1,855 +1,828 @@
-- name: "Persona amb tots els requeriments de HA-001 reb l'ajuda"
+- name: Persona amb tots els requeriments de HA-001 reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-    altres_persones: [ adult ]
-  unitats_de_convivencia:
-     persones_que_conviuen: [ adult ]
-     import_del_lloguer: 800
-     es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
-     tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
-     relacio_de_parentiu_amb_el_propietari: false
-     zona_de_lhabitatge: zona_a
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: adult
-     ingressos_bruts_ultims_sis_mesos: 3174
-     temps_empadronat_habitatge_actual: menys_nou_mesos
-     tipus_document_identitat: DNI
-     titular_contracte_de_lloguer: true
-     municipi_empadronament: barcelona
-  output_variables:
-     HA_001: [ 1 ]
-
-
-
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 800
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts_ultims_sis_mesos: 3174
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HA_001: [1]
 - name: Test from a simulation 58
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: 10dc3656-a5ae-474b-a537-76db4731019c
+  input:
+    familia:
       altres_persones:
-        - 8cdc35cc-926b-49d2-ba48-923a727a0f8b
-        - fca0efbf-339c-4367-9e7d-90be378439e0
-        - 831296ae-601f-4104-a749-fb6b8c3a6cf1
-  persones:
-    - id: 831296ae-601f-4104-a749-fb6b8c3a6cf1
-      edat:
-        "2017-01": 14
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": NIE
-      anys_empadronat_a_barcelona:
-        "2017-01": 14
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 8cdc35cc-926b-49d2-ba48-923a727a0f8b
-      edat:
-        "2017-01": 44
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 9452.40
-      situacio_laboral:
-        "2017-01": treball_compte_daltri_jornada_parcial
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": NIE
-      anys_empadronat_a_barcelona:
-        "2017-01": 8
-      victima_violencia_de_genere:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 6000
-      ha_treballat_a_l_estranger_6_mesos:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-      titular_contracte_de_lloguer: true
-      temps_empadronat_habitatge_actual: menys_nou_mesos
-    - id: fca0efbf-339c-4367-9e7d-90be378439e0
-      edat:
-        "2017-01": 1
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      tipus_document_identitat:
-        "2017-01": altres
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": false
-  unitats_de_convivencia:
-    - id: da40f1e6-cd01-481c-8506-fcc1fb543dda
+      - 8cdc35cc-926b-49d2-ba48-923a727a0f8b
+      - fca0efbf-339c-4367-9e7d-90be378439e0
+      - 831296ae-601f-4104-a749-fb6b8c3a6cf1
+    persones:
+      831296ae-601f-4104-a749-fb6b8c3a6cf1:
+        edat:
+          2017-01: 14
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: NIE
+        anys_empadronat_a_barcelona:
+          2017-01: 14
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      8cdc35cc-926b-49d2-ba48-923a727a0f8b:
+        edat:
+          2017-01: 44
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 9452.40
+        situacio_laboral:
+          2017-01: treball_compte_daltri_jornada_parcial
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: NIE
+        anys_empadronat_a_barcelona:
+          2017-01: 8
+        victima_violencia_de_genere:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 6000
+        ha_treballat_a_l_estranger_6_mesos:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+        titular_contracte_de_lloguer: true
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+      fca0efbf-339c-4367-9e7d-90be378439e0:
+        edat:
+          2017-01: 1
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        tipus_document_identitat:
+          2017-01: altres
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: false
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 600
+        2017-01: 600
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08014
+        2017-01: 08014
       persones_que_conviuen:
-        - 8cdc35cc-926b-49d2-ba48-923a727a0f8b
-        - fca0efbf-339c-4367-9e7d-90be378439e0
-        - 831296ae-601f-4104-a749-fb6b8c3a6cf1
+      - 8cdc35cc-926b-49d2-ba48-923a727a0f8b
+      - fca0efbf-339c-4367-9e7d-90be378439e0
+      - 831296ae-601f-4104-a749-fb6b8c3a6cf1
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_ciutat
+        2017-01: barcelona_ciutat
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": false
+        2017-01: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: 791d15e1-ed2b-4beb-ad9d-56d9967fc3c0
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - 8cdc35cc-926b-49d2-ba48-923a727a0f8b
-        - fca0efbf-339c-4367-9e7d-90be378439e0
-        - 831296ae-601f-4104-a749-fb6b8c3a6cf1
-  output_variables:
-    HA_001: [ 1 ]
-
+      - 8cdc35cc-926b-49d2-ba48-923a727a0f8b
+      - fca0efbf-339c-4367-9e7d-90be378439e0
+      - 831296ae-601f-4104-a749-fb6b8c3a6cf1
+  output:
+    HA_001: [1]
 - name: Test from a simulation 61
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: 9ad8ae6d-a600-4c52-b446-ac4f2250b80ed61192ed-b179-4923-80bf-7dbecc140397
+  input:
+    familia:
       menors:
-        - 55499106-84df-42ac-8d98-3b66d81b42d5
+      - 55499106-84df-42ac-8d98-3b66d81b42d5
       tipus_custodia:
-        "2017-01": total
+        2017-01: total
       sustentadors_i_custodia:
-        - 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
-        - d61192ed-b179-4923-80bf-7dbecc140397
+      - 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
+      - d61192ed-b179-4923-80bf-7dbecc140397
       es_usuari_serveis_socials:
-        "2017-01": false
+        2017-01: false
       tipus_familia_monoparental:
-        "2017-01": nop
-  persones:
-    - id: 55499106-84df-42ac-8d98-3b66d81b42d5
-      edat:
-        "2017-01": 5
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 0
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": altres
-      anys_empadronat_a_barcelona:
-        "2017-01": 0
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": false
-    - id: 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
-      edat:
-        "2017-01": 30
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 12000
-      situacio_laboral:
-        "2017-01": aturat
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": passaport
-      anys_empadronat_a_barcelona:
-        "2017-01": 0
-      victima_violencia_domestica:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 2556
-      inscrit_com_a_demandant_docupacio:
-        "2017-01": true
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": false
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": false
-      percep_prestacions_incompatibles_amb_la_feina:
-        "2017-01": false
-      inscrit_com_a_demandant_docupacio_mes_de_12_mesos:
-        "2017-01": false
-      en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina:
-        "2017-01": false
-    - id: d61192ed-b179-4923-80bf-7dbecc140397
-      edat:
-        "2017-01": 30
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      situacio_laboral:
-        "2017-01": altres
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": passaport
-      anys_empadronat_a_barcelona:
-        "2017-01": 0
-      victima_violencia_de_genere:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": false
-      titular_contracte_de_lloguer: true
-      temps_empadronat_habitatge_actual: menys_nou_mesos
-  unitats_de_convivencia:
-    - id: c96b7a50-9f52-4898-b22f-9d757be4c65a
+        2017-01: nop
+    persones:
+      55499106-84df-42ac-8d98-3b66d81b42d5:
+        edat:
+          2017-01: 5
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 0
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: altres
+        anys_empadronat_a_barcelona:
+          2017-01: 0
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: false
+      9ad8ae6d-a600-4c52-b446-ac4f2250b80e:
+        edat:
+          2017-01: 30
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 12000
+        situacio_laboral:
+          2017-01: aturat
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: passaport
+        anys_empadronat_a_barcelona:
+          2017-01: 0
+        victima_violencia_domestica:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 2556
+        inscrit_com_a_demandant_docupacio:
+          2017-01: true
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: false
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: false
+        percep_prestacions_incompatibles_amb_la_feina:
+          2017-01: false
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos:
+          2017-01: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina:
+          2017-01: false
+      d61192ed-b179-4923-80bf-7dbecc140397:
+        edat:
+          2017-01: 30
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        situacio_laboral:
+          2017-01: altres
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: passaport
+        anys_empadronat_a_barcelona:
+          2017-01: 0
+        victima_violencia_de_genere:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: false
+        titular_contracte_de_lloguer: true
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 600
+        2017-01: 600
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08001
+        2017-01: 08001
       persones_que_conviuen:
-        - 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
-        - d61192ed-b179-4923-80bf-7dbecc140397
-        - 55499106-84df-42ac-8d98-3b66d81b42d5
+      - 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
+      - d61192ed-b179-4923-80bf-7dbecc140397
+      - 55499106-84df-42ac-8d98-3b66d81b42d5
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_ciutat
+        2017-01: barcelona_ciutat
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": false
+        2017-01: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: 56c2a510-7dd8-4263-af4d-b4c87f8373d2
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
-        - d61192ed-b179-4923-80bf-7dbecc140397
-        - 55499106-84df-42ac-8d98-3b66d81b42d5
-  output_variables:
-    HA_001: [ 1 ]
-
-
+      - 9ad8ae6d-a600-4c52-b446-ac4f2250b80e
+      - d61192ed-b179-4923-80bf-7dbecc140397
+      - 55499106-84df-42ac-8d98-3b66d81b42d5
+  output:
+    HA_001: [1]
 - name: Test from a simulation 62
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: bc387516-b623-4c7c-bf45-b6821821e8f3
+  input:
+    familia:
       altres_familiars:
-        - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
-  persones:
-    - id: 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
-      edat:
-        "2017-01": 48
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      situacio_laboral:
-        "2017-01": altres
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": passaport
-      anys_empadronat_a_barcelona:
-        "2017-01": 1
-      victima_violencia_de_genere:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": false
-      titular_contracte_de_lloguer: true
-      temps_empadronat_habitatge_actual: menys_nou_mesos
-  unitats_de_convivencia:
-    - id: 2918b82d-57b0-4de2-b299-4594428bbafc
+      - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
+    persones:
+      20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2:
+        edat:
+          2017-01: 48
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        situacio_laboral:
+          2017-01: altres
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: passaport
+        anys_empadronat_a_barcelona:
+          2017-01: 1
+        victima_violencia_de_genere:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: false
+        titular_contracte_de_lloguer: true
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 800
+        2017-01: 800
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08001
+        2017-01: 08001
       persones_que_conviuen:
-        - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
+      - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_ciutat
+        2017-01: barcelona_ciutat
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": false
+        2017-01: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: 67d0a2e4-0c80-4851-8f56-6b94c68bea95
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
-  output_variables:
-    HA_001: [ 0 ]
-
-
+      - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
+  output:
+    HA_001: [0]
 - name: Test from a simulation 63
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: 78069e2e-077d-472f-82c7-130fc5800342
+  input:
+    familia:
       menors:
-        - 4f371cfd-c95f-4738-81ef-5d35af035cca
-        - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-        - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
+      - 4f371cfd-c95f-4738-81ef-5d35af035cca
+      - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
+      - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
       tipus_custodia:
-        "2017-01": total
+        2017-01: total
       sustentadors_i_custodia:
-        - 78069e2e-077d-472f-82c7-130fc5800342
+      - 78069e2e-077d-472f-82c7-130fc5800342
       es_usuari_serveis_socials:
-        "2017-01": false
+        2017-01: false
       tipus_familia_monoparental:
-        "2017-01": general
-  persones:
-    - id: 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
-      edat:
-        "2017-01": 4
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 2
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-      edat:
-        "2017-01": 6
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 1
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 4f371cfd-c95f-4738-81ef-5d35af035cca
-      edat:
-        "2017-01": 10
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 0
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 78069e2e-077d-472f-82c7-130fc5800342
-      edat:
-        "2017-01": 25
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 15000
-      situacio_laboral:
-        "2017-01": treball_compte_propi
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      victima_violencia_de_genere:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 2500
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-      titular_contracte_de_lloguer: true
-      temps_empadronat_habitatge_actual: menys_nou_mesos
-  unitats_de_convivencia:
-    - id: c772783e-b918-4931-8e90-4cae80275cbd
+        2017-01: general
+    persones:
+      05d7bbd3-8e80-417a-8b1d-2b146449e3aa:
+        edat:
+          2017-01: 4
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 2
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      2ceaed98-bee0-4285-88f4-b4df49dc85e7:
+        edat:
+          2017-01: 6
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 1
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      4f371cfd-c95f-4738-81ef-5d35af035cca:
+        edat:
+          2017-01: 10
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 0
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      78069e2e-077d-472f-82c7-130fc5800342:
+        edat:
+          2017-01: 25
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 15000
+        situacio_laboral:
+          2017-01: treball_compte_propi
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        victima_violencia_de_genere:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 2500
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+        titular_contracte_de_lloguer: true
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 700
+        2017-01: 700
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08001
+        2017-01: 08001
       persones_que_conviuen:
-        - 78069e2e-077d-472f-82c7-130fc5800342
-        - 4f371cfd-c95f-4738-81ef-5d35af035cca
-        - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-        - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
+      - 78069e2e-077d-472f-82c7-130fc5800342
+      - 4f371cfd-c95f-4738-81ef-5d35af035cca
+      - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
+      - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_ciutat
+        2017-01: barcelona_ciutat
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": false
+        2017-01: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: 0f0c8306-8e40-4641-a6b6-3194342a9352
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - 78069e2e-077d-472f-82c7-130fc5800342
-        - 4f371cfd-c95f-4738-81ef-5d35af035cca
-        - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-        - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
-  output_variables:
-    HA_001: [ 1 ]
-
-
-
-
+      - 78069e2e-077d-472f-82c7-130fc5800342
+      - 4f371cfd-c95f-4738-81ef-5d35af035cca
+      - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
+      - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
+  output:
+    HA_001: [1]
 - name: Test from a simulation 63
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: 78069e2e-077d-472f-82c7-130fc5800342
+  input:
+    familia:
       menors:
-        - 4f371cfd-c95f-4738-81ef-5d35af035cca
-        - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-        - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
+      - 4f371cfd-c95f-4738-81ef-5d35af035cca
+      - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
+      - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
       tipus_custodia:
-        "2017-01": total
+        2017-01: total
       sustentadors_i_custodia:
-        - 78069e2e-077d-472f-82c7-130fc5800342
+      - 78069e2e-077d-472f-82c7-130fc5800342
       es_usuari_serveis_socials:
-        "2017-01": false
+        2017-01: false
       tipus_familia_monoparental:
-        "2017-01": general
-  persones:
-    - id: 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
-      edat:
-        "2017-01": 4
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 2
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-      edat:
-        "2017-01": 6
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 1
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 4f371cfd-c95f-4738-81ef-5d35af035cca
-      edat:
-        "2017-01": 10
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 0
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": false
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 78069e2e-077d-472f-82c7-130fc5800342
-      edat:
-        "2017-01": 25
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 15000
-      situacio_laboral:
-        "2017-01": treball_compte_propi
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 4
-      victima_violencia_de_genere:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 2500
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-      titular_contracte_de_lloguer: true
-      temps_empadronat_habitatge_actual: menys_nou_mesos
-  unitats_de_convivencia:
-    - id: c772783e-b918-4931-8e90-4cae80275cbd
+        2017-01: general
+    persones:
+      05d7bbd3-8e80-417a-8b1d-2b146449e3aa:
+        edat:
+          2017-01: 4
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 2
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      2ceaed98-bee0-4285-88f4-b4df49dc85e7:
+        edat:
+          2017-01: 6
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 1
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      4f371cfd-c95f-4738-81ef-5d35af035cca:
+        edat:
+          2017-01: 10
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 0
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: false
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      78069e2e-077d-472f-82c7-130fc5800342:
+        edat:
+          2017-01: 25
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 15000
+        situacio_laboral:
+          2017-01: treball_compte_propi
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 4
+        victima_violencia_de_genere:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 2500
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+        titular_contracte_de_lloguer: true
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 700
+        2017-01: 700
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08001
+        2017-01: 08001
       persones_que_conviuen:
-        - 78069e2e-077d-472f-82c7-130fc5800342
-        - 4f371cfd-c95f-4738-81ef-5d35af035cca
-        - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-        - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
+      - 78069e2e-077d-472f-82c7-130fc5800342
+      - 4f371cfd-c95f-4738-81ef-5d35af035cca
+      - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
+      - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_ciutat
+        2017-01: barcelona_ciutat
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": false
+        2017-01: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: 0f0c8306-8e40-4641-a6b6-3194342a9352
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - 78069e2e-077d-472f-82c7-130fc5800342
-        - 4f371cfd-c95f-4738-81ef-5d35af035cca
-        - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
-        - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
-  output_variables:
-    HA_001: [ 1 ]
-
-
+      - 78069e2e-077d-472f-82c7-130fc5800342
+      - 4f371cfd-c95f-4738-81ef-5d35af035cca
+      - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
+      - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
+  output:
+    HA_001: [1]
 - name: Test from a simulation 65
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: f227a961-dc72-43ea-879c-9153625492ff
+  input:
+    familia:
       altres_familiars:
-        - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
-  persones:
-    - id: 510ba50e-f8a5-44c6-a523-eac8a58c5c08
-      edat:
-        "2017-01": 40
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 6000
-      situacio_laboral:
-        "2017-01": treball_compte_daltri_jornada_complerta
-      municipi_empadronament:
-        "2017-01": altres
-      tipus_document_identitat:
-        "2017-01": DNI
-      victima_violencia_de_genere:
-        "2017-01": false
-      titular_contracte_de_lloguer:
-        "2017-01": true
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 3000
-      temps_empadronat_habitatge_actual:
-        "2017-01": nou_mesos_o_mes
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-  unitats_de_convivencia:
-    - id: 6c1d33cc-7092-4a9f-8d5b-79a0a8bcc4c3
+      - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
+    persones:
+      510ba50e-f8a5-44c6-a523-eac8a58c5c08:
+        edat:
+          2017-01: 40
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 6000
+        situacio_laboral:
+          2017-01: treball_compte_daltri_jornada_complerta
+        municipi_empadronament:
+          2017-01: altres
+        tipus_document_identitat:
+          2017-01: DNI
+        victima_violencia_de_genere:
+          2017-01: false
+        titular_contracte_de_lloguer:
+          2017-01: true
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 3000
+        temps_empadronat_habitatge_actual:
+          2017-01: nou_mesos_o_mes
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 500
+        2017-01: 500
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08100
+        2017-01: 08100
       persones_que_conviuen:
-        - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
+      - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_provincia
+        2017-01: barcelona_provincia
       ha_pagat_almenys_3_quotes_del_lloguer:
-        "2017-01": true
+        2017-01: true
       relacio_de_parentiu_amb_el_propietari:
-        "2017-01": false
+        2017-01: false
       ha_rebut_una_notificacio_de_desnonament:
-        "2017-01": true
+        2017-01: true
       import_deute_en_el_pagament_del_lloguer:
-        "2017-01": 1000
+        2017-01: 1000
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": true
+        2017-01: true
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: 8d71dad2-d3ec-461f-8d5e-90a613a72615
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
-  output_variables:
-    HA_001: [ 0 ]
-
+      - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
+  output:
+    HA_001: [0]
 - name: Test from a simulation 66
   description: just a test
   period: 2017-01
   absolute_error_margin: false
-  families:
-    - id: 95645b7b-38db-4a44-98d5-73101ec9186e
-      altres_persones:
+  input:
+    families:
+      95645b7b-38db-4a44-98d5-73101ec9186e:
+        altres_persones:
         - 3b47ae47-2620-4104-8c3c-8bf47315b93e
-    - id: f38d88fd-1660-4ec1-9def-f79fc266c0cb
-      menors:
+      f38d88fd-1660-4ec1-9def-f79fc266c0cb:
+        menors:
         - 3056a9e9-3741-4114-829d-6439e76ddbb0
-      tipus_custodia:
-        "2017-01": compartida
-      sustentadors_i_custodia:
+        tipus_custodia:
+          2017-01: compartida
+        sustentadors_i_custodia:
         - f38d88fd-1660-4ec1-9def-f79fc266c0cb
-      es_usuari_serveis_socials:
-        "2017-01": false
-      tipus_familia_monoparental:
-        "2017-01": nop
-  persones:
-    - id: 3056a9e9-3741-4114-829d-6439e76ddbb0
-      edat:
-        "2017-01": 5
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 0
-      ordre_del_menor:
-        "2017-01": 0
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 5
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 0
-      es_escolaritzat_entre_P3_i_4rt_ESO:
-        "2017-01": true
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: 3b47ae47-2620-4104-8c3c-8bf47315b93e
-      edat:
-        "2017-01": 27
-      sexe:
-        "2017-01": dona
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 12000
-      situacio_laboral:
-        "2017-01": treball_compte_daltri_jornada_complerta
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 27
-      victima_violencia_de_genere:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 6000
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-    - id: f38d88fd-1660-4ec1-9def-f79fc266c0cb
-      edat:
-        "2017-01": 35
-      sexe:
-        "2017-01": home
-      en_acolliment:
-        "2017-01": false
-      ingressos_bruts:
-        2016: 14400
-      situacio_laboral:
-        "2017-01": treball_compte_daltri_jornada_complerta
-      municipi_empadronament:
-        "2017-01": barcelona
-      tipus_document_identitat:
-        "2017-01": DNI
-      anys_empadronat_a_barcelona:
-        "2017-01": 6
-      victima_violencia_domestica:
-        "2017-01": false
-      ingressos_bruts_ultims_sis_mesos:
-        "2017-01": 7200
-      ha_esgotat_prestacio_de_desocupacio:
-        "2017-01": true
-      beneficiari_de_prestacio_residencial:
-        "2017-01": false
-      porta_dos_anys_o_mes_empadronat_a_catalunya:
-        "2017-01": true
-  unitats_de_convivencia:
-    - id: ed2cc87e-2ca9-428e-80b2-0f9164b736f3
+        es_usuari_serveis_socials:
+          2017-01: false
+        tipus_familia_monoparental:
+          2017-01: nop
+    persones:
+      3056a9e9-3741-4114-829d-6439e76ddbb0:
+        edat:
+          2017-01: 5
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 0
+        ordre_del_menor:
+          2017-01: 0
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 5
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 0
+        es_escolaritzat_entre_P3_i_4rt_ESO:
+          2017-01: true
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      3b47ae47-2620-4104-8c3c-8bf47315b93e:
+        edat:
+          2017-01: 27
+        sexe:
+          2017-01: dona
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 12000
+        situacio_laboral:
+          2017-01: treball_compte_daltri_jornada_complerta
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 27
+        victima_violencia_de_genere:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 6000
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+      f38d88fd-1660-4ec1-9def-f79fc266c0cb:
+        edat:
+          2017-01: 35
+        sexe:
+          2017-01: home
+        en_acolliment:
+          2017-01: false
+        ingressos_bruts:
+          2016: 14400
+        situacio_laboral:
+          2017-01: treball_compte_daltri_jornada_complerta
+        municipi_empadronament:
+          2017-01: barcelona
+        tipus_document_identitat:
+          2017-01: DNI
+        anys_empadronat_a_barcelona:
+          2017-01: 6
+        victima_violencia_domestica:
+          2017-01: false
+        ingressos_bruts_ultims_sis_mesos:
+          2017-01: 7200
+        ha_esgotat_prestacio_de_desocupacio:
+          2017-01: true
+        beneficiari_de_prestacio_residencial:
+          2017-01: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya:
+          2017-01: true
+    unitat_de_convivencia:
       import_del_lloguer:
-        "2017-01": 800
+        2017-01: 800
       zona_de_lhabitatge:
-        "2017-01": zona_a
+        2017-01: zona_a
       codi_postal_habitatge:
-        "2017-01": 08016
+        2017-01: 08016
       persones_que_conviuen:
-        - f38d88fd-1660-4ec1-9def-f79fc266c0cb
-        - 3056a9e9-3741-4114-829d-6439e76ddbb0
-        - 3b47ae47-2620-4104-8c3c-8bf47315b93e
+      - f38d88fd-1660-4ec1-9def-f79fc266c0cb
+      - 3056a9e9-3741-4114-829d-6439e76ddbb0
+      - 3b47ae47-2620-4104-8c3c-8bf47315b93e
       demarcacio_de_lhabitatge:
-        "2017-01": barcelona_ciutat
+        2017-01: barcelona_ciutat
       existeix_deute_en_el_pagament_del_lloguer:
-        "2017-01": false
+        2017-01: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys:
-        "2017-01": false
-  families_fins_a_segon_grau:
-    - id: fb916b66-7eec-46fb-a5d0-a53d47ad638d
+        2017-01: false
+    familia_fins_a_segon_grau:
       familiars:
-        - f38d88fd-1660-4ec1-9def-f79fc266c0cb
-        - 3056a9e9-3741-4114-829d-6439e76ddbb0
-        - 3b47ae47-2620-4104-8c3c-8bf47315b93e
-  output_variables:
-    HA_001: [ 0 ]
+      - f38d88fd-1660-4ec1-9def-f79fc266c0cb
+      - 3056a9e9-3741-4114-829d-6439e76ddbb0
+      - 3b47ae47-2620-4104-8c3c-8bf47315b93e
+  output:
+    HA_001: [0]

@@ -20,7 +20,7 @@ class GA_234(Variable):
 
     def formula(persona, period, parameters):
         major_65 = persona("edat", period) >= 65
-        es_empadronat_a_barcelona = persona('municipi_empadronament', period) == 'barcelona'
+        es_empadronat_a_barcelona = persona('municipi_empadronament', period) == b'barcelona'
         se_sent_sol = persona('sentirse_sol', period)
 
         return \

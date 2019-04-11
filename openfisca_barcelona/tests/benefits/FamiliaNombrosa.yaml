@@ -1,95 +1,96 @@
-- name: "Three children is a familia nombrosa"
+- name: Three children is a familia nombrosa
   description: Familia nombrosa
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: [adult1, adult2]
-    menors: [infant1, infant2, infant3]
-  unitats_de_convivencia:
-    persones_que_conviuen: [adult1, adult2, infant1, infant2, infant3]
-  families_fins_a_segon_grau:
-    familiars: [adult1, adult2, infant1, infant2, infant3]
-  persones:
-   - id: adult1
-     edat: 57
-   - id: adult2
-     edat: 57
-   - id: infant1
-     edat: 15
-   - id: infant2
-     edat: 15
-   - id: infant3
-     edat: 10
-  output_variables:
-    es_familia_nombrosa: [ True ]
-
-- name: "Two children one disabled is a familia nombrosa"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      menors: [infant1, infant2, infant3]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, infant1, infant2, infant3]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, infant1, infant2, infant3]
+    persones:
+      adult1:
+        edat: 57
+      adult2:
+        edat: 57
+      infant1:
+        edat: 15
+      infant2:
+        edat: 15
+      infant3:
+        edat: 10
+  output:
+    es_familia_nombrosa: [true]
+- name: Two children one disabled is a familia nombrosa
   description: Familia nombrosa
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: [adult1, adult2]
-    menors: [infant1, infant2]
-  unitats_de_convivencia:
-    persones_que_conviuen: [adult1, adult2, infant1, infant2]
-  families_fins_a_segon_grau:
-    familiars: [adult1, adult2, infant1, infant2]
-  persones:
-   - id: adult1
-     edat: 57
-   - id: adult2
-     edat: 57
-   - id: infant1
-     edat: 15
-   - id: infant2
-     edat: 15
-     grau_discapacitat: 33
-  output_variables:
-    es_familia_nombrosa: [ True ]
-
-- name: "Two children one disabled is a familia nombrosa"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      menors: [infant1, infant2]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, infant1, infant2]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, infant1, infant2]
+    persones:
+      adult1:
+        edat: 57
+      adult2:
+        edat: 57
+      infant1:
+        edat: 15
+      infant2:
+        edat: 15
+        grau_discapacitat: 33
+  output:
+    es_familia_nombrosa: [true]
+- name: Two children one disabled is a familia nombrosa
   description: Familia nombrosa
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: [adult1, adult2]
-    menors: [infant1, infant2]
-  unitats_de_convivencia:
-    persones_que_conviuen: [adult1, adult2, infant1, infant2]
-  families_fins_a_segon_grau:
-    familiars: [adult1, adult2, infant1, infant2]
-  persones:
-   - id: adult1
-     edat: 57
-     grau_discapacitat: 33
-   - id: adult2
-     edat: 57
-   - id: infant1
-     edat: 15
-   - id: infant2
-     edat: 15
-  output_variables:
-    es_familia_nombrosa: [ True ]
-
-- name: "Two children are not a familia nombrosa"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      menors: [infant1, infant2]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, infant1, infant2]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, infant1, infant2]
+    persones:
+      adult1:
+        edat: 57
+        grau_discapacitat: 33
+      adult2:
+        edat: 57
+      infant1:
+        edat: 15
+      infant2:
+        edat: 15
+  output:
+    es_familia_nombrosa: [true]
+- name: Two children are not a familia nombrosa
   description: Familia nombrosa
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: [adult1, adult2]
-    menors: [infant1, infant2]
-  unitats_de_convivencia:
-    persones_que_conviuen: [adult1, adult2, infant1, infant2]
-  families_fins_a_segon_grau:
-    familiars: [adult1, adult2, infant1, infant2]
-  persones:
-   - id: adult1
-     edat: 57
-   - id: adult2
-     edat: 57
-   - id: infant1
-     edat: 15
-   - id: infant2
-     edat: 15
-  output_variables:
-    es_familia_nombrosa: [ False ]
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      menors: [infant1, infant2]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, infant1, infant2]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, infant1, infant2]
+    persones:
+      adult1:
+        edat: 57
+      adult2:
+        edat: 57
+      infant1:
+        edat: 15
+      infant2:
+        edat: 15
+  output:
+    es_familia_nombrosa: [false]

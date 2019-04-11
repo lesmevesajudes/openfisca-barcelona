@@ -1,27 +1,28 @@
-- name: "Persona amb tots els condicionants reb l'ajuda"
+- name: Persona amb tots els condicionants reb l'ajuda
   description: RAI 1 - Ajuda discapacitats 33% o superior
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult1"]
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult1"]
-  families_fins_a_segon_grau:
-    familiars: ["adult1"]
-  persones:
-   - id: "adult1"
-     data_naixement: '1961-01-15'
-     ingressos_bruts:
-      2016: 6000
-     situacio_laboral: aturat
-     grau_discapacitat: 34
-     ha_esgotat_prestacio_de_desocupacio: true
-     inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
-     ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
-     ha_estat_beneficiari_de_les_tres_rai_anteriors: false
-     treballa_per_compte_propi: false
-     ingressat_en_centre_penitenciari: false
-     percep_prestacions_incompatibles_amb_la_feina: false
-     beneficiari_ajuts_per_violencia_de_genere: false
-  output_variables:
-     GE_051_00_mensual: [ 430 ]
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        data_naixement: '1961-01-15'
+        ingressos_bruts:
+          2016: 6000
+        situacio_laboral: aturat
+        grau_discapacitat: 34
+        ha_esgotat_prestacio_de_desocupacio: true
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        ha_estat_beneficiari_de_la_rai_en_els_ultims_12_mesos: false
+        ha_estat_beneficiari_de_les_tres_rai_anteriors: false
+        treballa_per_compte_propi: false
+        ingressat_en_centre_penitenciari: false
+        percep_prestacions_incompatibles_amb_la_feina: false
+        beneficiari_ajuts_per_violencia_de_genere: false
+  output:
+    GE_051_00_mensual: [430]

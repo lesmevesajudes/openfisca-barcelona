@@ -1,12 +1,8 @@
-
-# Test files describe situations and their expected outcomes
-# We can run this test on our command line using `openfisca-run-test edat.yaml`
-
 - name: Person born on the 15th of Jan 1980
   period: 2015-01
-  input_variables:
+  input:
     data_naixement: 1980-01-15
-  output_variables:
+  output:
     edat:
       2015-01: 34
       2015-02: 35

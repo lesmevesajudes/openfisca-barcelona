@@ -13,7 +13,7 @@ class GA_246(Variable):
     def formula(persona, period, parameters):
         discapacitat_superior_al_33_percent = persona('grau_discapacitat', period) >= 33
         major_60 = persona("edat", period) >= 60
-        es_empadronat_a_barcelona = persona('municipi_empadronament', period) == 'barcelona'
+        es_empadronat_a_barcelona = persona('municipi_empadronament', period) == b'barcelona'
 
         return \
             (discapacitat_superior_al_33_percent + major_60) * \

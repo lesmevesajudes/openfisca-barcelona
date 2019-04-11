@@ -1,272 +1,268 @@
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC"
+- name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1", "mare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "mare1", "infant1"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "mare1", "infant1"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 7000
-     anys_empadronat_a_barcelona: 2
-   - id: "mare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-   - id: "infant1"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 0
-  output_variables:
-    AE_230_mensual: [ 0, 0, 100]
-
-
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC - do not take into account non family members"
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1, mare1]
+      menors: [infant1]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, mare1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, mare1, infant1]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 7000
+        anys_empadronat_a_barcelona: 2
+      mare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+      infant1:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 0
+  output:
+    AE_230_mensual: [0, 0, 100]
+- name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC - do not take into account non family members
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1", "mare1"]
-    menors: ["infant1"]
-    altres_persones: ["no_familiar"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "mare1", "infant1", "no_familiar"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "mare1", "infant1"]
-    no_familiars: ["no_familiar"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 7000
-     anys_empadronat_a_barcelona: 2
-   - id: "mare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-   - id: "infant1"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 0
-   - id: "no_familiar"
-     ingressos_bruts:
-      2016: 45000
-  output_variables:
-    AE_230_mensual: [ 0, 0, 100, 0]
-
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC fill nascut després de 2016-01-01"
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1, mare1]
+      menors: [infant1]
+      altres_persones: [no_familiar]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, mare1, infant1, no_familiar]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, mare1, infant1]
+      no_familiars: [no_familiar]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 7000
+        anys_empadronat_a_barcelona: 2
+      mare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+      infant1:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 0
+      no_familiar:
+        ingressos_bruts:
+          2016: 45000
+  output:
+    AE_230_mensual: [0, 0, 100, 0]
+- name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC fill nascut després de 2016-01-01
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1", "mare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "mare1", "infant1"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "mare1", "infant1"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 7000
-     anys_empadronat_a_barcelona: 2
-   - id: "mare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-   - id: "infant1"
-     edat: 1
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 1
-     ordre_del_menor: 0
-  output_variables:
-    AE_230_mensual: [ 0, 0, 100]
-
-- name: "0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC, data alta padró posterior a 01-01-16"
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1, mare1]
+      menors: [infant1]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, mare1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, mare1, infant1]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 7000
+        anys_empadronat_a_barcelona: 2
+      mare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+      infant1:
+        edat: 1
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 1
+        ordre_del_menor: 0
+  output:
+    AE_230_mensual: [0, 0, 100]
+- name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC, data alta padró posterior a 01-01-16
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1"]
-    menors: ["infant1"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_familia_monoparental: general
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "infant1"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "infant1"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 7000
-     anys_empadronat_a_barcelona: 1
-   - id: "infant1"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 1
-     ordre_del_menor: 0
-  output_variables:
-    AE_230_mensual: [ 0, 0]
-
-- name: "0-16 Unitat familiar 3 membres nivell renda disponible inferior a 1,5 IRSC"
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1]
+      menors: [infant1]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_familia_monoparental: general
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, infant1]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 7000
+        anys_empadronat_a_barcelona: 1
+      infant1:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 1
+        ordre_del_menor: 0
+  output:
+    AE_230_mensual: [0, 0]
+- name: 0-16 Unitat familiar 3 membres nivell renda disponible inferior a 1,5 IRSC
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1"]
-    menors: ["infant1", "infant2"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "infant1", "infant2"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "infant1", "infant2"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 12000
-     anys_empadronat_a_barcelona: 2
-   - id: "infant1"
-     edat: 15
-     municipi_empadronament: barcelona
-     ordre_del_menor: 0
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 0
-   - id: "infant2"
-     edat: 15
-     municipi_empadronament: barcelona
-     ordre_del_menor: 1
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 1
-  output_variables:
-    AE_230_mensual: [ 0, 100, 75]
-
-- name: "0-16 Unitat familiar 3 membres nivell renda disponible superior a 1,5 IRSC"
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1]
+      menors: [infant1, infant2]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, infant1, infant2]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, infant1, infant2]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 12000
+        anys_empadronat_a_barcelona: 2
+      infant1:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 0
+      infant2:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 1
+  output:
+    AE_230_mensual: [0, 100, 75]
+- name: 0-16 Unitat familiar 3 membres nivell renda disponible superior a 1,5 IRSC
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1"]
-    menors: ["infant1", "infant2"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "infant1", "infant2"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "infant1", "infant2"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 14940
-     anys_empadronat_a_barcelona: 2
-   - id: "infant1"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 0
-   - id: "infant2"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 1
-  output_variables:
-    AE_230_mensual: [ 0, 0, 0]
-
-- name: "0-16 Unitat familiar 4 membres nivell renda disponible superior a 1,5 IRSC"
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1]
+      menors: [infant1, infant2]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, infant1, infant2]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, infant1, infant2]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 14940
+        anys_empadronat_a_barcelona: 2
+      infant1:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 0
+      infant2:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 1
+  output:
+    AE_230_mensual: [0, 0, 0]
+- name: 0-16 Unitat familiar 4 membres nivell renda disponible superior a 1,5 IRSC
   description: Ajuda menors 0-16
   period: 2017-01
   absolute_error_margin: 0
-  families:
-    sustentadors_i_custodia: ["pare1", "mare1"]
-    menors: ["infant1", "infant2"]
-    domicili_a_barcelona_ciutat: true
-    es_usuari_serveis_socials: true
-    tipus_custodia: total
-  unitats_de_convivencia:
-    persones_que_conviuen: ["pare1", "mare1", "infant1", "infant2"]
-  families_fins_a_segon_grau:
-    familiars: ["pare1", "mare1", "infant1", "infant2"]
-  persones:
-   - id: "pare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 7928
-     anys_empadronat_a_barcelona: 2
-   - id: "mare1"
-     edat: 57
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 10000
-     anys_empadronat_a_barcelona: 2
-   - id: "infant1"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 0
-   - id: "infant2"
-     edat: 15
-     municipi_empadronament: barcelona
-     ingressos_bruts:
-      2016: 0
-     anys_empadronat_a_barcelona: 2
-     ordre_del_menor: 1
-  output_variables:
-    AE_230_mensual: [ 0, 0, 0, 0]
-
-
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1, mare1]
+      menors: [infant1, infant2]
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, mare1, infant1, infant2]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, mare1, infant1, infant2]
+    persones:
+      pare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 7928
+        anys_empadronat_a_barcelona: 2
+      mare1:
+        edat: 57
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 10000
+        anys_empadronat_a_barcelona: 2
+      infant1:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 0
+      infant2:
+        edat: 15
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2016: 0
+        anys_empadronat_a_barcelona: 2
+        ordre_del_menor: 1
+  output:
+    AE_230_mensual: [0, 0, 0, 0]

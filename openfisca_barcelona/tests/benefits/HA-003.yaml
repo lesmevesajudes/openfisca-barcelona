@@ -1,27 +1,28 @@
-- name: "Persona amb tots els requeriments de HA-003 reb l'ajuda"
+- name: Persona amb tots els requeriments de HA-003 reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-    altres_persones: [ adult ]
-  unitats_de_convivencia:
-     persones_que_conviuen: [ adult ]
-     import_de_la_hipoteca: 400
-     es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
-     tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
-     relacio_de_parentiu_amb_el_propietari: false
-     zona_de_lhabitatge: zona_a
-     ha_pagat_12_mesos_daquesta_hipoteca: true
-     demarcacio_de_lhabitatge: tarragona
-     import_deute_en_el_pagament_hipoteca: 2000
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: adult
-     ingressos_bruts_ultims_sis_mesos: 3174
-     temps_empadronat_habitatge_actual: menys_nou_mesos
-     tipus_document_identitat: DNI
-     titular_hipoteca: true
-     municipi_empadronament: altres
-  output_variables:
-     HA_003: [ 2000 ]
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_de_la_hipoteca: 400
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      ha_pagat_12_mesos_daquesta_hipoteca: true
+      demarcacio_de_lhabitatge: tarragona
+      import_deute_en_el_pagament_hipoteca: 2000
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts_ultims_sis_mesos: 3174
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_hipoteca: true
+        municipi_empadronament: altres
+  output:
+    HA_003: [2000]

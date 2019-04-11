@@ -1,359 +1,351 @@
-- name: "Persona amb tots els condicionants reb l'ajuda"
+- name: Persona amb tots els condicionants reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     situacio_laboral: aturat
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 314 ]
-
-
-- name: "Persona amb ingressos superiors al limit no reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1961-01-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        situacio_laboral: aturat
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [314]
+- name: Persona amb ingressos superiors al limit no reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts_ultims_sis_mesos: 6372
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     situacio_laboral: aturat
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-
-- name: "Persona que no ha viscut els ultims 24 mesos a Catalunya no reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1961-01-15'
+        ingressos_bruts_ultims_sis_mesos: 6372
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        situacio_laboral: aturat
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [0]
+- name: Persona que no ha viscut els ultims 24 mesos a Catalunya no reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts_ultims_sis_mesos: 3383
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: false
-     situacio_laboral: aturat
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-
-- name: "Persona que te una ajuda residencial no reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1961-01-15'
+        ingressos_bruts_ultims_sis_mesos: 3383
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: false
+        situacio_laboral: aturat
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [0]
+- name: Persona que te una ajuda residencial no reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts_ultims_sis_mesos: 3383
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     situacio_laboral: aturat
-     beneficiari_de_prestacio_residencial: true
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-
-- name: "Persona que que és un pres no reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1961-01-15'
+        ingressos_bruts_ultims_sis_mesos: 3383
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        situacio_laboral: aturat
+        beneficiari_de_prestacio_residencial: true
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [0]
+- name: Persona que que és un pres no reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts_ultims_sis_mesos: 3383
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     situacio_laboral: aturat
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: true
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-- name: "Persona que va causar baixa voluntaria de la última feina no reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1961-01-15'
+        ingressos_bruts_ultims_sis_mesos: 3383
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        situacio_laboral: aturat
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: true
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [0]
+- name: Persona que va causar baixa voluntaria de la última feina no reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1961-01-15'
-     ingressos_bruts_ultims_sis_mesos: 3383
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     situacio_laboral: aturat
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
-     inscrit_com_a_demandant_docupacio: false
-  output_variables:
-     GG_270_mensual: [ 0 ]
-
-
-- name: "Persona menor de 23 orfe de projenitors amb discapacitats a carrec reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1961-01-15'
+        ingressos_bruts_ultims_sis_mesos: 3383
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        situacio_laboral: aturat
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
+        inscrit_com_a_demandant_docupacio: false
+  output:
+    GG_270_mensual: [0]
+- name: Persona menor de 23 orfe de projenitors amb discapacitats a carrec reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     menors: ["menor_discapacitat"]
-     tipus_familia_monoparental: general
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult", "menor_discapacitat"]
-  families_fins_a_segon_grau:
-    familiars: ["adult", "menor_discapacitat"]
-  persones:
-   - id: "adult"
-     data_naixement: '1998-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     situacio_laboral: aturat
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-   - id: "menor_discapacitat"
-     data_naixement: '2008-03-15'
-     grau_discapacitat: 33
-  output_variables:
-     GG_270_mensual: [ 661, 0 ]
-
-
-- name: "Persona menor de 23 victima de violencia de genere reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      menors: [menor_discapacitat]
+      tipus_familia_monoparental: general
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult, menor_discapacitat]
+    familia_fins_a_segon_grau:
+      familiars: [adult, menor_discapacitat]
+    persones:
+      adult:
+        data_naixement: '1998-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        situacio_laboral: aturat
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+      menor_discapacitat:
+        data_naixement: '2008-03-15'
+        grau_discapacitat: 33
+  output:
+    GG_270_mensual: [661, 0]
+- name: Persona menor de 23 victima de violencia de genere reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1998-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: true
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     situacio_laboral: aturat
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 314 ]
-
-
-- name: "Persona menor de 23 orfena dels dos progenitors reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1998-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: true
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        situacio_laboral: aturat
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [314]
+- name: Persona menor de 23 orfena dels dos progenitors reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult"]
-  families_fins_a_segon_grau:
-    familiars: ["adult"]
-  persones:
-   - id: "adult"
-     data_naixement: '1998-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: true
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     situacio_laboral: aturat
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 314 ]
-
-
-- name: "Persona no empadronada i sense permis pero divorciada de familia reagrupada reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        data_naixement: '1998-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: true
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        situacio_laboral: aturat
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [314]
+- name: Persona no empadronada i sense permis pero divorciada de familia reagrupada reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     menors: ["menor_discapacitat"]
-     tipus_familia_monoparental: nop
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult", "menor_discapacitat"]
-  families_fins_a_segon_grau:
-    familiars: ["adult", "menor_discapacitat"]
-  persones:
-   - id: "adult"
-     data_naixement: '1990-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: true
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: true
-     situacio_laboral: aturat
-   - id: "menor_discapacitat"
-     data_naixement: '2008-03-15'
-     grau_discapacitat: 33
-     inscrit_com_a_demandant_docupacio: true
-  output_variables:
-     GG_270_mensual: [ 586, 0 ]
-
-- name: "Familia monoparental amb contracte a temps parcial no inscrita al SOC reb l'ajuda"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      menors: [menor_discapacitat]
+      tipus_familia_monoparental: nop
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult, menor_discapacitat]
+    familia_fins_a_segon_grau:
+      familiars: [adult, menor_discapacitat]
+    persones:
+      adult:
+        data_naixement: '1990-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: true
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: true
+        situacio_laboral: aturat
+      menor_discapacitat:
+        data_naixement: '2008-03-15'
+        grau_discapacitat: 33
+        inscrit_com_a_demandant_docupacio: true
+  output:
+    GG_270_mensual: [586, 0]
+- name: Familia monoparental amb contracte a temps parcial no inscrita al SOC reb l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult"]
-     menors: ["menor"]
-     tipus_familia_monoparental: general
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult", "menor"]
-  families_fins_a_segon_grau:
-    familiars: ["adult", "menor"]
-  persones:
-   - id: "adult"
-     data_naixement: '1980-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: false
-     situacio_laboral: treball_compte_daltri_jornada_parcial
-   - id: "menor"
-     data_naixement: '2008-03-15'
-  output_variables:
-     GG_270_mensual: [ 661, 0 ]
-
-
-- name: "Algorithm selects the person with a higher benefit"
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+      menors: [menor]
+      tipus_familia_monoparental: general
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult, menor]
+    familia_fins_a_segon_grau:
+      familiars: [adult, menor]
+    persones:
+      adult:
+        data_naixement: '1980-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: false
+        situacio_laboral: treball_compte_daltri_jornada_parcial
+      menor:
+        data_naixement: '2008-03-15'
+  output:
+    GG_270_mensual: [661, 0]
+- name: Algorithm selects the person with a higher benefit
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
-  families:
-     sustentadors_i_custodia: ["adult", "adult1"]
-     menors: ["menor"]
-     tipus_familia_monoparental: general
-  unitats_de_convivencia:
-     persones_que_conviuen: ["adult", "adult1", "menor"]
-  families_fins_a_segon_grau:
-     familiars: ["adult", "adult1", "menor"]
-  persones:
-   - id: "adult"
-     data_naixement: '1980-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1800
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: false
-     situacio_laboral: treball_compte_daltri_jornada_parcial
-   - id: "adult1"
-     data_naixement: '1980-03-15'
-     ingressos_bruts_ultims_sis_mesos: 1500
-     es_orfe_dels_dos_progenitors: false
-     es_victima_de_violencia_masclista: false
-     es_divorciada_de_familia_reagrupada: false
-     porta_dos_anys_o_mes_empadronat_a_catalunya: true
-     beneficiari_de_prestacio_residencial: false
-     ingressat_en_centre_penitenciari: false
-     en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
-     inscrit_com_a_demandant_docupacio: false
-     situacio_laboral: treball_compte_daltri_jornada_parcial
-   - id: "menor"
-     data_naixement: '2008-03-15'
-  output_variables:
-     GG_270_mensual: [ 0, 734, 0 ]
+  input:
+    familia:
+      sustentadors_i_custodia: [adult, adult1]
+      menors: [menor]
+      tipus_familia_monoparental: general
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult, adult1, menor]
+    familia_fins_a_segon_grau:
+      familiars: [adult, adult1, menor]
+    persones:
+      adult:
+        data_naixement: '1980-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1800
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: false
+        situacio_laboral: treball_compte_daltri_jornada_parcial
+      adult1:
+        data_naixement: '1980-03-15'
+        ingressos_bruts_ultims_sis_mesos: 1500
+        es_orfe_dels_dos_progenitors: false
+        es_victima_de_violencia_masclista: false
+        es_divorciada_de_familia_reagrupada: false
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        beneficiari_de_prestacio_residencial: false
+        ingressat_en_centre_penitenciari: false
+        en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
+        inscrit_com_a_demandant_docupacio: false
+        situacio_laboral: treball_compte_daltri_jornada_parcial
+      menor:
+        data_naixement: '2008-03-15'
+  output:
+    GG_270_mensual: [0, 734, 0]

@@ -1,4 +1,4 @@
-FROM python:2.7-alpine
+FROM python:3.7.3-alpine
 
 COPY ./setup.* ./docker/docker-entrypoint.sh /
 
@@ -6,7 +6,7 @@ RUN apk update && \
 	apk add build-base && \
 	apk add linux-headers && \
 	apk add yaml-dev && \
-	pip install -e ".[api,test]" && \
+	pip install -e ".[test]" && \
 	rm /setup.py /setup.cfg
 
 EXPOSE 2000
