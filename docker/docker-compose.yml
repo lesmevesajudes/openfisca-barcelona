@@ -1,0 +1,18 @@
+version: "3.5"
+ 
+services:
+  openfisca:
+    build: 
+      context: ".."
+      dockerfile: docker/Dockerfile
+    image: "openfisca-dev"
+    container_name: openfisca
+    volumes:
+      - "../:/usr/src/app"
+    working_dir: /usr/src/app
+    network_mode: "bridge"
+    environment:
+      COUNTRY_PACKAGE: "openfisca_barcelona"
+      HOST_PATH: "${PWD}"
+    ports:
+      - "2000:2000"

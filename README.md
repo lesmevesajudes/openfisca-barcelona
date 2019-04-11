@@ -95,3 +95,30 @@ and run:
 curl http://localhost:2000/api/1/calculate -X POST --data @./the_file_you_created.json --header 'Content-type: application/json'
 ```
 > [Learn more about the API](https://doc.openfisca.fr/openfisca-web-api/index.html)
+
+## Development environment using Docker
+
+Go to _docker_ subdirectory, run: 
+
+```sh
+docker-compose up -d
+```
+
+On first run, openfisca-dev image is created. In the creation process, all the necessary dependencies will be installed.
+
+The started container is named __openfisca__. Check that everything is working ok running the provided tests:
+
+```sh
+docker exec openfisca make test
+```
+
+The container is prepared to do remote debugs using Eclipse PyDev, JetBrains PyCharm or VSCode Python.
+
+### Debug tests using Eclipse PyDev
+
+1. Start python debug server in Eclipse: Dbeug Perspective -> Pydev -> Start Debug Server.
+2. Run:
+```sh
+docker exec openfisca make DEBUG_SERVER=<your eclipse workstation ip> test_remote_debug
+```
+

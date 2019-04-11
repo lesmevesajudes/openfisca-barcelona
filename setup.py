@@ -14,6 +14,9 @@ setup(
     keywords='benefit microsimulation social tax',
     license='http://www.fsf.org/licensing/licenses/agpl-3.0.html',
     url='https://github.com/openfisca/openfisca-barcelona',
+    entry_points = {
+        'console_scripts': ['openfisca-debug-test=openfisca_barcelona.scripts.debug_test:main'],
+    },
     include_package_data=True,  # Will read MANIFEST.in
     install_requires=[
         'OpenFisca-Core >= 23.1, < 24.0',
@@ -26,6 +29,7 @@ setup(
             'flake8 >= 3.4.0, < 3.5.0',
             'flake8-print',
             'nose',
+            'pydevd',
         ]
     },
     packages=find_packages(),
