@@ -116,3 +116,115 @@
         municipi_empadronament: barcelona
   output:
     HA_005: [0]
+- name: Familia nombrosa amb discapacitat
+  description: Ajuda lloguer just
+  period: 2017-01
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+      menors: [menor1, menor2]
+      es_usuari_serveis_socials: true
+      tipus_familia_monoparental: general
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2, menor1, menor2]
+      codi_postal_habitatge: 08003
+      demarcacio_de_lhabitatge: barcelona_ciutat
+      import_del_lloguer: 700
+      zona_de_lhabitatge: zona_a
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2, menor1, menor2]
+    persones:
+      adult1:
+        anys_empadronat_a_barcelona: 3
+        beneficiari_de_prestacio_residencial: true
+        edat: 45
+        en_acolliment: false
+        grau_discapacitat: 33
+        ha_esgotat_prestacio_de_desocupacio: false
+        ha_treballat_a_l_estranger_6_mesos: true
+        ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
+        ingressos_bruts:
+          2016: 3000
+        ingressos_per_pnc:
+          2016: 1000
+        inscrit_com_a_demandant_docupacio: true
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        municipi_empadronament: barcelona
+        tipus_document_identitat:
+          "2017-01": DNI
+        victima_violencia_domestica: true
+        titular_contracte_de_lloguer: true
+        temps_empadronat_habitatge_actual: nou_mesos_o_mes
+      adult2:
+        anys_empadronat_a_barcelona: 3
+        beneficiari_de_prestacio_residencial: true
+        edat: 45
+        en_acolliment: false
+        grau_discapacitat: 33
+        ha_esgotat_prestacio_de_desocupacio: false
+        ha_treballat_a_l_estranger_6_mesos: true
+        ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
+        ingressos_bruts:
+          2016: 3000
+        ingressos_per_pnc:
+          2016: 1000
+        inscrit_com_a_demandant_docupacio:
+          "2017-01": true
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos:
+          "2017-01": true
+        municipi_empadronament: barcelona
+        percep_prestacions_incompatibles_amb_la_feina: true
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        sexe: home
+        situacio_laboral: aturat
+        tipus_document_identitat: DNI
+        victima_violencia_domestica: true
+
+      menor1:
+        anys_empadronat_a_barcelona: 3
+        beneficiari_de_prestacio_residencial: true
+        edat: 12
+        en_acolliment: false
+        grau_discapacitat: 33
+        ha_esgotat_prestacio_de_desocupacio: false
+        ha_treballat_a_l_estranger_6_mesos: true
+        ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
+        ingressos_bruts:
+          2016: 3000
+        ingressos_per_pnc:
+          2016: 1000
+        inscrit_com_a_demandant_docupacio: true
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        municipi_empadronament: barcelona
+        percep_prestacions_incompatibles_amb_la_feina: true
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        sexe: home
+        situacio_laboral: aturat
+        tipus_document_identitat: DNI
+        victima_violencia_domestica: true
+      menor2:
+        anys_empadronat_a_barcelona: 3
+        beneficiari_de_prestacio_residencial: true
+        edat: 12
+        en_acolliment: false
+        grau_discapacitat: 33
+        ha_esgotat_prestacio_de_desocupacio: false
+        ha_treballat_a_l_estranger_6_mesos: true
+        ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos: true
+        ingressos_bruts:
+          2016: 3000
+        ingressos_per_pnc:
+          2016: 1000
+        inscrit_com_a_demandant_docupacio: true
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        municipi_empadronament: barcelona
+        percep_prestacions_incompatibles_amb_la_feina: true
+        porta_dos_anys_o_mes_empadronat_a_catalunya: true
+        sexe: home
+        situacio_laboral: aturat
+        tipus_document_identitat: DNI
+        victima_violencia_domestica: true
+  output:
+    HA_005: [200]
