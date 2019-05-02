@@ -60,14 +60,15 @@ class ordre_del_menor(Variable):
     label = "Ordinal number of this person within a family"
 
 
-class data_obertura_expedient_anterior_a_2016_12_31(Variable):
+class data_obertura_expedient_anterior_a_31_desembre(Variable):
     value_type = bool
     entity = Familia
     definition_period = ETERNITY
-    label = u"The social services expedient if filed after 2016/12/31"
+    label = u"The social services expedient if filed before 31st of december of previous year"
 
     def formula(familia, period, parameters):
-        return familia("data_obertura_expedient_serveis_socials", period) < datetime.strptime('2016-12-31', "%Y-%m-%d").date()
+        lastYear = datetime.now().year - 1
+        return familia("data_obertura_expedient_serveis_socials", period) < datetime.strptime(str(lastYear) + '-12-31', "%Y-%m-%d").date() 
 
 
 class data_alta_padro_valida_AE_230(Variable):
@@ -112,6 +113,7 @@ class compleix_criteris_AE230(Variable):
 
     def formula(persona, period, parameters):
         te_16_anys_o_menys = persona('edat', period) <= 16
+        expedient_amb_antiguitat = persona.familia('data_obertura_expedient_anterior_a_31_desembre', period)
         ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year) <= \
                                     varem_irsc_016(persona.familia.nb_persons())
         es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)
@@ -120,6 +122,7 @@ class compleix_criteris_AE230(Variable):
         existeix_algun_solicitant_AE_230 = persona.familia.any(persona.familia.members('solicitant_AE_230_valid', period))
 
         return te_16_anys_o_menys \
+               * expedient_amb_antiguitat \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
                * anys_empadronament_valid \
