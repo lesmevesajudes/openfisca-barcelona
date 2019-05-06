@@ -1,0 +1,12 @@
+compartida:
+  values:
+    2017-01-01:
+      value: 450
+    2019-01-01:
+      value: 400
+total:
+  values:
+    2017-01-01:
+      value: 900
+    2019-01-01:
+      value: 800
