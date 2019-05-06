@@ -2,8 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/lesmevesajudes/openfisca-barcelona.svg?style=svg)](https://circleci.com/gh/jvalduvieco/openfisca-barcelona)
 
-[OpenFisca](https://www.openfisca.fr/) package that model Spain legislation from Barcelona point of view. This project 
-is intended to be used as a simulator to determine which benefits can be opted by a person or family.
+[OpenFisca](https://www.openfisca.fr/) package that model a subset of Spain, Catalonia and Barcelona legislation. This project 
+is intended to be used as a simulator to determine which benefits can be opted by a person or a family.
 
 As domain language Catalan has been choosen as all project documentation and team uses this language. We use English in
 all non domain specific documentation to enable collaboration with other openfisca teams and developers in general.

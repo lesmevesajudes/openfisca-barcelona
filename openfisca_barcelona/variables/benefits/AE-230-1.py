@@ -16,8 +16,6 @@ class AE_230_01_mensual(Variable):
         tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
         es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
         tipus_custodia = persona.familia('tipus_custodia', period)
-        es_monoparental_custodia_total = es_monoparental * (tipus_custodia == tipus_custodia.possible_values.total)
-        es_monoparental_custodia_compartida = es_monoparental * (tipus_custodia == tipus_custodia.possible_values.compartida)
         compleix_criteris_AE230 = persona.familia.members('compleix_criteris_AE230', period)
         algun_membre_compleix_criteris_AE230 = persona.familia.any(compleix_criteris_AE230)
         import_ajuda = parameters(period).benefits.AE230.import_total[tipus_custodia]
