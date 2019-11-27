@@ -18,17 +18,11 @@ class GA_234_02(Variable):
 
     def formula(persona, period, parameters):
         requeriments_generals = persona('GA_234', period)
-        
-        ingressos_bruts_familia = persona.familia('familia_ingressos_bruts', period.last_year) 
-        nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
-        llindar_ingressos_minims = parameters(period).benefits.GA234.llindars_ingressos['A'][clauNombreDeMebres(nr_membres)]
-        llindar_ingressos = parameters(period).benefits.GA234.llindars_ingressos['B'][clauNombreDeMebres(nr_membres)]
-        compleix_ingressos_minims = ingressos_bruts_familia > llindar_ingressos_minims
-        compleix_ingressos_maxims = ingressos_bruts_familia <= llindar_ingressos
-        
+        te_dispositiu_propi = persona("te_dispositiu_inteligent_amb_connexio_a_internet", period)
+
+
         compleix_els_requeriments = \
             requeriments_generals \
-            * compleix_ingressos_minims \
-            * compleix_ingressos_maxims
+            * te_dispositiu_propi
 
         return compleix_els_requeriments

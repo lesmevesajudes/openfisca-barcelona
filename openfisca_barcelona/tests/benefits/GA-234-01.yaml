@@ -1,4 +1,4 @@
-- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol
+- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol, sense dispositiu propi
   description: GA_234_01 - Ajuda Vincles (A)
   period: 2017-01
   absolute_error_margin: false
@@ -17,8 +17,33 @@
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_01: [1]
+
+- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol, amb dispositiu propi
+  description: GA_234_01 - Ajuda Vincles (A)
+  period: 2017-01
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 66
+        ingressos_bruts:
+          2016: 6000
+        situacio_laboral: aturat
+        municipi_empadronament: barcelona
+        sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: true
+  output:
+    GA_234_01: [0]
+
 - name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, no se sent sol
   description: GA_234_01 - Ajuda Vincles (A)
   period: 2017-01
@@ -40,7 +65,7 @@
         sentirse_sol: false
   output:
     GA_234_01: [0]
-- name: Persona >= 65 anys, empadronat a Barcelona, ingressos > límit, se sent sol
+- name: Persona >= 65 anys, empadronat a Barcelona, ingressos > límit, se sent sol, sense dispositiu propi
   description: GA_234_01 - Ajuda Vincles (A)
   period: 2017-01
   absolute_error_margin: false
@@ -59,6 +84,7 @@
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_01: [0]
 - name: Persona >= 65 anys, empadronat a altres, ingressos < límit, se sent sol
@@ -80,6 +106,7 @@
         situacio_laboral: aturat
         municipi_empadronament: altres
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_01: [0]
 - name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol
@@ -101,6 +128,7 @@
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_01: [1]
 - name: Persona < 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol
@@ -122,6 +150,7 @@
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_01: [0]
 - name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit, se sent sol, 2 membres, fill no rep ajuda
@@ -144,6 +173,7 @@
         edat: 66
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
         ingressos_bruts:
           2016: 8000
         situacio_laboral: aturat
@@ -179,6 +209,7 @@
         edat: 65
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
         ingressos_bruts:
           2016: 8000
         situacio_laboral: aturat
@@ -223,6 +254,7 @@
         edat: 65
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
         ingressos_bruts:
           2016: 8000
         situacio_laboral: aturat

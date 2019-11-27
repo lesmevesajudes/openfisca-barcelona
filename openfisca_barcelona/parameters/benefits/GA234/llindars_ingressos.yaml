@@ -1,7 +1,7 @@
 description: Gross family income
 reference: openfisca
 
-A:
+menys_de_75:
   1:
     values:
       2017-01-01:
@@ -18,20 +18,6 @@ A:
     values:
       2017-01-01:
         value: 33086.20
-B:
-  1:
-    values:
+mes_de_74:
       2017-01-01:
         value: 16543.10
-  2:
-    values:
-      2017-01-01:
-        value: 33086.20
-  3:
-    values:
-      2017-01-01:
-        value: 49629.30
-  4:
-    values:
-      2017-01-01:
-        value: 66172.40
