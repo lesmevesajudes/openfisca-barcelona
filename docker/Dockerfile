@@ -8,7 +8,6 @@ RUN apk update && \
 	apk add yaml-dev && \
 	pip install --upgrade pip && \
 	pip install Cython && \
-	pip install numpy && \
 	pip install -e ".[test]" && \
 	rm /setup.py /setup.cfg
 
