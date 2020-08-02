@@ -3,25 +3,37 @@ compartida:
     values:
       2017-01-01:
         value: 50
+      2020-07-07:
+        value: 0
   segon:
     values:
       2017-01-01:
         value: 37.5
+      2020-07-07:
+        value: 0
   tercer_o_mes:
     values:
       2017-01-01:
         value: 25
+      2020-07-07:
+        value: 0
 
 total:
   primer:
     values:
       2017-01-01:
         value: 100
+      2020-07-07:
+        value: 0
   segon:
     values:
       2017-01-01:
         value: 75
+      2020-07-07:
+        value: 0
   tercer_o_mes:
     values:
       2017-01-01:
         value: 50
+      2020-07-07:
+        value: 0

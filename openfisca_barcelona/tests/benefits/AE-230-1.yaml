@@ -30,3 +30,35 @@
   output:
     AE_230_mensual: [0, 50]
     AE_230_01_mensual: [450, 0]
+- name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC cust. compartida. Any 2020, ajuda eliminada
+  description: Ajuda menors 0-16
+  period: 2020-08
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [pare1]
+      menors: [infant1]
+      tipus_familia_monoparental: general
+      domicili_a_barcelona_ciutat: true
+      es_usuari_serveis_socials: true
+      tipus_custodia: compartida
+    unitat_de_convivencia:
+      persones_que_conviuen: [pare1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [pare1, infant1]
+    persones:
+      pare1:
+        edat: 57
+        ingressos_bruts:
+          2019: 7000
+        anys_empadronat_a_barcelona: 2
+        municipi_empadronament: barcelona
+      infant1:
+        edat: 15
+        ingressos_bruts:
+          2019: 0
+        anys_empadronat_a_barcelona: 2
+        municipi_empadronament: barcelona
+  output:
+    AE_230_mensual: [0, 0]
+    AE_230_01_mensual: [0, 0]

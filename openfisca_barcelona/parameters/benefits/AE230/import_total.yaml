@@ -4,16 +4,22 @@ compartida:
       value: 450
     2019-01-01:
       value: 400
+    2020-07-07:
+      value: 0
 total:
   values:
     2017-01-01:
       value: 900
     2019-01-01:
       value: 800
+    2020-07-07:
+      value: 0
 
 cap:
   values:
     2017-01-01:
       value: 0
     2019-01-01:
+      value: 0
+    2020-07-07:
       value: 0
