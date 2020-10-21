@@ -3,7 +3,7 @@ from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
 
-class quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003(Variable):
+class quota_hipoteca_inferior_al_maxim_per_demarcacio_HG_077_03(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
     definition_period = MONTH
@@ -13,11 +13,11 @@ class quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_de_la_hipoteca = unitatDeConvivencia("import_de_la_hipoteca", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        import_de_la_hipoteca_maxim_per_demarcacio = legislation(period).benefits.H.import_quota_hipoteca_maxim["HA003"][demarcacio_de_lhabitatge]
+        import_de_la_hipoteca_maxim_per_demarcacio = legislation(period).benefits.H.import_quota_hipoteca_maxim["HG_077_03"][demarcacio_de_lhabitatge]
         return import_de_la_hipoteca <= import_de_la_hipoteca_maxim_per_demarcacio
 
 
-class pot_ser_solicitant_HA003(Variable):
+class pot_ser_solicitant_HG_077_03(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
@@ -39,7 +39,7 @@ class pot_ser_solicitant_HA003(Variable):
                * titular_hipoteca
 
 
-class HA_003(Variable):
+class HG_077_03(Variable):
     value_type = float
     unit = 'currency'
     entity = UnitatDeConvivencia
@@ -51,7 +51,7 @@ class HA_003(Variable):
         discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
         existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
-        poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HA003", period)
+        poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HG_077_03", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
@@ -66,7 +66,7 @@ class HA_003(Variable):
             unitatDeConvivencia("tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit", period) == False
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
-        quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003 = unitatDeConvivencia("quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003", period)
+        quota_hipoteca_inferior_al_maxim_per_demarcacio_HG_077_03 = unitatDeConvivencia("quota_hipoteca_inferior_al_maxim_per_demarcacio_HG_077_03", period)
         import_ajuda = min(3000, unitatDeConvivencia("import_deute_en_el_pagament_hipoteca", period))
 
         return existeix_solicitant_viable \
@@ -75,5 +75,5 @@ class HA_003(Variable):
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
                * no_relacio_de_parentiu_amb_el_propietari \
-               * quota_hipoteca_inferior_al_maxim_per_demarcacio_HA003 \
+               * quota_hipoteca_inferior_al_maxim_per_demarcacio_HG_077_03 \
                * import_ajuda
