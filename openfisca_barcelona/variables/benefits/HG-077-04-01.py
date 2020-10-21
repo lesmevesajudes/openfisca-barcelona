@@ -9,7 +9,7 @@ class ha_rebut_una_notificacio_de_desnonament(Variable):
     label = "Some person has a familiar relation to the owner"
     default_value = False
 
-class HA_004_01(Variable):
+class HG_077_04_01(Variable):
     value_type = float
     unit = 'currency'
     entity = UnitatDeConvivencia
@@ -17,5 +17,5 @@ class HA_004_01(Variable):
     label = "COMPLEMENT AJUTS LLOGUER ESPECIAL URGENCIA"
 
     def formula(unitatDeConvivencia, period, legislation):
-        return unitatDeConvivencia('HA_004', period) \
+        return unitatDeConvivencia('HG_077_04', period) \
                * unitatDeConvivencia('ha_rebut_una_notificacio_de_desnonament', period)

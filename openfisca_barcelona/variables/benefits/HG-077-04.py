@@ -3,7 +3,7 @@ from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
 
-class lloguer_inferior_al_maxim_per_demarcacio_HA004(Variable):
+class lloguer_inferior_al_maxim_per_demarcacio_HG_077_04(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
     definition_period = MONTH
@@ -13,11 +13,11 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA004(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        lloguer_maxim_per_demarcacio = legislation(period).benefits.H.import_lloguer_maxim["HA004"][demarcacio_de_lhabitatge]
+        lloguer_maxim_per_demarcacio = legislation(period).benefits.H.import_lloguer_maxim["HG_077_04"][demarcacio_de_lhabitatge]
         return import_del_lloguer <= lloguer_maxim_per_demarcacio
 
 
-class pot_ser_solicitant_HA004(Variable):
+class pot_ser_solicitant_HG_077_04(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
@@ -39,7 +39,7 @@ class pot_ser_solicitant_HA004(Variable):
                * titular_contracte_de_lloguer
 
 
-class HA_004(Variable):
+class HG_077_04(Variable):
     value_type = float
     unit = 'currency'
     entity = UnitatDeConvivencia
@@ -51,7 +51,7 @@ class HA_004(Variable):
         discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
         existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
-        poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HA004", period)
+        poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HG_077_04", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
@@ -60,7 +60,7 @@ class HA_004(Variable):
             * legislation(period).benefits.H.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         ha_pagat_almenys_3_quotes_del_lloguer = unitatDeConvivencia("ha_pagat_almenys_3_quotes_del_lloguer", period)
-        lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA004", period)
+        lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HG_077_04", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False
         no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit = \
