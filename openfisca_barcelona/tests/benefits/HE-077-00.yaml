@@ -1,4 +1,4 @@
-- name: Persona amb tots els requeriments de HA-005 reb l'ajuda
+- name: Persona amb tots els requeriments de HE-077-00 rep l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
@@ -24,8 +24,8 @@
         titular_contracte_de_lloguer: true
         municipi_empadronament: barcelona
   output:
-    HA_005: [200]
-- name: Familia nombrosa amb tots els requeriments de HA-005 reb l'ajuda
+    HE_077_00: [200]
+- name: Familia nombrosa amb tots els requeriments de HE-077-00 rep l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
@@ -82,8 +82,8 @@
         titular_contracte_de_lloguer: true
         municipi_empadronament: barcelona
   output:
-    HA_005: [200]
-- name: Persona amb tots els requeriments de HA-005 i lloguer sobre llindar NO reb l'ajuda
+    HE_077_00: [200]
+- name: Persona amb tots els requeriments de HE-077-00 i lloguer sobre llindar NO rep l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
@@ -115,7 +115,7 @@
         tipus_document_identitat: DNI
         municipi_empadronament: barcelona
   output:
-    HA_005: [0]
+    HE_077_00: [0]
 - name: Familia nombrosa amb discapacitat
   description: Ajuda lloguer just
   period: 2017-01
@@ -227,4 +227,4 @@
         tipus_document_identitat: DNI
         victima_violencia_domestica: true
   output:
-    HA_005: [200]
+    HE_077_00: [200]

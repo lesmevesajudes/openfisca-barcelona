@@ -8,7 +8,7 @@ def clauImportLloguerMaximFmiliaNombrosa(es_familia_nombrosa):
                   ["familia_nombrosa", "familia_convencional"])
 
 
-class lloguer_inferior_al_maxim_per_demarcacio_HA005(Variable):
+class lloguer_inferior_al_maxim_per_demarcacio_HE_077_00(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
     definition_period = MONTH
@@ -20,14 +20,14 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA005(Variable):
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
 
         lloguer_maxim_per_demarcacio = \
-            legislation(period).benefits.HA005.import_lloguer_maxim[clauImportLloguerMaximFmiliaNombrosa(
+            legislation(period).benefits.HE077.import_lloguer_maxim[clauImportLloguerMaximFmiliaNombrosa(
                 unitatDeConvivencia.any(
-                    unitatDeConvivencia.members("el_solicitant_HA005_es_membre_de_familia_nombrosa", period)))][
+                    unitatDeConvivencia.members("el_solicitant_HE_077_00_es_membre_de_familia_nombrosa", period)))][
                 demarcacio_de_lhabitatge]
         return import_del_lloguer <= lloguer_maxim_per_demarcacio
 
 
-class pot_ser_solicitant_HA005(Variable):
+class pot_ser_solicitant_HE_077_00(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
@@ -50,7 +50,7 @@ class pot_ser_solicitant_HA005(Variable):
                * titular_contracte_de_lloguer
 
 
-class el_solicitant_HA005_es_membre_de_familia_nombrosa(Variable):
+class el_solicitant_HE_077_00_es_membre_de_familia_nombrosa(Variable):
     value_type = bool
     entity = Persona
     definition_period = MONTH
@@ -58,10 +58,10 @@ class el_solicitant_HA005_es_membre_de_familia_nombrosa(Variable):
     default_value = False
 
     def formula(persona, period, legislation):
-        return persona("pot_ser_solicitant_HA005", period) * persona.familia("es_familia_nombrosa", period)
+        return persona("pot_ser_solicitant_HE_077_00", period) * persona.familia("es_familia_nombrosa", period)
 
 
-class HA_005(Variable):
+class HE_077_00(Variable):
     value_type = float
     unit = 'currency'
     entity = UnitatDeConvivencia
@@ -73,7 +73,7 @@ class HA_005(Variable):
         discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
         existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
-        poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HA005", period)
+        poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HE_077_00", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
@@ -83,7 +83,7 @@ class HA_005(Variable):
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = \
-            unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA005", period)
+            unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HE_077_00", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
             unitatDeConvivencia("es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge", period) == False
         no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit = \
