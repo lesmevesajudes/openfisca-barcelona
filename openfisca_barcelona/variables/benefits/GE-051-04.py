@@ -4,7 +4,7 @@ from openfisca_core.model_api import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
 
-class GE_051_00_mensual(Variable):
+class GE_051_04_mensual(Variable):
     value_type = float
     unit = 'currency'
     entity = Persona

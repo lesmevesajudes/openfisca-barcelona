@@ -1,6 +1,6 @@
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
-from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
+from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
 
 class ZonaDeLHabitatge(Enum):
@@ -63,8 +63,8 @@ class HA_001(Variable):
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts_ultims_sis_mesos) / 6
         ingressos_familia_mes_ajuda_superen_import_lloguer = (ingressos_familia_mensuals + 300) >= import_del_lloguer
         nivell_ingressos_maxim = \
-            legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.HA.multiplicadors[
+            legislation(period).benefits.H.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
+            * legislation(period).benefits.H.multiplicadors[
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         import_de_lloguer_supera_el_30_perc_dingressos = import_del_lloguer >= (ingressos_familia_mensuals * 0.3)

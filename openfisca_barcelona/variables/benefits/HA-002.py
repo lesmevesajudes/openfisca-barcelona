@@ -1,6 +1,6 @@
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
-from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
+from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
 
 class lloguer_inferior_al_maxim_per_demarcacio_HA002(Variable):
@@ -13,7 +13,7 @@ class lloguer_inferior_al_maxim_per_demarcacio_HA002(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        lloguer_maxim_per_demarcacio = legislation(period).benefits.HA.import_lloguer_maxim["HA002"][demarcacio_de_lhabitatge]
+        lloguer_maxim_per_demarcacio = legislation(period).benefits.H.import_lloguer_maxim["HA002"][demarcacio_de_lhabitatge]
 
         return import_del_lloguer <= lloguer_maxim_per_demarcacio
 
@@ -55,8 +55,8 @@ class HA_002(Variable):
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
         nivell_ingressos_maxim = \
-            legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.HA.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
+            legislation(period).benefits.H.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
+            * legislation(period).benefits.H.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HA002", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \

@@ -1,6 +1,6 @@
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
-from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
+from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
 
 def clauImportLloguerMaximFmiliaNombrosa(es_familia_nombrosa):
@@ -78,8 +78,8 @@ class HA_005(Variable):
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
         nivell_ingressos_maxim = \
-            legislation(period).benefits.HA.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.HA.multiplicadors[
+            legislation(period).benefits.H.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
+            * legislation(period).benefits.H.multiplicadors[
                 clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = \

@@ -1,6 +1,6 @@
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
-from openfisca_barcelona.variables.benefits.HA import clauIRSCPonderat, clauMultiplicadors
+from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
 class ha_rebut_una_notificacio_de_desnonament(Variable):
     value_type = bool

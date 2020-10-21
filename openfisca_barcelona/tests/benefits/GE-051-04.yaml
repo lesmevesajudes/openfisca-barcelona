@@ -25,4 +25,4 @@
         percep_prestacions_incompatibles_amb_la_feina: false
         beneficiari_ajuts_per_violencia_de_genere: false
   output:
-    GE_051_00_mensual: [430]
+    GE_051_04_mensual: [430]
