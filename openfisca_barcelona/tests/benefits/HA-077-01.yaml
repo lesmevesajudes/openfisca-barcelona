@@ -1,4 +1,4 @@
-- name: Persona amb tots els requeriments de HA-001 reb l'ajuda
+- name: Persona amb tots els requeriments de HA-077-01 rep l'ajuda
   description: Ajuda lloguer just
   period: 2017-01
   absolute_error_margin: false
@@ -22,7 +22,7 @@
         titular_contracte_de_lloguer: true
         municipi_empadronament: barcelona
   output:
-    HA_001: [1]
+    HA_077_01: [1]
 - name: Test from a simulation 58
   description: just a test
   period: 2017-01
@@ -132,7 +132,7 @@
       - fca0efbf-339c-4367-9e7d-90be378439e0
       - 831296ae-601f-4104-a749-fb6b8c3a6cf1
   output:
-    HA_001: [1]
+    HA_077_01: [1]
 - name: Test from a simulation 61
   description: just a test
   period: 2017-01
@@ -265,7 +265,7 @@
       - d61192ed-b179-4923-80bf-7dbecc140397
       - 55499106-84df-42ac-8d98-3b66d81b42d5
   output:
-    HA_001: [1]
+    HA_077_01: [1]
 - name: Test from a simulation 62
   description: just a test
   period: 2017-01
@@ -323,7 +323,7 @@
       familiars:
       - 20ebbf18-0158-4bae-8d26-dd1c9f3f9ea2
   output:
-    HA_001: [0]
+    HA_077_01: [0]
 - name: Test from a simulation 63
   description: just a test
   period: 2017-01
@@ -478,7 +478,7 @@
       - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
       - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
   output:
-    HA_001: [1]
+    HA_077_01: [1]
 - name: Test from a simulation 63
   description: just a test
   period: 2017-01
@@ -633,7 +633,7 @@
       - 2ceaed98-bee0-4285-88f4-b4df49dc85e7
       - 05d7bbd3-8e80-417a-8b1d-2b146449e3aa
   output:
-    HA_001: [1]
+    HA_077_01: [1]
 - name: Test from a simulation 65
   description: just a test
   period: 2017-01
@@ -699,7 +699,7 @@
       familiars:
       - 510ba50e-f8a5-44c6-a523-eac8a58c5c08
   output:
-    HA_001: [0]
+    HA_077_01: [0]
 - name: Test from a simulation 66
   description: just a test
   period: 2017-01
@@ -825,4 +825,4 @@
       - 3056a9e9-3741-4114-829d-6439e76ddbb0
       - 3b47ae47-2620-4104-8c3c-8bf47315b93e
   output:
-    HA_001: [0]
+    HA_077_01: [0]
