@@ -117,7 +117,7 @@ class import_GG_270(Variable):
         tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
         es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
         ingressos_mensuals = persona("ingressos_bruts_ultims_sis_mesos", period) / 6
-        import_ajuda = round_(llindar_ingressos - ingressos_mensuals, decimals=0) + (es_monoparental * 75)
+        import_ajuda = round_(llindar_ingressos - ingressos_mensuals, decimals=2) + (es_monoparental * 75)
         return import_ajuda * persona('solicitant_GG_270_valid', period)
 
 
