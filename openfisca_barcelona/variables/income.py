@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openfisca_core.model_api import *
+from openfisca_core.entities import *
 # Import the entities specifically defined for this tax and benefit system
 from openfisca_barcelona.entities import *
 
@@ -36,9 +37,9 @@ class ingressos_bruts_familiars(Variable):
 
     def formula(persona, period):
         ingressos = persona('ingressos_bruts', period, options=[DIVIDE])
-        return ingressos * (persona.has_role(persona.familia.SUSTENTADOR_I_CUSTODIA)
-                            + persona.has_role(persona.familia.SUSTENTADOR)
-                            + persona.has_role(persona.familia.MENOR))
+        return ingressos * (persona.has_role(Familia.SUSTENTADOR_I_CUSTODIA)
+                            + persona.has_role(Familia.SUSTENTADOR)
+                            + persona.has_role(Familia.MENOR))
 
 
 class familia_ingressos_bruts(Variable):

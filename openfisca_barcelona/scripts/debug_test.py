@@ -15,7 +15,7 @@ def main():
         sys.argv.remove(args.debugserver)
     else:
         pydevd.settrace()
-    sys.argv.insert(1, 'test')
+    sys.argv.insert(1, 'serve')
     sys.exit(openfisca_command.main())
 
 if __name__ == "__main__":

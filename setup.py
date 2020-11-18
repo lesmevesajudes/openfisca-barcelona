@@ -19,9 +19,9 @@ setup(
     },
     include_package_data=True,  # Will read MANIFEST.in
     install_requires=[
-        'gunicorn >=19.7.1, <20.0.0',
-        'Werkzeug >=0.14.0, <1.0.0',
-        'OpenFisca-Core[web-api] >=31.0, <32.0',
+        'gunicorn >=20.0.0,<21.0.0',
+        'Werkzeug >=1.0.0, <2.0.0',
+        'OpenFisca-Core[web-api] >=34.0, <35.0',
     ],
     extras_require={
         'test': [

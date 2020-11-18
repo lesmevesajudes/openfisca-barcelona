@@ -6,34 +6,50 @@ primer_adult:
     values:
       2016-01-01:
         value: 24168.25
+      2020-03-17:
+        value: 25241.25
   altres:
     values:
       2016-01-01:
         value: 9667.30
+      2020-03-17:
+        value: 10096.50
 segon_adult:
   membre_discapacitat_superior_60:
     values:
       2016-01-01:
         value: 12084.0
+      2020-03-17:
+        value: 12620.75
   altres:
     values:
       2016-01-01:
         value: 4833.6
+      2020-03-17:
+        value: 5048.30
 altres_familiars:
   membre_discapacitat_superior_60:
     values:
       2016-01-01:
         value: 6042
+      2020-03-17:
+        value: 6310.37
   altres:
     values:
       2016-01-01:
         value: 2416.8
+      2020-03-17:
+        value: 2524.15
 menors:
   membre_discapacitat_superior_60:
     values:
       2016-01-01:
         value: 7250.5
+      2020-03-17:
+        value: 7572.37
   altres:
     values:
       2016-01-01:
         value: 2900.2
+      2020-03-17:
+        value: 3028.95
