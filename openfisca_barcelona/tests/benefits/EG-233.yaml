@@ -43,7 +43,7 @@
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 6.2]
+    EG_233_mensual: [0, 0, 0, 6.33]
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, custodia compartida rep l'ajuda
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -89,7 +89,7 @@
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 6.2]
+    EG_233_mensual: [0, 0, 0, 6.33]
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, sense custodia no té ajut
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -165,7 +165,7 @@
         ingressos_bruts:
           2020: 2880
   output:
-    EG_233_mensual: [0, 0, 0, 3.1]
+    EG_233_mensual: [0, 0, 0, 4.43]
 - name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria adult 1
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -422,7 +422,7 @@
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3.1]
+    EG_233_mensual: [0, 0, 0, 4.43]
 - name: Familia amb rendiments patrimonials superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -468,7 +468,7 @@
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3.1]
+    EG_233_mensual: [0, 0, 0, 4.43]
 - name: Familia amb valoracions cadastrals rustiques superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -514,7 +514,7 @@
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3.1]
+    EG_233_mensual: [0, 0, 0, 4.43]
 - name: Familia amb valoracions cadastrals urbanes superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -560,7 +560,7 @@
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3.1]
+    EG_233_mensual: [0, 0, 0, 4.43]
 - name: Familia obté ajut extraordinari per punts família
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -603,7 +603,7 @@
         grau_discapacitat: 34
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 6.2, 6.2]
+    EG_233_mensual: [0, 6.33, 6.33]
 - name: Familia obté ajut extraordinari si es beneficiaria del fons 0-16
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -641,7 +641,7 @@
         en_acolliment: false
         beneficiari_fons_infancia: true
   output:
-    EG_233_mensual: [0, 6.2]
+    EG_233_mensual: [0, 6.33]
 - name: Familia amb un discapacitat superior al 60% obté ajut per aquest membre
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -684,7 +684,7 @@
         grau_discapacitat: 34
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 3.1, 0]
+    EG_233_mensual: [0, 4.43, 0]
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
   period: 2021-01
@@ -730,5 +730,5 @@
         grau_discapacitat: 61
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 6.2]
+    EG_233_mensual: [0, 0, 0, 6.33]
 
