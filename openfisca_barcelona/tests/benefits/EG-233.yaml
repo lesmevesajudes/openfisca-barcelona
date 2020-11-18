@@ -1,6 +1,6 @@
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -11,13 +11,13 @@
       tipus_familia_nombrosa: nop
       tipus_familia_monoparental: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -26,27 +26,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5799
+          2020: 6056
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2899
+          2020: 3027
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1449
+          2020: 1513
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1739
+          2020: 1816
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 6]
+    EG_233_mensual: [0, 0, 0, 6.2]
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, custodia compartida rep l'ajuda
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -57,13 +57,13 @@
       tipus_familia_monoparental: nop
       tipus_familia_nombrosa: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: compartida
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -72,27 +72,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5799
+          2020: 6056
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2880
+          2020: 3027
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1449
+          2020: 1513
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1739
+          2020: 1816
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 6]
+    EG_233_mensual: [0, 0, 0, 6.2]
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria, sense custodia no té ajut
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -103,13 +103,13 @@
       tipus_familia_monoparental: nop
       tipus_familia_nombrosa: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: cap
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -118,27 +118,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5799
+          2020: 6056
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2880
+          2020: 3027
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1449
+          2020: 1513
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1739
+          2020: 1816
         grau_discapacitat: 0
         en_acolliment: false
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants i nivell de renda ordinari reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -153,22 +153,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
-    EG_233_mensual: [0, 0, 0, 3]
+    EG_233_mensual: [0, 0, 0, 3.1]
 - name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria adult 1
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -183,22 +183,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 10848
+          2020: 10848
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, adult 2
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -213,22 +213,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 6012
+          2020: 6012
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari no reb l'ajuda ordinaria, altres_persones
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -243,22 +243,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 3600
+          2020: 3600
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants i nivell de renda superior a l'ordinari nop reb l'ajuda ordinaria, menors
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -273,22 +273,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 4080
+          2020: 4080
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants menys escolarització i nivell de renda ordinari nop reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -303,22 +303,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: false
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants menys custodia i nivell de renda ordinari nop reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -333,22 +333,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Persona amb tots els condicionants menys custodia i nivell de renda ordinari nop reb l'ajuda ordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -364,22 +364,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 9648
+          2020: 9648
       adult2:
         ingressos_bruts:
-          2016: 4812
+          2020: 4812
       adult3:
         ingressos_bruts:
-          2016: 2400
+          2020: 2400
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
   output:
     EG_233_mensual: [0, 0, 0, 0]
 - name: Familia amb volum de negoci superior al limit nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -390,13 +390,13 @@
       tipus_familia_monoparental: nop
       tipus_familia_nombrosa: nop
       volum_del_negoci_familiar:
-        2016: 155001
+        2020: 155001
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -405,27 +405,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5784
+          2020: 5784
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1428
+          2020: 1428
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1728
+          2020: 1728
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3]
+    EG_233_mensual: [0, 0, 0, 3.1]
 - name: Familia amb rendiments patrimonials superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -436,13 +436,13 @@
       tipus_familia_monoparental: nop
       tipus_familia_nombrosa: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 1701
+        2020: 1701
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -451,27 +451,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5784
+          2020: 5784
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1428
+          2020: 1428
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1728
+          2020: 1728
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3]
+    EG_233_mensual: [0, 0, 0, 3.1]
 - name: Familia amb valoracions cadastrals rustiques superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -482,13 +482,13 @@
       tipus_familia_monoparental: nop
       tipus_familia_nombrosa: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 131391
+        2020: 131391
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -497,27 +497,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5784
+          2020: 5784
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1428
+          2020: 1428
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1728
+          2020: 1728
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3]
+    EG_233_mensual: [0, 0, 0, 3.1]
 - name: Familia amb valoracions cadastrals urbanes superiors al llindar nop reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -528,13 +528,13 @@
       tipus_familia_monoparental: nop
       tipus_familia_nombrosa: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 42901
+        2020: 42901
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -543,27 +543,27 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5784
+          2020: 5784
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 2880
+          2020: 2880
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 1428
+          2020: 1428
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1728
+          2020: 1728
         grau_discapacitat: 0
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 3]
+    EG_233_mensual: [0, 0, 0, 3.1]
 - name: Familia obté ajut extraordinari per punts família
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -573,13 +573,13 @@
       tipus_familia_monoparental: especial
       tipus_familia_nombrosa: especial
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, menor1, menor2]
@@ -588,25 +588,25 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5784
+          2020: 5784
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1728
+          2020: 1728
         grau_discapacitat: 34
         en_acolliment: true
       menor2:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 1728
+          2020: 1728
         grau_discapacitat: 34
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 6, 6]
+    EG_233_mensual: [0, 6.2, 6.2]
 - name: Familia obté ajut extraordinari si es beneficiaria del fons 0-16
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -616,13 +616,13 @@
       tipus_familia_monoparental: especial
       tipus_familia_nombrosa: especial
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, menor1]
@@ -631,20 +631,20 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 5784
+          2020: 5784
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 3728
+          2020: 3728
         grau_discapacitat: 0
         en_acolliment: false
         beneficiari_fons_infancia: true
   output:
-    EG_233_mensual: [0, 6]
+    EG_233_mensual: [0, 6.2]
 - name: Familia amb un discapacitat superior al 60% obté ajut per aquest membre
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -654,13 +654,13 @@
       tipus_familia_monoparental: especial
       tipus_familia_nombrosa: especial
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, menor1, menor2]
@@ -669,25 +669,25 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 24167
+          2020: 25241
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 7249
+          2020: 7572
         grau_discapacitat: 61
         en_acolliment: true
       menor2:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 7249
+          2020: 7572
         grau_discapacitat: 34
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 3, 0]
+    EG_233_mensual: [0, 3.1, 0]
 - name: Persona amb tots els condicionants i nivell de renda extraordinari reb l'ajuda extraordinaria
   description: EG_233 - AJUTS INDIVIDUALS DE BEQUES MENJADOR CIUTAT BARCELONA
-  period: 2017-01
+  period: 2021-01
   absolute_error_margin: false
   input:
     familia:
@@ -698,13 +698,13 @@
       tipus_familia_nombrosa: nop
       tipus_familia_monoparental: nop
       volum_del_negoci_familiar:
-        2016: 0
+        2020: 0
       rendiments_del_patrimoni:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_rustiques:
-        2016: 0
+        2020: 0
       valor_cadastral_finques_urbanes:
-        2016: 0
+        2020: 0
       tipus_custodia: total
     unitat_de_convivencia:
       persones_que_conviuen: [adult1, adult2, adult3, menor1]
@@ -713,21 +713,22 @@
     persones:
       adult1:
         ingressos_bruts:
-          2016: 14499
+          2020: 15144
         grau_discapacitat: 0
       adult2:
         ingressos_bruts:
-          2016: 7249
+          2020: 7572
         grau_discapacitat: 0
       adult3:
         ingressos_bruts:
-          2016: 3624
+          2020: 3786
         grau_discapacitat: 0
       menor1:
         es_escolaritzat_entre_P3_i_4rt_ESO: true
         ingressos_bruts:
-          2016: 4349
+          2020: 4544
         grau_discapacitat: 61
         en_acolliment: false
   output:
-    EG_233_mensual: [0, 0, 0, 6]
+    EG_233_mensual: [0, 0, 0, 6.2]
+

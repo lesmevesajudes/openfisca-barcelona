@@ -3,3 +3,5 @@ reference: openfisca
 values:
   2017-01-01:
     value: 3
+  2020-03-17:
+    value: 3.10
