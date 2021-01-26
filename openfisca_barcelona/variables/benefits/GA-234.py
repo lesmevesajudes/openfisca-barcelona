@@ -12,6 +12,14 @@ class sentirse_sol(Variable):
     set_input = set_input_dispatch_by_period
     default_value = False
 
+class te_dispositiu_inteligent_amb_connexio_a_internet(Variable):
+    value_type = bool
+    entity = Persona
+    definition_period = MONTH
+    label = "The user has an smartphone or tablet"
+    set_input = set_input_dispatch_by_period
+    default_value = False
+
 class GA_234(Variable):
     value_type = bool
     entity = Persona
@@ -22,7 +30,6 @@ class GA_234(Variable):
         major_65 = persona("edat", period) >= 65
         es_empadronat_a_barcelona = persona('municipi_empadronament', period) == b'barcelona'
         se_sent_sol = persona('sentirse_sol', period)
-
         return \
             major_65 * \
             es_empadronat_a_barcelona * \

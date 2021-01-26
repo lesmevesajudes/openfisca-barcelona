@@ -1,4 +1,4 @@
-- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit_minim, se sent sol
+- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < màxim_ingressos, se sent sol, amb dispositiu mòbil intel·ligent
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: false
@@ -17,9 +17,10 @@
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: true
   output:
-    GA_234_02: [0]
-- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit_mínim, no se sent sol
+    GA_234_02: [1]
+- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < màxim_ingressos, no se sent sol, sense dispositiu mòbil intel·ligent
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: false
@@ -38,9 +39,10 @@
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: false
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_02: [0]
-- name: Persona >= 65 anys, empadronat a Barcelona, límit_màxim > ingressos > límit_mínim, se sent sol
+- name: Persona >= 75 anys, empadronat a Barcelona, màxim_ingressos < ingressos, se sent sol, sense dispositiu mòbil intel·ligent
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: false
@@ -53,36 +55,38 @@
       familiars: [adult1]
     persones:
       adult1:
-        edat: 66
-        ingressos_bruts:
-          2016: 9000
-        situacio_laboral: aturat
-        municipi_empadronament: barcelona
-        sentirse_sol: true
-  output:
-    GA_234_02: [1]
-- name: Persona >= 65 anys, empadronat a Barcelona, límit_mínim < ingressos < límit_màxim, se sent sol
-  description: GA_234_02 - Ajuda Vincles (B)
-  period: 2017-01
-  absolute_error_margin: false
-  input:
-    familia:
-      sustentadors_i_custodia: [adult1]
-    unitat_de_convivencia:
-      persones_que_conviuen: [adult1]
-    familia_fins_a_segon_grau:
-      familiars: [adult1]
-    persones:
-      adult1:
-        edat: 66
+        edat: 76
         ingressos_bruts:
           2016: 19000
         situacio_laboral: aturat
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_02: [0]
-- name: Persona >= 65 anys, empadronat a altres, límit_mínim < ingressos < límit_màxim, se sent sol
+- name: Persona >= 75 anys, empadronat a Barcelona, ingressos < límit_màxim, se sent sol, sense dispositiu mòbil intel·ligent
+  description: GA_234_02 - Ajuda Vincles (B)
+  period: 2017-01
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 76
+        ingressos_bruts:
+          2016: 19000
+        situacio_laboral: aturat
+        municipi_empadronament: barcelona
+        sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
+  output:
+    GA_234_02: [0]
+- name: Persona >= 75 anys, empadronat a altres, ingressos < límit_màxim, se sent sol, sense dispositiu mòbil intel·ligent
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: false
@@ -101,9 +105,10 @@
         situacio_laboral: aturat
         municipi_empadronament: altres
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
   output:
     GA_234_02: [0]
-- name: Persona < 65 anys, empadronat a Barcelona, límit_mínim < ingressos < límit_màxim, se sent sol
+- name: Persona < 65 anys, empadronat a Barcelona, ingressos < límit_màxim, se sent sol
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: false
@@ -124,7 +129,7 @@
         sentirse_sol: true
   output:
     GA_234_02: [0]
-- name: Persona >= 65 anys, empadronat a Barcelona, límit_mínim < ingressos < límit_màxim, se sent sol, 2 membres, fill no rep ajuda
+- name: Persona >= 65 anys, empadronat a Barcelona, ingressos < límit_màxim, se sent sol, 2 membres, fill no rep ajuda, sense dispositiu mòbil intel·ligent
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: 0
@@ -144,8 +149,9 @@
         edat: 66
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
         ingressos_bruts:
-          2016: 18000
+          2016: 15000
         situacio_laboral: aturat
         ha_esgotat_prestacio_de_desocupacio: true
         anys_empadronat_a_barcelona: 10
@@ -158,82 +164,30 @@
         anys_empadronat_a_barcelona: 3
         ordre_del_menor: 0
   output:
-    GA_234_02: [1, 0]
-- name: Persona >= 65 anys, empadronat a Barcelona, límit_mínim < ingressos < límit_màxim, se sent sol, 3 membres, fill i parella no reben ajuda
+    GA_234_02: [0, 0]
+- name: Persona >= 75 anys, empadronat a Barcelona, ingressos < límit_màxim, se sent sol, 2 membres, sense dispositiu mòbil intel·ligent
   description: GA_234_02 - Ajuda Vincles (B)
   period: 2017-01
   absolute_error_margin: 0
   input:
     familia:
-      sustentadors_i_custodia: [adult1, adult2]
+      sustentadors_i_custodia: [adult1]
       menors: [infant1]
       tipus_familia_monoparental: nop
       es_usuari_serveis_socials: false
       tipus_custodia: total
     unitat_de_convivencia:
-      persones_que_conviuen: [adult1, adult2, infant1]
+      persones_que_conviuen: [adult1, infant1]
     familia_fins_a_segon_grau:
-      familiars: [adult1, adult2, infant1]
+      familiars: [adult1, infant1]
     persones:
       adult1:
-        edat: 65
-        municipi_empadronament: barcelona
-        sentirse_sol: true
-        ingressos_bruts:
-          2016: 18000
-        situacio_laboral: aturat
-        ha_esgotat_prestacio_de_desocupacio: true
-        anys_empadronat_a_barcelona: 10
-      adult2:
-        edat: 63
-        municipi_empadronament: barcelona
-        sentirse_sol: true
-        ingressos_bruts:
-          2016: 9000
-        situacio_laboral: aturat
-        ha_esgotat_prestacio_de_desocupacio: true
-        anys_empadronat_a_barcelona: 10
-      infant1:
-        edat: 5
-        municipi_empadronament: barcelona
-        sentirse_sol: true
-        ingressos_bruts:
-          2016: 0
-        anys_empadronat_a_barcelona: 3
-        ordre_del_menor: 0
-  output:
-    GA_234_02: [1, 0, 0]
-- name: Persona >= 65 anys, empadronat a Barcelona, límit_mínim < ingressos < límit_màxim, se senten sols, 3 membres, parella rep, fill no rep
-  description: GA_234_02 - Ajuda Vincles (B)
-  period: 2017-01
-  absolute_error_margin: 0
-  input:
-    familia:
-      sustentadors_i_custodia: [adult1, adult2]
-      menors: [infant1]
-      tipus_familia_monoparental: nop
-      es_usuari_serveis_socials: false
-      tipus_custodia: total
-    unitat_de_convivencia:
-      persones_que_conviuen: [adult1, adult2, infant1]
-    familia_fins_a_segon_grau:
-      familiars: [adult1, adult2, infant1]
-    persones:
-      adult1:
-        edat: 65
-        municipi_empadronament: barcelona
-        sentirse_sol: true
-        ingressos_bruts:
-          2016: 18000
-        situacio_laboral: aturat
-        ha_esgotat_prestacio_de_desocupacio: true
-        anys_empadronat_a_barcelona: 10
-      adult2:
         edat: 66
         municipi_empadronament: barcelona
         sentirse_sol: true
+        te_dispositiu_inteligent_amb_connexio_a_internet: false
         ingressos_bruts:
-          2016: 9000
+          2016: 10000
         situacio_laboral: aturat
         ha_esgotat_prestacio_de_desocupacio: true
         anys_empadronat_a_barcelona: 10
@@ -246,4 +200,4 @@
         anys_empadronat_a_barcelona: 3
         ordre_del_menor: 0
   output:
-    GA_234_02: [1, 1, 0]
+    GA_234_02: [0, 0]
