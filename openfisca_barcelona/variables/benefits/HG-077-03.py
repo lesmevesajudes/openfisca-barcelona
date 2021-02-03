@@ -28,7 +28,9 @@ class pot_ser_solicitant_HG_077_03(Variable):
         tipus_document_identitat = persona("tipus_document_identitat", period)
         has_DNI = tipus_document_identitat == tipus_document_identitat.possible_values.DNI
         has_NIE = tipus_document_identitat == tipus_document_identitat.possible_values.NIE
-        empadronat_a_catalunya = (persona("municipi_empadronament", period) == b'barcelona') + (persona("municipi_empadronament", period) == b'altres')
+        empadronat_a_catalunya = (persona("municipi_empadronament", period) == b'barcelona') \
+        + (persona("municipi_empadronament", period) == b'altres') \
+        + (persona("municipi_empadronament", period) == b'municipis_atm')
         temps_empadronat_a_lhabitatge = persona("temps_empadronat_habitatge_actual", period)
         empadronat_a_lhabitatge = temps_empadronat_a_lhabitatge != temps_empadronat_a_lhabitatge.possible_values.no_empadronat
         titular_hipoteca = persona("titular_hipoteca", period)

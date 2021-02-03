@@ -1,0 +1,123 @@
+- name: Persona > 18 anys, 2 membres, fill < 4 anys empadronat a barcelona. No rep ajuda
+  description: TA-01-00-00 - T-16
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [infant1]
+      tipus_familia_monoparental: nop
+      es_usuari_serveis_socials: false
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, infant1]
+    persones:
+      adult1:
+        edat: 49
+      infant1:
+        edat: 2
+        municipi_empadronament: barcelona
+        ordre_del_menor: 0
+  output:
+    TA_01_00_00: [0, 0]
+- name: Persona > 18 anys, 2 membres, fill > 16 anys empadronat a barcelona. No rep ajuda
+  description: TA-01-00-00 - T-16
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [infant1]
+      tipus_familia_monoparental: nop
+      es_usuari_serveis_socials: false
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, infant1]
+    persones:
+      adult1:
+        edat: 49
+      infant1:
+        edat: 17
+        municipi_empadronament: barcelona
+        ordre_del_menor: 0
+  output:
+    TA_01_00_00: [0, 0]
+- name: Persona > 18 anys, 2 membres, fill 6 anys empadronat fora de municipis ATM. No rep ajuda
+  description: TA-01-00-00 - T-16
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [infant1]
+      tipus_familia_monoparental: nop
+      es_usuari_serveis_socials: false
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, infant1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: altres
+      infant1:
+        edat: 6
+        municipi_empadronament: altres
+        ordre_del_menor: 0
+  output:
+    TA_01_00_00: [0, 0]
+- name: Persona > 18 anys, 2 membres, fill 6 anys empadronat a barcelona. Rep ajuda
+  description: TA-01-00-00 - T-16
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [infant1]
+      tipus_familia_monoparental: nop
+      es_usuari_serveis_socials: false
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, infant1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: altres
+      infant1:
+        edat: 6
+        municipi_empadronament: barcelona
+        ordre_del_menor: 0
+  output:
+    TA_01_00_00: [0, 40]
+- name: Persona > 18 anys, 2 membres, fill 6 anys empadronat a altres municipis ATM. Rep ajuda
+  description: TA-01-00-00 - T-16
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+      menors: [infant1]
+      tipus_familia_monoparental: nop
+      es_usuari_serveis_socials: false
+      tipus_custodia: total
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, infant1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1, infant1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: altres
+      infant1:
+        edat: 6
+        municipi_empadronament: municipis_atm
+        ordre_del_menor: 0
+  output:
+    TA_01_00_00: [0, 40]

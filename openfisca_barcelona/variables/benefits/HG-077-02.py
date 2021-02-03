@@ -29,7 +29,9 @@ class pot_ser_solicitant_HG_077_02(Variable):
         tipus_document_identitat = persona("tipus_document_identitat", period)
         has_DNI = tipus_document_identitat == tipus_document_identitat.possible_values.DNI
         has_NIE = tipus_document_identitat == tipus_document_identitat.possible_values.NIE
-        empadronat_a_catalunya = (persona("municipi_empadronament", period) == b'barcelona') + (persona("municipi_empadronament", period) == b'altres')
+        empadronat_a_catalunya = (persona("municipi_empadronament", period) == b'barcelona') \
+        + (persona("municipi_empadronament", period) == b'altres') \
+        + (persona("municipi_empadronament", period) == b'municipis_atm')
         titular_contracte_de_lloguer = persona("titular_contracte_de_lloguer", period)
 
         return (has_DNI + has_NIE) \
