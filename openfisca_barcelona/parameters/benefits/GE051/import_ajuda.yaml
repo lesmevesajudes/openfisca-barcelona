@@ -3,3 +3,5 @@ reference: openfisca
 values:
   2017-01-01:
     value: 430
+  2021-01-01:
+    value: 451.92
