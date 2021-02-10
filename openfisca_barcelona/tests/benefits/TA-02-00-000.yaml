@@ -1,0 +1,159 @@
+- name: Persona > 18 anys sense atur ni prestacions ni subsidis. No rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+  output:
+    TA_02_00_00: [0]
+- name: Persona > 18 anys sense atur de curta durada, sense prestacions ni subsidis. No rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        situacio_laboral: aturat
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: false
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: false
+        percep_ajut_serveis_socials_municipals: false
+  output:
+    TA_02_00_00: [0]
+- name: Persona > 18 anys aturada i inscrita com a demandant durant 12 mesos, amb altres prestacions o subsidis estatals superiors a 950€. No rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: true
+        percep_ajut_serveis_socials_municipals: false
+  output:
+    TA_02_00_00: [0]
+- name: Persona > 18 anys. Rep només ajut d'un ajuntament de fora del sistema tarifari integrat. No rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: altres
+        percep_ajut_serveis_socials_municipals: true
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: false
+  output:
+    TA_02_00_00: [0]
+- name: Persona > 18 anys empadronada fora de Catalunya. Aturada i inscrita com a demandant durant 12 mesos, amb altres prestacions o subsidis estatals inferiors a 950€. No rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: no_empadronat_a_cat
+        situacio_laboral: aturat
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: true
+        percep_prestacio_menys_de_950: true
+        percep_ajut_serveis_socials_municipals: false
+  output:
+    TA_02_00_00: [0]
+- name: Persona > 18 anys empadronada a bcn. Aturada i inscrita com a demandant durant 12 mesos, amb altres prestacions o subsidis estatals inferiors a 950€. Rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: barcelona
+        situacio_laboral: aturat
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: true
+        percep_prestacio_menys_de_950: true
+        percep_ajut_serveis_socials_municipals: false
+  output:
+    TA_02_00_00: [30.05]
+- name: Persona > 18 anys aturada i inscrita com a demandant durant 12 mesos, sense prestacions ni subsidis. Rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: barcelona
+        situacio_laboral: aturat
+        inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: false
+        percep_ajut_serveis_socials_municipals: false
+  output:
+    TA_02_00_00: [30.05]
+- name: Persona > 18 anys. Rep només ajut d'un ajuntament de dins del sistema tarifari integrat. Rep ajuda
+  description: TA-02-00-00 - T-Usual bonificada
+  period: 2021-02
+  absolute_error_margin: 0
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 49
+        municipi_empadronament: barcelona
+        situacio_laboral: aturat
+        percep_ajut_serveis_socials_municipals: true
+        gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: false
+  output:
+    TA_02_00_00: [30.05]
