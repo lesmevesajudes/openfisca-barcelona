@@ -2,6 +2,22 @@ from numpy.ma import logical_not
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 
+def clauNombreDeMebres(membres):
+    return select([membres == 1, membres == 2, membres == 3, membres == 4, membres > 4],
+                  ['1', '2', '3', '4', '5_o_mes'])
+
+class compleix_ingressos_maxims_rai(Variable):
+    value_type = bool
+    entity = FamiliaRai
+    definition_period = MONTH
+    label = "Total income for familiar unit following RAI critieria"
+    set_input = set_input_dispatch_by_period
+
+    def formula(familiaRai, period, parameters):
+        nr_membres = familiaRai.nb_persons()
+        llindar_ingressos_rai = parameters(period).benefits.GE051.llindars_ingressos[clauNombreDeMebres(nr_membres)]
+        ingressos_bruts_familia = familiaRai.sum(familiaRai.members('ingressos_bruts', period.last_year))/12
+        return ingressos_bruts_familia < llindar_ingressos_rai
 
 class renda_mensual_disponible_inferior_a_75_percent_SMI(Variable):
     value_type = bool
@@ -11,7 +27,7 @@ class renda_mensual_disponible_inferior_a_75_percent_SMI(Variable):
     set_input = set_input_dispatch_by_period
 
     def formula(persona, period, parameters):
-        llindar_ingressos = parameters(period).benefits.GE051.llindars_ingressos
+        llindar_ingressos = parameters(period).benefits.GE051.llindars_ingressos['1']
         return persona('ingressos_bruts', period.last_year)/12 <= llindar_ingressos
 
 
@@ -95,8 +111,8 @@ class GE_051_mensual(Variable):
     label = "GE_051_1 - RAI 1 - Ajuda discapacitats 33% o superior"
 
     def formula(persona, period, parameters):
-        cap_membre_amb_ingressos_superiors_a_75_percent_SMI = \
-            persona.familia('cap_familiar_te_renda_disponible_superior_a_75_percent_SMI', period)
+        compleix_ingressos_maxims_rai = \
+            persona.familia_rai('compleix_ingressos_maxims_rai', period)
         situacio_laboral = persona('situacio_laboral', period)
         aturat = situacio_laboral == situacio_laboral.possible_values.aturat
         no_se_li_ha_concedit_cap_ajuda_rai_en_els_ultims_12_mesos = \
@@ -110,7 +126,7 @@ class GE_051_mensual(Variable):
         menor_de_65_anys = persona('edat', period) < 65
 
         return \
-            cap_membre_amb_ingressos_superiors_a_75_percent_SMI \
+            compleix_ingressos_maxims_rai \
             * aturat \
             * menor_de_65_anys \
             * no_treballa_per_compte_propi \

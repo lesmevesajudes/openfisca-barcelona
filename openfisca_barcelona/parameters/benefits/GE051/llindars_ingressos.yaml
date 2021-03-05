@@ -1,7 +1,26 @@
 description: monthly income limit 75% of IMS
 reference: openfisca
-values:
-  2017-01-01:
-    value: 551.93
-  2021-02-01:
-    value: 712.50
+1:
+  values:
+    2017-01-01:
+        value: 551.93
+    2021-02-01:
+      value: 712.50
+2:
+  values:
+    2017-01-01:
+        value: 1103.86
+    2021-02-01:
+      value: 1425.00
+3:
+  values:
+    2017-01-01:
+        value: 1655.79
+    2021-02-01:
+      value: 2137.50
+4:
+  values:
+    2017-01-01:
+        value: 2207.72
+    2021-02-01:
+      value: 2850.00
