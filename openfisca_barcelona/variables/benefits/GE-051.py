@@ -17,7 +17,7 @@ class compleix_ingressos_maxims_rai(Variable):
         nr_membres = familiaRai.nb_persons()
         llindar_ingressos_rai = parameters(period).benefits.GE051.llindars_ingressos[clauNombreDeMebres(nr_membres)]
         ingressos_bruts_familia = familiaRai.sum(familiaRai.members('ingressos_bruts', period.last_year))/12
-        return ingressos_bruts_familia < llindar_ingressos_rai
+        return ingressos_bruts_familia <= llindar_ingressos_rai
 
 class renda_mensual_disponible_inferior_a_75_percent_SMI(Variable):
     value_type = bool
