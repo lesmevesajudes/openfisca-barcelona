@@ -87,6 +87,18 @@ FamiliaRai = build_entity(
     ]
 )
 
+FamiliaNombrosa = build_entity(
+    key="familia_nombrosa",
+    plural="families_nombroses",
+    label=u'Familia nombrosa',
+    roles=[{
+        'key': 'familiars',
+        'plural': 'familiars',
+        'label': u'persones familiars'
+    }
+    ]
+)
+
 Persona = build_entity(
     key="persona",
     plural="persones",
@@ -95,4 +107,4 @@ Persona = build_entity(
     )
 
 
-entities = [Familia, Persona, UnitatDeConvivencia, FamiliaFins2onGrau, FamiliaRai]
+entities = [Familia, Persona, UnitatDeConvivencia, FamiliaFins2onGrau, FamiliaRai, FamiliaNombrosa]

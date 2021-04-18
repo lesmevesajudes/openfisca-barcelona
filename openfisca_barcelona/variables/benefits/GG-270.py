@@ -72,6 +72,7 @@ class solicitant_GG_270_valid(Variable):
         es_orfe_de_progenitors = persona("es_orfe_dels_dos_progenitors", period)
         tipus_monoparental = persona.familia('tipus_familia_monoparental', period)
         es_monoparental = tipus_monoparental != tipus_monoparental.possible_values.nop
+        es_familia_nombrosa = persona.has_role(FamiliaNombrosa.FAMILIARS)
         es_victima_violencia_de_genere = persona("es_victima_de_violencia_masclista", period)
         ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos = \
             persona("ha_treballat_a_l_estranger_6_mesos_i_ha_retornat_en_els_ultims_12_mesos", period)
@@ -99,7 +100,7 @@ class solicitant_GG_270_valid(Variable):
                             * en_els_ultims_12_mesos_no_ha_fet_baixa_voluntaria_de_la_feina \
                             * no_beneficiari_de_prestacio_residencial \
                             * compleix_nivell_ingressos \
-                            * (inscrit_com_a_demandant_docupacio + (es_monoparental * es_contracte_jornada_parcial)) \
+                            * (inscrit_com_a_demandant_docupacio + es_familia_nombrosa + (es_monoparental * es_contracte_jornada_parcial)) \
                             * no_ingressat_en_centre_penitenciari
 
         return compleix_criteris
