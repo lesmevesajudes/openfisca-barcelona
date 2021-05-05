@@ -2,17 +2,15 @@ from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
 from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
-
-def clauImportLloguerMaximFmiliaNombrosa(es_familia_nombrosa):
-    return select([es_familia_nombrosa, es_familia_nombrosa == False],
-                  ["familia_nombrosa", "familia_convencional"])
-
+def clauNombreDeMebres(membres):
+    return select([membres == 1, membres == 2, membres == 3, membres >= 4],
+                  ['1', '2', '3', '4_o_mes'])
 
 class lloguer_inferior_al_maxim_per_demarcacio_HE_077_00(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
     definition_period = MONTH
-    label = "Some person has a familiar relation to the owner"
+    label = "place rental below maximum allowed"
     default_value = False
 
     def formula(unitatDeConvivencia, period, legislation):
@@ -20,11 +18,12 @@ class lloguer_inferior_al_maxim_per_demarcacio_HE_077_00(Variable):
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
 
         lloguer_maxim_per_demarcacio = \
-            legislation(period).benefits.HE077.import_lloguer_maxim[clauImportLloguerMaximFmiliaNombrosa(
-                unitatDeConvivencia.any(
-                    unitatDeConvivencia.members("el_solicitant_HE_077_00_es_membre_de_familia_nombrosa", period)))][
-                demarcacio_de_lhabitatge]
-        return import_del_lloguer <= lloguer_maxim_per_demarcacio
+            legislation(period).benefits.HE077.import_lloguer_maxim[demarcacio_de_lhabitatge]
+        discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
+        persona_amb_discapacitat = unitatDeConvivencia.any(discapacitats)
+        discapacitat_amb_lloguer_inferor_al_maxim = persona_amb_discapacitat * (import_del_lloguer <= 900)
+        lloger_inferior_a_la_demarcacio = import_del_lloguer <= lloguer_maxim_per_demarcacio
+        return discapacitat_amb_lloguer_inferor_al_maxim + lloger_inferior_a_la_demarcacio
 
 
 class pot_ser_solicitant_HE_077_00(Variable):
@@ -50,18 +49,6 @@ class pot_ser_solicitant_HE_077_00(Variable):
                * empadronat_a_lhabitatge \
                * titular_contracte_de_lloguer
 
-
-class el_solicitant_HE_077_00_es_membre_de_familia_nombrosa(Variable):
-    value_type = bool
-    entity = Persona
-    definition_period = MONTH
-    label = "Is this person suitable to apply for this benefit"
-    default_value = False
-
-    def formula(persona, period, legislation):
-        return persona("pot_ser_solicitant_HE_077_00", period) * persona.familia("es_familia_nombrosa", period)
-
-
 class HE_077_00(Variable):
     value_type = float
     unit = 'currency'
@@ -69,19 +56,15 @@ class HE_077_00(Variable):
     definition_period = MONTH
     label = u"SUBVENCIONS DE TIPUS MIFO"
 
-    def formula(unitatDeConvivencia, period, legislation):
+    def formula(unitatDeConvivencia, period, parameters):
         nr_membres = unitatDeConvivencia.nb_persons()
-        discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
-        existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
-        zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
         poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HE_077_00", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
         ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
         ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
+        numero_persones = clauNombreDeMebres(nr_membres)
         nivell_ingressos_maxim = \
-            legislation(period).benefits.H.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.H.multiplicadors[
-                clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
+            parameters(period).benefits.HE077.maxim_ingressos[numero_persones]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         lloguer_inferior_al_maxim_per_demarcacio = \
             unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HE_077_00", period)

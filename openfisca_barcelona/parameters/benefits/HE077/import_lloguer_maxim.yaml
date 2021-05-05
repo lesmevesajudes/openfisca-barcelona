@@ -1,59 +1,40 @@
-familia_convencional:
-  barcelona_ciutat:
-    values:
-      2017-01-01:
-        value: 600
-  barcelona_provincia:
-    values:
-      2017-01-01:
-        value: 600
-  desconeguda:
-    values:
-      2017-01-01:
-        value: 0
-  girona:
-    values:
-      2017-01-01:
-        value: 500
-  lleida:
-    values:
-      2017-01-01:
-        value: 400
-  terres_de_lebre:
-    values:
-      2017-01-01:
-        value: 350
-  tarragona:
-    values:
-      2017-01-01:
-        value: 450
-
-familia_nombrosa:
-  barcelona_ciutat:
-    values:
-      2017-01-01:
-        value: 900
-  barcelona_provincia:
-    values:
-      2017-01-01:
-        value: 900
-  desconeguda:
-    values:
-      2017-01-01:
-        value: 900
-  girona:
-    values:
-      2017-01-01:
-        value: 900
-  lleida:
-    values:
-      2017-01-01:
-        value: 900
-  terres_de_lebre:
-    values:
-      2017-01-01:
-        value: 900
-  tarragona:
-    values:
-      2017-01-01:
-        value: 900
+barcelona_ciutat:
+  values:
+    2017-01-01:
+      value: 600
+    2021-04-30:
+      value: 800
+barcelona_provincia:
+  values:
+    2017-01-01:
+      value: 600
+    2021-04-30:
+      value: 800
+desconeguda:
+  values:
+    2017-01-01:
+      value: 0
+girona:
+  values:
+    2017-01-01:
+      value: 500
+    2021-04-30:
+      value: 550
+lleida:
+  values:
+    2017-01-01:
+      value: 400
+    2021-04-30:
+      value: 500
+terres_de_lebre:
+  values:
+    2017-01-01:
+      value: 350
+    2021-04-30:
+      value: 400
+tarragona:
+  values:
+    2017-01-01:
+      value: 450
+    2021-04-30:
+      value: 550
