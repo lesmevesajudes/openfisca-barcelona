@@ -255,3 +255,58 @@
         victima_violencia_domestica: true
   output:
     HE_077_00: [0]
+- name: Persona amb sou per sota del minim i del lloguer NO rep l'ajuda
+  description: Ajuda lloguer just
+  period: 2021-05
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 149
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 1200
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_077_00: [0]
+
+- name: Persona amb sou per sota del minim i per sobre del lloguer SI rep l'ajuda
+  description: Ajuda lloguer just
+  period: 2021-05
+  absolute_error_margin: 0.005
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 149
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 1800
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_077_00: [59.60]

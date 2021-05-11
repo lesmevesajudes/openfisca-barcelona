@@ -25,6 +25,24 @@ class lloguer_inferior_al_maxim_per_demarcacio_HE_077_00(Variable):
         lloger_inferior_a_la_demarcacio = import_del_lloguer <= lloguer_maxim_per_demarcacio
         return discapacitat_amb_lloguer_inferor_al_maxim + lloger_inferior_a_la_demarcacio
 
+class lloguer_superor_al_minim_HE_077_00(Variable):
+    value_type = bool
+    entity = UnitatDeConvivencia
+    definition_period = MONTH
+    label = "income beyond minimum allowed"
+    default_value = False
+
+    def formula(unitatDeConvivencia, period, parameters):
+        import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
+        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
+        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
+        ingressos_minims = parameters(period).benefits.HE077.minim_ingressos / 12
+
+        ingressos_per_damunt_del_minim = ingressos_familia_mensuals >= ingressos_minims
+        ingressos_per_sota_del_minim = ingressos_familia_mensuals < ingressos_minims
+        ingressos_per_sobre_del_lloguer = import_del_lloguer <= ingressos_familia_mensuals
+
+        return ingressos_per_damunt_del_minim + (ingressos_per_sota_del_minim * ingressos_per_sobre_del_lloguer)
 
 class pot_ser_solicitant_HE_077_00(Variable):
     value_type = bool
@@ -65,7 +83,8 @@ class HE_077_00(Variable):
         numero_persones = clauNombreDeMebres(nr_membres)
         nivell_ingressos_maxim = \
             parameters(period).benefits.HE077.maxim_ingressos[numero_persones]
-        ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
+        ingressos_compleix_maxim = ingressos_familia_mensuals <= nivell_ingressos_maxim
+        ingressos_compleix_minim = unitatDeConvivencia("lloguer_superor_al_minim_HE_077_00", period)
         lloguer_inferior_al_maxim_per_demarcacio = \
             unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HE_077_00", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
@@ -77,7 +96,8 @@ class HE_077_00(Variable):
 
         import_ajuda = min(200, unitatDeConvivencia("import_del_lloguer", period) * 0.4)
         return existeix_solicitant_viable \
-               * ingressos_bruts_dins_barems \
+               * ingressos_compleix_maxim \
+               * ingressos_compleix_minim \
                * lloguer_inferior_al_maxim_per_demarcacio \
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \
                * no_tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit \
