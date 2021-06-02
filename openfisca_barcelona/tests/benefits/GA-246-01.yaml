@@ -341,3 +341,24 @@
   output:
     GA_246_01: [1, 1, 0]
     GA_246_02: [0, 0, 0]
+- name: Persona < 65 anys, discapacitat >= 33, empadronat a atm, ingressos < límit
+  description: GA_246_01 - Targeta Rosa (Gratuïta)
+  period: 2021-06
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        data_naixement: '1961-01-15'
+        ingressos_bruts:
+          2016: 6000
+        grau_discapacitat: 34
+        municipi_empadronament: municipis_atm
+  output:
+    GA_246_01: [1]
+    GA_246_02: [0]
