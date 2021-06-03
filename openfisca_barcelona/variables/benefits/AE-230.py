@@ -59,18 +59,6 @@ class ordre_del_menor(Variable):
     definition_period = ETERNITY
     label = "Ordinal number of this person within a family"
 
-
-class data_obertura_expedient_anterior_a_31_desembre(Variable):
-    value_type = bool
-    entity = Familia
-    definition_period = ETERNITY
-    label = u"The social services expedient if filed before 31st of december of previous year"
-
-    def formula(familia, period, parameters):
-        lastYear = datetime.now().year - 1
-        return familia("data_obertura_expedient_serveis_socials", period) < datetime.strptime(str(lastYear) + '-12-31', "%Y-%m-%d").date() 
-
-
 class data_alta_padro_valida_AE_230(Variable):
     value_type = bool
     entity = Persona
@@ -113,22 +101,17 @@ class compleix_criteris_AE230(Variable):
 
     def formula(persona, period, parameters):
         te_16_anys_o_menys = persona('edat', period) <= 16
-        expedient_amb_antiguitat = persona.familia('data_obertura_expedient_anterior_a_31_desembre', period)
         ingressos_inferiors_varem = persona.familia('familia_ingressos_bruts', period.last_year) <= \
                                     varem_irsc_016(persona.familia.nb_persons())
-        es_usuari_serveis_socials = persona.familia('es_usuari_serveis_socials', period)
         es_empadronat_a_barcelona = persona('municipi_empadronament', period) == b'barcelona'
         anys_empadronament_valid = persona('data_alta_padro_valida_AE_230', period)
         existeix_algun_solicitant_AE_230 = persona.familia.any(persona.familia.members('solicitant_AE_230_valid', period))
 
         return te_16_anys_o_menys \
-               * expedient_amb_antiguitat \
                * ingressos_inferiors_varem \
                * es_empadronat_a_barcelona \
                * anys_empadronament_valid \
-               * es_usuari_serveis_socials \
                * existeix_algun_solicitant_AE_230
-
 
 class AE_230_mensual(Variable):
     value_type = float
@@ -138,6 +121,7 @@ class AE_230_mensual(Variable):
     label = "Ajuda 0-16"
 
     def formula(persona, period, parameters):
-        tipus_custodia = persona.familia('tipus_custodia', period)
-        import_ajuda = parameters(period).benefits.AE230.import_ajuda[clau_custodia(tipus_custodia)][clau_ordre_del_menor(persona("ordre_del_menor", period))]
-        return persona('compleix_criteris_AE230', period) * import_ajuda
+    #    tipus_custodia = persona.familia('tipus_custodia', period)
+    #    import_ajuda = parameters(period).benefits.AE230.import_ajuda[clau_custodia(tipus_custodia)][clau_ordre_del_menor(persona("ordre_del_menor", period))]
+        return persona('compleix_criteris_AE230', period)
+        # * import_ajuda

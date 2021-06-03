@@ -34,7 +34,7 @@
         anys_empadronat_a_barcelona: 2
         ordre_del_menor: 0
   output:
-    AE_230_mensual: [0, 0, 100]
+    AE_230_mensual: [0, 0, 1]
 - name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC - do not take into account non family members
   description: Ajuda menors 0-16
   period: 2017-01
@@ -76,7 +76,7 @@
         ingressos_bruts:
           2016: 45000
   output:
-    AE_230_mensual: [0, 0, 100, 0]
+    AE_230_mensual: [0, 0, 1, 0]
 - name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC fill nascut després de 2016-01-01
   description: Ajuda menors 0-16
   period: 2017-01
@@ -113,7 +113,7 @@
         anys_empadronat_a_barcelona: 1
         ordre_del_menor: 0
   output:
-    AE_230_mensual: [0, 0, 100]
+    AE_230_mensual: [0, 0, 1]
 - name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC, data alta padró posterior a 01-01-16
   description: Ajuda menors 0-16
   period: 2017-01
@@ -183,7 +183,7 @@
         anys_empadronat_a_barcelona: 2
         ordre_del_menor: 1
   output:
-    AE_230_mensual: [0, 100, 75]
+    AE_230_mensual: [0, 1, 1]
 - name: 0-16 Unitat familiar 3 membres nivell renda disponible superior a 1,5 IRSC
   description: Ajuda menors 0-16
   period: 2017-01
@@ -266,40 +266,3 @@
         ordre_del_menor: 1
   output:
     AE_230_mensual: [0, 0, 0, 0]
-- name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC fill nascut després de 2016-01-01. any 2020, ajuda eliminada
-  description: Ajuda menors 0-16
-  period: 2020-08
-  absolute_error_margin: 0
-  input:
-    familia:
-      sustentadors_i_custodia: [pare1, mare1]
-      menors: [infant1]
-      domicili_a_barcelona_ciutat: true
-      es_usuari_serveis_socials: true
-      tipus_custodia: total
-    unitat_de_convivencia:
-      persones_que_conviuen: [pare1, mare1, infant1]
-    familia_fins_a_segon_grau:
-      familiars: [pare1, mare1, infant1]
-    persones:
-      pare1:
-        edat: 57
-        municipi_empadronament: barcelona
-        ingressos_bruts:
-          2016: 7000
-        anys_empadronat_a_barcelona: 2
-      mare1:
-        edat: 57
-        municipi_empadronament: barcelona
-        ingressos_bruts:
-          2016: 0
-        anys_empadronat_a_barcelona: 2
-      infant1:
-        edat: 1
-        municipi_empadronament: barcelona
-        ingressos_bruts:
-          2016: 0
-        anys_empadronat_a_barcelona: 1
-        ordre_del_menor: 0
-  output:
-    AE_230_mensual: [0, 0, 0]

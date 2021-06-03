@@ -28,7 +28,7 @@
         anys_empadronat_a_barcelona: 2
         municipi_empadronament: barcelona
   output:
-    AE_230_mensual: [0, 50]
+    AE_230_mensual: [0, 1]
     AE_230_01_mensual: [450, 0]
 - name: 0-16 Unitat familiar 2 membres nivell renda disponible inferior a 1,5 IRSC cust. compartida. Any 2020, ajuda eliminada
   description: Ajuda menors 0-16
@@ -60,5 +60,5 @@
         anys_empadronat_a_barcelona: 2
         municipi_empadronament: barcelona
   output:
-    AE_230_mensual: [0, 0]
+    AE_230_mensual: [0, 1]
     AE_230_01_mensual: [0, 0]
