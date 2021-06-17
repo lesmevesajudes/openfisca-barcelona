@@ -1,0 +1,173 @@
+- name: Persona amb sou per sobre del maxim NO rep l'ajuda
+  description: Ajuda lloguer persones grans
+  period: 2021-06
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 500
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 66
+        ingressos_bruts:
+          2020: 25788
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_02_01_00: [0]
+- name: Persona amb lloguer per sobre del maxim NO rep l'ajuda
+  description: Ajuda lloguer persones grans
+  period: 2021-06
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 850
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 66
+        ingressos_bruts:
+          2020: 24000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_02_01_00: [0]
+- name: Persona compleix requeriments rep l'ajuda
+  description: Ajuda lloguer persones grans
+  period: 2021-06
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 550
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 66
+        ingressos_bruts:
+          2020: 24000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_02_01_00: [1]
+- name: Persona amb edat inferior al minim NO rep l'ajuda
+  description: Ajuda lloguer persones grans
+  period: 2021-06
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 550
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 64
+        ingressos_bruts:
+          2020: 24000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_02_01_00: [0]
+- name: Familia amb alguna persona amb discapacitat i amb tots els requeriments de HE-02-01-00 rep l'ajuda
+  description: Ajuda lloguer just
+  period: 2021-06
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult, adult2]
+      menors: [menor, menor2, menor3]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult, adult2, menor, menor2, menor3]
+      import_del_lloguer: 850
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult, adult2, menor, menor2, menor3]
+    persones:
+      adult:
+        edat: 66
+        ingressos_bruts:
+          2020: 6348
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+      adult2:
+        edat: 62
+        ingressos_bruts:
+          2020: 6348
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        municipi_empadronament: barcelona
+        grau_discapacitat: 10
+      menor:
+        edat: 12
+        ingressos_bruts:
+          2020: 0
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+      menor2:
+        edat: 12
+        ingressos_bruts:
+          2020: 0
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+      menor3:
+        edat: 12
+        ingressos_bruts:
+          2020: 0
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+  output:
+    HE_02_01_00: [1]
