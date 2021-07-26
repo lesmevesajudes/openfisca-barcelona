@@ -232,7 +232,7 @@
       adult:
         edat: 65
         ingressos_bruts:
-          2020: 25800
+          2020: 30100
         temps_empadronat_habitatge_actual: menys_nou_mesos
         tipus_document_identitat: DNI
         titular_contracte_de_lloguer: true
@@ -262,7 +262,7 @@
       adult1:
         edat: 65
         ingressos_bruts:
-          2020: 20800
+          2020: 24800
         temps_empadronat_habitatge_actual: menys_nou_mesos
         tipus_document_identitat: DNI
         titular_contracte_de_lloguer: true
@@ -270,7 +270,7 @@
       adult2:
         edat: 35
         ingressos_bruts:
-          2020: 6000
+          2020: 6300
         temps_empadronat_habitatge_actual: menys_nou_mesos
         tipus_document_identitat: DNI
         titular_contracte_de_lloguer: true
