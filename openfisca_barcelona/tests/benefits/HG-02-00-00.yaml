@@ -1,0 +1,318 @@
+- name: Persona ha estat sota ERTO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [1]
+
+- name: Persona ha estat sota ERTO i amb dependencia rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 27000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+        grau_dependencia: 3
+  output:
+    HG_02_00_00: [1]
+
+- name: Persona ha estat sota ERTO i amb discapacitat rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 27000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+        grau_discapacitat: 40
+  output:
+    HG_02_00_00: [1]
+
+- name: Persona en atur rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: false
+        situacio_laboral: aturat
+  output:
+    HG_02_00_00: [1]
+
+- name: 2 Persones amb 1 ERTO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult1, adult2]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+      adult2:
+        ingressos_bruts:
+          2020: 6000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: false
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [1]
+
+- name: 2 Persones amb 1 ERTO ingressos per damunt del limit rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult1, adult2]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult1, adult2]
+    persones:
+      adult1:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+      adult2:
+        ingressos_bruts:
+          2020: 8000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: false
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [0]
+
+- name: Persona ha estat sota ERTO però amb ingressos damunt del llindar NO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 22000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [0]
+
+- name: Persona ha estat sota ERTO però amb lloguer damunt del llindar NO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 850
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [0]
+
+- name: Persona ha estat sota ERTO però habitatge fora de barcelona NO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_provincia
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [0]
+
+- name: Persona ha estat sota ERTO però empadronat fora de barcelona NO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 600
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: municipis_atm
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [0]
