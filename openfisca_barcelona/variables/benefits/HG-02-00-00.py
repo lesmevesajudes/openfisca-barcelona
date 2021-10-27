@@ -48,8 +48,7 @@ class pot_ser_solicitant_HG_02_00_00(Variable):
         empadronat_a_barcelona = (persona("municipi_empadronament", period) == b'barcelona')
         situacio_laboral = persona('situacio_laboral', period)
         aturat = situacio_laboral == situacio_laboral.possible_values.aturat
-        amb_erto = persona('esta_o_ha_estat_en_erto', period)
-        return empadronat_a_barcelona * (aturat + amb_erto)
+        return empadronat_a_barcelona
 
 class HG_02_00_00(Variable):
     value_type = float
