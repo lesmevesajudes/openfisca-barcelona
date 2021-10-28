@@ -1,0 +1,28 @@
+barcelona_ciutat:
+  values:
+    2021-10-01:
+      value: 800
+barcelona_provincia:
+  values:
+    2021-10-01:
+      value: 800
+desconeguda:
+  values:
+    2017-01-01:
+      value: 0
+girona:
+  values:
+    2017-01-01:
+      value: 550
+lleida:
+  values:
+    2017-01-01:
+      value: 500
+terres_de_lebre:
+  values:
+    2017-01-01:
+      value: 400
+tarragona:
+  values:
+    2017-01-01:
+      value: 550

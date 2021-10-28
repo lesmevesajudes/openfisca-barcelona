@@ -1,7 +1,13 @@
 from openfisca_core.model_api import *
 from openfisca_barcelona.entities import *
-from openfisca_barcelona.variables.benefits.H import clauIRSCPonderat, clauMultiplicadors
 
+def clauNombreDeMebres(membres):
+    return select([membres == 1, membres == 2, membres == 3, membres >= 4],
+                  ['un', 'dos', 'tres', 'quatreomes'])
+
+def clauDependencia(valor):
+    return select([valor == 0, valor > 0],
+                  ['sense_discapacitat_dependencia', 'amb_discapacitat_dependencia'])
 
 class lloguer_inferior_al_maxim_per_demarcacio_HG_077_04(Variable):
     value_type = bool
@@ -13,7 +19,7 @@ class lloguer_inferior_al_maxim_per_demarcacio_HG_077_04(Variable):
     def formula(unitatDeConvivencia, period, legislation):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
         demarcacio_de_lhabitatge = unitatDeConvivencia("demarcacio_de_lhabitatge", period)
-        lloguer_maxim_per_demarcacio = legislation(period).benefits.H.import_lloguer_maxim["HG_077_04"][demarcacio_de_lhabitatge]
+        lloguer_maxim_per_demarcacio = legislation(period).benefits.HG07704.import_lloguer_maxim[demarcacio_de_lhabitatge]
         return import_del_lloguer <= lloguer_maxim_per_demarcacio
 
 
@@ -25,9 +31,6 @@ class pot_ser_solicitant_HG_077_04(Variable):
     default_value = False
 
     def formula(persona, period, legislation):
-        tipus_document_identitat = persona("tipus_document_identitat", period)
-        has_DNI = tipus_document_identitat == tipus_document_identitat.possible_values.DNI
-        has_NIE = tipus_document_identitat == tipus_document_identitat.possible_values.NIE
         empadronat_a_catalunya = (persona("municipi_empadronament", period) == b'barcelona') \
         + (persona("municipi_empadronament", period) == b'altres') \
         + (persona("municipi_empadronament", period) == b'municipis_atm')
@@ -35,8 +38,7 @@ class pot_ser_solicitant_HG_077_04(Variable):
         empadronat_a_lhabitatge = temps_empadronat_a_lhabitatge != temps_empadronat_a_lhabitatge.possible_values.no_empadronat
         titular_contracte_de_lloguer = persona("titular_contracte_de_lloguer", period)
 
-        return (has_DNI + has_NIE) \
-               * empadronat_a_catalunya \
+        return empadronat_a_catalunya \
                * empadronat_a_lhabitatge \
                * titular_contracte_de_lloguer
 
@@ -50,16 +52,16 @@ class HG_077_04(Variable):
 
     def formula(unitatDeConvivencia, period, legislation):
         nr_membres = unitatDeConvivencia.nb_persons()
-        discapacitats = unitatDeConvivencia.members("grau_discapacitat", period)
-        existeix_algun_discapacitat = unitatDeConvivencia.any(discapacitats)
+        discapacitats = unitatDeConvivencia.members("grau_discapacitat", period) > 33
+        dependencies = unitatDeConvivencia.members("grau_dependencia", period) == 3
+        existeix_discapacitat_o_dependencia = unitatDeConvivencia.any(discapacitats) + unitatDeConvivencia.any(dependencies)
         zona_de_lhabitatge = unitatDeConvivencia("zona_de_lhabitatge", period)
         poden_solicitar = unitatDeConvivencia.members("pot_ser_solicitant_HG_077_04", period)
         existeix_solicitant_viable = unitatDeConvivencia.any(poden_solicitar)
-        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts_ultims_sis_mesos", period)
-        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 6 / nr_membres
+        ingressos_bruts = unitatDeConvivencia.members("ingressos_bruts", period.last_year)
+        ingressos_familia_mensuals = unitatDeConvivencia.sum(ingressos_bruts) / 12
         nivell_ingressos_maxim = \
-            legislation(period).benefits.H.irsc_ponderat[zona_de_lhabitatge][clauIRSCPonderat(nr_membres)] \
-            * legislation(period).benefits.H.multiplicadors[clauMultiplicadors(nr_membres, existeix_algun_discapacitat)]
+            legislation(period).benefits.HG07704.ingressos_maxims[clauDependencia(existeix_discapacitat_o_dependencia)][clauNombreDeMebres(nr_membres)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
         ha_pagat_almenys_3_quotes_del_lloguer = unitatDeConvivencia("ha_pagat_almenys_3_quotes_del_lloguer", period)
         lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HG_077_04", period)
@@ -69,7 +71,7 @@ class HG_077_04(Variable):
             unitatDeConvivencia("tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit", period) == False
         no_relacio_de_parentiu_amb_el_propietari = \
             unitatDeConvivencia("relacio_de_parentiu_amb_el_propietari", period) == False
-        import_ajuda = min(3000, unitatDeConvivencia("import_deute_en_el_pagament_del_lloguer", period))
+        import_ajuda = min(4500, unitatDeConvivencia("import_deute_en_el_pagament_del_lloguer", period))
 
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
