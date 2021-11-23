@@ -63,6 +63,8 @@ class HG_077_04(Variable):
         nivell_ingressos_maxim = \
             legislation(period).benefits.HG07704.ingressos_maxims[clauDependencia(existeix_discapacitat_o_dependencia)][clauNombreDeMebres(nr_membres)]
         ingressos_bruts_dins_barems = ingressos_familia_mensuals <= nivell_ingressos_maxim
+        deute_lloguer = \
+            unitatDeConvivencia("existeix_deute_en_el_pagament_del_lloguer", period) == True
         ha_pagat_almenys_3_quotes_del_lloguer = unitatDeConvivencia("ha_pagat_almenys_3_quotes_del_lloguer", period)
         lloguer_inferior_al_maxim_per_demarcacio = unitatDeConvivencia("lloguer_inferior_al_maxim_per_demarcacio_HG_077_04", period)
         no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge = \
@@ -75,6 +77,7 @@ class HG_077_04(Variable):
 
         return existeix_solicitant_viable \
                * ingressos_bruts_dins_barems \
+               * deute_lloguer \
                * ha_pagat_almenys_3_quotes_del_lloguer \
                * lloguer_inferior_al_maxim_per_demarcacio\
                * no_es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge \

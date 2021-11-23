@@ -149,3 +149,11 @@ def clauMultiplicadors(membres, existeixDiscapacitat):
     return select([existeixDiscapacitat, membres == 1, membres >= 2],
                   ['discapacitats', 'un', 'dosomes']
                   )
+
+def clauNombreDeMebres(membres):
+    return select([membres == 1, membres == 2, membres == 3, membres >= 4],
+                  ['un', 'dos', 'tres', 'quatreomes'])
+
+def clauDependencia(valor):
+    return select([valor == 0, valor > 0],
+                  ['sense_discapacitat_dependencia', 'amb_discapacitat_dependencia'])

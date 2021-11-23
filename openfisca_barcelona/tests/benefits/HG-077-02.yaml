@@ -1,57 +1,113 @@
-- name: Persona amb tots els requeriments de HG-077-02 rep l'ajuda
+- name: Persona amb tots els requeriments i ha perdut l'habitatge de HG-077-02 rep l'ajuda
   description: Ajuda lloguer just
-  period: 2017-01
+  period: 2021-11
   absolute_error_margin: false
   input:
     familia:
       altres_persones: [adult]
     unitat_de_convivencia:
       persones_que_conviuen: [adult]
-      import_del_lloguer: 600
+      import_del_lloguer: 790
+      existeix_deute_en_el_pagament_del_lloguer: false
+      ha_pagat_almenys_3_quotes_del_lloguer: true
       es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys: true
-      zona_de_lhabitatge: zona_a
       demarcacio_de_lhabitatge: barcelona_ciutat
     familia_fins_a_segon_grau:
       familiars: [adult]
     persones:
       adult:
-        ingressos_bruts_ultims_sis_mesos: 3174
+        ingressos_bruts_ultims_sis_mesos: 10623
         temps_empadronat_habitatge_actual: menys_nou_mesos
         tipus_document_identitat: DNI
         titular_contracte_de_lloguer: true
         municipi_empadronament: barcelona
   output:
-    HG_077_02: [200]
-- name: Persona amb massa ingressos no reb l'ajuda HG-077-02
+    HG_077_02: [1]
+
+- name: Persona depenent amb tots els requeriments rep l'ajuda
   description: Ajuda lloguer just
-  period: 2017-01
+  period: 2021-11
   absolute_error_margin: false
   input:
     familia:
-      altres_persones: [adult, adult2]
+      altres_persones: [adult]
     unitat_de_convivencia:
-      persones_que_conviuen: [adult, adult2]
-      import_del_lloguer: 600
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 790
+      existeix_deute_en_el_pagament_del_lloguer: false
+      ha_pagat_almenys_3_quotes_del_lloguer: true
       es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       ha_perdut_lhabitatge_en_els_ultims_2_anys: true
-      zona_de_lhabitatge: zona_a
       demarcacio_de_lhabitatge: barcelona_ciutat
     familia_fins_a_segon_grau:
-      familiars: [adult, adult2]
+      familiars: [adult]
     persones:
       adult:
-        ingressos_bruts_ultims_sis_mesos: 11735
+        ingressos_bruts_ultims_sis_mesos: 15935
         temps_empadronat_habitatge_actual: menys_nou_mesos
         tipus_document_identitat: DNI
         titular_contracte_de_lloguer: true
         municipi_empadronament: barcelona
-      adult2:
-        ingressos_bruts_ultims_sis_mesos: 11735
+        grau_dependencia: 3
+  output:
+    HG_077_02: [1]
+
+- name: Persona amb tots els requeriments i victima de violencia masclista rep l'ajuda
+  description: Ajuda lloguer just
+  period: 2021-11
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 790
+      existeix_deute_en_el_pagament_del_lloguer: false
+      ha_pagat_almenys_3_quotes_del_lloguer: true
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts_ultims_sis_mesos: 10623
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        victima_violencia_de_genere: true
+  output:
+    HG_077_02: [1]
+- name: Persona amb massa ingressos no rep l'ajuda HG-077-02
+  description: Ajuda lloguer just
+  period: 2021-11
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      import_del_lloguer: 790
+      existeix_deute_en_el_pagament_del_lloguer: false
+      ha_pagat_almenys_3_quotes_del_lloguer: true
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: true
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts_ultims_sis_mesos: 10624
         temps_empadronat_habitatge_actual: menys_nou_mesos
         tipus_document_identitat: DNI
         titular_contracte_de_lloguer: true

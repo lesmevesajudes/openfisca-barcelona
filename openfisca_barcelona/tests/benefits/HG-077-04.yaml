@@ -12,6 +12,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: lleida
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -42,6 +43,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: lleida
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -79,6 +81,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: lleida
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -116,6 +119,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: lleida
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -146,6 +150,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: barcelona_ciutat
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -176,6 +181,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: barcelona_ciutat
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -206,6 +212,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: barcelona_ciutat
       import_deute_en_el_pagament_del_lloguer: 2000
@@ -236,6 +243,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: barcelona_ciutat
       import_deute_en_el_pagament_del_lloguer: 5000
@@ -268,6 +276,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: barcelona_ciutat
       import_deute_en_el_pagament_del_lloguer: 3000
@@ -300,6 +309,7 @@
       tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
       relacio_de_parentiu_amb_el_propietari: false
       zona_de_lhabitatge: zona_a
+      existeix_deute_en_el_pagament_del_lloguer: true
       ha_pagat_almenys_3_quotes_del_lloguer: true
       demarcacio_de_lhabitatge: barcelona_ciutat
       import_deute_en_el_pagament_del_lloguer: 3000
