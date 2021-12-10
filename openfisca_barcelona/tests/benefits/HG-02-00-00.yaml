@@ -316,3 +316,32 @@
         esta_o_ha_estat_en_erto: true
   output:
     HG_02_00_00: [0]
+
+- name: Persona ha estat sota ERTO però sense lloguer NO rep l'ajuda
+  description: Ajuda lloguer covid19
+  period: 2021-10
+  absolute_error_margin: false
+  input:
+    familia:
+      altres_persones: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge: false
+      tinc_alguna_propietat_a_part_habitatge_habitual_i_disposo_dusdefruit: false
+      relacio_de_parentiu_amb_el_propietari: false
+      ha_perdut_lhabitatge_en_els_ultims_2_anys: false
+      zona_de_lhabitatge: zona_a
+      demarcacio_de_lhabitatge: barcelona_ciutat
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        ingressos_bruts:
+          2020: 21000
+        temps_empadronat_habitatge_actual: menys_nou_mesos
+        tipus_document_identitat: DNI
+        titular_contracte_de_lloguer: true
+        municipi_empadronament: barcelona
+        esta_o_ha_estat_en_erto: true
+  output:
+    HG_02_00_00: [0]

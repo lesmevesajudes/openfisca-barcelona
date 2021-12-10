@@ -35,7 +35,9 @@ class quota_lloguer_inferior_al_maxim_HG_02_00_00(Variable):
 
     def formula(unitatDeConvivencia, period, legislation):
         import_del_lloguer = unitatDeConvivencia("import_del_lloguer", period)
-        return import_del_lloguer <= 800
+        existeix_lloguer = import_del_lloguer > 0
+        import_sota_llindar = import_del_lloguer <= 800
+        return existeix_lloguer * import_sota_llindar
 
 class pot_ser_solicitant_HG_02_00_00(Variable):
     value_type = bool
