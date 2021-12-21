@@ -1,0 +1,35 @@
+sense_discapacitat_dependencia:
+  un:
+    values:
+      2017-01-01:
+        value: 1770.61
+  dos:
+    values:
+      2017-01-01:
+        value: 2281.71
+  tres:
+    values:
+      2017-01-01:
+        value: 2379.85
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 2459.18
+
+amb_discapacitat_dependencia:
+  un:
+    values:
+      2017-01-01:
+        value: 2655.91
+  dos:
+    values:
+      2017-01-01:
+        value: 2738.05
+  tres:
+    values:
+      2017-01-01:
+        value: 2855.82
+  quatreomes:
+    values:
+      2017-01-01:
+        value: 2951.01
