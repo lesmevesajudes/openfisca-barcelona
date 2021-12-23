@@ -21,6 +21,23 @@ class demarcacio_de_lhabitatge(Variable):
     definition_period = MONTH
 
 
+class ZonaDeLHabitatge(Enum):
+    zona_a = "zona_a"
+    zona_b = "zona_b"
+    zona_c = "zona_c"
+    zona_d = "zona_d"
+    desconegut = "desconegut"
+
+
+class zona_de_lhabitatge(Variable):
+    value_type = Enum
+    possible_values = ZonaDeLHabitatge
+    default_value = ZonaDeLHabitatge.desconegut
+    entity = UnitatDeConvivencia
+    label = u"Zone of the house"
+    definition_period = MONTH
+
+
 class es_ocupant_dun_habitatge_gestionat_per_lagencia_de_lhabitatge(Variable):
     value_type = bool
     entity = UnitatDeConvivencia
