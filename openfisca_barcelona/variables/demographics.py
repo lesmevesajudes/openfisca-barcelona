@@ -165,3 +165,21 @@ class sexe(Variable):
     definition_period = MONTH
     label = "Gender"
     set_input = set_input_dispatch_by_period
+
+class alta_ss_12_mesos(Variable):
+    value_type = bool
+    entity = Persona
+    label = "Alta a la SS durant 12 mesos"
+    definition_period = MONTH
+
+class vida_independent(Variable):
+    value_type = int
+    entity = Persona
+    label = "Anys de vida independent"
+    definition_period = MONTH
+
+class prove_de_centre_tutelat(Variable):
+    value_type = bool
+    entity = Persona
+    label = "From minor age center"
+    definition_period = MONTH

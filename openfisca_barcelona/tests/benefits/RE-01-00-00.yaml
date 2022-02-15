@@ -1,0 +1,201 @@
+- name: Persona major de 30 anys amb tots els condicionants rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 31
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 5700
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 1
+  output:
+    RE_01_00_00: [1]
+
+- name: Persona major de 30 anys no empadronada NO rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 31
+        municipi_empadronament: no_empadronat_a_esp
+        ingressos_bruts:
+          2021: 5700
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 1
+  output:
+    RE_01_00_00: [0]
+
+- name: Persona amb patrimoni per damunt del llindar NO rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 31
+        municipi_empadronament: municipis_atm
+        ingressos_bruts:
+          2021: 5700
+        valor_de_patrimoni:
+          2021: 18000
+        vida_independent: 1
+  output:
+    RE_01_00_00: [0]
+
+- name: Persona amb ingressos per damunt del llindar NO rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 31
+        municipi_empadronament: altres
+        ingressos_bruts:
+          2021: 5800
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 1
+  output:
+    RE_01_00_00: [0]
+
+- name: Persona menor de 30 anys amb tots els condicionants rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 29
+        municipi_empadronament: empadronat_a_esp
+        ingressos_bruts:
+          2021: 5700
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 2
+        alta_ss_12_mesos: true
+  output:
+    RE_01_00_00: [1]
+
+- name: Persona menor de 23 prove de centre de menors anys amb tots els condicionants rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 21
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 5700
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 2
+        alta_ss_12_mesos: true
+        prove_de_centre_tutelat: true
+  output:
+    RE_01_00_00: [1]
+
+- name: Persona menor de 23 orfe dels dos progenitors rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 21
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 5700
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 2
+        alta_ss_12_mesos: true
+        prove_de_centre_tutelat: false
+        es_orfe_dels_dos_progenitors: true
+  output:
+    RE_01_00_00: [1]
+
+- name: Persona menor de 23 orfe dels dos progenitors no viu sol NO rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult1, adult2]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult1, adult2]
+    familia_fins_a_segon_grau:
+      familiars: [adult1]
+    persones:
+      adult1:
+        edat: 21
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 4000
+        valor_de_patrimoni:
+          2021: 17000
+        vida_independent: 2
+        alta_ss_12_mesos: true
+        prove_de_centre_tutelat: false
+        es_orfe_dels_dos_progenitors: true
+      adult2:
+        edat: 29
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 1700
+        valor_de_patrimoni:
+          2021: 0
+        vida_independent: 2
+        alta_ss_12_mesos: false
+  output:
+    RE_01_00_00: [0, 0]

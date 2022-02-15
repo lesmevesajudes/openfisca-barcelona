@@ -23,6 +23,7 @@
         ingressat_en_centre_penitenciari: false
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [314]
 - name: Persona amb ingressos superiors al limit no reb l'ajuda
@@ -50,6 +51,7 @@
         ingressat_en_centre_penitenciari: false
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [0]
 - name: Persona que no ha viscut els ultims 24 mesos a Catalunya no reb l'ajuda
@@ -77,6 +79,7 @@
         ingressat_en_centre_penitenciari: false
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [0]
 - name: Persona que te una ajuda residencial no reb l'ajuda
@@ -104,6 +107,7 @@
         ingressat_en_centre_penitenciari: false
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [0]
 - name: Persona que que és un pres no reb l'ajuda
@@ -131,6 +135,7 @@
         ingressat_en_centre_penitenciari: true
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [0]
 - name: Persona que va causar baixa voluntaria de la última feina no reb l'ajuda
@@ -158,6 +163,7 @@
         ingressat_en_centre_penitenciari: false
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: true
         inscrit_com_a_demandant_docupacio: false
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [0]
 - name: Persona menor de 23 orfe de projenitors amb discapacitats a carrec reb l'ajuda
@@ -186,6 +192,7 @@
         situacio_laboral: aturat
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
       menor_discapacitat:
         data_naixement: '2008-03-15'
         grau_discapacitat: 33
@@ -216,6 +223,7 @@
         situacio_laboral: aturat
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [314]
 - name: Persona menor de 23 orfena dels dos progenitors reb l'ajuda
@@ -243,6 +251,7 @@
         situacio_laboral: aturat
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [314]
 - name: Persona no empadronada i sense permis pero divorciada de familia reagrupada reb l'ajuda
@@ -275,6 +284,7 @@
         data_naixement: '2008-03-15'
         grau_discapacitat: 33
         inscrit_com_a_demandant_docupacio: true
+        municipi_empadronament: barcelona
   output:
     GG_270_mensual: [586, 0]
 - name: Familia monoparental amb contracte a temps parcial no inscrita al SOC reb l'ajuda
@@ -303,6 +313,7 @@
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: false
         situacio_laboral: treball_compte_daltri_jornada_parcial
+        municipi_empadronament: barcelona
       menor:
         data_naixement: '2008-03-15'
   output:
@@ -334,6 +345,7 @@
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: false
         situacio_laboral: treball_compte_daltri_jornada_parcial
+        municipi_empadronament: barcelona
       fill1:
         data_naixement: '2008-03-15'
       fill2:
@@ -366,6 +378,7 @@
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: false
         situacio_laboral: treball_compte_daltri_jornada_parcial
+        municipi_empadronament: barcelona
       adult1:
         data_naixement: '1980-03-15'
         ingressos_bruts_ultims_sis_mesos: 1500
@@ -378,6 +391,7 @@
         en_els_ultims_12_mesos_ha_fet_baixa_voluntaria_de_la_feina: false
         inscrit_com_a_demandant_docupacio: false
         situacio_laboral: treball_compte_daltri_jornada_parcial
+        municipi_empadronament: barcelona
       menor:
         data_naixement: '2008-03-15'
   output:

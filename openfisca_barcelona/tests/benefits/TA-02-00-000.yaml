@@ -86,7 +86,7 @@
     persones:
       adult1:
         edat: 49
-        municipi_empadronament: no_empadronat_a_cat
+        municipi_empadronament: empadronat_a_esp
         situacio_laboral: aturat
         inscrit_com_a_demandant_docupacio_mes_de_12_mesos: true
         gaudeix_de_prestacio_contributiva_o_subsidi_desocupacio: true

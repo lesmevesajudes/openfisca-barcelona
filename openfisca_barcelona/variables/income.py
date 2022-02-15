@@ -54,3 +54,10 @@ class familia_ingressos_bruts(Variable):
         ingressos_membres_de_la_familia = familia.members('ingressos_bruts_familiars', period, options=[DIVIDE])
         total_ingressos_familia = familia.sum(ingressos_membres_de_la_familia)
         return total_ingressos_familia
+
+class valor_de_patrimoni(Variable):
+    value_type = float
+    entity = Persona
+    definition_period = YEAR
+    label = "Total heritage"
+    set_input = set_input_divide_by_period
