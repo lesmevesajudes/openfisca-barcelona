@@ -26,7 +26,7 @@ class RE_01_00_00(Variable):
         nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
 
         compleix_vida_independent = menor_de_30_anys * (vida_independent > 1) * persona("alta_ss_12_mesos", period) \
-            + major_de_30_anys * (vida_independent == 1)
+            + major_de_30_anys * (vida_independent >= 1)
 
         orfe_absolut = persona("es_orfe_dels_dos_progenitors", period) * (persona.unitat_de_convivencia.nb_persons() == 1)
         empadronat_a_estat_espanyol = persona("municipi_empadronament", period) != b'no_empadronat_a_esp'
