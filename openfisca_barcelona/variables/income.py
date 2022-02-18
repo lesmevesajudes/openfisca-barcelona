@@ -56,8 +56,8 @@ class familia_ingressos_bruts(Variable):
         return total_ingressos_familia
 
 class valor_de_patrimoni(Variable):
-    value_type = float
-    entity = Persona
+    value_type = int
+    entity = UnitatDeConvivencia
     definition_period = YEAR
     label = "Total heritage"
     set_input = set_input_divide_by_period

@@ -37,7 +37,7 @@ class RE_01_00_00(Variable):
         llindar_ingressos = parameters(period).benefits.RE01.llindars_ingressos[clauNombreDeMebres(nr_membres)]
         compleix_nivell_ingressos = ingressos_bruts_familia <= llindar_ingressos
 
-        patrimoni_familia = persona.familia_fins_a_segon_grau.sum(persona.familia_fins_a_segon_grau.members('valor_de_patrimoni', period.last_year))
+        patrimoni_familia = persona.unitat_de_convivencia('valor_de_patrimoni', period.last_year)
         llindar_patrimoni = parameters(period).benefits.RE01.llindars_patrimoni[clauNombreDeMebres(nr_membres)]
         compleix_nivell_patrimoni = patrimoni_familia <= llindar_patrimoni
 
