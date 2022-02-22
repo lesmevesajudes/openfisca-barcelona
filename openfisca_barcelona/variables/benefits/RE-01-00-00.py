@@ -52,6 +52,6 @@ class RE_01_00_00(Variable):
             * compleix_vida_independent \
             * compleix_nivell_ingressos \
             * compleix_nivell_patrimoni \
-            * (empadronat_a_estat_espanyol + es_victima_violencia_de_genere)
+            * empadronat_a_estat_espanyol
 
         return compleix_els_requeriments
