@@ -21,6 +21,77 @@
   output:
     RE_01_00_00: [1]
 
+- name: Persona jubilada amb tots els condicionants NO rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      valor_de_patrimoni:
+        2021: 1
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 66
+        situacio_laboral: jubilat
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 5700
+        vida_independent: 1
+  output:
+    RE_01_00_00: [0]
+
+- name: Persona major de 30 anys no independent NO rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      valor_de_patrimoni:
+        2021: 1
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 31
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 5700
+        vida_independent: 0
+  output:
+    RE_01_00_00: [0]
+
+- name: Persona victima de violencia masclista no independent rep l'ajuda
+  description: IMV
+  period: 2022-02
+  absolute_error_margin: false
+  input:
+    familia:
+      sustentadors_i_custodia: [adult]
+    unitat_de_convivencia:
+      persones_que_conviuen: [adult]
+      valor_de_patrimoni:
+        2021: 1
+    familia_fins_a_segon_grau:
+      familiars: [adult]
+    persones:
+      adult:
+        edat: 31
+        victima_violencia_de_genere: true
+        municipi_empadronament: barcelona
+        ingressos_bruts:
+          2021: 5700
+        vida_independent: 0
+  output:
+    RE_01_00_00: [1]
+
 - name: Persona major de 30 anys no empadronada NO rep l'ajuda
   description: IMV
   period: 2022-02

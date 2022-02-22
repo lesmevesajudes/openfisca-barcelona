@@ -25,7 +25,13 @@ class RE_01_00_00(Variable):
         centre_tutelat = persona("prove_de_centre_tutelat", period)
         nr_membres = persona.familia_fins_a_segon_grau.nb_persons()
 
-        compleix_vida_independent = menor_de_30_anys * (vida_independent > 1) * persona("alta_ss_12_mesos", period) \
+        situacio_laboral = persona('situacio_laboral', period)
+        no_jubilat = situacio_laboral != situacio_laboral.possible_values.jubilat
+
+        es_victima_violencia_de_genere = persona("victima_violencia_de_genere", period)
+
+        compleix_vida_independent =es_victima_violencia_de_genere \
+            + menor_de_30_anys * (vida_independent > 1) * persona("alta_ss_12_mesos", period) \
             + major_de_30_anys * (vida_independent >= 1)
 
         orfe_absolut = persona("es_orfe_dels_dos_progenitors", period) * (persona.unitat_de_convivencia.nb_persons() == 1)
@@ -42,9 +48,10 @@ class RE_01_00_00(Variable):
         compleix_nivell_patrimoni = patrimoni_familia <= llindar_patrimoni
 
         compleix_els_requeriments = compleix_edat \
+            * no_jubilat \
             * compleix_vida_independent \
             * compleix_nivell_ingressos \
             * compleix_nivell_patrimoni \
-            * empadronat_a_estat_espanyol
+            * (empadronat_a_estat_espanyol + es_victima_violencia_de_genere)
 
         return compleix_els_requeriments
